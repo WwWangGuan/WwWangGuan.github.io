@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-07-05T15:37:38.214Z</updated>
+  <updated>2023-07-05T15:44:16.224Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[object Object]</title>
+    <title>高等数学</title>
     <link href="http://wwwangguan.github.io/2023/07/05/gao-deng-shu-xue/gao-deng-shu-xue/"/>
     <id>http://wwwangguan.github.io/2023/07/05/gao-deng-shu-xue/gao-deng-shu-xue/</id>
     <published>2023-07-05T14:49:26.674Z</published>
-    <updated>2023-07-05T15:37:38.214Z</updated>
+    <updated>2023-07-05T15:44:16.224Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="数学" scheme="http://wwwangguan.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
