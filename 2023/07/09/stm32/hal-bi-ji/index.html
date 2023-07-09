@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-07
+                    2023-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -652,6 +652,83 @@ printf("Wrong parameters value: file %s on line %d\\rr\\n", file, line) */*/ /*
 while (1) &#123;  
   &#125;
 &#125;
+</code></pre>
+<h1 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h1><h2 id="gpio-h-c"><a href="#gpio-h-c" class="headerlink" title="gpio.h/.c"></a>gpio.h/.c</h2><p>似乎这里只有一个函数“ void MX_GPIO_Init()”</p>
+<pre class=" language-lang-C"><code class="language-lang-C">/** Configure pins as  
+* Analog  
+* Input  
+* Output  
+* EVENT_OUT  
+* EXTI  
+* Free pins are configured automatically as Analog (this feature is enabled through  
+* the Code Generation settings)  
+*/  
+void MX_GPIO_Init(void)  
+&#123;  
+
+GPIO_InitTypeDef GPIO_InitStruct = &#123;0&#125;;  
+
+/* GPIO Ports Clock Enable */  
+__HAL_RCC_GPIOE_CLK_ENABLE();  
+__HAL_RCC_GPIOI_CLK_ENABLE();  
+__HAL_RCC_GPIOC_CLK_ENABLE();  
+__HAL_RCC_GPIOF_CLK_ENABLE();  
+__HAL_RCC_GPIOH_CLK_ENABLE();  
+__HAL_RCC_GPIOA_CLK_ENABLE();  
+__HAL_RCC_GPIOB_CLK_ENABLE();  
+__HAL_RCC_GPIOJ_CLK_ENABLE();  
+__HAL_RCC_GPIOG_CLK_ENABLE();  
+__HAL_RCC_GPIOD_CLK_ENABLE();  
+__HAL_RCC_GPIOK_CLK_ENABLE();  
+
+/*Configure GPIO pins : PE2 PE3 PE4 PE5  
+PE6 PE7 PE8 PE9  
+PE10 PE11 PE12 PE13  
+PE14 PE15 PE0 PE1 */  
+GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5  
+|GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9  
+|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13  
+|GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1;  
+GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;  
+GPIO_InitStruct.Pull = GPIO_NOPULL;  
+HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);  
+
+/*Configure GPIO pins : PI8 PI10 PI11 PI12  
+PI13 PI14 PI15 PI0  
+PI1 PI2 PI3 PI4  
+PI5 PI6 PI7 */  
+GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12  
+|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0  
+|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4  
+|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;  
+GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;  
+GPIO_InitStruct.Pull = GPIO_NOPULL;  
+HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);  
+
+&#125;
+</code></pre>
+<p>这里只摘取了部分代码，后面的基本都是相同的<br>此初始化函数首先建立GPIO_InitStruct结构体变量，设置为0。<br>GPIO_InitTypeDef结构体一般用于配置GPIO引脚的初始化参数。这个结构体包含了多个成员变量，用来设置引脚的模式、速度、上拉/下拉设置等。</p>
+<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>以下是GPIO初始化结构体定义</p>
+<pre class=" language-lang-C"><code class="language-lang-C">/**  
+* @brief GPIO Init structure definition  
+*/  
+typedef struct  
+&#123;  
+uint32_t Pin; /*!< Specifies the GPIO pins to be configured.  
+This parameter can be any value of @ref GPIO_pins_define */  
+
+uint32_t Mode; /*!< Specifies the operating mode for the selected pins.  
+This parameter can be a value of @ref GPIO_mode_define */  
+
+uint32_t Pull; /*!< Specifies the Pull-up or Pull-Down activation for the selected pins.  
+This parameter can be a value of @ref GPIO_pull_define */  
+
+uint32_t Speed; /*!< Specifies the speed for the selected pins.  
+This parameter can be a value of @ref GPIO_speed_define */  
+
+uint32_t Alternate; /*!< Peripheral to be connected to the selected pins.  
+This parameter can be a value of @ref GPIO_Alternate_function_selection */  
+&#125;GPIO_InitTypeDef;
 </code></pre>
 
                 
@@ -1075,7 +1152,7 @@ while (1) &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">6.5k</span>
+                        class="white-color">7k</span>
             
             
             
