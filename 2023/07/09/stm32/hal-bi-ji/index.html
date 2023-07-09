@@ -408,14 +408,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -707,8 +707,142 @@ HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
 
 &#125;
 </code></pre>
-<p>这里只摘取了部分代码，后面的基本都是相同的<br>此初始化函数首先建立GPIO_InitStruct结构体变量，设置为0。<br>GPIO_InitTypeDef结构体一般用于配置GPIO引脚的初始化参数。这个结构体包含了多个成员变量，用来设置引脚的模式、速度、上拉/下拉设置等。</p>
-<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>以下是GPIO初始化结构体定义</p>
+<p>这里只摘取了部分代码，后面的基本都是相同的</p>
+<blockquote>
+<p>GPIO_InitTypeDef结构体一般用于配置GPIO引脚的初始化参数。这个结构体包含了多个成员变量，用来设置引脚的模式、速度、上拉/下拉设置等。</p>
+</blockquote>
+<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>随后开启GPIO的时钟并开始配置引脚，这里的每一个GPIO_PIN之前都用宏定义定义了地址，使用或位操作符将多个引脚组合在一起。<br>这里统一设置为了模拟模式和浮空状态，随后进入HAL_GPIO_INIT函数进行初始化</p>
+<pre class=" language-lang-C"><code class="language-lang-C">/**  
+* @brief Initializes the GPIOx peripheral according to the specified parameters in the GPIO_Init.  
+* @param GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or  
+* x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427X devices.  
+* @param GPIO_Init pointer to a GPIO_InitTypeDef structure that contains  
+* the configuration information for the specified GPIO peripheral.  
+* @retval None  
+*/  
+void HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)  
+&#123;  
+uint32_t position;  
+uint32_t ioposition = 0x00U;  
+uint32_t iocurrent = 0x00U;  
+uint32_t temp = 0x00U;  
+
+/* Check the parameters */  
+assert_param(IS_GPIO_ALL_INSTANCE(GPIOx));  
+assert_param(IS_GPIO_PIN(GPIO_Init->Pin));  
+assert_param(IS_GPIO_MODE(GPIO_Init->Mode));  
+
+/* Configure the port pins */  
+for(position = 0U; position < GPIO_NUMBER; position++)  
+&#123;  
+/* Get the IO position */  
+ioposition = 0x01U << position;  
+/* Get the current IO position */  
+iocurrent = (uint32_t)(GPIO_Init->Pin) & ioposition;  
+
+if(iocurrent == ioposition)  
+&#123;  
+/*--------------------- GPIO Mode Configuration ------------------------*/  
+/* In case of Output or Alternate function mode selection */  
+if(((GPIO_Init->Mode & GPIO_MODE) == MODE_OUTPUT) || \  
+(GPIO_Init->Mode & GPIO_MODE) == MODE_AF)  
+&#123;  
+/* Check the Speed parameter */  
+assert_param(IS_GPIO_SPEED(GPIO_Init->Speed));  
+/* Configure the IO Speed */  
+temp = GPIOx->OSPEEDR;  
+temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));  
+temp |= (GPIO_Init->Speed << (position * 2U));  
+GPIOx->OSPEEDR = temp;  
+
+/* Configure the IO Output Type */  
+temp = GPIOx->OTYPER;  
+temp &= ~(GPIO_OTYPER_OT_0 << position) ;  
+temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position);  
+GPIOx->OTYPER = temp;  
+&#125;  
+
+if((GPIO_Init->Mode & GPIO_MODE) != MODE_ANALOG)  
+&#123;  
+/* Check the parameters */  
+assert_param(IS_GPIO_PULL(GPIO_Init->Pull));  
+
+/* Activate the Pull-up or Pull down resistor for the current IO */  
+temp = GPIOx->PUPDR;  
+temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));  
+temp |= ((GPIO_Init->Pull) << (position * 2U));  
+GPIOx->PUPDR = temp;  
+&#125;  
+
+/* In case of Alternate function mode selection */  
+if((GPIO_Init->Mode & GPIO_MODE) == MODE_AF)  
+&#123;  
+/* Check the Alternate function parameter */  
+assert_param(IS_GPIO_AF(GPIO_Init->Alternate));  
+/* Configure Alternate function mapped with the current IO */  
+temp = GPIOx->AFR[position >> 3U];  
+temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;  
+temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));  
+GPIOx->AFR[position >> 3U] = temp;  
+&#125;  
+
+/* Configure IO Direction mode (Input, Output, Alternate or Analog) */  
+temp = GPIOx->MODER;  
+temp &= ~(GPIO_MODER_MODER0 << (position * 2U));  
+temp |= ((GPIO_Init->Mode & GPIO_MODE) << (position * 2U));  
+GPIOx->MODER = temp;  
+
+/*--------------------- EXTI Mode Configuration ------------------------*/  
+/* Configure the External Interrupt or event for the current IO */  
+if((GPIO_Init->Mode & EXTI_MODE) != 0x00U)  
+&#123;  
+/* Enable SYSCFG Clock */  
+__HAL_RCC_SYSCFG_CLK_ENABLE();  
+
+temp = SYSCFG->EXTICR[position >> 2U];  
+temp &= ~(0x0FU << (4U * (position & 0x03U)));  
+temp |= ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U)));  
+SYSCFG->EXTICR[position >> 2U] = temp;  
+
+/* Clear Rising Falling edge configuration */  
+temp = EXTI->RTSR;  
+temp &= ~((uint32_t)iocurrent);  
+if((GPIO_Init->Mode & TRIGGER_RISING) != 0x00U)  
+&#123;  
+temp |= iocurrent;  
+&#125;  
+EXTI->RTSR = temp;  
+
+temp = EXTI->FTSR;  
+temp &= ~((uint32_t)iocurrent);  
+if((GPIO_Init->Mode & TRIGGER_FALLING) != 0x00U)  
+&#123;  
+temp |= iocurrent;  
+&#125;  
+EXTI->FTSR = temp;  
+
+temp = EXTI->EMR;  
+temp &= ~((uint32_t)iocurrent);  
+if((GPIO_Init->Mode & EXTI_EVT) != 0x00U)  
+&#123;  
+temp |= iocurrent;  
+&#125;  
+EXTI->EMR = temp;  
+
+/* Clear EXTI line configuration */  
+temp = EXTI->IMR;  
+temp &= ~((uint32_t)iocurrent);  
+if((GPIO_Init->Mode & EXTI_IT) != 0x00U)  
+&#123;  
+temp |= iocurrent;  
+&#125;  
+EXTI->IMR = temp;  
+&#125;  
+&#125;  
+&#125;  
+&#125;
+</code></pre>
+<p>以下是GPIO初始化结构体定义</p>
 <pre class=" language-lang-C"><code class="language-lang-C">/**  
 * @brief GPIO Init structure definition  
 */  
@@ -1152,7 +1286,7 @@ This parameter can be a value of @ref GPIO_Alternate_function_selection */
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">7k</span>
+                        class="white-color">7.7k</span>
             
             
             
