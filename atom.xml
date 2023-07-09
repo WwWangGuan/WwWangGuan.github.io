@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-07-05T15:44:16.224Z</updated>
+  <updated>2023-07-06T06:53:14.671Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,166 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SuperCap</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/chao-ji-dian-rong/supercap/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/chao-ji-dian-rong/supercap/</id>
+    <published>2023-07-09T02:54:04.839Z</published>
+    <updated>2023-07-06T06:53:14.671Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;超级电容功率控制器&quot;&gt;&lt;a href=&quot;#超级电容功率控制器&quot; class=&quot;headerlink&quot; title=&quot;超级电容功率控制器&quot;&gt;&lt;/a&gt;超级电容功率控制器&lt;/h1&gt;&lt;h2 id=&quot;开关电容均压电路&quot;&gt;&lt;a href=&quot;#开关电容均压电路&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="超级电容" scheme="http://wwwangguan.github.io/categories/%E8%B6%85%E7%BA%A7%E7%94%B5%E5%AE%B9/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>线性代数</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/xian-xing-dai-shu/xian-xing-dai-shu/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/xian-xing-dai-shu/xian-xing-dai-shu/</id>
+    <published>2023-07-09T02:54:04.836Z</published>
+    <updated>2023-07-06T06:11:44.262Z</updated>
+    
+    
+    
+    
+    <category term="线性代数" scheme="http://wwwangguan.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+    
+    <category term="线性代数" scheme="http://wwwangguan.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电路分析</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/lm3150mhx/dian-lu-fen-xi/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/lm3150mhx/dian-lu-fen-xi/</id>
+    <published>2023-07-09T02:54:04.834Z</published>
+    <updated>2023-07-06T06:21:00.415Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;原理图&quot;&gt;&lt;a href=&quot;#原理图&quot; class=&quot;headerlink&quot; title=&quot;原理图&quot;&gt;&lt;/a&gt;原理图&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="电子电力" scheme="http://wwwangguan.github.io/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/"/>
+    
+    <category term="LM3150MHX" scheme="http://wwwangguan.github.io/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/LM3150MHX/"/>
+    
+    
+    <category term="DC-DC" scheme="http://wwwangguan.github.io/tags/DC-DC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>嵌入式C</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/qian-ru-shi-c/qian-ru-shi-c/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/qian-ru-shi-c/qian-ru-shi-c/</id>
+    <published>2023-07-09T02:54:04.829Z</published>
+    <updated>2023-07-06T17:42:35.009Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;混合编译&quot;&gt;&lt;a href=&quot;#混合编译&quot; class=&quot;headerlink&quot; title=&quot;混合编译&quot;&gt;&lt;/a&gt;混合编译&lt;/h1&gt;&lt;pre class=&quot; language-lang-C&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="嵌入式C" scheme="http://wwwangguan.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8FC/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>定时器</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/stm32/ding-shi-qi/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/stm32/ding-shi-qi/</id>
+    <published>2023-07-09T02:54:04.824Z</published>
+    <updated>2023-07-06T13:12:53.407Z</updated>
+    
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HAL笔记</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/stm32/hal-bi-ji/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/stm32/hal-bi-ji/</id>
+    <published>2023-07-09T02:54:04.821Z</published>
+    <updated>2023-07-07T03:13:25.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下所有笔记均基于安富莱V6板&lt;/p&gt;
+&lt;h1 id=&quot;配置文件&quot;&gt;&lt;a href=&quot;#配置文件&quot; class=&quot;headerlink&quot; title=&quot;配置文件&quot;&gt;&lt;/a&gt;配置文件&lt;/h1&gt;&lt;p&gt;为防止递归包含使用如下宏定义进行头文件保护&lt;/p&gt;
+&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
+    
+    
+    <category term="STM32 HAL" scheme="http://wwwangguan.github.io/tags/STM32-HAL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HAL与LL库区别</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/stm32/hal-yu-ll-ku-qu-bie/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/stm32/hal-yu-ll-ku-qu-bie/</id>
+    <published>2023-07-09T02:54:04.820Z</published>
+    <updated>2023-07-06T13:12:53.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;内联函数&quot;&gt;&lt;a href=&quot;#内联函数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>高等数学</title>
-    <link href="http://wwwangguan.github.io/2023/07/05/gao-deng-shu-xue/gao-deng-shu-xue/"/>
-    <id>http://wwwangguan.github.io/2023/07/05/gao-deng-shu-xue/gao-deng-shu-xue/</id>
-    <published>2023-07-05T14:49:26.674Z</published>
-    <updated>2023-07-05T15:44:16.224Z</updated>
+    <link href="http://wwwangguan.github.io/2023/07/09/gao-deng-shu-xue/gao-deng-shu-xue/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/gao-deng-shu-xue/gao-deng-shu-xue/</id>
+    <published>2023-07-09T02:53:56.981Z</published>
+    <updated>2023-07-07T08:32:57.751Z</updated>
     
     
       
@@ -33,6 +188,8 @@
       
     
     
+    
+    <category term="高等数学" scheme="http://wwwangguan.github.io/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
     
     
     <category term="数学" scheme="http://wwwangguan.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
