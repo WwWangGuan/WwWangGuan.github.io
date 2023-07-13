@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>模拟电子技术</title>
+      <link href="/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/"/>
+      <url>/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="半导体基本知识"><a href="#半导体基本知识" class="headerlink" title="半导体基本知识"></a>半导体基本知识</h1><h2 id="本征半导体"><a href="#本征半导体" class="headerlink" title="本征半导体"></a>本征半导体</h2><p>纯净的，具有晶体结构的半导体成为本征半导体。</p><h2 id="本征载流子"><a href="#本征载流子" class="headerlink" title="本征载流子"></a>本征载流子</h2><p>仅由于外部原因引起材料中的自由电子称为本征载流子</p><h2 id="掺杂半导体"><a href="#掺杂半导体" class="headerlink" title="掺杂半导体"></a>掺杂半导体</h2><p>半导体材料可以通过在相对纯净的半导体材料中添加特定的杂质原子来改变其特性，即使只添加千万分之一的杂质。</p><h3 id="N型半导体（电子型半导体）"><a href="#N型半导体（电子型半导体）" class="headerlink" title="N型半导体（电子型半导体）"></a>N型半导体（电子型半导体）</h3><p>N型半导体是向硅（锗）晶体内掺入五价元素杂质（P/Sb）而形成的。<br>以磷原子为例，其有五个价电子，与硅原子形成四个共价键后还会多出一个电子，这个剩余的电子与其所属原子间的联系相对松散，只需要外界给予较少的能量就能成为自由电子从而在新构成的N型材料内自由运动。<br>由于磷原子与硅原子在形成4个共价键后还能给出一个电子，故称磷原子为施主原子，磷成为施主杂质或N型杂质，<del>其中N的意义为Negative。</del><br>明显自由电子为多数载流子，空穴为少数载流子。</p><h3 id="P型半导体（空穴型半导体）"><a href="#P型半导体（空穴型半导体）" class="headerlink" title="P型半导体（空穴型半导体）"></a>P型半导体（空穴型半导体）</h3><p>也是向硅晶体内掺杂，但是掺入三价元素（B/Ga）。<br>以镓原子为例，其与硅原子形成三个共价键，但是硅原子还剩余一个未成键的自由电子，因此在晶体中形成了空穴，当其相邻共价键上的电子吸收外来能量激发时，就有可能填补上这个空穴，从而在外加电场的作用下形成空穴电流。<br>由于镓原子和硅原子形成三个共价键后，硅原子并没有形成8电子稳定构型，而是形成了空穴，需要从杂质原子的空位中吸收电子，故称镓原子为受主原子。<br>明显空穴为多数载流子，自由电子为少数载流子。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[object Object]</title>
       <link href="/2023/07/12/kong-zhi-li-lun/kong-zhi-zhi-mei/du-shu-bi-ji/"/>
       <url>/2023/07/12/kong-zhi-li-lun/kong-zhi-zhi-mei/du-shu-bi-ji/</url>
