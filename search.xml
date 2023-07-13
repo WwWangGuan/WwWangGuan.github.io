@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>[object Object]</title>
+      <link href="/2023/07/12/kong-zhi-li-lun/kong-zhi-zhi-mei/du-shu-bi-ji/"/>
+      <url>/2023/07/12/kong-zhi-li-lun/kong-zhi-zhi-mei/du-shu-bi-ji/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IIC</title>
+      <link href="/2023/07/11/stm32/iic/"/>
+      <url>/2023/07/11/stm32/iic/</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>IIC（Inter-Integrated Circuit ,内部集成电路)总线是一种由飞利浦Philip公司开发的串行总线。是两条串行的总线，它由一根数据线（SDA）和一根 时钟线（SDL）组成。I2C总线上可以接多个I2C设备，每个器件都有一个唯一的地址识别。同一时间只能有一个主设备，其他为从设备。通常MCU作为主设备控制，外设作为从设备。<br>IIC通信模式为半双工通信，同一时间只能单向通信。 </p><h1 id="电路组成"><a href="#电路组成" class="headerlink" title="电路组成"></a>电路组成</h1><p>I2C总线为漏极开路结构(OD)，因此它们必须接有上拉电阻,阻值常为4.7K或者10K。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[object Object]</title>
+      <link href="/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/"/>
+      <url>/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/</url>
+      
+        <content type="html"><![CDATA[<h1 id="3W规则"><a href="#3W规则" class="headerlink" title="3W规则"></a>3W规则</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SuperCap</title>
       <link href="/2023/07/09/chao-ji-dian-rong/supercap/"/>
       <url>/2023/07/09/chao-ji-dian-rong/supercap/</url>
@@ -98,7 +137,7 @@
       <link href="/2023/07/09/stm32/ding-shi-qi/"/>
       <url>/2023/07/09/stm32/ding-shi-qi/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>对于STM32F4x，其有2 个高级控制定时器、10 个通用定时器和 2 个基本定时器。</p><p><img src="https://picx.zhimg.com/80/v2-4211c12913d9b34f3ba486b6409f30f1_1440w.png" alt="" title="STM32定时器汇总"></p><p><img src="https://picx.zhimg.com/80/v2-5f07297b26daffd8a1956a2bc9731a01_1440w.png" alt="STM32定时器特性"></p><p><img src="https://picx.zhimg.com/80/v2-f95d0963cfb4d534a8f6689cfbbd3a96_1440w.png" alt="STM32F1系统结构图"></p><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="CNT"><a href="#CNT" class="headerlink" title="CNT"></a>CNT</h3><p>计数器寄存器内的计数值</p><h3 id="ARR"><a href="#ARR" class="headerlink" title="ARR"></a>ARR</h3><p>重装载值</p><h3 id="Counter-Mode"><a href="#Counter-Mode" class="headerlink" title="Counter Mode"></a>Counter Mode</h3><p>计数模式<br>一共有五种计数模式</p><ol><li>Up</li><li>Down</li><li>Center Aligned Mode（1/2/3）<br>PSC 预分频系数<br>Auto-reload Preload 自动重装载<br>internal Clock Division(CKD) 内部时钟分频因子<h1 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h1>对于计数器的计数频率，我们有<script type="math/tex; mode=display">f_{timer}=\frac{T_{clk}}{PSC}</script>因此实际我们所需的定时周期在计数频率确定之后，只需更改ARR即可</li></ol>]]></content>
       
       
       <categories>
