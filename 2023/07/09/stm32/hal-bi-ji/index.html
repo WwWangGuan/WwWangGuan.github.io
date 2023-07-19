@@ -401,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-09
+                    2023-07-15
                 </div>
                 
 
@@ -447,10 +447,8 @@
 <blockquote>
 <p>递归包含是指在头文件中包含其他头文件时，可能会出现循环依赖的情况。例如，头文件A包含头文件B，而头文件B又包含头文件A，这样就形成了递归包含。<br>递归包含可能会导致以下问题：</p>
 <ol>
-<li>编译错误：当头文件A包含头文件B时，编译器会先处理头文件A的内容，然后再处理头文件B的内容。如果头文件B中又包含了头文件A，就会产生循环依赖，编译器无法解析这种情况，导致编译错误。<ol>
+<li>编译错误：当头文件A包含头文件B时，编译器会先处理头文件A的内容，然后再处理头文件B的内容。如果头文件B中又包含了头文件A，就会产生循环依赖，编译器无法解析这种情况，导致编译错误。</li>
 <li>重复定义：如果递归包含导致某个符号在多个头文件中被定义多次，就会导致重复定义的错误。这会导致链接错误，使得程序无法正常编译和运行。</li>
-</ol>
-</li>
 </ol>
 </blockquote>
 <p>在配置文件中对于HAL库模块的启用使用了宏定义，如：</p>
@@ -647,8 +645,8 @@ LINE__ 表示源代码行号。 关键字__FILE__表示源代码文件名。
 使能断言的方法有两种：(1) 在在CC编译器的预定义宏选项中定义编译器的预定义宏选项中定义USE_FULL_ASSERTUSE_FULL_ASSERT。。 (2) 在本文件取消在本文件取消"#define USE_FULL_ASSERT 1""#define USE_FULL_ASSERT 1"行的注释。 */
 void assert_failed(uint8_t* file, uint32_t line)&#123; 
 /* 用户可以添加自己的代码报告源代码文件名和代码行号，比如将错误文件和行号打印到串口
-printf("Wrong parameters value: file %s on line %d\\rr\\n", file, line) */*/ /* 
-/* 这是一个死循环，断言失败时程序会在此处死机，以便于用户查错这是一个死循环，断言失败时程序会在此处死机，以便于用户查错 */*/
+printf("Wrong parameters value: file %s on line %d\\rr\\n", file, line) */
+/* 这是一个死循环，断言失败时程序会在此处死机，以便于用户查错这是一个死循环，断言失败时程序会在此处死机，以便于用户查错 */
 while (1) &#123;  
   &#125;
 &#125;
@@ -1286,7 +1284,7 @@ This parameter can be a value of @ref GPIO_Alternate_function_selection */
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.2k</span>
+                        class="white-color">9.7k</span>
             
             
             
