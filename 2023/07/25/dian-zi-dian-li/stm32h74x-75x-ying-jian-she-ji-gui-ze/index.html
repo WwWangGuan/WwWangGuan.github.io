@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="线性代数, WwWangGuan">
-    <meta name="description" content="">
+    <meta name="keywords" content="WwWangGuan">
+    <meta name="description" content="供电部分MCU需要1.71~3.6V的工作电压，主$V_{DD}$断电时，由$V_{BAT}$电压（1.2~3.6V）供电$V_{BAT}$：1.2~3.6 V：当$V_{DD}$不存在时，为 RTC、外部 32 kHz 振荡器和备份寄存器">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>线性代数 | WwWangGuan</title>
+    <title>WwWangGuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">线性代数</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -360,25 +360,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
-                                <span class="chip bg-color">线性代数</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="post-category">
-                                线性代数
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -387,21 +374,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-09
+                    2023-07-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-06
+                    2023-07-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    393
                 </div>
                 
 
@@ -428,7 +415,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="供电部分"><a href="#供电部分" class="headerlink" title="供电部分"></a>供电部分</h1><p>MCU需要1.71~3.6V的工作电压，主$V_{DD}$断电时，由$V_{BAT}$电压（1.2~3.6V）供电<br>$V_{BAT}$：1.2~3.6 V：当$V_{DD}$不存在时，为 RTC、外部 32 kHz 振荡器和备份寄存器（通过电源开关）供电。<br>$V_{DD}$:I/O引脚和系统模拟部分供电，比如复位、电源管理、振荡器等<br>$V_{DDA}$:用于ADC、DAC、运放、比较器和电压基准供电，这部分供电是独立的。<br>$V_{REF}$:用于模拟外设（ADC/DAC）的外部基准电压。<br>$V_{REF}$可连接至$V_{DDA}$。 如果有单独的外部<br>参考电压施加到$V_{REF}$，必须连接一个100nF和一个1uF的电容。<br>在所有情况下，$V_{REF}$ 必须保持低于$V_{DDA}$。<br>当$V_{DDA}$ 高于 2 V 并且使用 ADC 时，$V_{REF}$下限为 2 V，否则为 1.62 V。<br>$V_{DD33USB}$和$V_{DD50USB}$:USB收发器的外部电源。<br>当使用$V_{DD50USB}$供电时，该引脚必须连接到 USB的VBUS 上并外加一个4.7 μF 去耦电容(CIN)。<br>此外、$V_{DD33USB}$ 必须连接到一个 1 μF 的电容，其最大 ESR 应为 600 mΩ。<br>当 $V_{DD33USB}$ 用于为 USB 收发器供电（3.0 至 3.6 V）时，如果$V_{DD50USB}$引脚可用，则必须将$V_{DD33USB}$连接到 $V_{DD50USB}$引脚。<br>如果$V_{DD50USB}$引脚可用，则必须连接到$V_{DD33USB}$，而$V_{DD33USB}$必须连接两个外部去耦电容。必须连接到两个外部去耦电容（一个 100 nF 陶瓷电容和一个1 μF 钽或陶瓷电容）。</p>
+
                 
             </div>
             <hr/>
@@ -454,7 +442,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://WwWangGuan.github.io/2023/07/09/xian-xing-dai-shu/xian-xing-dai-shu/">http://WwWangGuan.github.io/2023/07/09/xian-xing-dai-shu/xian-xing-dai-shu/</a>
+                    <a href="http://WwWangGuan.github.io/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/">http://WwWangGuan.github.io/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -491,11 +479,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
-                                    <span class="chip bg-color">线性代数</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -539,58 +523,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/07/09/chao-ji-dian-rong/supercap/">
+                <a href="/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="SuperCap">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">SuperCap</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%B6%85%E7%BA%A7%E7%94%B5%E5%AE%B9/" class="post-category">
-                                    超级电容
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/07/09/dian-zi-dian-li/lm3150mhx/dian-lu-fen-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="电路分析">
-                        
-                        <span class="card-title">电路分析</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -601,31 +545,53 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/" class="post-category">
-                                    电子电力
-                                </a>
-                            
-                            <a href="/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/LM3150MHX/" class="post-category">
-                                    LM3150MHX
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
                             
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/DC-DC/">
-                        <span class="chip bg-color">DC-DC</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/07/21/roboamaster-kai-fa-ban/wei-ming-ming/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="A板原理图解析">
+                        
+                        <span class="card-title">A板原理图解析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
@@ -781,13 +747,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
 
 
 
