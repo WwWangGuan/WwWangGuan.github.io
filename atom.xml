@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-07-25T07:06:31.236Z</updated>
+  <updated>2023-07-25T07:17:48.440Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wwwangguan.github.io/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/"/>
     <id>http://wwwangguan.github.io/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/</id>
     <published>2023-07-25T06:23:18.060Z</published>
-    <updated>2023-07-25T07:06:31.236Z</updated>
+    <updated>2023-07-25T07:17:48.440Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
     
   </entry>
   
@@ -218,11 +220,11 @@
   </entry>
   
   <entry>
-    <title>嵌入式C</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/qian-ru-shi-c/qian-ru-shi-c/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/qian-ru-shi-c/qian-ru-shi-c/</id>
+    <title>C</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/c/c/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/c/c/</id>
     <published>2023-07-09T02:54:04.829Z</published>
-    <updated>2023-07-09T13:27:28.459Z</updated>
+    <updated>2023-08-09T12:45:28.968Z</updated>
     
     
       
