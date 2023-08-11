@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-07-25T07:17:48.440Z</updated>
+  <updated>2023-08-10T08:09:48.712Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2023/08/10/2023-08-10/"/>
+    <id>http://wwwangguan.github.io/2023/08/10/2023-08-10/</id>
+    <published>2023-08-10T08:09:48.712Z</published>
+    <updated>2023-08-10T08:09:48.712Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常用通信阻抗要求</title>
+    <link href="http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/"/>
+    <id>http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/</id>
+    <published>2023-08-10T08:09:29.792Z</published>
+    <updated>2023-08-10T08:10:15.378Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>STM32H74x(75x)硬件设计规则</title>
@@ -224,7 +250,7 @@
     <link href="http://wwwangguan.github.io/2023/07/09/c/c/"/>
     <id>http://wwwangguan.github.io/2023/07/09/c/c/</id>
     <published>2023-07-09T02:54:04.829Z</published>
-    <updated>2023-08-09T12:45:28.968Z</updated>
+    <updated>2023-08-09T12:48:10.109Z</updated>
     
     
       
@@ -321,7 +347,7 @@
     <link href="http://wwwangguan.github.io/2023/07/09/gao-deng-shu-xue/gao-deng-shu-xue/"/>
     <id>http://wwwangguan.github.io/2023/07/09/gao-deng-shu-xue/gao-deng-shu-xue/</id>
     <published>2023-07-09T02:53:56.981Z</published>
-    <updated>2023-07-07T08:32:57.751Z</updated>
+    <updated>2023-08-11T00:31:50.619Z</updated>
     
     
       

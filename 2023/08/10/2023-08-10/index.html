@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C, WwWangGuan">
-    <meta name="description" content="混合编译#ifdef __cplusplus  
-extern &#34;C&#34; &amp;#123;  
-#endif
-
-这段代码是用于在C++代码中使用C语言的函数接口时进行编译器兼容性处理的。实际上，#ifdef __cplusplus 表示如果当前编">
+    <meta name="keywords" content="WwWangGuan">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@ extern &#34;C&#34; &amp;#123;
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C | WwWangGuan</title>
+    <title>WwWangGuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +333,12 @@ extern &#34;C&#34; &amp;#123;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -371,15 +367,6 @@ extern &#34;C&#34; &amp;#123;
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8FC/" class="post-category">
-                                嵌入式C
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -387,28 +374,28 @@ extern &#34;C&#34; &amp;#123;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-09
+                    2023-08-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-09
+                    2023-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    1 分
                 </div>
                 
 
@@ -428,81 +415,7 @@ extern &#34;C&#34; &amp;#123;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="混合编译"><a href="#混合编译" class="headerlink" title="混合编译"></a>混合编译</h1><pre class=" language-lang-C"><code class="language-lang-C">#ifdef __cplusplus  
-extern "C" &#123;  
-#endif
-</code></pre>
-<p>这段代码是用于在C++代码中使用C语言的函数接口时进行编译器兼容性处理的。<br>实际上，#ifdef __cplusplus 表示如果当前编译器是C++编译器，则执行下面的语句块。extern “C” { 表示将下面的代码块用C语言的方式进行编译和链接。</p>
-<p>这样就可以在C++代码中使用C语言的函数接口而不会出现编译错误。</p>
-<h1 id="堆栈作用"><a href="#堆栈作用" class="headerlink" title="堆栈作用"></a>堆栈作用</h1><p>堆和栈是两种不同的内存分配方式，它们在单片机中具有不同的作用和特点：</p>
-<ol>
-<li><p>堆（Heap）：</p>
-<ul>
-<li>堆是一块动态分配的内存区域，用于存储程序运行时动态分配的数据。</li>
-<li>堆的大小不固定，可以根据需要动态调整，通常比栈大得多。</li>
-<li>堆的分配和释放由程序员手动控制，通常使用动态内存分配函数（如malloc()、free()）进行操作。</li>
-<li>堆的数据可以在程序的任意位置访问，具有较长的生命周期。</li>
-</ul>
-</li>
-<li><p>栈（Stack）：</p>
-<ul>
-<li>栈是一种自动分配和释放的内存区域，用于存储函数调用、局部变量，返回地址，函数的形参等临时数据。</li>
-<li>栈的大小固定，由编译器或操作系统预先分配。通常比堆小，但速度更快。</li>
-<li>栈的分配和释放由编译器自动管理，遵循“<strong>先进后出</strong>”的原则。</li>
-<li>栈的数据只能在当前函数的作用域内访问，具有较短的生命周期。<br>对于STM32而言，堆栈在启动文件中设定<h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2>此修饰符用来控制变量与函数的存储方式和可见性</li>
-</ul>
-</li>
-<li>对局部变量使用static声明则此变量只会在第一次调用时初始化，之后的调用会保留上一次调用的值，并且其生命周期会延长到整个程序的运行期间而非整个函数的运行期间。</li>
-<li>在函数外部使用static关键字声明的变量称为静态全局变量。静态全局变量的作用域仅限于声明它的源文件，其他文件无法访问。</li>
-<li>静态函数：使用static关键字声明的函数称为静态函数。静态函数只能在声明它的源文件中使用，不能被其他文件调用。<h2 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h2>C语言中的extern关键字用于声明一个全局变量或函数，该变量或函数在其他文件中定义。它的作用是告诉编译器该变量或函数是在其他文件中定义的，需要在当前文件中使用。</li>
-</ol>
-<p>extern关键字可以放在变量或函数的声明前面，表示该变量或函数在其他文件中已经定义。例如：</p>
-<pre class=" language-lang-C"><code class="language-lang-C">
-extern int count; // 声明一个全局变量count，在其他文件中定义
-
-extern void printMessage(); // 声明一个函数printMessage()，在其他文件中定义
-</code></pre>
-<p>通过使用extern关键字，可以将全局变量或函数的定义分散在多个文件中，提高代码的模块化和可维护性。<br>需要注意的是，extern关键字只是告诉编译器该变量或函数在其他文件中定义，具体的定义仍需在其他文件中进行。如果没有在其他文件中定义，编译器将会报错。</p>
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><pre class=" language-lang-C"><code class="language-lang-C">#define HSE_VALUE ((uint32_t)8000000) \\外部高速时钟频率
-</code></pre>
-<ol>
-<li>这段代码定义了一个宏常量HSE_VALUE，其值为8000000。在单片机中，HSE_VALUE通常用于定义外部高速时钟（HSE）的频率。通过定义HSE_VALUE，可以方便地在程序中使用该值进行时钟配置和计算等操作。<br>在这个例子中，HSE_VALUE的值被定义为8000000，即外部高速时钟的频率为8MHz。在实际应用中，可以根据实际的硬件配置和需要进行适当的修改。</li>
-</ol>
-<p>使用宏常量的好处是可以提高代码的可读性和可维护性。通过使用HSE_VALUE宏常量，可以避免在代码中多次写入具体的数值，而只需要引用宏常量即可。这样，在需要修改外部高速时钟频率时，只需要修改一处定义即可，不需要在代码中逐个修改相关的数值，提高了代码的可维护性。</p>
-<ol>
-<li>(uint32_t)8000000 是一个类型转换表达式，将常量8000000转换为32位无符号整数类型（uint32_t）。在单片机编程中，类型转换常常用于将不同的数据类型进行转换，以满足特定的需求。在这个例子中，将8000000转换为uint32_t类型，可能是为了确保在计算或操作中使用32位无符号整数的正确性。<br>类型转换的目的可以是为了避免数据溢出、提高计算精度、满足特定的数据格式要求等。在使用类型转换时，需要注意数据范围是否适合目标类型，以及可能引起的数据丢失或截断等问题。</li>
-</ol>
-<h1 id="递归包含"><a href="#递归包含" class="headerlink" title="递归包含"></a>递归包含</h1><p>递归包含是指在头文件中包含其他头文件时，可能会出现循环依赖的情况。例如，头文件A包含头文件B，而头文件B又包含头文件A，这样就形成了递归包含。<br>递归包含可能会导致以下问题：</p>
-<ol>
-<li>编译错误：当头文件A包含头文件B时，编译器会先处理头文件A的内容，然后再处理头文件B的内容。如果头文件B中又包含了头文件A，就会产生循环依赖，编译器无法解析这种情况，导致编译错误。</li>
-<li>重复定义：如果递归包含导致某个符号在多个头文件中被定义多次，就会导致重复定义的错误。这会导致链接错误，使得程序无法正常编译和运行。<br>可以采取以下几种解决方法以避免递归包含：</li>
-<li>使用前置声明：如果只需要使用某个类型的指针或引用，可以使用前置声明来替代头文件的包含。这样可以避免直接包含头文件，减少循环依赖的可能性。</li>
-<li>使用头文件保护宏：在每个头文件的开头和结尾使用头文件保护宏，可以防止同一个头文件被重复包含。这样可以避免递归包含和重复定义的问题。<h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1>C语言中的断言（assertion）是一种用于在程序中检查条件是否满足的机制。它可以帮助程序员在开发过程中发现和诊断错误，并提供一种简单的调试工具。</li>
-</ol>
-<p>断言的基本用法是在代码中插入一个条件判断，如果条件为假（即false），则会触发断言失败，并输出相关的错误信息。断言的目的是在程序运行时快速定位错误，并提供有关错误信息的提示，以便于调试和修复问题。</p>
-<p>在C语言中，可以使用 <code>&lt;assert.h&gt;</code> 头文件中的 <code>assert()</code> 宏来实现断言功能。<code>assert()</code> 宏接受一个条件表达式作为参数，如果条件为假，则会触发断言失败，打印出错信息，并终止程序的执行。</p>
-<p>以下是一个简单的示例：</p>
-<pre class=" language-lang-c"><code class="language-lang-c">#include <assert.h>
-
-int main() &#123;
-    int x = 5;
-    assert(x == 10);  // 断言条件 x == 10
-    return 0;
-&#125;
-</code></pre>
-<p>在上述示例中，断言条件 <code>x == 10</code> 显然是不满足的，因此运行程序时会触发断言失败，输出类似以下的错误信息：</p>
-<pre class=" language-lang-Cmake"><code class="language-lang-Cmake">Assertion failed: x == 10, file example.c, line 6
-</code></pre>
-<p>通过断言，我们可以在程序中插入一些条件检查，帮助我们在开发过程中发现和解决问题。但需要注意的是，断言通常用于调试阶段，而在生产环境中，可以通过定义 <code>NDEBUG</code> 宏来禁用断言，以提高程序的性能和效率。</p>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>0x00000002U 是一个十六进制的无符号整数常量，表示十进制的2。</p>
-<p>解析这个数据时，按照以下步骤进行：</p>
-<ol>
-<li>“0x” 表示这是一个十六进制数。</li>
-<li>“00000002” 是十六进制数的具体数值部分。</li>
-<li>“U” 表示这是一个无符号整数。(unsigned int)</li>
-</ol>
-<p>将十六进制数”00000002” 转换为十进制数，结果为2。由于数据类型被指定为无符号整数，因此该数值为正数。</p>
-<h1 id="标准库学习"><a href="#标准库学习" class="headerlink" title="标准库学习"></a>标准库学习</h1>
+                
                 
             </div>
             <hr/>
@@ -528,7 +441,7 @@ int main() &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://WwWangGuan.github.io/2023/07/09/c/c/">http://WwWangGuan.github.io/2023/07/09/c/c/</a>
+                    <a href="http://WwWangGuan.github.io/2023/08/10/2023-08-10/">http://WwWangGuan.github.io/2023/08/10/2023-08-10/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,70 +522,18 @@ int main() &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/07/09/dian-zi-dian-li/lm3150mhx/dian-lu-fen-xi/">
+                <a href="/2023/08/10/2023-08-10/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="电路分析">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">电路分析</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-09
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/" class="post-category">
-                                    电子电力
-                                </a>
-                            
-                            <a href="/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/LM3150MHX/" class="post-category">
-                                    LM3150MHX
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/DC-DC/">
-                        <span class="chip bg-color">DC-DC</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/07/09/stm32/ding-shi-qi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="定时器">
-                        
-                        <span class="card-title">定时器</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -683,16 +544,50 @@ int main() &#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
                             
-                            <a href="/categories/STM32/" class="post-category">
-                                    STM32
-                                </a>
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="常用通信阻抗要求">
+                        
+                        <span class="card-title">常用通信阻抗要求</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
                             
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
                             
                         </span>
                     </div>
@@ -851,13 +746,6 @@ int main() &#123;
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
 
 
 
