@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-08-10T08:09:48.712Z</updated>
+  <updated>2023-09-07T08:29:34.402Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2023/09/07/dian-zi-dian-li/dc-dc/tang-lao-shi-wang-ke-bi-ji/"/>
+    <id>http://wwwangguan.github.io/2023/09/07/dian-zi-dian-li/dc-dc/tang-lao-shi-wang-ke-bi-ji/</id>
+    <published>2023-09-07T04:10:12.402Z</published>
+    <updated>2023-09-07T08:29:34.402Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;线性电源&quot;&gt;&lt;a href=&quot;#线性电源&quot; class=&quot;headerlink&quot; title=&quot;线性电源&quot;&gt;&lt;/a&gt;线性电源&lt;/h1&gt;&lt;p&gt;压降（Dropout Voltage）&lt;/p&gt;
+&lt;h2 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DC-DC" scheme="http://wwwangguan.github.io/tags/DC-DC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2023/08/14/stm32/armfly-ke-cheng-bi-ji/"/>
+    <id>http://wwwangguan.github.io/2023/08/14/stm32/armfly-ke-cheng-bi-ji/</id>
+    <published>2023-08-14T09:23:25.204Z</published>
+    <updated>2023-08-14T09:27:27.397Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;启动文件解析&quot;&gt;&lt;a href=&quot;#启动文件解析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -34,7 +79,7 @@
     <link href="http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/"/>
     <id>http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/</id>
     <published>2023-08-10T08:09:29.792Z</published>
-    <updated>2023-08-11T02:35:39.147Z</updated>
+    <updated>2023-09-02T08:43:26.883Z</updated>
     
     
       
@@ -112,7 +157,7 @@
     <link href="http://wwwangguan.github.io/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/"/>
     <id>http://wwwangguan.github.io/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/</id>
     <published>2023-07-13T08:59:26.680Z</published>
-    <updated>2023-07-21T08:20:18.479Z</updated>
+    <updated>2023-09-05T08:01:06.498Z</updated>
     
     
       
@@ -122,7 +167,8 @@
     <summary type="html">&lt;p&gt;参考书籍：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;模拟电子技术 第2版：电子工业出版社 (美)Robert L.Boylestad,(美)Louis Nashelsky著&lt;/li&gt;
-&lt;li&gt;模拟电子技术基础（第四版）&lt;h1 id=&quot;半导体二极管&quot;&gt;&lt;a href=&quot;#半导体二极管&quot;</summary>
+&lt;li&gt;模拟电子技术基础（第四版）&lt;/li&gt;
+&lt;li&gt;新概念模拟电路 杨建国著&lt;h1</summary>
         
       
     
@@ -191,14 +237,14 @@
     <link href="http://wwwangguan.github.io/2023/07/09/chao-ji-dian-rong/supercap/"/>
     <id>http://wwwangguan.github.io/2023/07/09/chao-ji-dian-rong/supercap/</id>
     <published>2023-07-09T02:54:04.839Z</published>
-    <updated>2023-07-06T06:53:14.671Z</updated>
+    <updated>2023-09-15T06:42:21.225Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;超级电容功率控制器&quot;&gt;&lt;a href=&quot;#超级电容功率控制器&quot; class=&quot;headerlink&quot; title=&quot;超级电容功率控制器&quot;&gt;&lt;/a&gt;超级电容功率控制器&lt;/h1&gt;&lt;h2 id=&quot;开关电容均压电路&quot;&gt;&lt;a href=&quot;#开关电容均压电路&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;超级电容功率控制器&quot;&gt;&lt;a href=&quot;#超级电容功率控制器&quot; class=&quot;headerlink&quot; title=&quot;超级电容功率控制器&quot;&gt;&lt;/a&gt;超级电容功率控制器&lt;/h1&gt;&lt;h2 id=&quot;双向BuckBoost原理&quot;&gt;&lt;a</summary>
         
       
     
@@ -305,7 +351,7 @@
     <link href="http://wwwangguan.github.io/2023/07/09/stm32/hal-bi-ji/"/>
     <id>http://wwwangguan.github.io/2023/07/09/stm32/hal-bi-ji/</id>
     <published>2023-07-09T02:54:04.821Z</published>
-    <updated>2023-07-15T06:09:25.530Z</updated>
+    <updated>2023-09-15T07:47:38.822Z</updated>
     
     
       

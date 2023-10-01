@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="SuperCap, WwWangGuan">
-    <meta name="description" content="超级电容功率控制器开关电容均压电路超级电容控制模块">
+    <meta name="description" content="超级电容功率控制器双向BuckBoost原理其本质上也是Buck-Boost的基本拓补结构只需将图内续流二极管换成Mos管即可
+Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关，也就是变成了经典Buck电路拓补结构">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -390,14 +391,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-06
+                    2023-09-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    25
+                    492
                 </div>
                 
 
@@ -424,7 +425,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="超级电容功率控制器"><a href="#超级电容功率控制器" class="headerlink" title="超级电容功率控制器"></a>超级电容功率控制器</h1><h2 id="开关电容均压电路"><a href="#开关电容均压电路" class="headerlink" title="开关电容均压电路"></a>开关电容均压电路</h2><h2 id="超级电容控制模块"><a href="#超级电容控制模块" class="headerlink" title="超级电容控制模块"></a>超级电容控制模块</h2>
+                <h1 id="超级电容功率控制器"><a href="#超级电容功率控制器" class="headerlink" title="超级电容功率控制器"></a>超级电容功率控制器</h1><h2 id="双向BuckBoost原理"><a href="#双向BuckBoost原理" class="headerlink" title="双向BuckBoost原理"></a>双向BuckBoost原理</h2><p><img src="https://pic1.zhimg.com/80/v2-103cc0c450fc12c4723054bd0efafd4b_1440w.png" alt=""><br>其本质上也是Buck-Boost的基本拓补结构<br><img src="https://pic1.zhimg.com/80/v2-6687a142cd61eb44dc30ab01ffdd9e4c_1440w.png" alt=""><br>只需将图内续流二极管换成Mos管即可</p>
+<h3 id="Buck模式"><a href="#Buck模式" class="headerlink" title="Buck模式"></a>Buck模式</h3><p>工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关，也就是变成了经典Buck电路拓补结构<br><img src="https://pica.zhimg.com/80/v2-ca50fe2d1baa11937e1aa7c5e236e5e2_1440w.png" alt=""></p>
+<h3 id="Boost模式"><a href="#Boost模式" class="headerlink" title="Boost模式"></a>Boost模式</h3><p><img src="https://picx.zhimg.com/80/v2-9b2c241093b59dcb1c6987d3ef1a4aee_1440w.png" alt=""><br>由经典Boost电路不难得出，如果想工作在Boost状态，Q1工作在满占空比状态，Q2常开，Q3、Q4交替开关</p>
+<h3 id="BuckBoost"><a href="#BuckBoost" class="headerlink" title="BuckBoost"></a>BuckBoost</h3><p><del>四开关不就是干这个的吗</del></p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>使用超级电容与裁判系统供电并联的方案，当底盘功率小于限定功率时，电池的剩余功率走buck回路给电容组充电，当所需底盘功率高于限定功率时， 超级电容走Boost回路和裁判系统一起给底盘供电。<br>为了防止电流回灌到裁判系统中，在裁判系统电源输入端串接以理想二极管回路。</p>
+<h3 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h3><ol>
+<li>如何实现上管MOS工作在满占空比状态，自举升压可能不太行。</li>
+<li>开关频率与电源效率的平衡。</li>
+<li><del>环路带宽？</del></li>
+<li>HRTIM和ADC采样+DMA重点学习。</li>
+<li>元器件选型与电源效率的关系。</li>
+<li>电机电流如果回灌回来能否进行有效利用？</li>
+<li></li>
+</ol>
+<h2 id="超级电容均压板"><a href="#超级电容均压板" class="headerlink" title="超级电容均压板"></a>超级电容均压板</h2><p>计划使用主动均衡电路<br><img src="https://pic1.zhimg.com/80/v2-d973d70449df0612034c47e848c1cba2_1440w.png" alt=""><br>如图所示，SC为超级电容，其和一个小电容并联，充电电源和两列电容之间用4个MOS管隔开，充电时，左侧MOS等效为开关闭合，右侧MOS截止，先给小电容充电，随后左侧MOS截止，右侧MOS闭合，小电容给超级电容充电，如此循环往复达到超级电容的主动均压，只需给一个高频PWM即可。</p>
+<h3 id="均压速率影响因素"><a href="#均压速率影响因素" class="headerlink" title="均压速率影响因素"></a>均压速率影响因素</h3><p>有人做过相关Matlab仿真,结果如图所示<br><img src="https://picx.zhimg.com/80/v2-10102bcb9e8165ef687dc9d29c76b7e7_1440w.png" alt=""></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>ST的双向BuckBoost</p>
+
                 
             </div>
             <hr/>
@@ -846,7 +864,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.8k</span>
+                        class="white-color">14.4k</span>
             
             
             
