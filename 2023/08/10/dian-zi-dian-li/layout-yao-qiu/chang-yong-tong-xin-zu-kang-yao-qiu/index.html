@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="常用通信阻抗要求, WwWangGuan">
-    <meta name="description" content="USB接口是Universal Serial Bus的缩写，即通用串行总线，是一个外部总线标准，用于规范电脑与外部设备的连接和通讯。是应用在PC领域的接口技术。PCB-layout规则：a. 总长度尽量控制在1800mil；b. 差分线特性">
+    <meta name="description" content="USB接口是Universal Serial Bus的缩写，即通用串行总线，是一个外部总线标准，用于规范电脑与外部设备的连接和通讯。是应用在PC领域的接口技术。PCB-layout规则：a. 总长度尽量控制在1800mil；b. USB特性">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -381,7 +381,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-02
+                    2023-09-21
                 </div>
                 
 
@@ -415,7 +415,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="USB接口"><a href="#USB接口" class="headerlink" title="USB接口"></a>USB接口</h2><p>是Universal Serial Bus的缩写，即通用串行总线，是一个外部总线标准，用于规范电脑与外部设备的连接和通讯。是应用在PC领域的接口技术。<br>PCB-layout规则：<br>a. 总长度尽量控制在1800mil；<br>b. 差分线特性阻抗为90Ω；<br>c. 电源管脚走线宽度≥30mil;<br>d. O_USB_OC[0:3]/ 阻抗为60 Ω ± 15%。<br>e. ESD器件尽量靠近接口放置。<br>f. 信号长度，要求主板信号长度与底板信号长度之和不超过18inch”。</p>
+                <h2 id="USB接口"><a href="#USB接口" class="headerlink" title="USB接口"></a>USB接口</h2><p>是Universal Serial Bus的缩写，即通用串行总线，是一个外部总线标准，用于规范电脑与外部设备的连接和通讯。是应用在PC领域的接口技术。<br>PCB-layout规则：<br>a. 总长度尽量控制在1800mil；<br>b. USB特性阻抗为90Ω,USB3.0的SSTX/SSRX极性可交换，长度误差5mil，USB2.0不可交换<br>c. 电源管脚走线宽度≥30mil;<br>d. O_USB_OC[0:3]/ 阻抗为60 Ω ± 15%。<br>e. ESD器件尽量靠近接口放置。<br>f. 信号长度，要求主板信号长度与底板信号长度之和不超过18inch”。</p>
 <h2 id="VGA接口"><a href="#VGA接口" class="headerlink" title="VGA接口"></a>VGA接口</h2><p>是Video Graphics Array的缩写，即视频图形阵列，具有分辨率高、显示速率快、颜色丰富等优点。VGA接口不但是CRT显示设备的标准接口，同样也是LCD液晶显示设备的标准接口，具有广泛的应用范围。目前台式机的视频接口多是VGA接口。<br>PCB-layout规则：<br>a. 布局：一字形或L形；<br>b. R、G 、B、Hsync和Vsync需要加粗 15mil，做包地处理，隔离层走线。阻抗为75Ω。<br>c. TVS管在布局时，要尽量靠近连接器侧。<br>d. 其余信号阻抗为50Ω。<br>e. VGA_RED、VGA_GRN、VGA_BLU、VGA_HSYNC、VGA_VSYNC为模拟信号，这些模拟信号的地为VGAGND，在地层上要分割出这种地。数字信号和模拟信号要各自布在自己的‘地’的上。布线时把这模拟信号布在TOP层最好，每条信号线用两条各自相应的地线平行夹裹跟随。在这模拟地的上下各信号层不允许布数字信号线。当然上述模拟信号线也不要在数字地上各信号层走线。</p>
 <h2 id="SATA接口"><a href="#SATA接口" class="headerlink" title="SATA接口"></a>SATA接口</h2><p>是Serial ATA的缩写，即串行ATA。它是一种电脑总线，主要功能是用作主板和大量存储设备（如硬盘及光盘驱动器）之间的数据传输。这是一种完全不同于并行PATA的新型硬盘接口类型，由于采用串行方式传输数据而得名。串行接口还具有结构简单、支持热插拔的优点。<br>PCB-layout规则：<br>a. 走线时尽量不打过孔； 最大过孔数为2个，换参考层处150mil内增加连接不同参考层过孔，每个信号对要求一个过孔。<br>b. 注意差分线控制特性阻抗：90Ω；<br>c. 走线时注意邻近地平面走线，不许跨切割，除测点外尽量不要有via,且不可有stub，同时注意立体包地处理。<br>d. Differential pair信号上的耦合电容需放置到SATA conector端且对称放置。<br>e. ESD防护器件紧挨接口放置，后端放置差分线匹配电容。<br>f. 信号长度，要求主板信号长度与底板信号长度之和不超过4inch。</p>
 <h2 id="AUDIO接口"><a href="#AUDIO接口" class="headerlink" title="AUDIO接口"></a>AUDIO接口</h2><p>音频接口,可将计算机、录像机等的音频信号输入进来，通过自带扬声器播放。还可以通过音频输出接口，连接功放、外接喇叭。<br>PCB-layout规则：<br>1.信号线阻抗：65Ω；<br>2.左、右声道（HPL HPR）走线长度≥12mil；<br>3.模拟信号要进行包地处理；<br>4.AGND需铺到插座，同时电源拉最小30mil宽；<br>5.TVS管要尽量靠近端口放置，磁珠要放在TVS管后端。</p>
@@ -850,7 +850,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">14.4k</span>
+                        class="white-color">14.7k</span>
             
             
             

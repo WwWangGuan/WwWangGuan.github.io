@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-09-07T08:29:34.402Z</updated>
+  <updated>2023-09-21T12:54:51.975Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2023/09/21/dian-zi-dian-li/pcb/usb-hub/"/>
+    <id>http://wwwangguan.github.io/2023/09/21/dian-zi-dian-li/pcb/usb-hub/</id>
+    <published>2023-09-21T11:39:10.314Z</published>
+    <updated>2023-09-21T12:54:51.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;每一个USB3.1接口有六个数据线，阻抗均为90&lt;/p&gt;
+&lt;h1 id=&quot;芯片&quot;&gt;&lt;a href=&quot;#芯片&quot; class=&quot;headerlink&quot; title=&quot;芯片&quot;&gt;&lt;/a&gt;芯片&lt;/h1&gt;&lt;p&gt;选用GL3510&lt;br&gt;引脚注意如下&lt;br&gt;Pin32</summary>
+        
+      
+    
+    
+    
+    
+    <category term="PCB" scheme="http://wwwangguan.github.io/tags/PCB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2023/09/20/stm32/an-jian-fifo/"/>
+    <id>http://wwwangguan.github.io/2023/09/20/stm32/an-jian-fifo/</id>
+    <published>2023-09-20T08:51:11.636Z</published>
+    <updated>2023-09-21T11:25:46.211Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;FIFO是 First Input First</summary>
+        
+      
+    
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
+    
+    <category term="HAL" scheme="http://wwwangguan.github.io/tags/HAL/"/>
+    
+  </entry>
   
   <entry>
     <title>[object Object]</title>
@@ -79,7 +128,7 @@
     <link href="http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/"/>
     <id>http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/</id>
     <published>2023-08-10T08:09:29.792Z</published>
-    <updated>2023-09-02T08:43:26.883Z</updated>
+    <updated>2023-09-21T11:29:23.847Z</updated>
     
     
       
@@ -157,7 +206,7 @@
     <link href="http://wwwangguan.github.io/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/"/>
     <id>http://wwwangguan.github.io/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/</id>
     <published>2023-07-13T08:59:26.680Z</published>
-    <updated>2023-09-05T08:01:06.498Z</updated>
+    <updated>2023-10-08T14:27:01.139Z</updated>
     
     
       
@@ -216,14 +265,14 @@
     <link href="http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/"/>
     <id>http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/</id>
     <published>2023-07-09T15:34:38.406Z</published>
-    <updated>2023-07-09T15:44:26.272Z</updated>
+    <updated>2023-09-20T08:49:21.097Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;3W规则&quot;&gt;&lt;a href=&quot;#3W规则&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;为什么信号线要串联电阻&quot;&gt;&lt;a href=&quot;#为什么信号线要串联电阻&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -393,31 +442,6 @@
     
     <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>高等数学</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/gao-deng-shu-xue/gao-deng-shu-xue/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/gao-deng-shu-xue/gao-deng-shu-xue/</id>
-    <published>2023-07-09T02:53:56.981Z</published>
-    <updated>2023-08-11T00:31:50.619Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第八章-向量代数与空间解析几何&quot;&gt;&lt;a href=&quot;#第八章-向量代数与空间解析几何&quot; class=&quot;headerlink&quot; title=&quot;第八章  向量代数与空间解析几何&quot;&gt;&lt;/a&gt;第八章  向量代数与空间解析几何&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="高等数学" scheme="http://wwwangguan.github.io/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
-    
-    
-    <category term="数学" scheme="http://wwwangguan.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
