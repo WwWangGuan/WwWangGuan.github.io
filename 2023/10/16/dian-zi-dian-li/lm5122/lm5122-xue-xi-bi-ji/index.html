@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="IIC, WwWangGuan">
-    <meta name="description" content="简介IIC（Inter-Integrated Circuit ,内部集成电路)总线是一种由飞利浦Philip公司开发的串行总线。是两条串行的总线，它由一根数据线（SDA）和一根 时钟线（SDL）组成。I2C总线上可以接多个I2C设备，每个器">
+    <meta name="keywords" content="[object Object], WwWangGuan">
+    <meta name="description" content="
+引脚解析BSTBST是用来驱动高侧MOS的栅极驱动器电源，连接至外部自举二极管与一个电容，芯片内部有一电荷泵为电容充电用以驱动MOS。
+CSN/CSP本质上是一个运算放大器的同相输入端与反相输入端，其与一个采样电阻相连接用以对输入电流进行">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>IIC | WwWangGuan</title>
+    <title>[object Object] | WwWangGuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -333,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">IIC</h1>
+                    <h1 class="description center-align post-title">[object Object]</h1>
                 </div>
             </div>
         </div>
@@ -374,21 +376,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-11
+                    2023-10-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-11
+                    2023-10-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    173
+                    353
                 </div>
                 
 
@@ -415,8 +417,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>IIC（Inter-Integrated Circuit ,内部集成电路)总线是一种由飞利浦Philip公司开发的串行总线。是两条串行的总线，它由一根数据线（SDA）和一根 时钟线（SDL）组成。I2C总线上可以接多个I2C设备，每个器件都有一个唯一的地址识别。同一时间只能有一个主设备，其他为从设备。通常MCU作为主设备控制，外设作为从设备。<br>IIC通信模式为半双工通信，同一时间只能单向通信。 </p>
-<h1 id="电路组成"><a href="#电路组成" class="headerlink" title="电路组成"></a>电路组成</h1><p>I2C总线为漏极开路结构(OD)，因此它们必须接有上拉电阻,阻值常为4.7K或者10K。</p>
+                <p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=NDdhNzMxNmFlOGZiZTViMmY3YTMxMDFhM2U0MDU4MWRfSGZlOHdocHhLMHNtYmYxS1pvMlkwOXNaMEkxV1ZJTGVfVG9rZW46Vzc4ZWJyWUFab2Z0S254eTBEaGNpUVljbnJkXzE2OTc0NTU0MTI6MTY5NzQ1OTAxMl9WNA" alt=""></p>
+<h1 id="引脚解析"><a href="#引脚解析" class="headerlink" title="引脚解析"></a>引脚解析</h1><h2 id="BST"><a href="#BST" class="headerlink" title="BST"></a>BST</h2><p>BST是用来驱动高侧MOS的栅极驱动器电源，连接至外部自举二极管与一个电容，芯片内部有一电荷泵为电容充电用以驱动MOS。</p>
+<h2 id="CSN-CSP"><a href="#CSN-CSP" class="headerlink" title="CSN/CSP"></a>CSN/CSP</h2><p>本质上是一个运算放大器的同相输入端与反相输入端，其与一个采样电阻相连接用以对输入电流进行采样。</p>
+<h2 id="RES"><a href="#RES" class="headerlink" title="RES"></a>RES</h2><p>打嗝工作模式的选择<br><a target="_blank" rel="noopener" href="https://www.eet-china.com/mp/a146201.html">峰值电流模式的过流保护：Hiccup打嗝工作模式</a></p>
+<h2 id="SLOPE"><a href="#SLOPE" class="headerlink" title="SLOPE"></a>SLOPE</h2><p>斜坡补偿调整<br><a target="_blank" rel="noopener" href="https://bbs.21dianyuan.com/thread-47567-1-1.html">https://bbs.21dianyuan.com/thread-47567-1-1.html</a></p>
+<h2 id="SYNCIN-RT"><a href="#SYNCIN-RT" class="headerlink" title="SYNCIN/RT"></a>SYNCIN/RT</h2><p>外部连接一下拉电阻用以调整内部晶振的频率，其频率会影响内部开关频率。</p>
+<h2 id="UVLO"><a href="#UVLO" class="headerlink" title="UVLO"></a>UVLO</h2><p>欠压保护编程引脚</p>
+<p>如果 UVLO 引脚电压低于 0.4V，则调节器处于关闭模式，所有功能被禁用。如果 UVLO 引脚电压高于 0.4V 且低于 1.2V，则调节器处于待机模式，VCC 稳压器工作，HO 和LO 输出端无开关。如果 UVLO 引脚电压高于 1.2V，则启动顺序开始。当 UVLO 超过 1.2V 时，UVLO 引脚上的 A10- μA 电流源启动，并流过外部 UVLO 电阻，以提供迟滞。UVLO 引脚不应悬空。 —-DataSheet</p>
+<h2 id="Mode"><a href="#Mode" class="headerlink" title="Mode"></a>Mode</h2><p>控制器的工作模式选择，主要是强制PWM模式和二极管仿真模式的切换</p>
+<p><a target="_blank" rel="noopener" href="https://e2echina.ti.com/blogs_/b/power_house/posts/buck">https://e2echina.ti.com/blogs_/b/power_house/posts/buck</a></p>
 
                 
             </div>
@@ -443,7 +453,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://WwWangGuan.github.io/2023/07/11/stm32/iic/">http://WwWangGuan.github.io/2023/07/11/stm32/iic/</a>
+                    <a href="http://WwWangGuan.github.io/2023/10/16/dian-zi-dian-li/lm5122/lm5122-xue-xi-bi-ji/">http://WwWangGuan.github.io/2023/10/16/dian-zi-dian-li/lm5122/lm5122-xue-xi-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -524,48 +534,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2023/07/12/kong-zhi-li-lun/kong-zhi-zhi-mei/du-shu-bi-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="[object Object]">
-                        
-                        <span class="card-title">[object Object]</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-12
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Harry Zhang
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/">
+                <a href="/2023/10/16/dian-zi-dian-li/lm5122/lm5122-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
@@ -582,7 +556,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-16
                             </span>
                         <span class="publish-author">
                             
@@ -591,6 +565,52 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/09/21/dian-zi-dian-li/pcb/usb-hub/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="[object Object]">
+                        
+                        <span class="card-title">[object Object]</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/PCB/">
+                        <span class="chip bg-color">PCB</span>
+                    </a>
+                    
                 </div>
                 
             </div>
