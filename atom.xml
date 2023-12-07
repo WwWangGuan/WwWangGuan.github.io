@@ -42,7 +42,7 @@
     <link href="http://wwwangguan.github.io/2023/09/21/dian-zi-dian-li/pcb/usb-hub/"/>
     <id>http://wwwangguan.github.io/2023/09/21/dian-zi-dian-li/pcb/usb-hub/</id>
     <published>2023-09-21T11:39:10.314Z</published>
-    <updated>2023-09-21T12:54:51.975Z</updated>
+    <updated>2023-12-07T14:23:15.342Z</updated>
     
     
       
@@ -66,7 +66,7 @@
     <link href="http://wwwangguan.github.io/2023/09/20/stm32/an-jian-fifo/"/>
     <id>http://wwwangguan.github.io/2023/09/20/stm32/an-jian-fifo/</id>
     <published>2023-09-20T08:51:11.636Z</published>
-    <updated>2023-09-21T11:25:46.211Z</updated>
+    <updated>2023-12-07T14:23:42.321Z</updated>
     
     
       
@@ -111,11 +111,11 @@
   </entry>
   
   <entry>
-    <title>[object Object]</title>
+    <title>Armfly课程笔记</title>
     <link href="http://wwwangguan.github.io/2023/08/14/stm32/armfly-ke-cheng-bi-ji/"/>
     <id>http://wwwangguan.github.io/2023/08/14/stm32/armfly-ke-cheng-bi-ji/</id>
     <published>2023-08-14T09:23:25.204Z</published>
-    <updated>2023-08-14T09:27:27.397Z</updated>
+    <updated>2023-12-07T14:23:51.598Z</updated>
     
     
       
@@ -125,19 +125,6 @@
     <summary type="html">&lt;h1 id=&quot;启动文件解析&quot;&gt;&lt;a href=&quot;#启动文件解析&quot; class=&quot;headerlink&quot;</summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2023/08/10/2023-08-10/"/>
-    <id>http://wwwangguan.github.io/2023/08/10/2023-08-10/</id>
-    <published>2023-08-10T08:09:48.712Z</published>
-    <updated>2023-08-10T08:09:48.712Z</updated>
-    
     
     
     
@@ -440,6 +427,29 @@
     
     
     <category term="STM32 HAL" scheme="http://wwwangguan.github.io/tags/STM32-HAL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HAL与LL库区别</title>
+    <link href="http://wwwangguan.github.io/2023/07/09/stm32/hal-yu-ll-ku-qu-bie/"/>
+    <id>http://wwwangguan.github.io/2023/07/09/stm32/hal-yu-ll-ku-qu-bie/</id>
+    <published>2023-07-09T02:54:04.820Z</published>
+    <updated>2023-07-06T13:12:53.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;内联函数&quot;&gt;&lt;a href=&quot;#内联函数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
+    
     
   </entry>
   
