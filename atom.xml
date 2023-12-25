@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2023-10-16T11:26:07.627Z</updated>
+  <updated>2023-12-09T12:22:13.422Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,98 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2023/12/09/dian-zi-dian-li/mo-ni-dian-lu/ying-jian-zu-kao-he/"/>
+    <id>http://wwwangguan.github.io/2023/12/09/dian-zi-dian-li/mo-ni-dian-lu/ying-jian-zu-kao-he/</id>
+    <published>2023-12-09T12:08:49.812Z</published>
+    <updated>2023-12-09T12:22:13.422Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自行阅读学习有关Buck电路的相关知识，并阅读MP2315S的DataSheet，对其典型应用电路进行分析，并回答下列问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$R3$的作用是什么？它是怎么影响电源的？&lt;/li&gt;
+&lt;li&gt;如何控制开启和关闭芯片？&lt;/li&gt;
+&lt;li&gt;什么是前馈电容？</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>超级电容</title>
+    <link href="http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/chao-ji-dian-rong/"/>
+    <id>http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/chao-ji-dian-rong/</id>
+    <published>2023-12-09T09:16:57.909Z</published>
+    <updated>2023-12-14T14:28:37.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;方案&quot;&gt;&lt;a href=&quot;#方案&quot; class=&quot;headerlink&quot; title=&quot;方案&quot;&gt;&lt;/a&gt;方案&lt;/h1&gt;&lt;p&gt;四开关管双向Buck-Boost+主动均衡。&lt;/p&gt;
+&lt;p&gt;电容组预计单个60F，2.7V，串联九个&lt;/p&gt;
+&lt;p&gt;由&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>栅极驱动器</title>
+    <link href="http://wwwangguan.github.io/2023/12/08/dian-zi-dian-li/dc-dc/zha-ji-qu-dong-qi/"/>
+    <id>http://wwwangguan.github.io/2023/12/08/dian-zi-dian-li/dc-dc/zha-ji-qu-dong-qi/</id>
+    <published>2023-12-08T10:02:02.074Z</published>
+    <updated>2023-12-08T15:01:07.475Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;栅极电阻作用&quot;&gt;&lt;a href=&quot;#栅极电阻作用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DC-DC" scheme="http://wwwangguan.github.io/tags/DC-DC/"/>
+    
+    <category term="栅极驱动器" scheme="http://wwwangguan.github.io/tags/%E6%A0%85%E6%9E%81%E9%A9%B1%E5%8A%A8%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Thu Dec 07 2023 00:00:00 GMT+0800 (中国标准时间)</title>
+    <link href="http://wwwangguan.github.io/2023/12/07/ri-ji/2023-12-07/"/>
+    <id>http://wwwangguan.github.io/2023/12/07/ri-ji/2023-12-07/</id>
+    <published>2023-12-07T14:30:24.716Z</published>
+    <updated>2023-12-07T14:34:42.079Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>[object Object]</title>
     <link href="http://wwwangguan.github.io/2023/10/16/dian-zi-dian-li/lm5122/lm5122-xue-xi-bi-ji/"/>
     <id>http://wwwangguan.github.io/2023/10/16/dian-zi-dian-li/lm5122/lm5122-xue-xi-bi-ji/</id>
     <published>2023-10-16T11:23:59.120Z</published>
-    <updated>2023-10-16T11:26:07.627Z</updated>
+    <updated>2023-12-14T15:53:11.416Z</updated>
     
     
       
@@ -294,7 +381,7 @@
     <link href="http://wwwangguan.github.io/2023/07/09/chao-ji-dian-rong/supercap/"/>
     <id>http://wwwangguan.github.io/2023/07/09/chao-ji-dian-rong/supercap/</id>
     <published>2023-07-09T02:54:04.839Z</published>
-    <updated>2023-09-15T06:42:21.225Z</updated>
+    <updated>2023-12-09T09:16:57.120Z</updated>
     
     
       
@@ -353,103 +440,6 @@
     
     
     <category term="DC-DC" scheme="http://wwwangguan.github.io/tags/DC-DC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/c/c/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/c/c/</id>
-    <published>2023-07-09T02:54:04.829Z</published>
-    <updated>2023-08-09T12:48:10.109Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;混合编译&quot;&gt;&lt;a href=&quot;#混合编译&quot; class=&quot;headerlink&quot; title=&quot;混合编译&quot;&gt;&lt;/a&gt;混合编译&lt;/h1&gt;&lt;pre class=&quot; language-lang-C&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="嵌入式C" scheme="http://wwwangguan.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8FC/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>定时器</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/stm32/ding-shi-qi/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/stm32/ding-shi-qi/</id>
-    <published>2023-07-09T02:54:04.824Z</published>
-    <updated>2023-07-13T00:59:41.323Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;对于STM32F4x，其有2 个高级控制定时器、10 个通用定时器和 2 个基本定时器。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://picx.zhimg.com/80/v2-4211c12913d9b34f3ba486b6409f30f1_1440w.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HAL笔记</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/stm32/hal-bi-ji/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/stm32/hal-bi-ji/</id>
-    <published>2023-07-09T02:54:04.821Z</published>
-    <updated>2023-12-01T06:15:04.402Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;以下所有笔记均基于安富莱V6板&lt;/p&gt;
-&lt;h1 id=&quot;配置文件&quot;&gt;&lt;a href=&quot;#配置文件&quot; class=&quot;headerlink&quot; title=&quot;配置文件&quot;&gt;&lt;/a&gt;配置文件&lt;/h1&gt;&lt;p&gt;为防止递归包含使用如下宏定义进行头文件保护&lt;/p&gt;
-&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
-    
-    
-    <category term="STM32 HAL" scheme="http://wwwangguan.github.io/tags/STM32-HAL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HAL与LL库区别</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/stm32/hal-yu-ll-ku-qu-bie/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/stm32/hal-yu-ll-ku-qu-bie/</id>
-    <published>2023-07-09T02:54:04.820Z</published>
-    <updated>2023-07-06T13:12:53.408Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;内联函数&quot;&gt;&lt;a href=&quot;#内联函数&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="STM32" scheme="http://wwwangguan.github.io/categories/STM32/"/>
-    
     
   </entry>
   
