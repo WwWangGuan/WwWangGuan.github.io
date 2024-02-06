@@ -4,11 +4,43 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2024/01/31/han-jia-bei-sai-zong-jie/"/>
+      <url>/2024/01/31/han-jia-bei-sai-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h2 id="整体超出预期结果"><a href="#整体超出预期结果" class="headerlink" title="整体超出预期结果"></a>整体超出预期结果</h2><h1 id="很难绷的地方"><a href="#很难绷的地方" class="headerlink" title="很难绷的地方"></a>很难绷的地方</h1><ol><li>机械卡进度（英雄）</li><li>平衡步兵</li><li>线</li><li><p>碳板浪费</p></li><li><p>场地</p></li><li>电控物资</li><li></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CMake</title>
+      <link href="/2024/01/30/cmake/cmake/"/>
+      <url>/2024/01/30/cmake/cmake/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-Cmake" data-language="Cmake"><code class="language-Cmake">set(CMAKE_SYSTEM_NAME Generic)  # 指定构建系统为通用系统set(CMAKE_SYSTEM_VERSION 1)  cmake_minimum_required(VERSION 3.26)  # 指定最低CMake版本要求# specify cross-compilers and tools  set(CMAKE_C_COMPILER arm-none-eabi-gcc)  set(CMAKE_CXX_COMPILER arm-none-eabi-g++)  set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)  set(CMAKE_AR arm-none-eabi-ar)  set(CMAKE_OBJCOPY arm-none-eabi-objcopy)  set(CMAKE_OBJDUMP arm-none-eabi-objdump)  set(SIZE arm-none-eabi-size)  set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)    # project settings  project(Competitoin_version C CXX ASM)  set(CMAKE_CXX_STANDARD 17)  set(CMAKE_C_STANDARD 11)    #Uncomment for hardware floating point  add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)  add_compile_options(-mfloat-abi&#x3D;hard -mfpu&#x3D;fpv4-sp-d16)  add_link_options(-mfloat-abi&#x3D;hard -mfpu&#x3D;fpv4-sp-d16)    #Uncomment for software floating point  #add_compile_options(-mfloat-abi&#x3D;soft)    #add_compile_options(-mcpu&#x3D;cortex-m4 -mthumb -mthumb-interwork)  #add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length&#x3D;0)    # uncomment to mitigate c++17 absolute addresses warnings  #set(CMAKE_CXX_FLAGS &quot;$&#123;CMAKE_CXX_FLAGS&#125; -Wno-register&quot;)    # Enable assembler files preprocessing  add_compile_options($&lt;$&lt;COMPILE_LANGUAGE:ASM&gt;:-x$&lt;SEMICOLON&gt;assembler-with-cpp&gt;)    if (&quot;$&#123;CMAKE_BUILD_TYPE&#125;&quot; STREQUAL &quot;Release&quot;)      message(STATUS &quot;Maximum optimization for speed&quot;)      add_compile_options(-Ofast)  elseif (&quot;$&#123;CMAKE_BUILD_TYPE&#125;&quot; STREQUAL &quot;RelWithDebInfo&quot;)      message(STATUS &quot;Maximum optimization for speed, debug info included&quot;)      add_compile_options(-Ofast -g)  elseif (&quot;$&#123;CMAKE_BUILD_TYPE&#125;&quot; STREQUAL &quot;MinSizeRel&quot;)      message(STATUS &quot;Maximum optimization for size&quot;)      add_compile_options(-Os)  else ()      message(STATUS &quot;Minimal optimization, debug info included&quot;)      add_compile_options(-Og -g)  endif ()    include_directories(Core&#x2F;Inc          Drivers&#x2F;STM32F4xx_HAL_Driver&#x2F;Inc        Drivers&#x2F;STM32F4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy        Drivers&#x2F;CMSIS&#x2F;Device&#x2F;ST&#x2F;STM32F4xx&#x2F;Include        Drivers&#x2F;CMSIS&#x2F;Include        bsp)    add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE)    file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Drivers&#x2F;*.*&quot; &quot;bsp&#x2F;*.*&quot;)    set(LINKER_SCRIPT $&#123;CMAKE_SOURCE_DIR&#125;&#x2F;STM32F411CEUX_FLASH.ld)    add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map&#x3D;$&#123;PROJECT_BINARY_DIR&#125;&#x2F;$&#123;PROJECT_NAME&#125;.map)  add_link_options(-mcpu&#x3D;cortex-m4 -mthumb -mthumb-interwork)  add_link_options(-T $&#123;LINKER_SCRIPT&#125;)    add_executable($&#123;PROJECT_NAME&#125;.elf $&#123;SOURCES&#125; $&#123;LINKER_SCRIPT&#125;)    set(HEX_FILE $&#123;PROJECT_BINARY_DIR&#125;&#x2F;$&#123;PROJECT_NAME&#125;.hex)  set(BIN_FILE $&#123;PROJECT_BINARY_DIR&#125;&#x2F;$&#123;PROJECT_NAME&#125;.bin)    add_custom_command(TARGET $&#123;PROJECT_NAME&#125;.elf POST_BUILD          COMMAND $&#123;CMAKE_OBJCOPY&#125; -Oihex $&lt;TARGET_FILE:$&#123;PROJECT_NAME&#125;.elf&gt; $&#123;HEX_FILE&#125;          COMMAND $&#123;CMAKE_OBJCOPY&#125; -Obinary $&lt;TARGET_FILE:$&#123;PROJECT_NAME&#125;.elf&gt; $&#123;BIN_FILE&#125;          COMMENT &quot;Building $&#123;HEX_FILE&#125;  Building $&#123;BIN_FILE&#125;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="语法杂记"><a href="#语法杂记" class="headerlink" title="语法杂记"></a>语法杂记</h1><h2 id="set"><a href="#set" class="headerlink" title="set()"></a>set()</h2><p>在CMake中，<code>set()</code> 函数用于定义变量及其值。这是CMake脚本中非常基本和重要的一个功能，用于配置项目构建过程中需要的各种参数。这个函数的基本语法是：</p><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">set(VARIABLE_NAME value1 value2 ...)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这里，<code>VARIABLE_NAME</code> 是你想要设置的变量的名称，而后面跟着的是一个或多个值，这些值将被赋给这个变量。变量的值可以是字符串、文件路径、布尔值等。</p><p>例如:</p><ul><li><p>设置一个简单的字符串变量：</p><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">set(MY_VARIABLE &quot;Hello World&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后可以使用<code>$&#123;MY_VARIABLE&#125;</code>来引用这个值。</p></li><li><p>设置文件或目录路径：</p><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">set(SOURCE_FILES main.cpp utils.cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这里<code>SOURCE_FILES</code> 变量包含了两个源文件的名称。</p></li><li><p>设置一个列表：</p><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">set(FILES file1.txt file2.txt file3.txt)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这样，<code>FILES</code> 变量现在包含了三个文件名的列表。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Cmake C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>信号与系统</title>
       <link href="/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/"/>
       <url>/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="信号与系统"><a href="#信号与系统" class="headerlink" title="信号与系统"></a>信号与系统</h1><h2 id="1-1-连续时间和离散时间信号"><a href="#1-1-连续时间和离散时间信号" class="headerlink" title="1.1 连续时间和离散时间信号"></a>1.1 连续时间和离散时间信号</h2><p>我们只考虑两种类型的信号，如上所示，前者在自变量的连续值上有定义，而后者只在离散时间点上有定义，为了区分这两类信号，我们用$t$表示连续时间变量，用$n$表示离散时间变量，譬如，$x(t)$是一个连续时间信号，而$x[n]$代表离散时间信号（或者离散时间序列）</p><h3 id="1-1-2-信号能量与功率"><a href="#1-1-2-信号能量与功率" class="headerlink" title="1.1.2 信号能量与功率"></a>1.1.2 信号能量与功率</h3><h2 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h2><p> 1. </p>]]></content>
       
       
       

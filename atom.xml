@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-01-24T22:24:51.040Z</updated>
+  <updated>2024-01-31T12:33:01.671Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,12 +17,65 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/01/31/han-jia-bei-sai-zong-jie/"/>
+    <id>http://wwwangguan.github.io/2024/01/31/han-jia-bei-sai-zong-jie/</id>
+    <published>2024-01-31T11:26:05.804Z</published>
+    <updated>2024-01-31T12:33:01.671Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;整体超出预期结果&quot;&gt;&lt;a href=&quot;#整体超出预期结果&quot; class=&quot;headerlink&quot; title=&quot;整体超出预期结果&quot;&gt;&lt;/a&gt;整体超出预期结果&lt;/h2&gt;&lt;h1 id=&quot;很难绷的地方&quot;&gt;&lt;a href=&quot;#很难绷的地方&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CMake</title>
+    <link href="http://wwwangguan.github.io/2024/01/30/cmake/cmake/"/>
+    <id>http://wwwangguan.github.io/2024/01/30/cmake/cmake/</id>
+    <published>2024-01-30T03:41:06.056Z</published>
+    <updated>2024-01-30T03:49:50.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-Cmake&quot; data-language=&quot;Cmake&quot;&gt;&lt;code class=&quot;language-Cmake&quot;&gt;set(CMAKE_SYSTEM_NAME Generic)  
+#</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Cmake C" scheme="http://wwwangguan.github.io/tags/Cmake-C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>信号与系统</title>
     <link href="http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/"/>
     <id>http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/</id>
     <published>2024-01-24T22:23:49.361Z</published>
-    <updated>2024-01-24T22:24:51.040Z</updated>
+    <updated>2024-01-25T17:26:00.916Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;信号与系统&quot;&gt;&lt;a href=&quot;#信号与系统&quot; class=&quot;headerlink&quot; title=&quot;信号与系统&quot;&gt;&lt;/a&gt;信号与系统&lt;/h1&gt;&lt;h2 id=&quot;1-1-连续时间和离散时间信号&quot;&gt;&lt;a href=&quot;#1-1-连续时间和离散时间信号&quot;</summary>
+        
+      
     
     
     
@@ -396,50 +449,6 @@
     
     <category term="超级电容" scheme="http://wwwangguan.github.io/categories/%E8%B6%85%E7%BA%A7%E7%94%B5%E5%AE%B9/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>线性代数</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/xian-xing-dai-shu/xian-xing-dai-shu/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/xian-xing-dai-shu/xian-xing-dai-shu/</id>
-    <published>2023-07-09T02:54:04.836Z</published>
-    <updated>2023-07-06T06:11:44.262Z</updated>
-    
-    
-    
-    
-    <category term="线性代数" scheme="http://wwwangguan.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="线性代数" scheme="http://wwwangguan.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>电路分析</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/lm3150mhx/dian-lu-fen-xi/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/lm3150mhx/dian-lu-fen-xi/</id>
-    <published>2023-07-09T02:54:04.834Z</published>
-    <updated>2023-07-06T06:21:00.415Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;原理图&quot;&gt;&lt;a href=&quot;#原理图&quot; class=&quot;headerlink&quot; title=&quot;原理图&quot;&gt;&lt;/a&gt;原理图&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="电子电力" scheme="http://wwwangguan.github.io/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/"/>
-    
-    <category term="LM3150MHX" scheme="http://wwwangguan.github.io/categories/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B/LM3150MHX/"/>
-    
-    
-    <category term="DC-DC" scheme="http://wwwangguan.github.io/tags/DC-DC/"/>
     
   </entry>
   
