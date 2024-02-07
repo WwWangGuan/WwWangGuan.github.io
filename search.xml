@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2024/01/31/han-jia-bei-sai-zong-jie/"/>
-      <url>/2024/01/31/han-jia-bei-sai-zong-jie/</url>
+      <title>[object Object]</title>
+      <link href="/2024/01/31/zhuan-li/"/>
+      <url>/2024/01/31/zhuan-li/</url>
       
-        <content type="html"><![CDATA[<h2 id="整体超出预期结果"><a href="#整体超出预期结果" class="headerlink" title="整体超出预期结果"></a>整体超出预期结果</h2><h1 id="很难绷的地方"><a href="#很难绷的地方" class="headerlink" title="很难绷的地方"></a>很难绷的地方</h1><ol><li>机械卡进度（英雄）</li><li>平衡步兵</li><li>线</li><li><p>碳板浪费</p></li><li><p>场地</p></li><li>电控物资</li><li></li></ol>]]></content>
+        <content type="html"><![CDATA[<ol><li>发明和实用新型专利申请应提交的文件基本相同，即：请求书、说明书、说明书附图、权利要求书、说明书摘要及摘要附图。但某些发明专利申请可以不提交说明书附图和摘要附图。</li></ol>]]></content>
       
       
       
@@ -49,9 +49,9 @@
     
     
     <entry>
-      <title></title>
-      <link href="/2023/12/09/dian-zi-dian-li/mo-ni-dian-lu/ying-jian-zu-kao-he/"/>
-      <url>/2023/12/09/dian-zi-dian-li/mo-ni-dian-lu/ying-jian-zu-kao-he/</url>
+      <title>硬件组考核</title>
+      <link href="/2023/12/09/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-kao-he/"/>
+      <url>/2023/12/09/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-kao-he/</url>
       
         <content type="html"><![CDATA[<p>自行阅读学习有关Buck电路的相关知识，并阅读MP2315S的DataSheet，对其典型应用电路进行分析，并回答下列问题：</p><ol><li>$R3$的作用是什么？它是怎么影响电源的？</li><li>如何控制开启和关闭芯片？</li><li>什么是前馈电容？</li><li>电感应该如何选型？</li><li>如果有一24V电源输入，我该如何更改电路使其能够输出12V电压？</li><li>如何计算所需电感感值？假设电源输入24V，输出5V3A（选做）</li><li>如果输出电容总计50uF左右，应该选取5个10uF电容还是使用100nF+10uF+22uF+22uF？为什么？</li><li>该电路的Layout要求。</li><li>试给出一使用该芯片的降压电路，电源输入24V，输出5V3A，给出原理图和PCB文件<br>（以上所有问题均可自由在互联网上查找答案，但需指明在何处看到了什么文章，看到了哪句话使你觉得是这个问题的答案。）<br>于周一中午12：00前给出收集问卷，请将答案以pdf文件上传。</li></ol>]]></content>
       
@@ -162,9 +162,9 @@
     
     
     <entry>
-      <title>[object Object]</title>
-      <link href="/2023/09/07/dian-zi-dian-li/dc-dc/tang-lao-shi-wang-ke-bi-ji/"/>
-      <url>/2023/09/07/dian-zi-dian-li/dc-dc/tang-lao-shi-wang-ke-bi-ji/</url>
+      <title>杂记</title>
+      <link href="/2023/09/07/dian-zi-dian-li/dc-dc/za-ji/"/>
+      <url>/2023/09/07/dian-zi-dian-li/dc-dc/za-ji/</url>
       
         <content type="html"><![CDATA[<h1 id="线性电源"><a href="#线性电源" class="headerlink" title="线性电源"></a>线性电源</h1><p>压降（Dropout Voltage）</p><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ol><li>$V_I$</li><li>$V_O$</li><li>压差</li><li>噪声</li><li>静态电流<br>DCDC和LDO之间需要插入一个磁珠和电容以形成低通滤波器滤除DCDC输出端的高频信号，使得LDO的输入端更纯净<br>设计注意事项<br>输入电容和输出电容要放在紧靠VIN，VOUT和GND的地方<br>IC的电源端口都必须经过电容<br>反馈信号要经过输出电容以后再引出到负载<br>输出侧和输入测的地要在IC处合在一起成为公共点<br>尽量加大焊盘面积<br>反馈组件应该放在靠近IC的地方<br>传统LDO不能并联而电流源型LDO可以</li></ol>]]></content>
       
@@ -220,19 +220,6 @@
             <tag> STM32 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[object Object]</title>
-      <link href="/2023/07/17/dian-zi-dian-li/dian-lu-yuan-li/dian-lu-yuan-li/"/>
-      <url>/2023/07/17/dian-zi-dian-li/dian-lu-yuan-li/dian-lu-yuan-li/</url>
-      
-        <content type="html"><![CDATA[<h1 id="电压和电路定律"><a href="#电压和电路定律" class="headerlink" title="电压和电路定律"></a>电压和电路定律</h1><p>两个及两个以上元件具有的公共连接点成为<strong>节点</strong></p>]]></content>
-      
-      
       
     </entry>
     
