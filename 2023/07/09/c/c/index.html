@@ -6,10 +6,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="C, WwWangGuan">
     <meta name="description" content="混合编译#ifdef __cplusplus  
-extern &#34;C&#34; &amp;#123;  
+extern &amp;quot;C&amp;quot; &amp;#123;  
 #endif
-
-这段代码是用于在C++代码中使用C语言的函数接口时进行编译器兼容性处理的。实际上，#ifdef __cplusplus 表示如果当前编">
+这段代码是用于在C++代码中使用C语言的函数接口时进行编译器兼容性处理的。实际上，#ifdef __cplusplu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -54,8 +53,8 @@ extern &#34;C&#34; &amp;#123;
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -431,10 +430,9 @@ extern &#34;C&#34; &amp;#123;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="混合编译"><a href="#混合编译" class="headerlink" title="混合编译"></a>混合编译</h1><pre class=" language-lang-C"><code class="language-lang-C">#ifdef __cplusplus  
-extern "C" &#123;  
-#endif
-</code></pre>
+                <h1 id="混合编译"><a href="#混合编译" class="headerlink" title="混合编译"></a>混合编译</h1><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef __cplusplus  
+extern &quot;C&quot; &#123;  
+#endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>这段代码是用于在C++代码中使用C语言的函数接口时进行编译器兼容性处理的。<br>实际上，#ifdef __cplusplus 表示如果当前编译器是C++编译器，则执行下面的语句块。extern “C” { 表示将下面的代码块用C语言的方式进行编译和链接。</p>
 <p>这样就可以在C++代码中使用C语言的函数接口而不会出现编译错误。</p>
 <h1 id="堆栈作用"><a href="#堆栈作用" class="headerlink" title="堆栈作用"></a>堆栈作用</h1><p>堆和栈是两种不同的内存分配方式，它们在单片机中具有不同的作用和特点：</p>
@@ -459,15 +457,12 @@ extern "C" &#123;
 <li>在函数外部使用static关键字声明的变量称为静态全局变量。静态全局变量的作用域仅限于声明它的源文件，其他文件无法访问。</li>
 <li>静态函数：使用static关键字声明的函数称为静态函数。静态函数只能在声明它的源文件中使用，不能被其他文件调用。<h2 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h2>C语言中的extern关键字用于声明一个全局变量或函数，该变量或函数在其他文件中定义。它的作用是告诉编译器该变量或函数是在其他文件中定义的，需要在当前文件中使用。</li>
 </ol>
-<p>extern关键字可以放在变量或函数的声明前面，表示该变量或函数在其他文件中已经定义。例如：</p>
-<pre class=" language-lang-C"><code class="language-lang-C">
-extern int count; // 声明一个全局变量count，在其他文件中定义
+<p>extern关键字可以放在变量或函数的声明前面，表示该变量或函数在其他文件中已经定义。例如：<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">
+extern int count; &#x2F;&#x2F; 声明一个全局变量count，在其他文件中定义
 
-extern void printMessage(); // 声明一个函数printMessage()，在其他文件中定义
-</code></pre>
+extern void printMessage(); &#x2F;&#x2F; 声明一个函数printMessage()，在其他文件中定义<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
 <p>通过使用extern关键字，可以将全局变量或函数的定义分散在多个文件中，提高代码的模块化和可维护性。<br>需要注意的是，extern关键字只是告诉编译器该变量或函数在其他文件中定义，具体的定义仍需在其他文件中进行。如果没有在其他文件中定义，编译器将会报错。</p>
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><pre class=" language-lang-C"><code class="language-lang-C">#define HSE_VALUE ((uint32_t)8000000) \\外部高速时钟频率
-</code></pre>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><pre class="line-numbers language-C" data-language="C"><code class="language-C">#define HSE_VALUE ((uint32_t)8000000) \\外部高速时钟频率<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ol>
 <li>这段代码定义了一个宏常量HSE_VALUE，其值为8000000。在单片机中，HSE_VALUE通常用于定义外部高速时钟（HSE）的频率。通过定义HSE_VALUE，可以方便地在程序中使用该值进行时钟配置和计算等操作。<br>在这个例子中，HSE_VALUE的值被定义为8000000，即外部高速时钟的频率为8MHz。在实际应用中，可以根据实际的硬件配置和需要进行适当的修改。</li>
 </ol>
@@ -485,17 +480,15 @@ extern void printMessage(); // 声明一个函数printMessage()，在其他文�
 <p>断言的基本用法是在代码中插入一个条件判断，如果条件为假（即false），则会触发断言失败，并输出相关的错误信息。断言的目的是在程序运行时快速定位错误，并提供有关错误信息的提示，以便于调试和修复问题。</p>
 <p>在C语言中，可以使用 <code>&lt;assert.h&gt;</code> 头文件中的 <code>assert()</code> 宏来实现断言功能。<code>assert()</code> 宏接受一个条件表达式作为参数，如果条件为假，则会触发断言失败，打印出错信息，并终止程序的执行。</p>
 <p>以下是一个简单的示例：</p>
-<pre class=" language-lang-c"><code class="language-lang-c">#include <assert.h>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">#include &lt;assert.h&gt;
 
 int main() &#123;
-    int x = 5;
-    assert(x == 10);  // 断言条件 x == 10
+    int x &#x3D; 5;
+    assert(x &#x3D;&#x3D; 10);  &#x2F;&#x2F; 断言条件 x &#x3D;&#x3D; 10
     return 0;
-&#125;
-</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在上述示例中，断言条件 <code>x == 10</code> 显然是不满足的，因此运行程序时会触发断言失败，输出类似以下的错误信息：</p>
-<pre class=" language-lang-Cmake"><code class="language-lang-Cmake">Assertion failed: x == 10, file example.c, line 6
-</code></pre>
+<pre class="line-numbers language-Cmake" data-language="Cmake"><code class="language-Cmake">Assertion failed: x &#x3D;&#x3D; 10, file example.c, line 6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>通过断言，我们可以在程序中插入一些条件检查，帮助我们在开发过程中发现和解决问题。但需要注意的是，断言通常用于调试阶段，而在生产环境中，可以通过定义 <code>NDEBUG</code> 宏来禁用断言，以提高程序的性能和效率。</p>
 <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>0x00000002U 是一个十六进制的无符号整数常量，表示十进制的2。</p>
 <p>解析这个数据时，按照以下步骤进行：</p>
@@ -938,7 +931,7 @@ int main() &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.3k</span>
+                        class="white-color">19.1k</span>
             
             
             

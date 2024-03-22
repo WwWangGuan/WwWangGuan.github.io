@@ -54,8 +54,8 @@ cmake_minimum_required(VERSION 3.26)
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -389,7 +389,7 @@ cmake_minimum_required(VERSION 3.26)
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-30
+                    2024-02-21
                 </div>
                 
 
@@ -477,7 +477,11 @@ else ()
 endif ()  
   
 include_directories(Core&#x2F;Inc  
-        Drivers&#x2F;STM32F4xx_HAL_Driver&#x2F;Inc        Drivers&#x2F;STM32F4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy        Drivers&#x2F;CMSIS&#x2F;Device&#x2F;ST&#x2F;STM32F4xx&#x2F;Include        Drivers&#x2F;CMSIS&#x2F;Include        bsp)  
+    Drivers&#x2F;STM32F4xx_HAL_Driver&#x2F;Inc      
+    Drivers&#x2F;STM32F4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy       
+    Drivers&#x2F;CMSIS&#x2F;Device&#x2F;ST&#x2F;STM32F4xx&#x2F;Include     
+    Drivers&#x2F;CMSIS&#x2F;Include      
+    bsp)  
   
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE)  
   
@@ -485,7 +489,7 @@ file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Drivers&#x2F;*.*&quot;
   
 set(LINKER_SCRIPT $&#123;CMAKE_SOURCE_DIR&#125;&#x2F;STM32F411CEUX_FLASH.ld)  
   
-add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map&#x3D;$&#123;PROJECT_BINARY_DIR&#125;&#x2F;$&#123;PROJECT_NAME&#125;.map)  
+add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map&#x3D;$&#123;PROJECT_BINAY_DIR&#125;&#x2F;$&#123;PROJECT_NAME&#125;.map)  
 add_link_options(-mcpu&#x3D;cortex-m4 -mthumb -mthumb-interwork)  
 add_link_options(-T $&#123;LINKER_SCRIPT&#125;)  
   
@@ -498,7 +502,7 @@ add_custom_command(TARGET $&#123;PROJECT_NAME&#125;.elf POST_BUILD
         COMMAND $&#123;CMAKE_OBJCOPY&#125; -Oihex $&lt;TARGET_FILE:$&#123;PROJECT_NAME&#125;.elf&gt; $&#123;HEX_FILE&#125;  
         COMMAND $&#123;CMAKE_OBJCOPY&#125; -Obinary $&lt;TARGET_FILE:$&#123;PROJECT_NAME&#125;.elf&gt; $&#123;BIN_FILE&#125;  
         COMMENT &quot;Building $&#123;HEX_FILE&#125;  
-Building $&#123;BIN_FILE&#125;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Building $&#123;BIN_FILE&#125;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="语法杂记"><a href="#语法杂记" class="headerlink" title="语法杂记"></a>语法杂记</h1><h2 id="set"><a href="#set" class="headerlink" title="set()"></a>set()</h2><p>在CMake中，<code>set()</code> 函数用于定义变量及其值。这是CMake脚本中非常基本和重要的一个功能，用于配置项目构建过程中需要的各种参数。这个函数的基本语法是：</p>
 <pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">set(VARIABLE_NAME value1 value2 ...)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这里，<code>VARIABLE_NAME</code> 是你想要设置的变量的名称，而后面跟着的是一个或多个值，这些值将被赋给这个变量。变量的值可以是字符串、文件路径、布尔值等。</p>
@@ -934,7 +938,7 @@ Building $&#123;BIN_FILE&#125;&quot;)<span aria-hidden="true" class="line-number
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.3k</span>
+                        class="white-color">19.1k</span>
             
             
             

@@ -6,13 +6,10 @@
     <meta charset="utf-8">
     <meta name="keywords" content="HAL笔记, WwWangGuan">
     <meta name="description" content="以下所有笔记均基于安富莱V6板
-配置文件为防止递归包含使用如下宏定义进行头文件保护
-#ifndef __STM32F4xx_HAL_CONF_H 
+配置文件为防止递归包含使用如下宏定义进行头文件保护#ifndef __STM32F4xx_HAL_CONF_H 
 #define __STM32F4xx_HAL_CONF_H
 
-// 在这里定义你的配置
-
-">
+&amp;#x2F;&amp;#x2F; 在这">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -57,8 +54,8 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -408,14 +405,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    18 分
                 </div>
                 
 
@@ -439,14 +436,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>以下所有笔记均基于安富莱V6板</p>
-<h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><p>为防止递归包含使用如下宏定义进行头文件保护</p>
-<pre class=" language-lang-C"><code class="language-lang-C">#ifndef __STM32F4xx_HAL_CONF_H 
+<h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><p>为防止递归包含使用如下宏定义进行头文件保护<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifndef __STM32F4xx_HAL_CONF_H 
 #define __STM32F4xx_HAL_CONF_H
 
-// 在这里定义你的配置
+&#x2F;&#x2F; 在这里定义你的配置
 
-#endif /* __STM32F4xx_HAL_CONF_H */
-</code></pre>
+#endif &#x2F;* __STM32F4xx_HAL_CONF_H *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <blockquote>
 <p>递归包含是指在头文件中包含其他头文件时，可能会出现循环依赖的情况。例如，头文件A包含头文件B，而头文件B又包含头文件A，这样就形成了递归包含。<br>递归包含可能会导致以下问题：</p>
 <ol>
@@ -454,208 +449,186 @@
 <li>重复定义：如果递归包含导致某个符号在多个头文件中被定义多次，就会导致重复定义的错误。这会导致链接错误，使得程序无法正常编译和运行。</li>
 </ol>
 </blockquote>
-<p>在配置文件中对于HAL库模块的启用使用了宏定义，如：</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/* ########################## Module Selection ############################## */  
-/**  
+<p>在配置文件中对于HAL库模块的启用使用了宏定义，如：<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################## Module Selection ############################## *&#x2F;  
+&#x2F;**  
 * @brief This is the list of modules to be used in the HAL driver  
-*/  
+*&#x2F;  
 #define HAL_MODULE_ENABLED  
-
-/* #define HAL_CRYP_MODULE_ENABLED */  
+  
+&#x2F;* #define HAL_CRYP_MODULE_ENABLED *&#x2F;  
 #define HAL_ADC_MODULE_ENABLED  
 #define HAL_CAN_MODULE_ENABLED  
-/* #define HAL_CRC_MODULE_ENABLED */  
-/* #define HAL_CAN_LEGACY_MODULE_ENABLED */
-</code></pre>
-<p>注释掉的即为未启用的模块，在配置文件的后面，如果你启用了该模块，那么会包含相对应的头文件</p>
-<pre class=" language-lang-C"><code class="language-lang-C">#ifdef HAL_RCC_MODULE_ENABLED  
-#include "stm32f4xx_hal_rcc.h"  
-#endif /* HAL_RCC_MODULE_ENABLED */  
-
+&#x2F;* #define HAL_CRC_MODULE_ENABLED *&#x2F;  
+&#x2F;* #define HAL_CAN_LEGACY_MODULE_ENABLED *&#x2F;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>注释掉的即为未启用的模块，在配置文件的后面，如果你启用了该模块，那么会包含相对应的头文件<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef HAL_RCC_MODULE_ENABLED  
+#include &quot;stm32f4xx_hal_rcc.h&quot;  
+#endif &#x2F;* HAL_RCC_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_GPIO_MODULE_ENABLED  
-#include "stm32f4xx_hal_gpio.h"  
-#endif /* HAL_GPIO_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_gpio.h&quot;  
+#endif &#x2F;* HAL_GPIO_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_EXTI_MODULE_ENABLED  
-#include "stm32f4xx_hal_exti.h"  
-#endif /* HAL_EXTI_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_exti.h&quot;  
+#endif &#x2F;* HAL_EXTI_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_DMA_MODULE_ENABLED  
-#include "stm32f4xx_hal_dma.h"  
-#endif /* HAL_DMA_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_dma.h&quot;  
+#endif &#x2F;* HAL_DMA_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_CORTEX_MODULE_ENABLED  
-#include "stm32f4xx_hal_cortex.h"  
-#endif /* HAL_CORTEX_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_cortex.h&quot;  
+#endif &#x2F;* HAL_CORTEX_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_ADC_MODULE_ENABLED  
-#include "stm32f4xx_hal_adc.h"  
-#endif /* HAL_ADC_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_adc.h&quot;  
+#endif &#x2F;* HAL_ADC_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_CAN_MODULE_ENABLED  
-#include "stm32f4xx_hal_can.h"  
-#endif /* HAL_CAN_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_can.h&quot;  
+#endif &#x2F;* HAL_CAN_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_CAN_LEGACY_MODULE_ENABLED  
-#include "stm32f4xx_hal_can_legacy.h"  
-#endif /* HAL_CAN_LEGACY_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_can_legacy.h&quot;  
+#endif &#x2F;* HAL_CAN_LEGACY_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_CRC_MODULE_ENABLED  
-#include "stm32f4xx_hal_crc.h"  
-#endif /* HAL_CRC_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_crc.h&quot;  
+#endif &#x2F;* HAL_CRC_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_CRYP_MODULE_ENABLED  
-#include "stm32f4xx_hal_cryp.h"  
-#endif /* HAL_CRYP_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_cryp.h&quot;  
+#endif &#x2F;* HAL_CRYP_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_DMA2D_MODULE_ENABLED  
-#include "stm32f4xx_hal_dma2d.h"  
-#endif /* HAL_DMA2D_MODULE_ENABLED */  
-
+#include &quot;stm32f4xx_hal_dma2d.h&quot;  
+#endif &#x2F;* HAL_DMA2D_MODULE_ENABLED *&#x2F;  
+  
 #ifdef HAL_DAC_MODULE_ENABLED  
-#include "stm32f4xx_hal_dac.h"  
-#endif /* HAL_DAC_MODULE_ENABLED */  
-......
-</code></pre>
-<p>在配置文件中包含了对晶振频率的设定，需和外界保持一致。</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/* ########################## HSE/HSI Values adaptation ##################### */  
-/**  
+#include &quot;stm32f4xx_hal_dac.h&quot;  
+#endif &#x2F;* HAL_DAC_MODULE_ENABLED *&#x2F;  
+......<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>在配置文件中包含了对晶振频率的设定，需和外界保持一致。<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################## HSE&#x2F;HSI Values adaptation ##################### *&#x2F;  
+&#x2F;**  
 * @brief Adjust the value of External High Speed oscillator (HSE) used in your application.  
 * This value is used by the RCC HAL module to compute the system frequency  
 * (when HSE is used as system clock source, directly or through the PLL).  
-*/  
+*&#x2F;  
 #if !defined (HSE_VALUE)  
-#define HSE_VALUE 25000000U /*!< Value of the External oscillator in Hz */  
-#endif /* HSE_VALUE */  
-
+#define HSE_VALUE 25000000U &#x2F;*!&lt; Value of the External oscillator in Hz *&#x2F;  
+#endif &#x2F;* HSE_VALUE *&#x2F;  
+  
 #if !defined (HSE_STARTUP_TIMEOUT)  
-#define HSE_STARTUP_TIMEOUT 100U /*!< Time out for HSE start up, in ms */  
-#endif /* HSE_STARTUP_TIMEOUT */  
-
-/**  
+#define HSE_STARTUP_TIMEOUT 100U &#x2F;*!&lt; Time out for HSE start up, in ms *&#x2F;  
+#endif &#x2F;* HSE_STARTUP_TIMEOUT *&#x2F;  
+  
+&#x2F;**  
 * @brief Internal High Speed oscillator (HSI) value.  
 * This value is used by the RCC HAL module to compute the system frequency  
 * (when HSI is used as system clock source, directly or through the PLL).  
-*/  
+*&#x2F;  
 #if !defined (HSI_VALUE)  
-#define HSI_VALUE ((uint32_t)16000000U) /*!< Value of the Internal oscillator in Hz*/  
-#endif /* HSI_VALUE */  
-
-/**  
+#define HSI_VALUE ((uint32_t)16000000U) &#x2F;*!&lt; Value of the Internal oscillator in Hz*&#x2F;  
+#endif &#x2F;* HSI_VALUE *&#x2F;  
+  
+&#x2F;**  
 * @brief Internal Low Speed oscillator (LSI) value.  
-*/  
+*&#x2F;  
 #if !defined (LSI_VALUE)  
-#define LSI_VALUE 32000U /*!< LSI Typical Value in Hz*/  
-#endif /* LSI_VALUE */ /*!< Value of the Internal Low Speed oscillator in Hz  
+#define LSI_VALUE 32000U &#x2F;*!&lt; LSI Typical Value in Hz*&#x2F;  
+#endif &#x2F;* LSI_VALUE *&#x2F; &#x2F;*!&lt; Value of the Internal Low Speed oscillator in Hz  
 The real value may vary depending on the variations  
-in voltage and temperature.*/  
-/**  
+in voltage and temperature.*&#x2F;  
+&#x2F;**  
 * @brief External Low Speed oscillator (LSE) value.  
-*/  
+*&#x2F;  
 #if !defined (LSE_VALUE)  
-#define LSE_VALUE 32768U /*!< Value of the External Low Speed oscillator in Hz */  
-#endif /* LSE_VALUE */  
-
+#define LSE_VALUE 32768U &#x2F;*!&lt; Value of the External Low Speed oscillator in Hz *&#x2F;  
+#endif &#x2F;* LSE_VALUE *&#x2F;  
+  
 #if !defined (LSE_STARTUP_TIMEOUT)  
-#define LSE_STARTUP_TIMEOUT 5000U /*!< Time out for LSE start up, in ms */  
-#endif /* LSE_STARTUP_TIMEOUT */  
-
-/**  
+#define LSE_STARTUP_TIMEOUT 5000U &#x2F;*!&lt; Time out for LSE start up, in ms *&#x2F;  
+#endif &#x2F;* LSE_STARTUP_TIMEOUT *&#x2F;  
+  
+&#x2F;**  
 * @brief External clock source for I2S peripheral  
 * This value is used by the I2S HAL module to compute the I2S clock source  
 * frequency, this source is inserted directly through I2S_CKIN pad.  
-*/  
+*&#x2F;  
 #if !defined (EXTERNAL_CLOCK_VALUE)  
-#define EXTERNAL_CLOCK_VALUE 12288000U /*!< Value of the External audio frequency in Hz*/  
-#endif /* EXTERNAL_CLOCK_VALUE */  
-
-/* Tip: To avoid modifying this file each time you need to use different HSE,  
-=== you can define the HSE value in your toolchain compiler preprocessor. */
-</code></pre>
-<p>需要注意的是，对于启动时的超时时间（XX_STARTUP_TIMEOUT）建议改为5000（5s），防止启动失败时出问题。</p>
-<p>以下是HAL系统配置选项</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/* ########################### System Configuration ######################### */  
-/**  
+#define EXTERNAL_CLOCK_VALUE 12288000U &#x2F;*!&lt; Value of the External audio frequency in Hz*&#x2F;  
+#endif &#x2F;* EXTERNAL_CLOCK_VALUE *&#x2F;  
+  
+&#x2F;* Tip: To avoid modifying this file each time you need to use different HSE,  
+&#x3D;&#x3D;&#x3D; you can define the HSE value in your toolchain compiler preprocessor. *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>需要注意的是，对于启动时的超时时间（XX_STARTUP_TIMEOUT）建议改为5000（5s），防止启动失败时出问题。</p>
+<p>以下是HAL系统配置选项<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################### System Configuration ######################### *&#x2F;  
+&#x2F;**  
 * @brief This is the HAL system configuration section  
-*/  
-#define VDD_VALUE 3300U /*!< Value of VDD in mv */  
-#define TICK_INT_PRIORITY 15U /*!< tick interrupt priority */  
+*&#x2F;  
+#define VDD_VALUE 3300U &#x2F;*!&lt; Value of VDD in mv *&#x2F;  
+#define TICK_INT_PRIORITY 15U &#x2F;*!&lt; tick interrupt priority *&#x2F;  
 #define USE_RTOS 0U  
 #define PREFETCH_ENABLE 1U  
 #define INSTRUCTION_CACHE_ENABLE 1U  
-#define DATA_CACHE_ENABLE 1U
-</code></pre>
-<p>比较重要的是TICK_INT_PRIORITY，这个是设置滴答中断优先级的，15是最低优先级。<br>目前HAL库还不支持RTOS宏定义配置</p>
-<p>在配置文件的最后，是关于断言功能的</p>
-<pre class=" language-lang-C"><code class="language-lang-C">#ifdef USE_FULL_ASSERT  
-/**  
-* @brief The assert_param macro is used for function's parameters check.  
+#define DATA_CACHE_ENABLE 1U<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>比较重要的是TICK_INT_PRIORITY，这个是设置滴答中断优先级的，15是最低优先级。<br>目前HAL库还不支持RTOS宏定义配置</p>
+<p>在配置文件的最后，是关于断言功能的<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef USE_FULL_ASSERT  
+&#x2F;**  
+* @brief The assert_param macro is used for function&#39;s parameters check.  
 * @param expr If expr is false, it calls assert_failed function  
 * which reports the name of the source file and the source  
 * line number of the call that failed.  
 * If expr is true, it returns no value.  
 * @retval None  
-*/  
+*&#x2F;  
 #define assert_param(expr) ((expr) ? (void)0U : assert_failed((uint8_t *)__FILE__, __LINE__))  
-/* Exported functions ------------------------------------------------------- */  
+&#x2F;* Exported functions ------------------------------------------------------- *&#x2F;  
 void assert_failed(uint8_t* file, uint32_t line);  
 #else  
 #define assert_param(expr) ((void)0U)  
-#endif /* USE_FULL_ASSERT */
-</code></pre>
-<p>其主要作用是用来判断函数形参是否有效。默认情况下是关闭的。<br>用一个HAL库函数举例</p>
-<pre class=" language-lang-C"><code class="language-lang-C">===============================================================================  
+#endif &#x2F;* USE_FULL_ASSERT *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>其主要作用是用来判断函数形参是否有效。默认情况下是关闭的。<br>用一个HAL库函数举例<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  
 ##### IO operation functions #####  
-===============================================================================
+&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
 @endverbatim  
 * @&#123;  
-*/  
-
-/**  
+*&#x2F;  
+  
+&#x2F;**  
 * @brief Reads the specified input port pin.  
 * @param GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or  
 * x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427X devices.  
 * @param GPIO_Pin specifies the port bit to read.  
 * This parameter can be GPIO_PIN_x where x can be (0..15).  
 * @retval The input port pin value.  
-*/  
+*&#x2F;  
 GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)  
 &#123;  
 GPIO_PinState bitstatus;  
-
-/* Check the parameters */  
+  
+&#x2F;* Check the parameters *&#x2F;  
 assert_param(IS_GPIO_PIN(GPIO_Pin));  
-
-if((GPIOx->IDR & GPIO_Pin) != (uint32_t)GPIO_PIN_RESET)  
+  
+if((GPIOx-&gt;IDR &amp; GPIO_Pin) !&#x3D; (uint32_t)GPIO_PIN_RESET)  
 &#123;  
-bitstatus = GPIO_PIN_SET;  
+bitstatus &#x3D; GPIO_PIN_SET;  
 &#125;  
 else  
 &#123;  
-bitstatus = GPIO_PIN_RESET;  
+bitstatus &#x3D; GPIO_PIN_RESET;  
 &#125;  
 return bitstatus;  
-&#125;
-</code></pre>
-<p>对于HAL的各个API都用到了断言功能，但是即使使能了断言，仍然需要自己定义函数</p>
-<pre class=" language-lang-C"><code class="language-lang-C">void assert_failed(uint8_t* file, uint32_t line)
-</code></pre>
-<p>下面给出一个参考</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/*
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>对于HAL的各个API都用到了断言功能，但是即使使能了断言，仍然需要自己定义函数<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">void assert_failed(uint8_t* file, uint32_t line)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>下面给出一个参考<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
 ST 库函数使用了 C 编译器的断言功能，如果定义了 USE_FULL_ASSERT ，那么所有的 ST 库函数将检查函数形参是否正确。如果不正确将调用是否正确。如果不正确将调用 assert_failed() assert_failed() 函数函数，这个函数是一个死循环，便于用户检查代码。
 LINE__ 表示源代码行号。 关键字__FILE__表示源代码文件名。
 断言功能使能后将增大代码大小，推荐用户仅在调试时使能，在正式发布软件是禁止。断言功能使能后将增大代码大小，推荐用户仅在调试时使能，在正式发布软件是禁止。 用户可以选择是否使能用户可以选择是否使能STST固件库的断言供能。使能断言的方法有两种：固件库的断言供能。
-使能断言的方法有两种：(1) 在在CC编译器的预定义宏选项中定义编译器的预定义宏选项中定义USE_FULL_ASSERTUSE_FULL_ASSERT。。 (2) 在本文件取消在本文件取消"#define USE_FULL_ASSERT 1""#define USE_FULL_ASSERT 1"行的注释。 */
+使能断言的方法有两种：(1) 在在CC编译器的预定义宏选项中定义编译器的预定义宏选项中定义USE_FULL_ASSERTUSE_FULL_ASSERT。。 (2) 在本文件取消在本文件取消&quot;#define USE_FULL_ASSERT 1&quot;&quot;#define USE_FULL_ASSERT 1&quot;行的注释。 *&#x2F;
 void assert_failed(uint8_t* file, uint32_t line)&#123; 
-/* 用户可以添加自己的代码报告源代码文件名和代码行号，比如将错误文件和行号打印到串口
-printf("Wrong parameters value: file %s on line %d\\rr\\n", file, line) */
-/* 这是一个死循环，断言失败时程序会在此处死机，以便于用户查错这是一个死循环，断言失败时程序会在此处死机，以便于用户查错 */
+&#x2F;* 用户可以添加自己的代码报告源代码文件名和代码行号，比如将错误文件和行号打印到串口
+printf(&quot;Wrong parameters value: file %s on line %d\\rr\\n&quot;, file, line) *&#x2F;
+&#x2F;* 这是一个死循环，断言失败时程序会在此处死机，以便于用户查错这是一个死循环，断言失败时程序会在此处死机，以便于用户查错 *&#x2F;
 while (1) &#123;  
   &#125;
-&#125;
-</code></pre>
-<h1 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h1><h2 id="gpio-h-c"><a href="#gpio-h-c" class="headerlink" title="gpio.h/.c"></a>gpio.h/.c</h2><p>似乎这里只有一个函数“ void MX_GPIO_Init()”</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/** Configure pins as  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h1 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h1><h2 id="gpio-h-c"><a href="#gpio-h-c" class="headerlink" title="gpio.h/.c"></a>gpio.h/.c</h2><p>似乎这里只有一个函数“ void MX_GPIO_Init()”<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;** Configure pins as  
 * Analog  
 * Input  
 * Output  
@@ -663,13 +636,13 @@ while (1) &#123;
 * EXTI  
 * Free pins are configured automatically as Analog (this feature is enabled through  
 * the Code Generation settings)  
-*/  
+*&#x2F;  
 void MX_GPIO_Init(void)  
 &#123;  
-
-GPIO_InitTypeDef GPIO_InitStruct = &#123;0&#125;;  
-
-/* GPIO Ports Clock Enable */  
+  
+GPIO_InitTypeDef GPIO_InitStruct &#x3D; &#123;0&#125;;  
+  
+&#x2F;* GPIO Ports Clock Enable *&#x2F;  
 __HAL_RCC_GPIOE_CLK_ENABLE();  
 __HAL_RCC_GPIOI_CLK_ENABLE();  
 __HAL_RCC_GPIOC_CLK_ENABLE();  
@@ -681,190 +654,183 @@ __HAL_RCC_GPIOJ_CLK_ENABLE();
 __HAL_RCC_GPIOG_CLK_ENABLE();  
 __HAL_RCC_GPIOD_CLK_ENABLE();  
 __HAL_RCC_GPIOK_CLK_ENABLE();  
-
-/*Configure GPIO pins : PE2 PE3 PE4 PE5  
+  
+&#x2F;*Configure GPIO pins : PE2 PE3 PE4 PE5  
 PE6 PE7 PE8 PE9  
 PE10 PE11 PE12 PE13  
-PE14 PE15 PE0 PE1 */  
-GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5  
+PE14 PE15 PE0 PE1 *&#x2F;  
+GPIO_InitStruct.Pin &#x3D; GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5  
 |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9  
 |GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13  
 |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1;  
-GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;  
-GPIO_InitStruct.Pull = GPIO_NOPULL;  
-HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);  
-
-/*Configure GPIO pins : PI8 PI10 PI11 PI12  
+GPIO_InitStruct.Mode &#x3D; GPIO_MODE_ANALOG;  
+GPIO_InitStruct.Pull &#x3D; GPIO_NOPULL;  
+HAL_GPIO_Init(GPIOE, &amp;GPIO_InitStruct);  
+  
+&#x2F;*Configure GPIO pins : PI8 PI10 PI11 PI12  
 PI13 PI14 PI15 PI0  
 PI1 PI2 PI3 PI4  
-PI5 PI6 PI7 */  
-GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12  
+PI5 PI6 PI7 *&#x2F;  
+GPIO_InitStruct.Pin &#x3D; GPIO_PIN_8|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12  
 |GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0  
 |GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4  
 |GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;  
-GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;  
-GPIO_InitStruct.Pull = GPIO_NOPULL;  
-HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);  
-
-&#125;
-</code></pre>
-<p>这里只摘取了部分代码，后面的基本都是相同的</p>
+GPIO_InitStruct.Mode &#x3D; GPIO_MODE_ANALOG;  
+GPIO_InitStruct.Pull &#x3D; GPIO_NOPULL;  
+HAL_GPIO_Init(GPIOI, &amp;GPIO_InitStruct);  
+  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>这里只摘取了部分代码，后面的基本都是相同的</p>
 <blockquote>
 <p>GPIO_InitTypeDef结构体一般用于配置GPIO引脚的初始化参数。这个结构体包含了多个成员变量，用来设置引脚的模式、速度、上拉/下拉设置等。</p>
 </blockquote>
-<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>随后开启GPIO的时钟并开始配置引脚，这里的每一个GPIO_PIN之前都用宏定义定义了地址，使用或位操作符将多个引脚组合在一起。<br>这里统一设置为了模拟模式和浮空状态，随后进入HAL_GPIO_INIT函数进行初始化</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/**  
+<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>随后开启GPIO的时钟并开始配置引脚，这里的每一个GPIO_PIN之前都用宏定义定义了地址，使用或位操作符将多个引脚组合在一起。<br>这里统一设置为了模拟模式和浮空状态，随后进入HAL_GPIO_INIT函数进行初始化<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;**  
 * @brief Initializes the GPIOx peripheral according to the specified parameters in the GPIO_Init.  
 * @param GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or  
 * x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427X devices.  
 * @param GPIO_Init pointer to a GPIO_InitTypeDef structure that contains  
 * the configuration information for the specified GPIO peripheral.  
 * @retval None  
-*/  
+*&#x2F;  
 void HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init)  
 &#123;  
 uint32_t position;  
-uint32_t ioposition = 0x00U;  
-uint32_t iocurrent = 0x00U;  
-uint32_t temp = 0x00U;  
-
-/* Check the parameters */  
+uint32_t ioposition &#x3D; 0x00U;  
+uint32_t iocurrent &#x3D; 0x00U;  
+uint32_t temp &#x3D; 0x00U;  
+  
+&#x2F;* Check the parameters *&#x2F;  
 assert_param(IS_GPIO_ALL_INSTANCE(GPIOx));  
-assert_param(IS_GPIO_PIN(GPIO_Init->Pin));  
-assert_param(IS_GPIO_MODE(GPIO_Init->Mode));  
-
-/* Configure the port pins */  
-for(position = 0U; position < GPIO_NUMBER; position++)  
+assert_param(IS_GPIO_PIN(GPIO_Init-&gt;Pin));  
+assert_param(IS_GPIO_MODE(GPIO_Init-&gt;Mode));  
+  
+&#x2F;* Configure the port pins *&#x2F;  
+for(position &#x3D; 0U; position &lt; GPIO_NUMBER; position++)  
 &#123;  
-/* Get the IO position */  
-ioposition = 0x01U << position;  
-/* Get the current IO position */  
-iocurrent = (uint32_t)(GPIO_Init->Pin) & ioposition;  
-
-if(iocurrent == ioposition)  
+&#x2F;* Get the IO position *&#x2F;  
+ioposition &#x3D; 0x01U &lt;&lt; position;  
+&#x2F;* Get the current IO position *&#x2F;  
+iocurrent &#x3D; (uint32_t)(GPIO_Init-&gt;Pin) &amp; ioposition;  
+  
+if(iocurrent &#x3D;&#x3D; ioposition)  
 &#123;  
-/*--------------------- GPIO Mode Configuration ------------------------*/  
-/* In case of Output or Alternate function mode selection */  
-if(((GPIO_Init->Mode & GPIO_MODE) == MODE_OUTPUT) || \  
-(GPIO_Init->Mode & GPIO_MODE) == MODE_AF)  
+&#x2F;*--------------------- GPIO Mode Configuration ------------------------*&#x2F;  
+&#x2F;* In case of Output or Alternate function mode selection *&#x2F;  
+if(((GPIO_Init-&gt;Mode &amp; GPIO_MODE) &#x3D;&#x3D; MODE_OUTPUT) || \  
+(GPIO_Init-&gt;Mode &amp; GPIO_MODE) &#x3D;&#x3D; MODE_AF)  
 &#123;  
-/* Check the Speed parameter */  
-assert_param(IS_GPIO_SPEED(GPIO_Init->Speed));  
-/* Configure the IO Speed */  
-temp = GPIOx->OSPEEDR;  
-temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));  
-temp |= (GPIO_Init->Speed << (position * 2U));  
-GPIOx->OSPEEDR = temp;  
-
-/* Configure the IO Output Type */  
-temp = GPIOx->OTYPER;  
-temp &= ~(GPIO_OTYPER_OT_0 << position) ;  
-temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position);  
-GPIOx->OTYPER = temp;  
+&#x2F;* Check the Speed parameter *&#x2F;  
+assert_param(IS_GPIO_SPEED(GPIO_Init-&gt;Speed));  
+&#x2F;* Configure the IO Speed *&#x2F;  
+temp &#x3D; GPIOx-&gt;OSPEEDR;  
+temp &amp;&#x3D; ~(GPIO_OSPEEDER_OSPEEDR0 &lt;&lt; (position * 2U));  
+temp |&#x3D; (GPIO_Init-&gt;Speed &lt;&lt; (position * 2U));  
+GPIOx-&gt;OSPEEDR &#x3D; temp;  
+  
+&#x2F;* Configure the IO Output Type *&#x2F;  
+temp &#x3D; GPIOx-&gt;OTYPER;  
+temp &amp;&#x3D; ~(GPIO_OTYPER_OT_0 &lt;&lt; position) ;  
+temp |&#x3D; (((GPIO_Init-&gt;Mode &amp; OUTPUT_TYPE) &gt;&gt; OUTPUT_TYPE_Pos) &lt;&lt; position);  
+GPIOx-&gt;OTYPER &#x3D; temp;  
 &#125;  
-
-if((GPIO_Init->Mode & GPIO_MODE) != MODE_ANALOG)  
+  
+if((GPIO_Init-&gt;Mode &amp; GPIO_MODE) !&#x3D; MODE_ANALOG)  
 &#123;  
-/* Check the parameters */  
-assert_param(IS_GPIO_PULL(GPIO_Init->Pull));  
-
-/* Activate the Pull-up or Pull down resistor for the current IO */  
-temp = GPIOx->PUPDR;  
-temp &= ~(GPIO_PUPDR_PUPDR0 << (position * 2U));  
-temp |= ((GPIO_Init->Pull) << (position * 2U));  
-GPIOx->PUPDR = temp;  
+&#x2F;* Check the parameters *&#x2F;  
+assert_param(IS_GPIO_PULL(GPIO_Init-&gt;Pull));  
+  
+&#x2F;* Activate the Pull-up or Pull down resistor for the current IO *&#x2F;  
+temp &#x3D; GPIOx-&gt;PUPDR;  
+temp &amp;&#x3D; ~(GPIO_PUPDR_PUPDR0 &lt;&lt; (position * 2U));  
+temp |&#x3D; ((GPIO_Init-&gt;Pull) &lt;&lt; (position * 2U));  
+GPIOx-&gt;PUPDR &#x3D; temp;  
 &#125;  
-
-/* In case of Alternate function mode selection */  
-if((GPIO_Init->Mode & GPIO_MODE) == MODE_AF)  
+  
+&#x2F;* In case of Alternate function mode selection *&#x2F;  
+if((GPIO_Init-&gt;Mode &amp; GPIO_MODE) &#x3D;&#x3D; MODE_AF)  
 &#123;  
-/* Check the Alternate function parameter */  
-assert_param(IS_GPIO_AF(GPIO_Init->Alternate));  
-/* Configure Alternate function mapped with the current IO */  
-temp = GPIOx->AFR[position >> 3U];  
-temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;  
-temp |= ((uint32_t)(GPIO_Init->Alternate) << (((uint32_t)position & 0x07U) * 4U));  
-GPIOx->AFR[position >> 3U] = temp;  
+&#x2F;* Check the Alternate function parameter *&#x2F;  
+assert_param(IS_GPIO_AF(GPIO_Init-&gt;Alternate));  
+&#x2F;* Configure Alternate function mapped with the current IO *&#x2F;  
+temp &#x3D; GPIOx-&gt;AFR[position &gt;&gt; 3U];  
+temp &amp;&#x3D; ~(0xFU &lt;&lt; ((uint32_t)(position &amp; 0x07U) * 4U)) ;  
+temp |&#x3D; ((uint32_t)(GPIO_Init-&gt;Alternate) &lt;&lt; (((uint32_t)position &amp; 0x07U) * 4U));  
+GPIOx-&gt;AFR[position &gt;&gt; 3U] &#x3D; temp;  
 &#125;  
-
-/* Configure IO Direction mode (Input, Output, Alternate or Analog) */  
-temp = GPIOx->MODER;  
-temp &= ~(GPIO_MODER_MODER0 << (position * 2U));  
-temp |= ((GPIO_Init->Mode & GPIO_MODE) << (position * 2U));  
-GPIOx->MODER = temp;  
-
-/*--------------------- EXTI Mode Configuration ------------------------*/  
-/* Configure the External Interrupt or event for the current IO */  
-if((GPIO_Init->Mode & EXTI_MODE) != 0x00U)  
+  
+&#x2F;* Configure IO Direction mode (Input, Output, Alternate or Analog) *&#x2F;  
+temp &#x3D; GPIOx-&gt;MODER;  
+temp &amp;&#x3D; ~(GPIO_MODER_MODER0 &lt;&lt; (position * 2U));  
+temp |&#x3D; ((GPIO_Init-&gt;Mode &amp; GPIO_MODE) &lt;&lt; (position * 2U));  
+GPIOx-&gt;MODER &#x3D; temp;  
+  
+&#x2F;*--------------------- EXTI Mode Configuration ------------------------*&#x2F;  
+&#x2F;* Configure the External Interrupt or event for the current IO *&#x2F;  
+if((GPIO_Init-&gt;Mode &amp; EXTI_MODE) !&#x3D; 0x00U)  
 &#123;  
-/* Enable SYSCFG Clock */  
+&#x2F;* Enable SYSCFG Clock *&#x2F;  
 __HAL_RCC_SYSCFG_CLK_ENABLE();  
-
-temp = SYSCFG->EXTICR[position >> 2U];  
-temp &= ~(0x0FU << (4U * (position & 0x03U)));  
-temp |= ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U)));  
-SYSCFG->EXTICR[position >> 2U] = temp;  
-
-/* Clear Rising Falling edge configuration */  
-temp = EXTI->RTSR;  
-temp &= ~((uint32_t)iocurrent);  
-if((GPIO_Init->Mode & TRIGGER_RISING) != 0x00U)  
+  
+temp &#x3D; SYSCFG-&gt;EXTICR[position &gt;&gt; 2U];  
+temp &amp;&#x3D; ~(0x0FU &lt;&lt; (4U * (position &amp; 0x03U)));  
+temp |&#x3D; ((uint32_t)(GPIO_GET_INDEX(GPIOx)) &lt;&lt; (4U * (position &amp; 0x03U)));  
+SYSCFG-&gt;EXTICR[position &gt;&gt; 2U] &#x3D; temp;  
+  
+&#x2F;* Clear Rising Falling edge configuration *&#x2F;  
+temp &#x3D; EXTI-&gt;RTSR;  
+temp &amp;&#x3D; ~((uint32_t)iocurrent);  
+if((GPIO_Init-&gt;Mode &amp; TRIGGER_RISING) !&#x3D; 0x00U)  
 &#123;  
-temp |= iocurrent;  
+temp |&#x3D; iocurrent;  
 &#125;  
-EXTI->RTSR = temp;  
-
-temp = EXTI->FTSR;  
-temp &= ~((uint32_t)iocurrent);  
-if((GPIO_Init->Mode & TRIGGER_FALLING) != 0x00U)  
+EXTI-&gt;RTSR &#x3D; temp;  
+  
+temp &#x3D; EXTI-&gt;FTSR;  
+temp &amp;&#x3D; ~((uint32_t)iocurrent);  
+if((GPIO_Init-&gt;Mode &amp; TRIGGER_FALLING) !&#x3D; 0x00U)  
 &#123;  
-temp |= iocurrent;  
+temp |&#x3D; iocurrent;  
 &#125;  
-EXTI->FTSR = temp;  
-
-temp = EXTI->EMR;  
-temp &= ~((uint32_t)iocurrent);  
-if((GPIO_Init->Mode & EXTI_EVT) != 0x00U)  
+EXTI-&gt;FTSR &#x3D; temp;  
+  
+temp &#x3D; EXTI-&gt;EMR;  
+temp &amp;&#x3D; ~((uint32_t)iocurrent);  
+if((GPIO_Init-&gt;Mode &amp; EXTI_EVT) !&#x3D; 0x00U)  
 &#123;  
-temp |= iocurrent;  
+temp |&#x3D; iocurrent;  
 &#125;  
-EXTI->EMR = temp;  
-
-/* Clear EXTI line configuration */  
-temp = EXTI->IMR;  
-temp &= ~((uint32_t)iocurrent);  
-if((GPIO_Init->Mode & EXTI_IT) != 0x00U)  
+EXTI-&gt;EMR &#x3D; temp;  
+  
+&#x2F;* Clear EXTI line configuration *&#x2F;  
+temp &#x3D; EXTI-&gt;IMR;  
+temp &amp;&#x3D; ~((uint32_t)iocurrent);  
+if((GPIO_Init-&gt;Mode &amp; EXTI_IT) !&#x3D; 0x00U)  
 &#123;  
-temp |= iocurrent;  
+temp |&#x3D; iocurrent;  
 &#125;  
-EXTI->IMR = temp;  
+EXTI-&gt;IMR &#x3D; temp;  
 &#125;  
 &#125;  
 &#125;  
-&#125;
-</code></pre>
-<p>以下是GPIO初始化结构体定义</p>
-<pre class=" language-lang-C"><code class="language-lang-C">/**  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>以下是GPIO初始化结构体定义<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;**  
 * @brief GPIO Init structure definition  
-*/  
+*&#x2F;  
 typedef struct  
 &#123;  
-uint32_t Pin; /*!< Specifies the GPIO pins to be configured.  
-This parameter can be any value of @ref GPIO_pins_define */  
-
-uint32_t Mode; /*!< Specifies the operating mode for the selected pins.  
-This parameter can be a value of @ref GPIO_mode_define */  
-
-uint32_t Pull; /*!< Specifies the Pull-up or Pull-Down activation for the selected pins.  
-This parameter can be a value of @ref GPIO_pull_define */  
-
-uint32_t Speed; /*!< Specifies the speed for the selected pins.  
-This parameter can be a value of @ref GPIO_speed_define */  
-
-uint32_t Alternate; /*!< Peripheral to be connected to the selected pins.  
-This parameter can be a value of @ref GPIO_Alternate_function_selection */  
-&#125;GPIO_InitTypeDef;
-</code></pre>
+uint32_t Pin; &#x2F;*!&lt; Specifies the GPIO pins to be configured.  
+This parameter can be any value of @ref GPIO_pins_define *&#x2F;  
+  
+uint32_t Mode; &#x2F;*!&lt; Specifies the operating mode for the selected pins.  
+This parameter can be a value of @ref GPIO_mode_define *&#x2F;  
+  
+uint32_t Pull; &#x2F;*!&lt; Specifies the Pull-up or Pull-Down activation for the selected pins.  
+This parameter can be a value of @ref GPIO_pull_define *&#x2F;  
+  
+uint32_t Speed; &#x2F;*!&lt; Specifies the speed for the selected pins.  
+This parameter can be a value of @ref GPIO_speed_define *&#x2F;  
+  
+uint32_t Alternate; &#x2F;*!&lt; Peripheral to be connected to the selected pins.  
+This parameter can be a value of @ref GPIO_Alternate_function_selection *&#x2F;  
+&#125;GPIO_InitTypeDef;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><h2 id="预加载"><a href="#预加载" class="headerlink" title="预加载"></a>预加载</h2><p>STM32的定时器预加载功能是指在定时器的计数器中设置一个预加载值，当计数器的值达到这个预设值时，可以触发一个事件或中断。这个功能在STM32微控制器的定时器操作中非常有用，尤其是在需要精确控制时间事件时。 </p>
 <h2 id="重复周期计数器"><a href="#重复周期计数器" class="headerlink" title="重复周期计数器"></a>重复周期计数器</h2><p>在STM32微控制器中，一个重复周期计数器（Repeat Counter）通常是指定时器中的一个功能，它允许定时器在计数达到预设值后自动重置并重新开始计数。这种功能对于创建周期性事件非常有用，如周期性中断或定期检查某个条件。</p>
 <p>使用重复周期计数器的基本步骤如下：</p>
@@ -1319,7 +1285,7 @@ This parameter can be a value of @ref GPIO_Alternate_function_selection */
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.3k</span>
+                        class="white-color">19.1k</span>
             
             
             
