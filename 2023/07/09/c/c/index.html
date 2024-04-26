@@ -393,21 +393,21 @@ extern &amp;quot;C&amp;quot; &amp;#123;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-09
+                    2024-04-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -498,7 +498,14 @@ int main() &#123;
 <li>“U” 表示这是一个无符号整数。(unsigned int)</li>
 </ol>
 <p>将十六进制数”00000002” 转换为十进制数，结果为2。由于数据类型被指定为无符号整数，因此该数值为正数。</p>
-<h1 id="标准库学习"><a href="#标准库学习" class="headerlink" title="标准库学习"></a>标准库学习</h1>
+<h1 id="杂记-1"><a href="#杂记-1" class="headerlink" title="杂记"></a>杂记</h1><ol>
+<li><pre class="line-numbers language-C" data-language="C"><code class="language-C">volatile const init_fn_t *fn_ptr;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+volatile: 这个关键字用来告诉编译器，这个变量的值可能会在程序控制之外的情况下改变，比如由于硬件的变动或者并行执行的线程。这意味着编译器在优化代码时不能假设这个值在两次读取之间是不变的，它必须在每次使用时直接从内存中读取它的值。</li>
+</ol>
+<p>const: 这个关键字表示指针指向的数据是常量，不可以被修改。注意，const 在 * 的左边，表明被指向的数据是常量，而指针本身可以修改，即可以指向不同的 init_fn_t 实例。</p>
+<p>init_fn_t: 这通常是一个函数指针的类型定义。在C或C++中，init_fn_t 可能定义为特定类型的函数指针，用于初始化操作或其他目的。</p>
+<p>fn_ptr: 这是变量名，指的是一个指向 init_fn_t 类型数据的指针。</p>
+
                 
             </div>
             <hr/>
@@ -931,7 +938,7 @@ int main() &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.1k</span>
+                        class="white-color">25.2k</span>
             
             
             

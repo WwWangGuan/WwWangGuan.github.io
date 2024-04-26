@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-03-22T13:56:19.143Z</updated>
+  <updated>2024-04-26T14:23:23.086Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,160 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>FOC原理</title>
+    <link href="http://wwwangguan.github.io/2024/04/25/foc/foc-yuan-li/"/>
+    <id>http://wwwangguan.github.io/2024/04/25/foc/foc-yuan-li/</id>
+    <published>2024-04-25T08:50:19.446Z</published>
+    <updated>2024-04-26T14:23:23.086Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/04/15/ti-2/"/>
+    <id>http://wwwangguan.github.io/2024/04/15/ti-2/</id>
+    <published>2024-04-14T23:32:46.740Z</published>
+    <updated>2024-04-24T13:36:59.274Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h1&gt;&lt;h1 id=&quot;第二题&quot;&gt;&lt;a href=&quot;#第二题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/04/14/kong-zhi-li-lun/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/"/>
+    <id>http://wwwangguan.github.io/2024/04/14/kong-zhi-li-lun/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/</id>
+    <published>2024-04-14T07:40:24.489Z</published>
+    <updated>2024-04-14T09:16:02.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;拉普拉斯变换&quot;&gt;&lt;a href=&quot;#拉普拉斯变换&quot; class=&quot;headerlink&quot; title=&quot;拉普拉斯变换&quot;&gt;&lt;/a&gt;拉普拉斯变换&lt;/h1&gt;&lt;script type=&quot;math/tex;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/04/08/stm32/rtthread/"/>
+    <id>http://wwwangguan.github.io/2024/04/08/stm32/rtthread/</id>
+    <published>2024-04-08T15:46:35.873Z</published>
+    <updated>2024-04-08T15:46:57.434Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;线程启动与切换过程详解&quot;&gt;&lt;a href=&quot;#线程启动与切换过程详解&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/04/06/robomaster/2024rmul-fu-pan/"/>
+    <id>http://wwwangguan.github.io/2024/04/06/robomaster/2024rmul-fu-pan/</id>
+    <published>2024-04-06T10:35:36.599Z</published>
+    <updated>2024-04-06T11:07:08.281Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;不能将就&quot;&gt;&lt;a href=&quot;#不能将就&quot; class=&quot;headerlink&quot; title=&quot;不能将就&quot;&gt;&lt;/a&gt;不能将就&lt;/h1&gt;&lt;h1 id=&quot;算法&quot;&gt;&lt;a href=&quot;#算法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2024/04/03/stm32/freertos/"/>
+    <id>http://wwwangguan.github.io/2024/04/03/stm32/freertos/</id>
+    <published>2024-04-03T03:51:47.565Z</published>
+    <updated>2024-04-04T14:24:11.705Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;中断模式和中断事件模式&quot;&gt;&lt;a href=&quot;#中断模式和中断事件模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/"/>
+    <id>http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/</id>
+    <published>2024-03-29T04:07:00.545Z</published>
+    <updated>2024-03-29T05:04:05.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;胡适所谓乐于助人的行为，大多是资助他人完成学业或者资助好友，比较典型的例子是资助林语堂&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在当时，与胡适一同到美国留学的林语堂便是众多贫困子弟中的一个，并且由于家境贫困，即使林语堂在空闲时间全部用于打工赚钱，仍然无法凑齐学费，日常生活也</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>问题</title>
     <link href="http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/"/>
     <id>http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/</id>
     <published>2024-03-22T04:01:58.030Z</published>
-    <updated>2024-03-22T13:56:19.143Z</updated>
+    <updated>2024-03-24T09:42:26.356Z</updated>
     
     
       
@@ -60,8 +209,8 @@
   
   <entry>
     <title></title>
-    <link href="http://wwwangguan.github.io/2024/03/01/ying-jian-fang-an/"/>
-    <id>http://wwwangguan.github.io/2024/03/01/ying-jian-fang-an/</id>
+    <link href="http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/"/>
+    <id>http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/</id>
     <published>2024-03-01T11:09:11.656Z</published>
     <updated>2024-03-02T10:37:03.843Z</updated>
     
@@ -102,8 +251,8 @@
   
   <entry>
     <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/01/31/zhuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/01/31/zhuan-li/</id>
+    <link href="http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/"/>
+    <id>http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/</id>
     <published>2024-01-31T11:26:05.804Z</published>
     <updated>2024-02-18T13:15:10.177Z</updated>
     
@@ -127,7 +276,7 @@
     <link href="http://wwwangguan.github.io/2024/01/30/cmake/cmake/"/>
     <id>http://wwwangguan.github.io/2024/01/30/cmake/cmake/</id>
     <published>2024-01-30T03:41:06.056Z</published>
-    <updated>2024-02-21T04:00:20.762Z</updated>
+    <updated>2024-04-09T15:17:50.528Z</updated>
     
     
       
@@ -151,7 +300,7 @@
     <link href="http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/"/>
     <id>http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/</id>
     <published>2024-01-24T22:23:49.361Z</published>
-    <updated>2024-01-25T17:26:00.916Z</updated>
+    <updated>2024-04-09T02:53:57.196Z</updated>
     
     
       
@@ -193,21 +342,18 @@
   </entry>
   
   <entry>
-    <title>超级电容</title>
-    <link href="http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/chao-ji-dian-rong/"/>
-    <id>http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/chao-ji-dian-rong/</id>
+    <title>HRTIM</title>
+    <link href="http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/hrtim/"/>
+    <id>http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/hrtim/</id>
     <published>2023-12-09T09:16:57.909Z</published>
-    <updated>2023-12-14T14:28:37.197Z</updated>
+    <updated>2024-04-04T15:47:20.782Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;方案&quot;&gt;&lt;a href=&quot;#方案&quot; class=&quot;headerlink&quot; title=&quot;方案&quot;&gt;&lt;/a&gt;方案&lt;/h1&gt;&lt;p&gt;四开关管双向Buck-Boost+主动均衡。&lt;/p&gt;
-&lt;p&gt;电容组预计单个60F，2.7V，串联九个&lt;/p&gt;
-&lt;p&gt;由&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;p&gt;前置条件：STM32G474，170MHz（HSE），定时器使能如图所示&lt;br&gt;&lt;img src=&quot;https://pic1.zhimg.com/80/v2-2aec432984e65fd476b03343c6d2ffb3_720w.png&quot;</summary>
         
       
     
@@ -310,162 +456,6 @@
     <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
     
     <category term="HAL" scheme="http://wwwangguan.github.io/tags/HAL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂记</title>
-    <link href="http://wwwangguan.github.io/2023/09/07/dian-zi-dian-li/dc-dc/za-ji/"/>
-    <id>http://wwwangguan.github.io/2023/09/07/dian-zi-dian-li/dc-dc/za-ji/</id>
-    <published>2023-09-07T04:10:12.402Z</published>
-    <updated>2024-02-07T04:57:48.764Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;线性电源&quot;&gt;&lt;a href=&quot;#线性电源&quot; class=&quot;headerlink&quot; title=&quot;线性电源&quot;&gt;&lt;/a&gt;线性电源&lt;/h1&gt;&lt;p&gt;压降（Dropout Voltage）&lt;/p&gt;
-&lt;h2 id=&quot;参数&quot;&gt;&lt;a href=&quot;#参数&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="DC-DC" scheme="http://wwwangguan.github.io/tags/DC-DC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Armfly课程笔记</title>
-    <link href="http://wwwangguan.github.io/2023/08/14/stm32/armfly-ke-cheng-bi-ji/"/>
-    <id>http://wwwangguan.github.io/2023/08/14/stm32/armfly-ke-cheng-bi-ji/</id>
-    <published>2023-08-14T09:23:25.204Z</published>
-    <updated>2023-12-07T14:23:51.598Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;启动文件解析&quot;&gt;&lt;a href=&quot;#启动文件解析&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>常用通信阻抗要求</title>
-    <link href="http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/"/>
-    <id>http://wwwangguan.github.io/2023/08/10/dian-zi-dian-li/layout-yao-qiu/chang-yong-tong-xin-zu-kang-yao-qiu/</id>
-    <published>2023-08-10T08:09:29.792Z</published>
-    <updated>2023-09-21T11:29:23.847Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;USB接口&quot;&gt;&lt;a href=&quot;#USB接口&quot; class=&quot;headerlink&quot; title=&quot;USB接口&quot;&gt;&lt;/a&gt;USB接口&lt;/h2&gt;&lt;p&gt;是Universal Serial</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>STM32H74x(75x)硬件设计规则</title>
-    <link href="http://wwwangguan.github.io/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/"/>
-    <id>http://wwwangguan.github.io/2023/07/25/dian-zi-dian-li/stm32h74x-75x-ying-jian-she-ji-gui-ze/</id>
-    <published>2023-07-25T06:23:18.060Z</published>
-    <updated>2023-09-20T08:41:30.521Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;供电部分&quot;&gt;&lt;a href=&quot;#供电部分&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模拟电子技术</title>
-    <link href="http://wwwangguan.github.io/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/"/>
-    <id>http://wwwangguan.github.io/2023/07/13/dian-zi-dian-li/mo-ni-dian-lu/mo-ni-dian-zi-ji-zhu/</id>
-    <published>2023-07-13T08:59:26.680Z</published>
-    <updated>2023-10-08T15:07:57.292Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考书籍：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;模拟电子技术 第2版：电子工业出版社 (美)Robert L.Boylestad,(美)Louis Nashelsky著&lt;/li&gt;
-&lt;li&gt;模拟电子技术基础（第四版）&lt;/li&gt;
-&lt;li&gt;新概念模拟电路 杨建国著&lt;h1</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>IIC</title>
-    <link href="http://wwwangguan.github.io/2023/07/11/stm32/iic/"/>
-    <id>http://wwwangguan.github.io/2023/07/11/stm32/iic/</id>
-    <published>2023-07-11T02:18:57.122Z</published>
-    <updated>2023-07-11T02:52:01.936Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;IIC（Inter-Integrated Circuit</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/"/>
-    <id>http://wwwangguan.github.io/2023/07/09/dian-zi-dian-li/pcb/pcb-she-ji-gui-ze/</id>
-    <published>2023-07-09T15:34:38.406Z</published>
-    <updated>2023-11-27T05:47:01.572Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;为什么信号线要串联电阻&quot;&gt;&lt;a href=&quot;#为什么信号线要串联电阻&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

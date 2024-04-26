@@ -4,17 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="超级电容, WwWangGuan">
-    <meta name="description" content="方案四开关管双向Buck-Boost+主动均衡。
-电容组预计单个60F，2.7V，串联九个
-由
-设计需求官方规则
-
-
-
-
-杂记
-电流和功率检测可以用Ti的INA226，iic能以400Khz去读，或者用ADI的MAX4081，但是这个只能用">
+    <meta name="keywords" content="WwWangGuan">
+    <meta name="description" content="主控：STM32F103CBT6锂电池充放电管理：IP5306，带有四颗LED灯指示电量。充电口：MicroUSB气体压力传感器：AGR10系列表压型传感器。运算放大器：OPA376选用3.7V电池或者18560锂电池。ADC读取气压数据I">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>超级电容 | WwWangGuan</title>
+    <title>WwWangGuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -342,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">超级电容</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -383,21 +374,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-09
+                    2024-03-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-14
+                    2024-03-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    101
+                    76
                 </div>
                 
 
@@ -427,20 +418,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><p>四开关管双向Buck-Boost+主动均衡。</p>
-<p>电容组预计单个60F，2.7V，串联九个</p>
-<p>由</p>
-<h2 id="设计需求"><a href="#设计需求" class="headerlink" title="设计需求"></a>设计需求</h2><h1 id="官方规则"><a href="#官方规则" class="headerlink" title="官方规则"></a>官方规则</h1><p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=MDYyNDk0OTRiYTZmN2QyZjQ4YmM1ZWQwZWI4YTA1NTVfWFlEQzJQWFBuYk1lTG93SkpTbWI3am5iV2hrV0xaaUhfVG9rZW46T3N4Q2JDcjBOb2pERVF4dWZqZWNpMnk5bmJiXzE3MDIxMTMzNzg6MTcwMjExNjk3OF9WNA" alt=""></p>
-<p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=MGUxMmE3N2RmZjQzYWE3NjdmNDg2MTQ5YzkwOGZiMTRfWDRHRXlBY2lRb1FaR3hEa3B1d05CVFZmMzNjcGNMSmVfVG9rZW46QkcwbGJoc0hUb0NtbEZ4alFsemN1bnk3bktmXzE3MDIxMTMzNzg6MTcwMjExNjk3OF9WNA" alt=""></p>
-<p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=MDJlYjgyMjI3YTlhNjFkYzhhNjdiMTg1NTlhZGI4ODFfTWJZZ3RIMHp1ZFpGTlJPUUtGU2lIaVI4VnNoREl1VHZfVG9rZW46SDFrNGJDU2h5b205dUV4dFlQUmNCTmNjbjNkXzE3MDIxMTMzNzg6MTcwMjExNjk3OF9WNA" alt=""></p>
-<p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=NjFhZWMxMTMxYWY0NGQxNWIyYzJjNWU2YjBjNWIzMzBfTENpd0pHRTFmVnFKRG9rNEpLbVcwN3NOWXVaOVVVcWFfVG9rZW46UW1sZWJkQlJtb05nb3B4Ym91VmMyUWNmbmMyXzE3MDIxMTMzNzg6MTcwMjExNjk3OF9WNA" alt=""></p>
-<p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=NTdmYjI0MzM1ZTBlNjZkMjljMTc3OTZkZWU0ZTRhZTdfYXdoZHJtYVZrcGVZa3g5c1lWRldaajVqR2lsSXRURFlfVG9rZW46VWI4amJXckdEb0Rkeml4WFZneGMycDlkbkhnXzE3MDIxMTMzNzg6MTcwMjExNjk3OF9WNA" alt=""></p>
-<h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><ol>
-<li><p>电流和功率检测可以用Ti的INA226，iic能以400Khz去读，或者用ADI的MAX4081，但是这个只能用在高侧。</p>
-</li>
-<li><p>栅极驱动器和MOS考虑英飞凌,栅驱考虑2edf7275k，看起来挺猛的。</p>
-<script type="math/tex; mode=display">S=\frac{\Delta n}{\Delta R_s/R_S}</script></li>
-</ol>
+                <p>主控：STM32F103CBT6<br>锂电池充放电管理：IP5306，带有四颗LED灯指示电量。<br>充电口：MicroUSB<br>气体压力传感器：AGR10系列表压型传感器。<br>运算放大器：OPA376<br>选用3.7V电池或者18560锂电池。<br>ADC读取气压数据<br>IIC与OLED屏幕连接用以显示数据 </p>
 
                 
             </div>
@@ -467,7 +445,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://WwWangGuan.github.io/2023/12/09/chao-ji-dian-rong/chao-ji-dian-rong/">http://WwWangGuan.github.io/2023/12/09/chao-ji-dian-rong/chao-ji-dian-rong/</a>
+                    <a href="http://WwWangGuan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/">http://WwWangGuan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -552,13 +530,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/12/09/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-kao-he/">
+                <a href="/2024/03/22/za-ji/gong-zuo-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="硬件组考核">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="工作记录">
                         
-                        <span class="card-title">硬件组考核</span>
+                        <span class="card-title">工作记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -569,7 +547,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-22
                         </span>
                         <span class="publish-author">
                             
@@ -589,13 +567,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/12/08/dian-zi-dian-li/dc-dc/zha-ji-qu-dong-qi/">
+                <a href="/2024/02/18/chao-ji-dian-rong/zhuan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="栅极驱动器">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">栅极驱动器</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -606,7 +584,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-18
                             </span>
                         <span class="publish-author">
                             
@@ -615,18 +593,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/DC-DC/">
-                        <span class="chip bg-color">DC-DC</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%85%E6%9E%81%E9%A9%B1%E5%8A%A8%E5%99%A8/">
-                        <span class="chip bg-color">栅极驱动器</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -786,13 +752,6 @@
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -866,7 +825,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.1k</span>
+                        class="white-color">25.2k</span>
             
             
             
