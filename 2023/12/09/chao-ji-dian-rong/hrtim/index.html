@@ -384,21 +384,21 @@ R">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-04
+                    2024-05-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    785
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -441,18 +441,32 @@ R">
 <li><strong>加载新值</strong>：将新的周期值写入ARR或新的比较值写入CCR。</li>
 <li><strong>更新请求</strong>：通常，需要一个更新事件（如计数器溢出）来使预装载的值生效。在某些模式下，可以通过软件生成一个立即更新的事件。</li>
 </ol>
-<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><p>以下是一个简单的示例，展示了如何为STM32定时器配置ARR preload功能：</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c">TIM_HandleTypeDef htimx; &#x2F;&#x2F; 假设已经配置好了htimx
-
-&#x2F;&#x2F; 启用ARR preload
-__HAL_TIM_ENABLE_PRELOAD(&amp;htimx, TIM_OC_PRELOAD_ENABLE);
-
-&#x2F;&#x2F; 设置新的自动重装载值
-__HAL_TIM_SET_AUTORELOAD(&amp;htimx, 1000-1); &#x2F;&#x2F; 设置定时器周期为1000个计数周期
-
-&#x2F;&#x2F; 如果需要立即生效，可以手动请求更新事件
-__HAL_TIM_GENERATE_EVENT(&amp;htimx, TIM_EVENTSOURCE_UPDATE);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这只是一个基本的例子，实际使用中需要根据你的具体需求进行调整。正确配置和使用preload功能，可以显著提高STM32应用中的时间控制精度和系统响应性。</p>
+<h1 id="Repetition-Update"><a href="#Repetition-Update" class="headerlink" title="Repetition Update"></a>Repetition Update</h1><p>STM32G474微控制器的高分辨率定时器（HRTIM）是一个高级功能，旨在满足精确的定时和波形生成需求。其中的“Repetition Update”功能是该定时器的一个重要特性。</p>
+<p>“Repetition Update”的主要作用是控制何时更新定时器的寄存器。在HRTIM中，有一些寄存器是受保护的，这意味着在定时器运行时，这些寄存器的值不能随意改变，以避免产生不稳定的输出波形或是不准确的定时行为。因此，“Repetition Update”允许用户设定一个重复计数器，指定定时器完成多少周期后才更新这些寄存器的内容。</p>
+<p>使用“Repetition Update”功能的优势包括：</p>
+<ol>
+<li><strong>增强稳定性</strong>：通过在适当的时机更新寄存器值，可以避免在输出周期中间改变设置，从而保持输出波形的稳定。</li>
+<li><strong>提高灵活性</strong>：用户可以根据需要配置更新频率，这对于需要频繁调整输出波形或定时参数的应用非常有用。</li>
+<li><strong>优化性能</strong>：在特定的应用中，如电机控制，可以通过精确地调整更新频率来优化系统的响应时间和效率。</li>
+</ol>
+<p>在实际应用中，如果需要定时器在不同的输出周期内实现不同的行为，或者根据外部事件调整定时器的行为，这时“Repetition Update”就显得尤为重要。例如，在PWM（脉冲宽度调制）应用中，可能需要在不同的PWM周期中应用不同的占空比设置，而这些设置的更新就可以依赖于“Repetition Update”功能来实现定时和同步更新。</p>
+<h2 id="by-the-way"><a href="#by-the-way" class="headerlink" title="by the way"></a>by the way</h2><p><del>没太看懂，但是大家都加上了我也加上吧（）</del></p>
+<h1 id="HRTIM中心对齐PWM"><a href="#HRTIM中心对齐PWM" class="headerlink" title="HRTIM中心对齐PWM"></a>HRTIM中心对齐PWM</h1><p>使用Master同步两个定时器（Timer A和Timer B），两个子定时器只有一个输出（TA1/TB1）。</p>
+<h2 id="如果不同步的后果"><a href="#如果不同步的后果" class="headerlink" title="如果不同步的后果"></a>如果不同步的后果</h2><pre class="line-numbers language-C" data-language="C"><code class="language-C">HAL_HRTIM_WaveformCountStart(&amp;hhrtim1,HRTIM_TIMERID_TIMER_A);  
+HAL_HRTIM_WaveformOutputStart(&amp;hhrtim1,HRTIM_OUTPUT_TA1);  
+HAL_HRTIM_WaveformCountStart(&amp;hhrtim1, HRTIM_TIMERID_TIMER_B);  
+HAL_HRTIM_WaveformOutputStart(&amp;hhrtim1, HRTIM_OUTPUT_TB1);  
+  
+__HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 200);  
+__HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_B, HRTIM_COMPAREUNIT_1, 200);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这么写的后果是在示波器上两个PWM输出端会发生相移，不是预期中的两个PWM波的起点是相同的。<br><del>byd照片没了，艹</del><br>如果你不用主定时器去同步的话，请在Start初始化的时候一起初始化，譬如：<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">HAL_HRTIM_WaveformCountStart(&amp;hhrtim1,HRTIM_TIMERID_TIMER_A | HRTIM_TIMERID_TIMER_B);  
+HAL_HRTIM_WaveformOutputStart(&amp;hhrtim1,HRTIM_OUTPUT_TA1 | HRTIM_OUTPUT_TB1);    
+  
+__HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT_1, 200);  
+__HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_B, HRTIM_COMPAREUNIT_1, 200);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>这样的话就能看见两个一模一样的PWM波形了。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>尝试使用Up-Down Countering去生成中心对齐PWM，示波器上能看见周期翻倍了，但是Duty被锁死在了0.5，问题可复现，尚未有解决方案。</p>
+<h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><h1 id="Master-定时器"><a href="#Master-定时器" class="headerlink" title="Master 定时器"></a>Master 定时器</h1><p><img src="https://pic1.zhimg.com/80/v2-52027b3db7f468bb81bea0171ec1f668_1440w.png" alt=""><br>后面都是disable，开了PreLoad和重复更新<br>这里跟着CSDN配置的，开了中断源，NVIC也开中断了，但是我没用中断输出，我直接<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">HAL_HRTIM_WaveformCountStart(&amp;hhrtim1,HRTIM_TIMERID_Master);  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>实测无影响。但是没测试过关了之后什么样，有时间再说</p>
+<h2 id="TimerA"><a href="#TimerA" class="headerlink" title="TimerA"></a>TimerA</h2><p><img src="https://picx.zhimg.com/80/v2-3e2f6cce2cb1e510c811f208ee054d07_1440w.png" alt=""><br><img src="https://pica.zhimg.com/80/v2-b7217745a46a8454de907f9715b62451_1440w.png" alt=""><br>子定时器如果想用Master去做同步更新，就要在 Reset Trigger Source里面选上跟随Master周期更新，开了两个比较的单元，没用2的原因是貌似跟ADC有关，<del>然后3和1又是一样的就直接用3了</del>。<br>这里TimerA是用来生成中心对齐PWM波形的，TimerB是生成了一个正常的PWM波形，用来和中心对齐的波形进行对比<br>Set Source是选了Counting到比较单元1的值之后再变成高电平，Reset Source则是在每个周期的开始和计数到比较单元3之后波形变成低电平。<br>实际波形图<br>![[IMG_20240507_203349.jpg]]</p>
 
                 
             </div>
@@ -878,7 +892,7 @@ __HAL_TIM_GENERATE_EVENT(&amp;htimx, TIM_EVENTSOURCE_UPDATE);<span aria-hidden="
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.2k</span>
+                        class="white-color">25.8k</span>
             
             
             

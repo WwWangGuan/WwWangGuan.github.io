@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-04-26T14:23:23.086Z</updated>
+  <updated>2024-05-04T07:05:41.710Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2024/05/04/tuo-luo-yi/adis16467/"/>
+    <id>http://wwwangguan.github.io/2024/05/04/tuo-luo-yi/adis16467/</id>
+    <published>2024-05-04T06:58:12.346Z</published>
+    <updated>2024-05-04T07:05:41.710Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;sadf&lt;br&gt;&lt;img src=&quot;https://picx.zhimg.com/80/v2-3ce7d73454de99d9c48aa0ed62dd0a92_720w.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2024/05/04/ri-ji/2024-05-04/"/>
+    <id>http://wwwangguan.github.io/2024/05/04/ri-ji/2024-05-04/</id>
+    <published>2024-05-04T06:55:59.828Z</published>
+    <updated>2024-05-04T06:56:31.681Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2024-5-1</title>
+    <link href="http://wwwangguan.github.io/2024/05/01/ri-ji/2024-5-1/"/>
+    <id>http://wwwangguan.github.io/2024/05/01/ri-ji/2024-5-1/</id>
+    <published>2024-05-01T13:50:38.467Z</published>
+    <updated>2024-05-04T06:55:54.436Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>FOC原理</title>
@@ -29,27 +92,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/04/15/ti-2/"/>
-    <id>http://wwwangguan.github.io/2024/04/15/ti-2/</id>
-    <published>2024-04-14T23:32:46.740Z</published>
-    <updated>2024-04-24T13:36:59.274Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h1&gt;&lt;h1 id=&quot;第二题&quot;&gt;&lt;a href=&quot;#第二题&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -346,7 +388,7 @@
     <link href="http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/hrtim/"/>
     <id>http://wwwangguan.github.io/2023/12/09/chao-ji-dian-rong/hrtim/</id>
     <published>2023-12-09T09:16:57.909Z</published>
-    <updated>2024-04-04T15:47:20.782Z</updated>
+    <updated>2024-05-07T12:39:52.136Z</updated>
     
     
       
@@ -405,57 +447,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2023/09/21/dian-zi-dian-li/pcb/usb-hub/"/>
-    <id>http://wwwangguan.github.io/2023/09/21/dian-zi-dian-li/pcb/usb-hub/</id>
-    <published>2023-09-21T11:39:10.314Z</published>
-    <updated>2024-02-07T04:59:23.631Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;每一个USB3.1接口有六个数据线，阻抗均为90&lt;/p&gt;
-&lt;h1 id=&quot;芯片&quot;&gt;&lt;a href=&quot;#芯片&quot; class=&quot;headerlink&quot; title=&quot;芯片&quot;&gt;&lt;/a&gt;芯片&lt;/h1&gt;&lt;p&gt;选用GL3510&lt;br&gt;引脚注意如下&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Pin32</summary>
-        
-      
-    
-    
-    
-    
-    <category term="PCB" scheme="http://wwwangguan.github.io/tags/PCB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2023/09/20/stm32/an-jian-fifo/"/>
-    <id>http://wwwangguan.github.io/2023/09/20/stm32/an-jian-fifo/</id>
-    <published>2023-09-20T08:51:11.636Z</published>
-    <updated>2023-12-07T14:23:42.321Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;FIFO是 First Input First</summary>
-        
-      
-    
-    
-    
-    
-    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
-    
-    <category term="HAL" scheme="http://wwwangguan.github.io/tags/HAL/"/>
     
   </entry>
   
