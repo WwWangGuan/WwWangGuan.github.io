@@ -478,7 +478,12 @@ add_link_options(
 # 设置库目录  
 link_directories(  
         galaxy_sdk&#x2F;bsp&#x2F;lib  
-        galaxy_sdk&#x2F;drivers&#x2F;lib        galaxy_sdk&#x2F;modules&#x2F;lib        galaxy_sdk&#x2F;modules&#x2F;external&#x2F;riscv_dsp        galaxy_sdk&#x2F;os&#x2F;lib        galaxy_sdk&#x2F;osal&#x2F;lib        galaxy_sdk&#x2F;prebuilts&#x2F;bluetooth&#x2F;health)  
+        galaxy_sdk&#x2F;drivers&#x2F;lib        
+        galaxy_sdk&#x2F;modules&#x2F;lib           
+        galaxy_sdk&#x2F;modules&#x2F;external&#x2F;riscv_dsp        
+        galaxy_sdk&#x2F;os&#x2F;lib        
+        galaxy_sdk&#x2F;osal&#x2F;lib        
+        galaxy_sdk&#x2F;prebuilts&#x2F;bluetooth&#x2F;health)  
   
 # 添加可执行文件  
 add_executable($&#123;PROJECT_NAME&#125;.out $&#123;SOURCES&#125;)  
@@ -492,7 +497,19 @@ endforeach()
   
 # 链接库  
 target_link_libraries($&#123;PROJECT_NAME&#125;.out  
-        -Wl,--start-group        c_nano        gcc        stdc++        semihost        osal_riscv        os_riscv        bsp_riscv        driver_riscv        common_riscv        ble        nmsis_dsp_rv32imafc_xxldsp        -Wl,--end-group)  
+        -Wl,--start-group        
+        c_nano        
+        gcc        
+        stdc++        
+        semihost        
+        osal_riscv        
+        os_riscv        
+        bsp_riscv        
+        driver_riscv        
+        common_riscv        
+        ble        
+        nmsis_dsp_rv32imafc_xxldsp        
+        -Wl,--end-group)  
   
 # 生成HEX文件  
 add_custom_command(TARGET $&#123;PROJECT_NAME&#125;.out POST_BUILD  
@@ -521,7 +538,7 @@ add_custom_command(TARGET $&#123;PROJECT_NAME&#125;.out POST_BUILD
 add_custom_target(clean_all  
         COMMAND $&#123;CMAKE_COMMAND&#125; -E rm -rf $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.o $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.d $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.out $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.hex $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.lst $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.siz  
         COMMENT &quot;Cleaning up generated files&quot;  
-)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h3 id="几个需要强调的地方"><a href="#几个需要强调的地方" class="headerlink" title="几个需要强调的地方"></a>几个需要强调的地方</h3><p><del>1. 我这里是手动指定了编译器的位置，因为我测试的时候发现即使我添加了环境变量Cmake仍然识别不到</del><br>byd，又好使了。</p>
 <ol>
 <li>项目信息看个人，要不要改随意，在第7行改就可以。</li>
