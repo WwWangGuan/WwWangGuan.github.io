@@ -521,17 +521,12 @@ add_custom_command(TARGET $&#123;PROJECT_NAME&#125;.out POST_BUILD
 add_custom_target(clean_all  
         COMMAND $&#123;CMAKE_COMMAND&#125; -E rm -rf $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.o $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.d $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.out $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.hex $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.lst $&#123;CMAKE_BINARY_DIR&#125;&#x2F;*.siz  
         COMMENT &quot;Cleaning up generated files&quot;  
-)&#96;&#96;&#96;
-#### 几个需要强调的地方
-~~1. 我这里是手动指定了编译器的位置，因为我测试的时候发现即使我添加了环境变量Cmake仍然识别不到~~
-byd，又好使了
-1. 项目信息看个人，要不要改随意，在第7行改就可以。
-2. 官方给的都是.a，链接的时候有顺序问题，我这里抄了一下原来的makefile，加上了-Wl,--start-group 和-Wl,--end-group ，让编译器自己找链接顺序。
-3. 如果需要添加新文件夹，添加方式和STM32的方式相同。
-### 配置效果
-如果准确无误，应该会有如下信息（Cmake）：
-&#96;&#96;&#96;bash
-C:\Users\34789\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE&#x3D;Release -DCMAKE_C_COMPILER&#x3D;C:&#x2F;Embedded_tools&#x2F;NucleiStudio&#x2F;toolchain&#x2F;gcc&#x2F;bin&#x2F;riscv64-unknown-elf-gcc.exe -DCMAKE_CXX_COMPILER&#x3D;C:&#x2F;Embedded_tools&#x2F;NucleiStudio&#x2F;toolchain&#x2F;gcc&#x2F;bin&#x2F;riscv64-unknown-elf-c++.exe -G &quot;MinGW Makefiles&quot; -S G:\VeriSilicon\VeriHealthi_QEMU_SDK.202405_preliminary\VeriHealthi_QEMU_SDK.202405_preliminary\VeriTest -B G:\VeriSilicon\VeriHealthi_QEMU_SDK.202405_preliminary\VeriHealthi_QEMU_SDK.202405_preliminary\VeriTest\cmake-build-release-verisilicon
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h3 id="几个需要强调的地方"><a href="#几个需要强调的地方" class="headerlink" title="几个需要强调的地方"></a>几个需要强调的地方</h3><p><del>1. 我这里是手动指定了编译器的位置，因为我测试的时候发现即使我添加了环境变量Cmake仍然识别不到</del><br>byd，又好使了。</p>
+<ol>
+<li>项目信息看个人，要不要改随意，在第7行改就可以。</li>
+<li>官方给的都是.a，链接的时候有顺序问题，我这里抄了一下原来的makefile，加上了-Wl,—start-group 和-Wl,—end-group ，让编译器自己找链接顺序。</li>
+<li>如果需要添加新文件夹，添加方式和STM32的方式相同。<h3 id="配置效果"><a href="#配置效果" class="headerlink" title="配置效果"></a>配置效果</h3>如果准确无误，应该会有如下信息（Cmake）：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">C:\Users\34789\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE&#x3D;Release -DCMAKE_C_COMPILER&#x3D;C:&#x2F;Embedded_tools&#x2F;NucleiStudio&#x2F;toolchain&#x2F;gcc&#x2F;bin&#x2F;riscv64-unknown-elf-gcc.exe -DCMAKE_CXX_COMPILER&#x3D;C:&#x2F;Embedded_tools&#x2F;NucleiStudio&#x2F;toolchain&#x2F;gcc&#x2F;bin&#x2F;riscv64-unknown-elf-c++.exe -G &quot;MinGW Makefiles&quot; -S G:\VeriSilicon\VeriHealthi_QEMU_SDK.202405_preliminary\VeriHealthi_QEMU_SDK.202405_preliminary\VeriTest -B G:\VeriSilicon\VeriHealthi_QEMU_SDK.202405_preliminary\VeriHealthi_QEMU_SDK.202405_preliminary\VeriTest\cmake-build-release-verisilicon
 -- The C compiler identification is GNU 13.1.1
 -- The CXX compiler identification is GNU 13.1.1
 -- The ASM compiler identification is GNU
@@ -551,7 +546,9 @@ C:\Users\34789\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCM
 -- Build files have been written to: G:&#x2F;VeriSilicon&#x2F;VeriHealthi_QEMU_SDK.202405_preliminary&#x2F;VeriHealthi_QEMU_SDK.202405_preliminary&#x2F;VeriTest&#x2F;cmake-build-release-verisilicon
 
 [已完成]
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
 <p><img src="https://picx.zhimg.com/80/v2-ce4e264a02aaf26dac9eeab5b5ad606f_1440w.png" alt=""></p>
 <h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h3><p><img src="https://picx.zhimg.com/80/v2-ebca35fb7dd940600576cc6480127534_1440w.png" alt=""></p>
 <p>愉 快 的 代 码 书 写 体 验<del>（双手指天）</del></p>
