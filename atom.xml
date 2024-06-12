@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-06-07T17:25:00.657Z</updated>
+  <updated>2024-06-11T15:56:26.880Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工程学导论</title>
+    <link href="http://wwwangguan.github.io/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/"/>
+    <id>http://wwwangguan.github.io/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/</id>
+    <published>2024-06-11T00:18:52.889Z</published>
+    <updated>2024-06-11T15:56:26.880Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;铁路信号系统&quot;&gt;&lt;a href=&quot;#铁路信号系统&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="工程学导论 自动化 o.O" scheme="http://wwwangguan.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%AD%A6%E5%AF%BC%E8%AE%BA-%E8%87%AA%E5%8A%A8%E5%8C%96-o-O/"/>
+    
+  </entry>
   
   <entry>
     <title>芯原杯IDE替换测试</title>
@@ -55,49 +78,6 @@
     <summary type="html">&lt;h1 id=&quot;第二次&quot;&gt;&lt;a href=&quot;#第二次&quot; class=&quot;headerlink&quot; title=&quot;第二次&quot;&gt;&lt;/a&gt;第二次&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;C&lt;/li&gt;
 &lt;li&gt;entity:描述电路的所有输入输出引脚&lt;br&gt;archtiecture：</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/05/19/shuo-ming/"/>
-    <id>http://wwwangguan.github.io/2024/05/19/shuo-ming/</id>
-    <published>2024-05-19T02:51:54.016Z</published>
-    <updated>2024-05-19T03:25:36.509Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;机器人竞技奖是国家级奖项，在&lt;a href=&quot;https://www.robomaster.com/zh-CN/resource/pages/announcement/1716&quot;&gt;RoboMaster</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/05/14/za-ji/wei-ming-ming/"/>
-    <id>http://wwwangguan.github.io/2024/05/14/za-ji/wei-ming-ming/</id>
-    <published>2024-05-14T14:51:59.329Z</published>
-    <updated>2024-05-14T15:14:10.258Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;李义诚同学平时努力学习，经常在课上回答老师的问题，成绩名列前茅。他不仅在学业上表现优异，而且积极组队参加学科竞赛，在多次竞赛中取得了不错的成绩，展示了其深厚的专业知识和出色的实践能力。此外，李义诚同学还积极参与班级事务，经常帮助组织班级活动和促进班级团结，作为团员，他极其重</summary>
         
       
     
@@ -446,6 +426,27 @@
     
     
     <category term="Cmake C" scheme="http://wwwangguan.github.io/tags/Cmake-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>信号与系统</title>
+    <link href="http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/"/>
+    <id>http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/</id>
+    <published>2024-01-24T22:23:49.361Z</published>
+    <updated>2024-04-09T02:53:57.196Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;信号与系统&quot;&gt;&lt;a href=&quot;#信号与系统&quot; class=&quot;headerlink&quot; title=&quot;信号与系统&quot;&gt;&lt;/a&gt;信号与系统&lt;/h1&gt;&lt;h2 id=&quot;1-1-连续时间和离散时间信号&quot;&gt;&lt;a href=&quot;#1-1-连续时间和离散时间信号&quot;</summary>
+        
+      
+    
+    
+    
     
   </entry>
   

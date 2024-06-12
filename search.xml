@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>工程学导论</title>
+      <link href="/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/"/>
+      <url>/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/</url>
+      
+        <content type="html"><![CDATA[<h1 id="铁路信号系统"><a href="#铁路信号系统" class="headerlink" title="铁路信号系统"></a>铁路信号系统</h1><ol><li>铁路信号的基本颜色有红、绿、黄，辅助颜色有蓝和月白</li><li>电动转辙机每转换一次，锁闭齿轮和锁闭齿条快完成了解锁，转换和锁闭三个过程</li><li>道岔按锁闭方式有内锁闭和外锁闭，ZD6使用间接锁闭方式，S700K使用直接锁闭方式。</li><li>继电器接点的接触方式有点接触，线接触和面接触三种</li><li>根据能源供应和信息提供方式，应答器可分为由有源应答器和无源应答器 ![[Pasted image 20240611185420.png]]<h1 id="什么是科学及科学思维"><a href="#什么是科学及科学思维" class="headerlink" title="什么是科学及科学思维"></a>什么是科学及科学思维</h1>用科学方法研究自然就是在进行科学思维<br>科学是研究自然的方法，发现有关自然的可靠知识，让我们了解世界的真理。<h1 id="什么是工程及工程思维"><a href="#什么是工程及工程思维" class="headerlink" title="什么是工程及工程思维"></a>什么是工程及工程思维</h1>涉及以下内容</li><li>科学思维和辩证思维</li><li>横向思维</li><li>设计思维</li><li>有组织的创造性思维<br>应用科学原理和优化方法将自然资源转化为造福人类的结构、机器、产品、系统及工艺。<h1 id="科学与工程的关系"><a href="#科学与工程的关系" class="headerlink" title="科学与工程的关系"></a>科学与工程的关系</h1>类似分析与综合的关系，工程呈现的是产品，技术是工程的手段，工程与技术关系密切<h1 id="举例说明科学如何为工程服务"><a href="#举例说明科学如何为工程服务" class="headerlink" title="举例说明科学如何为工程服务"></a>举例说明科学如何为工程服务</h1><h1 id="举例说明工程如何辅助科学探索"><a href="#举例说明工程如何辅助科学探索" class="headerlink" title="举例说明工程如何辅助科学探索"></a>举例说明工程如何辅助科学探索</h1><h1 id="什么是简单问题-如何求解"><a href="#什么是简单问题-如何求解" class="headerlink" title="什么是简单问题 如何求解"></a>什么是简单问题 如何求解</h1></li><li>简单问题评价标准类似，可以一并优化。</li><li>可以通过数学分析的方法或者逻辑推理的方法进行求解。<h1 id="什么是复杂问题-如何求解"><a href="#什么是复杂问题-如何求解" class="headerlink" title="什么是复杂问题 如何求解"></a>什么是复杂问题 如何求解</h1>不能按照简单问题求解方法进行求解的工程问题是复合问题<h2 id="求解策略"><a href="#求解策略" class="headerlink" title="求解策略"></a>求解策略</h2></li><li>暂时忽略不可测量指标。</li><li>基于事实或证据，表述指标的相对值，尝试将复合问题转化为简单问题。</li><li>将问题分解为可以独立求解的若干简单问题。<h1 id="什么叫优化？简述其在工程解决方案中的应用。"><a href="#什么叫优化？简述其在工程解决方案中的应用。" class="headerlink" title="什么叫优化？简述其在工程解决方案中的应用。"></a>什么叫优化？简述其在工程解决方案中的应用。</h1>优化是指通过系统化的分析和改进过程，使某一系统、方案或过程达到最佳状态。优化的目标通常是最大化或最小化某一性能指标，如成本、时间、资源使用效率或生产率等。优化可以应用于各种领域，包括工程、经济、管理、计算机科学等。<br>在工程解决方案中的应用，优化主要表现为以下几个方面：</li><li><strong>设计优化</strong>：工程设计阶段，通过优化算法来确定设计参数，以达到最优的设计效果。例如，优化建筑结构的材料分配，以达到最小的重量和最大强度。</li><li><strong>资源优化</strong>：在项目实施过程中，通过合理调配资源，减少浪费，提高资源利用率。例如，优化施工队伍的调度和施工顺序，以缩短工期和降低成本。</li><li><strong>过程优化</strong>：对生产过程进行优化，提高生产效率和产品质量。例如，优化制造流程中的每一个步骤，减少生产时间和不良品率。</li><li><strong>系统优化</strong>：在复杂系统中，通过优化算法来改进系统的整体性能。例如，优化供电网络中的电力调度，减少输电损耗，提高供电可靠性。</li><li><strong>参数优化</strong>：在工程模拟和分析过程中，通过调整模型参数，使模拟结果与实际情况更为接近，从而提高模型的准确性和预测能力。例如，优化流体动力学模型中的参数，以更准确地预测流体流动行为。<br>优化在工程解决方案中的应用可以显著提高效率、降低成本、提高质量和可靠性，是工程实践中不可或缺的重要方法。<h1 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2>物物相连的一种网络，把物品通过RFID和条码等 信息传感设备与互联网连接起来，实现智能化识别和管理，其实质就是将RFID与 互联网相结合加以应用。<br>RFID 无源有缘半无源</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工程学导论 自动化 o.O </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>芯原杯IDE替换测试</title>
       <link href="/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/"/>
       <url>/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/</url>
@@ -28,32 +47,6 @@
       <url>/2024/05/20/fpga-zuo-ye/</url>
       
         <content type="html"><![CDATA[<h1 id="第二次"><a href="#第二次" class="headerlink" title="第二次"></a>第二次</h1><ol><li>C</li><li>entity:描述电路的所有输入输出引脚<br>archtiecture： 用VHDL描述电路行为和实现功能。</li><li>B</li><li>变量 常量 信号</li><li>×<h1 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h1></li><li>8</li><li>1</li><li>IN OUT INOUT BUFFER LINKAGE</li><li>变量 常量 信号</li><li>PROCESS function PROCEDURE</li><li>D</li><li>C</li><li>B</li><li>D</li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/05/19/shuo-ming/"/>
-      <url>/2024/05/19/shuo-ming/</url>
-      
-        <content type="html"><![CDATA[<ol><li>机器人竞技奖是国家级奖项，在<a href="https://www.robomaster.com/zh-CN/resource/pages/announcement/1716">RoboMaster 2024机甲大师高校联盟赛机器人竞技奖获奖名单</a>中有详细说明，搜索海南大学南海鲨战队即可，没在文件里面放截图的原因是这么展示过于抽象。除截图将向外还有一个国二和两个国三![[Pasted image 20240519105422.png]]<br>Robomaster的奖状为个人奖状，无排名区分。</li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/05/14/za-ji/wei-ming-ming/"/>
-      <url>/2024/05/14/za-ji/wei-ming-ming/</url>
-      
-        <content type="html"><![CDATA[<p>李义诚同学平时努力学习，经常在课上回答老师的问题，成绩名列前茅。他不仅在学业上表现优异，而且积极组队参加学科竞赛，在多次竞赛中取得了不错的成绩，展示了其深厚的专业知识和出色的实践能力。此外，李义诚同学还积极参与班级事务，经常帮助组织班级活动和促进班级团结，作为团员，他极其重视并积极参加团组织的活动，积极配合班团委举办活动和日常工作，深受同学们的赞赏。但他平时也会有不重视细节的小问题，但瑕不掩瑜，李义诚同学是一位十分优秀的同学。</p>]]></content>
       
       
       
