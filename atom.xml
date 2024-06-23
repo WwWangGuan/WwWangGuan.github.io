@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-06-11T15:56:26.880Z</updated>
+  <updated>2024-06-23T15:45:06.022Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>硬件组2023-2024-2 最终考核</title>
+    <link href="http://wwwangguan.github.io/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/"/>
+    <id>http://wwwangguan.github.io/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/</id>
+    <published>2024-06-23T09:00:00.000Z</published>
+    <updated>2024-06-23T15:45:06.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现给出一个48V-&amp;gt;24V 10A 的需求，使用MP9929或&lt;br&gt;自行阅读MP9929 DataSheet，</summary>
+        
+      
+    
+    
+    
+    
+    <category term="硬件组" scheme="http://wwwangguan.github.io/tags/%E7%A1%AC%E4%BB%B6%E7%BB%84/"/>
+    
+    <category term="原神" scheme="http://wwwangguan.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="RoboMaster" scheme="http://wwwangguan.github.io/tags/RoboMaster/"/>
+    
+  </entry>
   
   <entry>
     <title>工程学导论</title>
@@ -68,7 +95,7 @@
     <link href="http://wwwangguan.github.io/2024/05/20/fpga-zuo-ye/"/>
     <id>http://wwwangguan.github.io/2024/05/20/fpga-zuo-ye/</id>
     <published>2024-05-20T11:34:03.523Z</published>
-    <updated>2024-05-23T04:03:15.970Z</updated>
+    <updated>2024-06-17T16:02:12.830Z</updated>
     
     
       
@@ -426,27 +453,6 @@
     
     
     <category term="Cmake C" scheme="http://wwwangguan.github.io/tags/Cmake-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>信号与系统</title>
-    <link href="http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/"/>
-    <id>http://wwwangguan.github.io/2024/01/25/xin-hao-yu-xi-tong/xin-hao-yu-xi-tong/</id>
-    <published>2024-01-24T22:23:49.361Z</published>
-    <updated>2024-04-09T02:53:57.196Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;信号与系统&quot;&gt;&lt;a href=&quot;#信号与系统&quot; class=&quot;headerlink&quot; title=&quot;信号与系统&quot;&gt;&lt;/a&gt;信号与系统&lt;/h1&gt;&lt;h2 id=&quot;1-1-连续时间和离散时间信号&quot;&gt;&lt;a href=&quot;#1-1-连续时间和离散时间信号&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

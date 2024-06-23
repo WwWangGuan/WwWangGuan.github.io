@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>硬件组2023-2024-2 最终考核</title>
+      <link href="/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/"/>
+      <url>/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/</url>
+      
+        <content type="html"><![CDATA[<p>现给出一个48V-&gt;24V 10A 的需求，使用MP9929或<br>自行阅读MP9929 DataSheet， 回答下列问题：</p><ol><li>开关频率靠什么调节？当开关频率是1Khz时应该如何修改电路？开关频率的高低对电路元件有什么要求或影响？</li><li>栅极驱动电源来自MP9929本身吗？如果不来自于本身，如何利用分立元件搭出符合要求的外部电路？</li><li>电流限制有几个挡位？</li><li>如何调节输出电压？应该如何搭配电阻使得MP9929能够输出24V或19V？（必须使用立创商城有货的电阻）</li><li>Typical Application Ciruits中，$C5$的作用是什么？</li><li>MP9929能够控制的最大输出电压是多少？</li><li>假设目前的开关频率是1Khz，计算电感的感值并挑选合适的电感。（给出公式来源，有推导过程加分）</li><li>如果实际的感值比计算值偏大或偏小，会对电路造成什么影响？</li><li>为什么航模电池上电会打火？如何避免打火？有几种方法？</li><li>假设输出电容的容值组成为：100nF+10uF * 3+470uF ，按照上面计算的感值，计算输出纹波。</li><li>MLCC的实际容值会受到哪些因素的影响？</li><li>如何计算$R_{SENSE}$的大小？为什么用到这个电阻？如何选型？需要注意什么？</li><li>如何挑选一个合适的MOS？MOS的什么参数会影响本身的开关速度？</li><li>在BST上串接电阻的意义是什么？除去串接电阻外有没有其他方式能够达到和串接电阻一样的效果？</li><li>为什么在$Figure 9$的电路中，$R_{SENSE}$被放在了低侧（靠近GND）而非像12V输出时，放在电感和输出电容之间？</li><li>写出Layout 要求，并尝试绘制原理图和PCB。</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 硬件组 </tag>
+            
+            <tag> 原神 </tag>
+            
+            <tag> RoboMaster </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>工程学导论</title>
       <link href="/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/"/>
       <url>/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/</url>
@@ -46,7 +69,7 @@
       <link href="/2024/05/20/fpga-zuo-ye/"/>
       <url>/2024/05/20/fpga-zuo-ye/</url>
       
-        <content type="html"><![CDATA[<h1 id="第二次"><a href="#第二次" class="headerlink" title="第二次"></a>第二次</h1><ol><li>C</li><li>entity:描述电路的所有输入输出引脚<br>archtiecture： 用VHDL描述电路行为和实现功能。</li><li>B</li><li>变量 常量 信号</li><li>×<h1 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h1></li><li>8</li><li>1</li><li>IN OUT INOUT BUFFER LINKAGE</li><li>变量 常量 信号</li><li>PROCESS function PROCEDURE</li><li>D</li><li>C</li><li>B</li><li>D</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="第二次"><a href="#第二次" class="headerlink" title="第二次"></a>第二次</h1><ol><li>C</li><li>entity:描述电路的所有输入输出引脚<br>archtiecture： 用VHDL描述电路行为和实现功能。</li><li>B</li><li>变量 常量 信号</li><li>×<h1 id="第三次"><a href="#第三次" class="headerlink" title="第三次"></a>第三次</h1></li><li>8</li><li>1</li><li>IN OUT INOUT BUFFER LINKAGE</li><li>变量 常量 信号</li><li>PROCESS function PROCEDURE</li><li>D</li><li>C</li><li>B</li><li>D<br>$$<br>\begin{equation}\begin{split}<br>已知电磁波的频率 f = 3 \times 10^9 \, \text{Hz}。在空气中传播，电磁波的波长 \lambda和传播常数 k 可以通过以下公式求得：\\</li></ol><p>\end{split}\end{equation}</p><script type="math/tex; mode=display"></script><p>\left[\matrix{\theta  \\ \dot{\theta}\\x\\\dot{x}\\\phi \\\dot{\phi}}\right]<br>$$</p>]]></content>
       
       
       
