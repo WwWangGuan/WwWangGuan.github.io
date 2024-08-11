@@ -391,14 +391,14 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-09
+                    2024-07-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    484
+                    541
                 </div>
                 
 
@@ -444,7 +444,8 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
 </ol>
 <h2 id="超级电容均压板"><a href="#超级电容均压板" class="headerlink" title="超级电容均压板"></a>超级电容均压板</h2><p>计划使用主动均衡电路<br><img src="https://pic1.zhimg.com/80/v2-d973d70449df0612034c47e848c1cba2_1440w.png" alt=""><br>如图所示，SC为超级电容，其和一个小电容并联，充电电源和两列电容之间用4个MOS管隔开，充电时，左侧MOS等效为开关闭合，右侧MOS截止，先给小电容充电，随后左侧MOS截止，右侧MOS闭合，小电容给超级电容充电，如此循环往复达到超级电容的主动均压，只需给一个高频PWM即可。</p>
 <h3 id="均压速率影响因素"><a href="#均压速率影响因素" class="headerlink" title="均压速率影响因素"></a>均压速率影响因素</h3><p>有人做过相关Matlab仿真,结果如图所示<br><img src="https://picx.zhimg.com/80/v2-10102bcb9e8165ef687dc9d29c76b7e7_1440w.png" alt=""></p>
-
+<h2 id="BuckBoost-占空比更新逻辑"><a href="#BuckBoost-占空比更新逻辑" class="headerlink" title="BuckBoost 占空比更新逻辑"></a>BuckBoost 占空比更新逻辑</h2><p>参数输入是输出电压和输入电压的比值<br>首先对比值进行限幅处理，不得高于预设的最大值和最小值（1.2 /0.1）</p>
+<h1 id="ADC滤波"><a href="#ADC滤波" class="headerlink" title="ADC滤波"></a>ADC滤波</h1>
                 
             </div>
             <hr/>
@@ -869,7 +870,7 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.4k</span>
+                        class="white-color">33.8k</span>
             
             
             

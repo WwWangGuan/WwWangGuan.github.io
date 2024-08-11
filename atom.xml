@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-06-23T16:35:44.501Z</updated>
+  <updated>2024-08-11T14:14:07.580Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,150 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/"/>
+    <id>http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/</id>
+    <published>2024-08-11T03:43:51.923Z</published>
+    <updated>2024-08-11T14:14:07.580Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/564229673&quot;&gt;在 CLion 中开发</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200eevk-spi/"/>
+    <id>http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200eevk-spi/</id>
+    <published>2024-08-09T07:49:01.036Z</published>
+    <updated>2024-08-10T12:59:04.155Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是&lt;br&gt;![[Pasted image</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/06/gao-qing/"/>
+    <id>http://wwwangguan.github.io/2024/08/06/gao-qing/</id>
+    <published>2024-08-06T04:30:44.453Z</published>
+    <updated>2024-08-07T06:00:26.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;超级电容&quot;&gt;&lt;a href=&quot;#超级电容&quot; class=&quot;headerlink&quot; title=&quot;超级电容&quot;&gt;&lt;/a&gt;超级电容&lt;/h1&gt;&lt;h2 id=&quot;拓扑结构&quot;&gt;&lt;a href=&quot;#拓扑结构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/"/>
+    <id>http://wwwangguan.github.io/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/</id>
+    <published>2024-07-13T13:42:10.156Z</published>
+    <updated>2024-07-16T12:23:36.182Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;7-13&quot;&gt;&lt;a href=&quot;#7-13&quot; class=&quot;headerlink&quot; title=&quot;7.13&quot;&gt;&lt;/a&gt;7.13&lt;/h1&gt;&lt;h2 id=&quot;频率和预计不符&quot;&gt;&lt;a href=&quot;#频率和预计不符&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/"/>
+    <id>http://wwwangguan.github.io/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/</id>
+    <published>2024-07-06T17:27:51.859Z</published>
+    <updated>2024-07-06T17:39:58.344Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以STM32</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>高速电路设计进阶</title>
+    <link href="http://wwwangguan.github.io/2024/07/06/dian-zi-dian-li/gao-su-dian-lu-she-ji-jin-jie/"/>
+    <id>http://wwwangguan.github.io/2024/07/06/dian-zi-dian-li/gao-su-dian-lu-she-ji-jin-jie/</id>
+    <published>2024-07-06T05:31:51.960Z</published>
+    <updated>2024-07-06T05:32:21.161Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/07/04/ma-yuan/"/>
+    <id>http://wwwangguan.github.io/2024/07/04/ma-yuan/</id>
+    <published>2024-07-04T08:05:36.933Z</published>
+    <updated>2024-07-05T04:58:46.051Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;为什么说物质资料的生产方式是社会发展的决定性力量？&quot;&gt;&lt;a href=&quot;#为什么说物质资料的生产方式是社会发展的决定性力量？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>硬件组2023-2024-2 最终考核</title>
     <link href="http://wwwangguan.github.io/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/"/>
     <id>http://wwwangguan.github.io/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/</id>
     <published>2024-06-23T09:00:00.000Z</published>
-    <updated>2024-06-23T16:35:44.501Z</updated>
+    <updated>2024-06-26T16:15:04.148Z</updated>
     
     
       
@@ -300,159 +439,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/"/>
-    <id>http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/</id>
-    <published>2024-03-29T04:07:00.545Z</published>
-    <updated>2024-03-29T05:04:05.252Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;胡适所谓乐于助人的行为，大多是资助他人完成学业或者资助好友，比较典型的例子是资助林语堂&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在当时，与胡适一同到美国留学的林语堂便是众多贫困子弟中的一个，并且由于家境贫困，即使林语堂在空闲时间全部用于打工赚钱，仍然无法凑齐学费，日常生活也</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>问题</title>
-    <link href="http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/"/>
-    <id>http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/</id>
-    <published>2024-03-22T04:01:58.030Z</published>
-    <updated>2024-03-24T09:42:26.356Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot;&gt;&lt;a href=&quot;#TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>工作记录</title>
-    <link href="http://wwwangguan.github.io/2024/03/22/za-ji/gong-zuo-ji-lu/"/>
-    <id>http://wwwangguan.github.io/2024/03/22/za-ji/gong-zuo-ji-lu/</id>
-    <published>2024-03-22T03:59:32.587Z</published>
-    <updated>2024-03-22T04:00:29.205Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-22&quot;&gt;&lt;a href=&quot;#2024-3-22&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/"/>
-    <id>http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/</id>
-    <published>2024-03-01T11:09:11.656Z</published>
-    <updated>2024-03-02T10:37:03.843Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;主控：STM32F103CBT6&lt;br&gt;锂电池充放电管理：IP5306，带有四颗LED灯指示电量。&lt;br&gt;充电口：MicroUSB&lt;br&gt;气体压力传感器：AGR10系列表压型传感器。&lt;br&gt;运算放大器：OPA376&lt;br&gt;选用3.7V电池或者18560锂电池。&lt;br&gt;ADC</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/02/18/chao-ji-dian-rong/zhuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/02/18/chao-ji-dian-rong/zhuan-li/</id>
-    <published>2024-02-18T09:53:05.382Z</published>
-    <updated>2024-02-18T12:06:53.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一种基于Type3型补偿器的超级电容组及其控制器&quot;&gt;&lt;a href=&quot;#一种基于Type3型补偿器的超级电容组及其控制器&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/</id>
-    <published>2024-01-31T11:26:05.804Z</published>
-    <updated>2024-02-18T13:15:10.177Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;发明和实用新型专利申请应提交的文件基本相同，即：请求书、说明书、说明书附图、权利要求书、说明书摘要及摘要附图。但某些发明专利申请可以不提交说明书附图和摘要附图。&lt;h1 id=&quot;分配&quot;&gt;&lt;a href=&quot;#分配&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CMake</title>
-    <link href="http://wwwangguan.github.io/2024/01/30/cmake/cmake/"/>
-    <id>http://wwwangguan.github.io/2024/01/30/cmake/cmake/</id>
-    <published>2024-01-30T03:41:06.056Z</published>
-    <updated>2024-04-09T15:17:50.528Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-Cmake&quot; data-language=&quot;Cmake&quot;&gt;&lt;code class=&quot;language-Cmake&quot;&gt;set(CMAKE_SYSTEM_NAME Generic)  
-#</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Cmake C" scheme="http://wwwangguan.github.io/tags/Cmake-C/"/>
     
   </entry>
   
