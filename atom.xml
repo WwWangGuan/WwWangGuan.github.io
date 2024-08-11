@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-11T14:14:07.580Z</updated>
+  <updated>2024-08-11T14:25:36.090Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Clion HPM5301lite开发</title>
     <link href="http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/"/>
     <id>http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/</id>
     <published>2024-08-11T03:43:51.923Z</published>
-    <updated>2024-08-11T14:14:07.580Z</updated>
+    <updated>2024-08-11T14:25:36.090Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="Clion HPM DAPLink JTAG OpenOCD" scheme="http://wwwangguan.github.io/tags/Clion-HPM-DAPLink-JTAG-OpenOCD/"/>
     
   </entry>
   
