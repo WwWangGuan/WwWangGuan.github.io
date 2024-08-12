@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-11T14:25:36.090Z</updated>
+  <updated>2024-08-12T02:48:04.945Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CAN</title>
+    <link href="http://wwwangguan.github.io/2024/08/12/stm32/can/"/>
+    <id>http://wwwangguan.github.io/2024/08/12/stm32/can/</id>
+    <published>2024-08-12T01:21:50.421Z</published>
+    <updated>2024-08-12T02:48:04.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
+    
+    <category term="CAN" scheme="http://wwwangguan.github.io/tags/CAN/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Clion HPM5301lite开发</title>
     <link href="http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/"/>
     <id>http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/</id>
     <published>2024-08-11T03:43:51.923Z</published>
-    <updated>2024-08-11T14:25:36.090Z</updated>
+    <updated>2024-08-12T01:24:38.272Z</updated>
     
     
       
@@ -52,27 +77,6 @@
         
         
     <summary type="html">&lt;p&gt;原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是&lt;br&gt;![[Pasted image</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/08/06/gao-qing/"/>
-    <id>http://wwwangguan.github.io/2024/08/06/gao-qing/</id>
-    <published>2024-08-06T04:30:44.453Z</published>
-    <updated>2024-08-07T06:00:26.565Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;超级电容&quot;&gt;&lt;a href=&quot;#超级电容&quot; class=&quot;headerlink&quot; title=&quot;超级电容&quot;&gt;&lt;/a&gt;超级电容&lt;/h1&gt;&lt;h2 id=&quot;拓扑结构&quot;&gt;&lt;a href=&quot;#拓扑结构&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -130,27 +134,6 @@
     <published>2024-07-06T05:31:51.960Z</published>
     <updated>2024-07-06T05:32:21.161Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/07/04/ma-yuan/"/>
-    <id>http://wwwangguan.github.io/2024/07/04/ma-yuan/</id>
-    <published>2024-07-04T08:05:36.933Z</published>
-    <updated>2024-07-05T04:58:46.051Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;为什么说物质资料的生产方式是社会发展的决定性力量？&quot;&gt;&lt;a href=&quot;#为什么说物质资料的生产方式是社会发展的决定性力量？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
     
     
     
@@ -228,29 +211,6 @@
     
     
     <category term="Cmake Clion RISCV VeriSilicon" scheme="http://wwwangguan.github.io/tags/Cmake-Clion-RISCV-VeriSilicon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/05/20/fpga-zuo-ye/"/>
-    <id>http://wwwangguan.github.io/2024/05/20/fpga-zuo-ye/</id>
-    <published>2024-05-20T11:34:03.523Z</published>
-    <updated>2024-06-17T16:02:12.830Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第二次&quot;&gt;&lt;a href=&quot;#第二次&quot; class=&quot;headerlink&quot; title=&quot;第二次&quot;&gt;&lt;/a&gt;第二次&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;C&lt;/li&gt;
-&lt;li&gt;entity:描述电路的所有输入输出引脚&lt;br&gt;archtiecture：</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
@@ -436,6 +396,50 @@
         
         
     <summary type="html">&lt;h1 id=&quot;中断模式和中断事件模式&quot;&gt;&lt;a href=&quot;#中断模式和中断事件模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/"/>
+    <id>http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/</id>
+    <published>2024-03-29T04:07:00.545Z</published>
+    <updated>2024-03-29T05:04:05.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;胡适所谓乐于助人的行为，大多是资助他人完成学业或者资助好友，比较典型的例子是资助林语堂&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在当时，与胡适一同到美国留学的林语堂便是众多贫困子弟中的一个，并且由于家境贫困，即使林语堂在空闲时间全部用于打工赚钱，仍然无法凑齐学费，日常生活也</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>问题</title>
+    <link href="http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/"/>
+    <id>http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/</id>
+    <published>2024-03-22T04:01:58.030Z</published>
+    <updated>2024-03-24T09:42:26.356Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot;&gt;&lt;a href=&quot;#TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot; class=&quot;headerlink&quot;</summary>
         
       
     

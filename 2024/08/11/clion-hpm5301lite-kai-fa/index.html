@@ -386,14 +386,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-11
+                    2024-08-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    835
+                    834
                 </div>
                 
 
@@ -434,11 +434,10 @@
 <h2 id="本地化开发"><a href="#本地化开发" class="headerlink" title="本地化开发"></a>本地化开发</h2><p>本地化开发是依托答辩，建议把sample里面的例程直接复制过来，加上Cmake的参数就行了，跟上面步骤是一样的</p>
 <h1 id="OpenOCD-下载与调试"><a href="#OpenOCD-下载与调试" class="headerlink" title="OpenOCD 下载与调试"></a>OpenOCD 下载与调试</h1><p>openocd必须用HPM的env里面提供的openocd，CLion开发实测不需要将其添加到环境变量中，只需指定即可</p>
 <p>一个bug<br>我的实际目录是这样的<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811205939.png" alt="Pasted image 20240811205939.png"></p>
-<p>但是呢，来看看CLion，<del>没有图了</del>，用人话说就是CLion的这个目录里面看不到这个openocd<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210041.png" alt="Pasted image 20240811210041.png"></p>
+<p>但是呢，来看看CLion，<del>没有图了</del>，用人话说就是CLion的这个目录里面看不到这个openocd<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210041.png" alt="Pasted image 20240811210041.png"> </p>
 </blockquote>
 <p>另外还需要对env_sdk的openocd目录做一点手脚，熟悉openocd的同学们应该能发现实际上env里面这个openocd是不完整的，CLion也会提示找不到scripts/board，这个东西实际上在sdk里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210252.png" alt="Pasted image 20240811210252.png"></p>
-<p>所以，要把这些东西复制到env的openocd/scripts目录里面<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210946.png" alt="Pasted image 20240811210946.png"></p>
-<p>这个时候CLion应该不会报错了，接下来是编写面板配置文件（.cfg）<br><pre class="line-numbers language-tcl" data-language="tcl"><code class="language-tcl">bindto 0.0.0.0  
+<p>所以，要把这些东西复制到env的openocd/scripts目录里面<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210946.png" alt="Pasted image 20240811210946.png"><br>这个时候CLion应该不会报错了，接下来是编写面板配置文件（.cfg）<br><pre class="line-numbers language-tcl" data-language="tcl"><code class="language-tcl">bindto 0.0.0.0  
   
 adapter speed 8000  
   
@@ -610,18 +609,17 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/08/11/clion-hpm5301lite-kai-fa/">
+                <a href="/2024/08/12/stm32/can/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Clion HPM5301lite开发">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="CAN">
                         
-                        <span class="card-title">Clion HPM5301lite开发</span>
+                        <span class="card-title">CAN</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -631,9 +629,9 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -642,12 +640,15 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Clion-HPM-DAPLink-JTAG-OpenOCD/">
-                        <span class="chip bg-color">Clion HPM DAPLink JTAG OpenOCD</span>
+                    <a href="/tags/STM32/">
+                        <span class="chip bg-color">STM32</span>
+                    </a>
+                    
+                    <a href="/tags/CAN/">
+                        <span class="chip bg-color">CAN</span>
                     </a>
                     
                 </div>
@@ -926,7 +927,7 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.8k</span>
+                        class="white-color">32.5k</span>
             
             
             
