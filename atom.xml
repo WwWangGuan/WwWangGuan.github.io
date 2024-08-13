@@ -90,7 +90,7 @@
     <link href="http://wwwangguan.github.io/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/"/>
     <id>http://wwwangguan.github.io/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/</id>
     <published>2024-07-13T13:42:10.156Z</published>
-    <updated>2024-07-16T12:23:36.182Z</updated>
+    <updated>2024-08-13T02:38:50.490Z</updated>
     
     
       
@@ -168,29 +168,6 @@
   </entry>
   
   <entry>
-    <title>工程学导论</title>
-    <link href="http://wwwangguan.github.io/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/"/>
-    <id>http://wwwangguan.github.io/2024/06/11/gong-cheng-xue-dao-lun/gong-cheng-xue-dao-lun/</id>
-    <published>2024-06-11T00:18:52.889Z</published>
-    <updated>2024-06-11T15:56:26.880Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;铁路信号系统&quot;&gt;&lt;a href=&quot;#铁路信号系统&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="工程学导论 自动化 o.O" scheme="http://wwwangguan.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%AD%A6%E5%AF%BC%E8%AE%BA-%E8%87%AA%E5%8A%A8%E5%8C%96-o-O/"/>
-    
-  </entry>
-  
-  <entry>
     <title>芯原杯IDE替换测试</title>
     <link href="http://wwwangguan.github.io/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/"/>
     <id>http://wwwangguan.github.io/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/</id>
@@ -215,11 +192,11 @@
   </entry>
   
   <entry>
-    <title>[object Object]</title>
+    <title>FPGA期末复习</title>
     <link href="http://wwwangguan.github.io/2024/05/14/fpga/fpga-qi-mo-fu-xi/"/>
     <id>http://wwwangguan.github.io/2024/05/14/fpga/fpga-qi-mo-fu-xi/</id>
     <published>2024-05-14T13:13:57.681Z</published>
-    <updated>2024-05-28T01:09:13.123Z</updated>
+    <updated>2024-08-13T02:36:13.415Z</updated>
     
     
       
@@ -228,69 +205,6 @@
         
     <summary type="html">&lt;h1 id=&quot;杂记&quot;&gt;&lt;a href=&quot;#杂记&quot; class=&quot;headerlink&quot; title=&quot;杂记&quot;&gt;&lt;/a&gt;杂记&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;RTL  Register Transfer</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/05/04/tuo-luo-yi/adis16467/"/>
-    <id>http://wwwangguan.github.io/2024/05/04/tuo-luo-yi/adis16467/</id>
-    <published>2024-05-04T06:58:12.346Z</published>
-    <updated>2024-05-04T07:05:41.710Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;sadf&lt;br&gt;&lt;img src=&quot;https://picx.zhimg.com/80/v2-3ce7d73454de99d9c48aa0ed62dd0a92_720w.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/05/04/ri-ji/2024-05-04/"/>
-    <id>http://wwwangguan.github.io/2024/05/04/ri-ji/2024-05-04/</id>
-    <published>2024-05-04T06:55:59.828Z</published>
-    <updated>2024-05-04T06:56:31.681Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2024-5-1</title>
-    <link href="http://wwwangguan.github.io/2024/05/01/ri-ji/2024-5-1/"/>
-    <id>http://wwwangguan.github.io/2024/05/01/ri-ji/2024-5-1/</id>
-    <published>2024-05-01T13:50:38.467Z</published>
-    <updated>2024-05-04T06:55:54.436Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -440,6 +354,91 @@
         
         
     <summary type="html">&lt;h1 id=&quot;TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot;&gt;&lt;a href=&quot;#TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>工作记录</title>
+    <link href="http://wwwangguan.github.io/2024/03/22/za-ji/gong-zuo-ji-lu/"/>
+    <id>http://wwwangguan.github.io/2024/03/22/za-ji/gong-zuo-ji-lu/</id>
+    <published>2024-03-22T03:59:32.587Z</published>
+    <updated>2024-03-22T04:00:29.205Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2024-3-22&quot;&gt;&lt;a href=&quot;#2024-3-22&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/"/>
+    <id>http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/</id>
+    <published>2024-03-01T11:09:11.656Z</published>
+    <updated>2024-03-02T10:37:03.843Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;主控：STM32F103CBT6&lt;br&gt;锂电池充放电管理：IP5306，带有四颗LED灯指示电量。&lt;br&gt;充电口：MicroUSB&lt;br&gt;气体压力传感器：AGR10系列表压型传感器。&lt;br&gt;运算放大器：OPA376&lt;br&gt;选用3.7V电池或者18560锂电池。&lt;br&gt;ADC</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/02/18/chao-ji-dian-rong/zhuan-li/"/>
+    <id>http://wwwangguan.github.io/2024/02/18/chao-ji-dian-rong/zhuan-li/</id>
+    <published>2024-02-18T09:53:05.382Z</published>
+    <updated>2024-02-18T12:06:53.077Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一种基于Type3型补偿器的超级电容组及其控制器&quot;&gt;&lt;a href=&quot;#一种基于Type3型补偿器的超级电容组及其控制器&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[object Object]</title>
+    <link href="http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/"/>
+    <id>http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/</id>
+    <published>2024-01-31T11:26:05.804Z</published>
+    <updated>2024-02-18T13:15:10.177Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;发明和实用新型专利申请应提交的文件基本相同，即：请求书、说明书、说明书附图、权利要求书、说明书摘要及摘要附图。但某些发明专利申请可以不提交说明书附图和摘要附图。&lt;h1 id=&quot;分配&quot;&gt;&lt;a href=&quot;#分配&quot; class=&quot;headerlink&quot;</summary>
         
       
     

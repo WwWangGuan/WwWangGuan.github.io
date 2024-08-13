@@ -388,7 +388,7 @@ R">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-05-07
+                    2024-08-13
                 </div>
                 
 
@@ -470,7 +470,7 @@ __HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_A, HRTIM_COMPAREUNIT
 __HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_B, HRTIM_COMPAREUNIT_1, 200);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>这样的话就能看见两个一模一样的PWM波形了。</p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>尝试使用Up-Down Countering去生成中心对齐PWM，示波器上能看见周期翻倍了，但是Duty被锁死在了0.5，问题可复现，尚未有解决方案。</p>
 <h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><h1 id="Master-定时器"><a href="#Master-定时器" class="headerlink" title="Master 定时器"></a>Master 定时器</h1><p><img src="https://pic1.zhimg.com/80/v2-52027b3db7f468bb81bea0171ec1f668_1440w.png" alt=""><br>后面都是disable，开了PreLoad和重复更新<br>这里跟着CSDN配置的，开了中断源，NVIC也开中断了，但是我没用中断输出，我直接<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">HAL_HRTIM_WaveformCountStart(&amp;hhrtim1,HRTIM_TIMERID_Master);  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>实测无影响。但是没测试过关了之后什么样，有时间再说</p>
-<h2 id="TimerA"><a href="#TimerA" class="headerlink" title="TimerA"></a>TimerA</h2><p><img src="https://picx.zhimg.com/80/v2-3e2f6cce2cb1e510c811f208ee054d07_1440w.png" alt=""><br><img src="https://pica.zhimg.com/80/v2-b7217745a46a8454de907f9715b62451_1440w.png" alt=""><br>子定时器如果想用Master去做同步更新，就要在 Reset Trigger Source里面选上跟随Master周期更新，开了两个比较的单元，没用2的原因是貌似跟ADC有关，<del>然后3和1又是一样的就直接用3了</del>。<br>这里TimerA是用来生成中心对齐PWM波形的，TimerB是生成了一个正常的PWM波形，用来和中心对齐的波形进行对比<br>Set Source是选了Counting到比较单元1的值之后再变成高电平，Reset Source则是在每个周期的开始和计数到比较单元3之后波形变成低电平。<br>实际波形图<br>![[IMG_20240507_203349.jpg]]</p>
+<h2 id="TimerA"><a href="#TimerA" class="headerlink" title="TimerA"></a>TimerA</h2><p><img src="https://picx.zhimg.com/80/v2-3e2f6cce2cb1e510c811f208ee054d07_1440w.png" alt=""><br><img src="https://pica.zhimg.com/80/v2-b7217745a46a8454de907f9715b62451_1440w.png" alt=""><br>子定时器如果想用Master去做同步更新，就要在 Reset Trigger Source里面选上跟随Master周期更新，开了两个比较的单元，没用2的原因是貌似跟ADC有关，<del>然后3和1又是一样的就直接用3了</del>。<br>这里TimerA是用来生成中心对齐PWM波形的，TimerB是生成了一个正常的PWM波形，用来和中心对齐的波形进行对比<br>Set Source是选了Counting到比较单元1的值之后再变成高电平，Reset Source则是在每个周期的开始和计数到比较单元3之后波形变成低电平。<br>实际波形图<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/IMG_20240507_203349.jpg" alt=""></p>
 
                 
             </div>
@@ -900,7 +900,7 @@ __HAL_HRTIM_SETCOMPARE(&amp;hhrtim1, HRTIM_TIMERINDEX_TIMER_B, HRTIM_COMPAREUNIT
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33k</span>
+                        class="white-color">31.4k</span>
             
             
             
