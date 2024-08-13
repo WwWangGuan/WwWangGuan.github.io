@@ -65,18 +65,18 @@
   </entry>
   
   <entry>
-    <title>{ title }</title>
+    <title>XMC7200EEVK-SPI</title>
     <link href="http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200eevk-spi/"/>
     <id>http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200eevk-spi/</id>
     <published>2024-08-09T07:49:01.036Z</published>
-    <updated>2024-08-13T01:19:15.698Z</updated>
+    <updated>2024-08-13T01:28:22.279Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是&lt;br&gt;&lt;img</summary>
+    <summary type="html">&lt;h1 id=&quot;BSP修改&quot;&gt;&lt;a href=&quot;#BSP修改&quot; class=&quot;headerlink&quot; title=&quot;BSP修改&quot;&gt;&lt;/a&gt;BSP修改&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
         
       
     

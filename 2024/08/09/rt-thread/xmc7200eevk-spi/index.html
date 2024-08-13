@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="{ title }, WwWangGuan">
-    <meta name="description" content="原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是
-RTT BSP传输波形，不知道为什么会在">
+    <meta name="keywords" content="XMC7200EEVK-SPI, WwWangGuan">
+    <meta name="description" content="BSP修改引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。
+实际使用原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划在本次实践中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@ RTT BSP传输波形，不知道为什么会在">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>{ title } | WwWangGuan</title>
+    <title>XMC7200EEVK-SPI | WwWangGuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +334,12 @@ RTT BSP传输波形，不知道为什么会在">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">{ title }</h1>
+                    <h1 class="description center-align post-title">XMC7200EEVK-SPI</h1>
                 </div>
             </div>
         </div>
@@ -419,7 +419,8 @@ RTT BSP传输波形，不知道为什么会在">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810164228.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810164228.png" alt=""></p>
+                <h1 id="BSP修改"><a href="#BSP修改" class="headerlink" title="BSP修改"></a>BSP修改</h1><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130926156.png" alt=""><br>引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。</p>
+<h1 id="实际使用"><a href="#实际使用" class="headerlink" title="实际使用"></a>实际使用</h1><p>原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划在本次实践中使用XMC7200嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810164228.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810164228.png" alt=""></p>
 <p>RTT BSP传输波形，不知道为什么会在后面有BA0，发送的是E880。</p>
 <h1 id="波形分析"><a href="#波形分析" class="headerlink" title="波形分析"></a>波形分析</h1><p>使用ST官方HAL库，ADIS16467可正常运行，驱动链接：<a target="_blank" rel="noopener" href="https://github.com/WwWangGuan/ADIS16467-2">GitHub - WwWangGuan/ADIS16467-2: ADIS16467-2的STM32驱动程序</a><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810191157.png" alt=""></p>
 <p>该函数使用的寄存器如图所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810191240.png" alt=""></p>
@@ -430,7 +431,7 @@ RTT BSP传输波形，不知道为什么会在">
 <p> 此函数的目的是为了在开机时重启陀螺仪（写值0x1000 0000/0x80h）<br> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810191844.png" alt=""></p>
 <p> 那么如何写一个寄存器呢？datasheet这么说<br> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810192129.png" alt=""><br> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810192203.png" alt=""></p>
 <p> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810200227.png" alt=""></p>
-<p> 也就是说 对于每一个16位的数据，写寄存器之前先将最高位置1，然后加上寄存器地址到高八位，低八位是你要写的数据，但是个人觉得最好是0，以免出现什么逆天问题。<br> 来看看逻辑分析仪的波形<br> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810192726.png" alt=""></p>
+<p> 也就是说 对于每一个16位的数据，写寄存器之前先将最高位置1，然后加上寄存器地址到高八位，低八位是你要写的数据<br> 来看看逻辑分析仪的波形<br> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810192726.png" alt=""></p>
 <p> 函数实现是这个样子<br> <img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810192502.png" alt=""></p>
 <p> 也明显，分成三步：</p>
 <ol>
