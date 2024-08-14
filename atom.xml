@@ -46,7 +46,7 @@
     <link href="http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/"/>
     <id>http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/</id>
     <published>2024-08-11T03:43:51.923Z</published>
-    <updated>2024-08-12T01:24:38.272Z</updated>
+    <updated>2024-08-14T07:34:31.822Z</updated>
     
     
       
@@ -60,7 +60,15 @@
     
     
     
-    <category term="Clion HPM DAPLink JTAG OpenOCD" scheme="http://wwwangguan.github.io/tags/Clion-HPM-DAPLink-JTAG-OpenOCD/"/>
+    <category term="Clion" scheme="http://wwwangguan.github.io/tags/Clion/"/>
+    
+    <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
+    
+    <category term="DAPLink" scheme="http://wwwangguan.github.io/tags/DAPLink/"/>
+    
+    <category term="JTAG" scheme="http://wwwangguan.github.io/tags/JTAG/"/>
+    
+    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
     
   </entry>
   
@@ -201,7 +209,7 @@
     <link href="http://wwwangguan.github.io/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/"/>
     <id>http://wwwangguan.github.io/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/</id>
     <published>2024-06-07T16:21:18.693Z</published>
-    <updated>2024-06-07T17:25:00.657Z</updated>
+    <updated>2024-08-14T07:34:16.077Z</updated>
     
     
       
@@ -216,7 +224,13 @@
     
     
     
-    <category term="Cmake Clion RISCV VeriSilicon" scheme="http://wwwangguan.github.io/tags/Cmake-Clion-RISCV-VeriSilicon/"/>
+    <category term="Cmake" scheme="http://wwwangguan.github.io/tags/Cmake/"/>
+    
+    <category term="Clion" scheme="http://wwwangguan.github.io/tags/Clion/"/>
+    
+    <category term="RISCV" scheme="http://wwwangguan.github.io/tags/RISCV/"/>
+    
+    <category term="VeriSilicon" scheme="http://wwwangguan.github.io/tags/VeriSilicon/"/>
     
   </entry>
   

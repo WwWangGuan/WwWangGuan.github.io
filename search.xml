@@ -35,7 +35,15 @@
       
         <tags>
             
-            <tag> Clion HPM DAPLink JTAG OpenOCD </tag>
+            <tag> Clion </tag>
+            
+            <tag> HPM </tag>
+            
+            <tag> DAPLink </tag>
+            
+            <tag> JTAG </tag>
+            
+            <tag> OpenOCD </tag>
             
         </tags>
       
@@ -152,7 +160,13 @@
       
         <tags>
             
-            <tag> Cmake Clion RISCV VeriSilicon </tag>
+            <tag> Cmake </tag>
+            
+            <tag> Clion </tag>
+            
+            <tag> RISCV </tag>
+            
+            <tag> VeriSilicon </tag>
             
         </tags>
       
@@ -327,7 +341,9 @@
       
         <tags>
             
-            <tag> Cmake C </tag>
+            <tag> Cmake </tag>
+            
+            <tag> C </tag>
             
         </tags>
       
@@ -372,7 +388,11 @@
       
         <tags>
             
-            <tag> HRTIM STM32 超级电容 </tag>
+            <tag> STM32 </tag>
+            
+            <tag> HRTIM </tag>
+            
+            <tag> 超级电容 </tag>
             
         </tags>
       
@@ -683,7 +703,9 @@
       
         <tags>
             
-            <tag> STM32 HAL </tag>
+            <tag> STM32 </tag>
+            
+            <tag> HAL </tag>
             
         </tags>
       
