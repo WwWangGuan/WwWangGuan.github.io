@@ -5,8 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="XMC7200EEVK-SPI, WwWangGuan">
-    <meta name="description" content="BSP修改引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。
-实际使用原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划在本次实践中">
+    <meta name="description" content="BSP修改与SPI配置首先在board/Kconfig里面加入SPI配置menuconfig BSP_USING_SPI  
+    bool &amp;quot;Enable SPI BUS&amp;quot;  
+    select RT_USING">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -382,21 +383,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-13
+                    2024-08-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -419,7 +420,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="BSP修改"><a href="#BSP修改" class="headerlink" title="BSP修改"></a>BSP修改</h1><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130926156.png" alt=""><br>引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。</p>
+                <h1 id="BSP修改与SPI配置"><a href="#BSP修改与SPI配置" class="headerlink" title="BSP修改与SPI配置"></a>BSP修改与SPI配置</h1><p>首先在board/Kconfig里面加入SPI配置<br><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">menuconfig BSP_USING_SPI  
+    bool &quot;Enable SPI BUS&quot;  
+    select RT_USING_SPI  
+    default n  
+    if BSP_USING_SPI  
+        menuconfig BSP_USING_SPI0  
+            bool &quot;Enable SPI0 BUS&quot;  
+            default n  
+        menuconfig BSP_USING_SPI3  
+            bool &quot;Enable SPI3 BUS&quot;  
+            default n  
+            if BSP_USING_SPI3  
+                config BSP_USING_SPI3_SAMPLE  
+                    bool &quot;Enable SPI3 BUS Sample&quot;  
+                    default n  
+            endif  
+        menuconfig BSP_USING_SPI6  
+            bool &quot;Enable SPI6 BUS&quot;  
+            default n  
+    endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408141359940.png" alt=""></p>
+<p>然后在menuconfig开启即可，但是需要修改一下drv_spi.c的引脚<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130926156.png" alt=""><br>引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。<br>配置与应用代码如下所示<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*  
+ * Copyright (c) 2006-2023, RT-Thread Development Team * * SPDX-License-Identifier: Apache-2.0 * * Change Logs: * Date           Author       Notes * 2024-05-22     LZero        first version *&#x2F;  
+#include &lt;rtthread.h&gt;  
+#include &lt;rtdevice.h&gt;  
+#include &quot;ADIS16467-2.h&quot;  
+  
+#include &quot;drv_gpio.h&quot;  
+#include &quot;drv_spi.h&quot;  
+#include &quot;rtdbg.h&quot;  
+  
+#define DBG_LVL DBG_  
+  
+#define LED_PIN     GET_PIN(16, 1)  
+#define LED2_PIN    GET_PIN(16,2)  
+rt_thread_t spitest;  
+ADIS16467_T adi_imu &#x3D; &#123;0&#125;;  
+  
+void SPIRTTEST() &#123;  
+&#x2F;&#x2F;    LOG_D(&quot;SPIRTTEST\n&quot;);  
+    rt_pin_mode(GET_PIN(10, 3), PIN_MODE_OUTPUT);  
+    rt_kprintf(&quot;SPIRTTEST\n&quot;);  
+    struct rt_spi_configuration imu_config &#x3D; &#123;  
+            .data_width&#x3D;16,  
+            .mode&#x3D;RT_SPI_MASTER | RT_SPI_MODE_3 | RT_SPI_MSB,  
+            .max_hz&#x3D;1000000  
+    &#125;;  
+&#x2F;&#x2F;    rt_hw_spi_device_attach(&quot;spi6&quot;, &quot;spi61&quot;, GET_PIN(10, 3));  
+  
+    struct rt_spi_device *imu &#x3D; (struct rt_spi_device *) rt_device_find(&quot;spi61&quot;);  
+  
+    if (!imu) &#123;  
+        LOG_E(&quot;imu not found\n&quot;);  
+    &#125; else &#123;  
+&#x2F;&#x2F;        LOG_D(&quot;imu found\n&quot;);  
+        rt_kprintf(&quot;imu found\n&quot;);  
+    &#125;    
+    rt_spi_bus_attach_device_cspin(imu,&quot;spi61&quot;,&quot;spi6&quot;,GET_PIN(10,3),RT_NULL);  
+    rt_spi_configure(imu, &amp;imu_config);  
+  
+    adi_imu.spi_device &#x3D; imu;  
+  
+%%     uint16_t send[1]&#x3D;&#123;0x1234&#125;;  
+    rt_spi_send(imu,send,1);   %%
+    ADIS16467_Init(&amp;adi_imu);  
+    ADIS16467_Check(&amp;adi_imu);  
+    ADIS16467_imuInfo(&amp;adi_imu);  
+    rt_kprintf(&quot;IMU ProdID : %X&quot;, adi_imu.ProdId);  
+    rt_pin_mode(LED2_PIN, PIN_MODE_OUTPUT);  
+    while (1) &#123;  
+        rt_pin_write(LED2_PIN, PIN_HIGH);  
+        rt_thread_mdelay(500);  
+        rt_pin_write(LED2_PIN, PIN_LOW);  
+        rt_thread_mdelay(500);  
+    &#125;  
+&#125;  
+  
+int main(void) &#123;  
+    spitest &#x3D; rt_thread_create(&quot;spitest&quot;, SPIRTTEST, RT_NULL,  
+                               RT_MAIN_THREAD_STACK_SIZE, 20, 20);  
+    rt_thread_startup(spitest);  
+    rt_pin_mode(LED_PIN, PIN_MODE_OUTPUT);  
+    rt_kprintf(&quot;Hello World!\n&quot;);  
+    for (;;) &#123;  
+        rt_pin_write(LED_PIN, PIN_HIGH);  
+        rt_thread_mdelay(500);  
+        rt_pin_write(LED_PIN, PIN_LOW);  
+        rt_thread_mdelay(500);  
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h1 id="实际使用"><a href="#实际使用" class="headerlink" title="实际使用"></a>实际使用</h1><p>原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划在本次实践中使用XMC7200嵌入RTT官方BSP，但是始终无法驱动起来。sendandsend函数逻分显示是正确的，但是<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810164228.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810164228.png" alt=""></p>
 <p>RTT BSP传输波形，不知道为什么会在后面有BA0，发送的是E880。</p>
 <h1 id="波形分析"><a href="#波形分析" class="headerlink" title="波形分析"></a>波形分析</h1><p>使用ST官方HAL库，ADIS16467可正常运行，驱动链接：<a target="_blank" rel="noopener" href="https://github.com/WwWangGuan/ADIS16467-2">GitHub - WwWangGuan/ADIS16467-2: ADIS16467-2的STM32驱动程序</a><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810191157.png" alt=""></p>
@@ -516,8 +605,7 @@ priority改成10？试了，没用，这真的慢。<br><img src="https://raw.gi
 <p>支持SFDP，这下好办了，可以直接使用RTT的SFUD<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810171424.png" alt=""></p>
 <h2 id="Kconfig文件修改"><a href="#Kconfig文件修改" class="headerlink" title="Kconfig文件修改"></a>Kconfig文件修改</h2><p>添加以下内容<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810171833.png" alt=""></p>
 <p>scons重新生成cmakelist之后提示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810172000.png" alt=""></p>
-<p>尝试 pkgs -Update，发现无效<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810172154.png" alt=""></p>
-<p>尝试在menucongfig中启用对应软件包，该软件包对此报错无效，且在HAL中无法找到此文件<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810180618.png" alt=""></p>
+<p>尝试 pkgs -Update，发现无效<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810172154.png" alt=""><br>尝试在menucongfig中启用对应软件包，该软件包对此报错无效，且在HAL中无法找到此文件<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810180618.png" alt=""></p>
 <p>问题：有对应的头文件，但是其实现却在drv_flash.c中，疑似官方错误，英飞凌的官方包也没有这个东西，在cmakelist中删除文件后能通过编译，但是AC6编译未能通过。</p>
 
                 
@@ -675,7 +763,7 @@ priority改成10？试了，没用，这真的慢。<br><img src="https://raw.gi
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/">
+                <a href="/2024/08/06/gao-qing/">
                     <div class="card-image">
                         
                         
@@ -692,7 +780,7 @@ priority改成10？试了，没用，这真的慢。<br><img src="https://raw.gi
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-06
                             </span>
                         <span class="publish-author">
                             
@@ -953,7 +1041,7 @@ priority改成10？试了，没用，这真的慢。<br><img src="https://raw.gi
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.4k</span>
+                        class="white-color">32k</span>
             
             
             

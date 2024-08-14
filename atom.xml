@@ -69,14 +69,37 @@
     <link href="http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200eevk-spi/"/>
     <id>http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200eevk-spi/</id>
     <published>2024-08-09T07:49:01.036Z</published>
-    <updated>2024-08-13T01:28:22.279Z</updated>
+    <updated>2024-08-14T06:01:16.637Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;BSP修改&quot;&gt;&lt;a href=&quot;#BSP修改&quot; class=&quot;headerlink&quot; title=&quot;BSP修改&quot;&gt;&lt;/a&gt;BSP修改&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;h1 id=&quot;BSP修改与SPI配置&quot;&gt;&lt;a href=&quot;#BSP修改与SPI配置&quot; class=&quot;headerlink&quot; title=&quot;BSP修改与SPI配置&quot;&gt;&lt;/a&gt;BSP修改与SPI配置&lt;/h1&gt;&lt;p&gt;首先在board/Kconfig里面加入SPI配置&lt;br&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/06/gao-qing/"/>
+    <id>http://wwwangguan.github.io/2024/08/06/gao-qing/</id>
+    <published>2024-08-06T04:30:44.453Z</published>
+    <updated>2024-08-13T10:00:42.937Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 超级电容 &lt;/p&gt;
+&lt;h2 id=&quot;拓扑结构&quot;&gt;&lt;a href=&quot;#拓扑结构&quot; class=&quot;headerlink&quot; title=&quot;拓扑结构&quot;&gt;&lt;/a&gt;拓扑结构&lt;/h2&gt;&lt;p&gt;双向四开关，隔离电源上管常开。&lt;/p&gt;
+&lt;h2 id=&quot;改进设计&quot;&gt;&lt;a</summary>
         
       
     
@@ -417,28 +440,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;一种基于Type3型补偿器的超级电容组及其控制器&quot;&gt;&lt;a href=&quot;#一种基于Type3型补偿器的超级电容组及其控制器&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/01/31/roboamaster-kai-fa-ban/zhuan-li/</id>
-    <published>2024-01-31T11:26:05.804Z</published>
-    <updated>2024-02-18T13:15:10.177Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;发明和实用新型专利申请应提交的文件基本相同，即：请求书、说明书、说明书附图、权利要求书、说明书摘要及摘要附图。但某些发明专利申请可以不提交说明书附图和摘要附图。&lt;h1 id=&quot;分配&quot;&gt;&lt;a href=&quot;#分配&quot; class=&quot;headerlink&quot;</summary>
         
       
     

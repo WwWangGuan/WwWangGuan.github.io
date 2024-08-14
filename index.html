@@ -619,8 +619,9 @@ RTL  Register Transfer level
                             <div class="title center-align">XMC7200EEVK-SPI</div>
                             <div class="description center-align">
                                 
-                                    BSP修改引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。
-实际使用原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划在本次实践中
+                                    BSP修改与SPI配置首先在board/Kconfig里面加入SPI配置menuconfig BSP_USING_SPI  
+    bool &quot;Enable SPI BUS&quot;  
+    select RT_USING
                                 
                             </div>
                             <div class="cover-btns">
@@ -1598,13 +1599,53 @@ De
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                BSP修改引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。
-实际使用原计划使用SPI驱动ADIS16467-2，这是一个ADI的精密陀螺仪，在STM32上已经有完整实现，计划在本次实践中
+                                BSP修改与SPI配置首先在board/Kconfig里面加入SPI配置menuconfig BSP_USING_SPI  
+    bool &quot;Enable SPI BUS&quot;  
+    select RT_USING
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2024-08-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/08/06/gao-qing/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 超级电容 
+拓扑结构双向四开关，隔离电源上管常开。
+改进设计27211良品率过于抽象栅极驱动器更换 2edkf7275k 隔离栅驱 4/8A。ADC 低通滤波 走线太长寄生电容太大只保留了R。缩小体积。HRTIM 中心对齐PWM触发电流采
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-06
                             </span>
                             <span class="publish-author">
                                 
@@ -1955,43 +1996,6 @@ RTL  Register Transfer level
             </div>
               <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/04/08/stm32/rtthread/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                线程启动与切换过程详解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
         </div>
     </article>
 
@@ -2095,7 +2099,7 @@ RTL  Register Transfer level
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">31.4k</span>
+                        class="white-color">32k</span>
             
             
             
