@@ -101,13 +101,21 @@
     
     
     <entry>
-      <title>[object Object]</title>
+      <title>CheeryDAP源码分析</title>
       <link href="/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/"/>
       <url>/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/</url>
       
         <content type="html"><![CDATA[<p>以STM32 的工程为例，能看出来没有启用RTOS，裸机处理的。<br>首先是DAP的init，主要干了这几件事</p><ol><li>UART_TX/RX的Ringbuffer初始化</li><li>DAPdata的默认值初始化</li><li>dapstate的初始化，看了下都是USB的状态机定义？</li><li>CheeryUSB相关初始化（interface和point）</li><li></li></ol>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> DAPlink </tag>
+            
+            <tag> CherryDAP </tag>
+            
+        </tags>
       
     </entry>
     

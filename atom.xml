@@ -144,11 +144,11 @@
   </entry>
   
   <entry>
-    <title>[object Object]</title>
+    <title>CheeryDAP源码分析</title>
     <link href="http://wwwangguan.github.io/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/"/>
     <id>http://wwwangguan.github.io/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/</id>
     <published>2024-07-06T17:27:51.859Z</published>
-    <updated>2024-07-06T17:39:58.344Z</updated>
+    <updated>2024-08-14T09:00:18.029Z</updated>
     
     
       
@@ -161,6 +161,10 @@
     
     
     
+    
+    <category term="DAPlink" scheme="http://wwwangguan.github.io/tags/DAPlink/"/>
+    
+    <category term="CherryDAP" scheme="http://wwwangguan.github.io/tags/CherryDAP/"/>
     
   </entry>
   

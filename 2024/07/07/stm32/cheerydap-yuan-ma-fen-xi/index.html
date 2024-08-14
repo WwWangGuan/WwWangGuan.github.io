@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="[object Object], WwWangGuan">
+    <meta name="keywords" content="CheeryDAP源码分析, WwWangGuan">
     <meta name="description" content="以STM32 的工程为例，能看出来没有启用RTOS，裸机处理的。首先是DAP的init，主要干了这几件事
 
 UART_TX/RX的Ringbuffer初始化
@@ -21,7 +21,7 @@ dapstate的初始化，看了下都是USB的状态机定">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>[object Object] | WwWangGuan</title>
+    <title>CheeryDAP源码分析 | WwWangGuan</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
     
 
@@ -261,7 +261,7 @@ dapstate的初始化，看了下都是USB的状态机定">
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/WwWangGuan" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -318,7 +318,7 @@ dapstate的初始化，看了下都是USB的状态机定">
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/WwWangGuan" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -337,12 +337,12 @@ dapstate的初始化，看了下都是USB的状态机定">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">[object Object]</h1>
+                    <h1 class="description center-align post-title">CheeryDAP源码分析</h1>
                 </div>
             </div>
         </div>
@@ -364,9 +364,17 @@ dapstate的初始化，看了下都是USB的状态机定">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/DAPlink/">
+                                <span class="chip bg-color">DAPlink</span>
+                            </a>
+                        
+                            <a href="/tags/CherryDAP/">
+                                <span class="chip bg-color">CherryDAP</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -385,7 +393,7 @@ dapstate的初始化，看了下都是USB的状态机定">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-07-07
+                    2024-08-14
                 </div>
                 
 
@@ -493,7 +501,15 @@ dapstate的初始化，看了下都是USB的状态机定">
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/DAPlink/">
+                                    <span class="chip bg-color">DAPlink</span>
+                                </a>
+                            
+                                <a href="/tags/CherryDAP/">
+                                    <span class="chip bg-color">CherryDAP</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -582,7 +598,7 @@ dapstate的初始化，看了下都是USB的状态机定">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="高速电路设计进阶">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="高速电路设计进阶">
                         
                         <span class="card-title">高速电路设计进阶</span>
                     </div>
@@ -1067,16 +1083,17 @@ $(function () {
     
     
     
-
-    <!-- 雪花特效 -->
-     
+        
         <script type="text/javascript">
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura-half.js"><\/script>');
             }
         </script>
+    
+
+    <!-- 雪花特效 -->
     
 
     <!-- 鼠标星星特效 -->
@@ -1131,6 +1148,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
