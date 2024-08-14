@@ -452,7 +452,7 @@
             bool &quot;Enable SPI6 BUS&quot;  
             default n  
     endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408141359940.png" alt=""></p>
-<p>然后在menuconfig开启即可，但是需要修改一下drv_spi.c的引脚<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130926156.png" alt=""><br>引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。<br>配置与应用代码如下所示<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*  
+<p>然后在menuconfig开启即可，但是需要修改一下drv_spi.c的引脚<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130926156.png" alt=""><br>引脚修改成EVK上对应的引脚即可，我这里用的是Arduino接口上的SPI，也是官方例程使用的SPI。<br>配置与应用代码如下所示。<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*  
  * Copyright (c) 2006-2023, RT-Thread Development Team * * SPDX-License-Identifier: Apache-2.0 * * Change Logs: * Date           Author       Notes * 2024-05-22     LZero        first version *&#x2F;  
 #include &lt;rtthread.h&gt;  
 #include &lt;rtdevice.h&gt;  
