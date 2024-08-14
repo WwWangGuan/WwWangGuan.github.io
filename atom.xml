@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-12T02:48:04.945Z</updated>
+  <updated>2024-08-14T17:30:33.305Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ZYNQ-Core 硬件设计</title>
+    <link href="http://wwwangguan.github.io/2024/08/15/zynq/zynq-core-ying-jian-she-ji/"/>
+    <id>http://wwwangguan.github.io/2024/08/15/zynq/zynq-core-ying-jian-she-ji/</id>
+    <published>2024-08-14T16:08:21.578Z</published>
+    <updated>2024-08-14T17:30:33.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;h1 id=&quot;原理图设计&quot;&gt;&lt;a href=&quot;#原理图设计&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ZYNQ" scheme="http://wwwangguan.github.io/tags/ZYNQ/"/>
+    
+    <category term="DDR3L" scheme="http://wwwangguan.github.io/tags/DDR3L/"/>
+    
+    <category term="电源上电时序" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E6%BA%90%E4%B8%8A%E7%94%B5%E6%97%B6%E5%BA%8F/"/>
+    
+    <category term="高速电路设计" scheme="http://wwwangguan.github.io/tags/%E9%AB%98%E9%80%9F%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>CAN</title>
@@ -443,27 +472,6 @@
         
         
     <summary type="html">&lt;p&gt;主控：STM32F103CBT6&lt;br&gt;锂电池充放电管理：IP5306，带有四颗LED灯指示电量。&lt;br&gt;充电口：MicroUSB&lt;br&gt;气体压力传感器：AGR10系列表压型传感器。&lt;br&gt;运算放大器：OPA376&lt;br&gt;选用3.7V电池或者18560锂电池。&lt;br&gt;ADC</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/02/18/chao-ji-dian-rong/zhuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/02/18/chao-ji-dian-rong/zhuan-li/</id>
-    <published>2024-02-18T09:53:05.382Z</published>
-    <updated>2024-02-18T12:06:53.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一种基于Type3型补偿器的超级电容组及其控制器&quot;&gt;&lt;a href=&quot;#一种基于Type3型补偿器的超级电容组及其控制器&quot; class=&quot;headerlink&quot;</summary>
         
       
     
