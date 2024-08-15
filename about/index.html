@@ -355,7 +355,7 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途",
+                                "毁灭即是新生",
                             
                                 "Never really desperate, only the lost of the soul",
                             
@@ -400,7 +400,7 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">44</a></span>
+    <span class="count"><a href="/">48</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -414,7 +414,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">31</a></span>
+    <span class="count"><a href="/tags">38</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -430,7 +430,7 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">44</a></span>
+    <span class="count"><a href="/">48</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -444,7 +444,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">31</a></span>
+    <span class="count"><a href="/tags">38</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -588,7 +588,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [2,3,1,0,3,3,1,4,5,1,2,3,5],
+                data: [2,3,1,0,3,3,1,4,5,1,2,3,9],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -654,7 +654,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["STM32","DC-DC","HAL","Cmake","Clion","CAN","线性代数","数学","栅极驱动器","PCB"]
+                data: ["STM32","DC-DC","HPM","HAL","Cmake","Clion","RISCV","CAN","线性代数","数学"]
             }
         ],
         yAxis: [
@@ -667,7 +667,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [5,3,2,2,2,1,1,1,1,1],
+                data: [5,3,3,2,2,2,2,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -1000,6 +1000,48 @@
             </a>
             
             
+            
+            <a href="/tags/%E7%94%B5%E5%AD%90%E5%85%83%E4%BB%B6%E5%8E%9F%E7%A5%9E/">
+                <span class="chip center-align waves-effect waves-light chip-default">电子元件原神</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%A1%AC%E4%BB%B6/">
+                <span class="chip center-align waves-effect waves-light chip-default">硬件</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/">
+                <span class="chip center-align waves-effect waves-light chip-default">嵌入式软件原神</span>
+            </a>
+            
+            
+            
+            <a href="/tags/GPIO/">
+                <span class="chip center-align waves-effect waves-light chip-default">GPIO</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/">
+                <span class="chip center-align waves-effect waves-light chip-default">编译器</span>
+            </a>
+            
+            
+            
+            <a href="/tags/GCC/">
+                <span class="chip center-align waves-effect waves-light chip-default">GCC</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Andes/">
+                <span class="chip center-align waves-effect waves-light chip-default">Andes</span>
+            </a>
+            
+            
         </div>
     </div>
     
@@ -1206,10 +1248,12 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">32.2k</span>
+                        class="white-color">33.3k</span>
             
             
             
@@ -1417,6 +1461,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://WwWangGuan.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     

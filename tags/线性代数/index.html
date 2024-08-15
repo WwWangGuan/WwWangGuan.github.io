@@ -348,7 +348,7 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途",
+                                "毁灭即是新生",
                             
                                 "Never really desperate, only the lost of the soul",
                             
@@ -541,11 +541,11 @@
                 </a>
                 
                 
-                <a href="/tags/RISCV/" title="RISCV: 1">
+                <a href="/tags/RISCV/" title="RISCV: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="RISCV" style="background-color: #E8F8F5;">RISCV
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -559,11 +559,11 @@
                 </a>
                 
                 
-                <a href="/tags/HPM/" title="HPM: 1">
+                <a href="/tags/HPM/" title="HPM: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="HPM" style="background-color: #D5F5E3;">HPM
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
@@ -675,6 +675,69 @@
                     </span>
                 </a>
                 
+                
+                <a href="/tags/%E7%94%B5%E5%AD%90%E5%85%83%E4%BB%B6%E5%8E%9F%E7%A5%9E/" title="电子元件原神: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="电子元件原神" style="background-color: #F9EBEA;">电子元件原神
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%A1%AC%E4%BB%B6/" title="硬件: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="硬件" style="background-color: #F9E79F;">硬件
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/" title="嵌入式软件原神: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="嵌入式软件原神" style="background-color: #D5F5E3;">嵌入式软件原神
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/GPIO/" title="GPIO: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="GPIO" style="background-color: #85C1E9;">GPIO
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/" title="编译器: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="编译器" style="background-color: #82E0AA;">编译器
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/GCC/" title="GCC: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="GCC" style="background-color: #82E0AA;">GCC
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Andes/" title="Andes: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Andes" style="background-color: #85C1E9;">Andes
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -738,10 +801,12 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">32.2k</span>
+                        class="white-color">33.3k</span>
             
             
             
@@ -949,6 +1014,17 @@ $(function () {
 
     
 
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://WwWangGuan.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
     
     
     

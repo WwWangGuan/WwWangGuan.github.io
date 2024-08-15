@@ -1,0 +1,1158 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="FOC原理, WwWangGuan">
+    <meta name="description" content="背景在机器人控制领域中，电机是一个重要的组成部分，无论是三轴云台、机械臂还是AGV，电机都在其中起到了动力输出的作用，常规的有刷电机结构简单，在实际工程中有着广泛的应用，但在机器人的运动控制中，有刷电机体现出了其控制精度不高和寿命短的缺陷，">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>FOC原理 | WwWangGuan</title>
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="WwWangGuan" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.jpg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">WwWangGuan</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.jpg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">WwWangGuan</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/WwWangGuan" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/WwWangGuan" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpeg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">FOC原理</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-04-25
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-04-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在机器人控制领域中，电机是一个重要的组成部分，无论是三轴云台、机械臂还是AGV，电机都在其中起到了动力输出的作用，常规的有刷电机结构简单，在实际工程中有着广泛的应用，但在机器人的运动控制中，有刷电机体现出了其控制精度不高和寿命短的缺陷，因此并未在机器人控制领域中广泛应用，而无刷电机虽然制造成本更高，但是其控制精度、可靠性和寿命会比有刷电机更加优越，被广泛应用在了机器人领域中。</p>
+<p>通常无刷电机分成两个使用场景，第一种的典型应用场景是在无人机上，其转速非常高，对位置或力矩的控制基本没有要求，而另一种则在机器人上，转速通常最大在几百rpm，但是对位置和力矩的控制精度要求非常大，因而在驱动和控制方法上分成了几种不同的派系：</p>
+<ol>
+<li>在高速运动场景下，可以使用无感开环控制，因其对力矩没有要求，可以使用方波进行驱动，这种设计硬件结构十分简单，只需要控制栅极驱动器的通断，换向时只需要判断电机反电动势是否过零点，过零点即可进行换向操作。但这种方法的缺点是低速和启动性能比较差，而且噪声非常大，不适合用在精细控制领域中。</li>
+<li>在低速高精度控制场景下，无刷电机更多采用FOC（Field-Oriented Control）进行控制，FOC被称为磁场导向控制，是一种利用变频器（VFD）控制三相交流电机的技术。这种技术通过调整变频器的输出频率、输出电压的大小及相位，来控制电机的输出。其特性是可以单独控制电机中每个绕组线圈的磁场方向和强度，类似他励式直流电机。由于在FOC算法的方程式中，三相交流电机的定子电流通过两个可视化的正交矢量分量来描述，因此这种控制方法又被称为矢量控制（Vector Control）。FOC方法可用于控制交流感应电机和直流无刷电机。最开始出现这种控制方法，就是为了提高电机的性能。在FOC控制下，电机不仅能在全速范围内平稳运行，以零速度产生额定扭矩，还具备良好的高速动态性能，如能够做到快速地加速或减速。</li>
+</ol>
+<p>因此，FOC的独特速度和力矩性能使得其成为了近些年来最常出现的电机控制算法，了解其对应的控制原理能够更好控制无刷电机，还可将其封装为伺服模块，大大增强了易用性。</p>
+<h1 id="无刷电机原理"><a href="#无刷电机原理" class="headerlink" title="无刷电机原理"></a>无刷电机原理</h1><p>以三相二极内转子电机为例，定子的三相绕组有星形联结方式和三角联结方式，而三相星形联结的二二导通方式最为常用，这里使用该模型做简单讨论：<br><img src="https://pic1.zhimg.com/80/v2-7fb73dac333fecf884c3e8df356ab718_720w.webp" alt=""></p>
+<p>如图所示，电机的三个线圈的一头均连接至中心点$O$（中心为转子，是永磁体，未画出），如果此时在AB相上通电，容易根据右手螺旋定则得出此时线圈产生的合磁场方向与$OB$成$30°$角，$N$极指向右下方，而此时，内转子受到磁场作用的力，会使得内转子的永磁铁的磁链和线圈的磁链相垂直。此时电机也就完成了一次$60°$转动，依次类推，分别在三相的两相上一次通电，也就“牵动”电机完成了一次完整旋转。<br><img src="https://pic1.zhimg.com/80/v2-bc0091ec15f7bd19094e890bf3e90418_720w.webp" alt=""><br>而我们需要对换向进行操作，则需要栅极驱动器和MOS管。<br><img src="https://pic4.zhimg.com/80/v2-de99d63cac7edac6868bd829ce92685f_720w.webp" alt=""><br>上图显示出了需要驱动无刷电机转动的三相逆变电路（图中的功率器件其实是IGBT），通过开关不同的MOS管，就能够实现对不同相和不同方向的通电和断开处理，进而也就实现了无刷电机的转向和换相。</p>
+<p>栅极驱动器，顾名思义，是驱动栅极使得MOS管打开的芯片。<br><img src="https://pic1.zhimg.com/80/v2-56e62c22009e65d2591853bb881d3d63_720w.png" alt=""><br>上图是Ti的智能栅极驱动芯片，带上了许多保护功能，如过压保护和过流保护等，但最核心的还是框图中的Gate Driver（栅极驱动器），芯片接收来自控制器的PWM信号，高电平占周期的时长决定了MOS管的开通时长，两个MOS管相连的电路我们称之为半桥电路，如图所示，三相电机的线圈的引头连接至桥臂中央，这也是容易理解的。</p>
+<h1 id="三相电机的旋转波形与驱动波形"><a href="#三相电机的旋转波形与驱动波形" class="headerlink" title="三相电机的旋转波形与驱动波形"></a>三相电机的旋转波形与驱动波形</h1><p>将示波器的探头连接至电机三相中的两相，如果是三通道的则更好，我们最后应该会得到三个正弦曲线，幅值相同而相邻波形相位差为$120°$。<br><img src="https://pic2.zhimg.com/80/v2-420583ae479dc60942af80ec30c0c175_720w.webp" alt=""><br>用手去旋转电机，是能够感受到强烈的阻尼感，我们上面的分析表明，转子在磁场中只有六个稳定的状态，因此在整个的旋转过程中是不平滑的，为了解决这个问题，也顺带衍生出了无刷电机中PMSM和BLDC的区别。</p>
+<p>BLDC的解决方式比较直白，既然我转一圈要切换六次，那么就增加电机的极对数，增加的极对数越多，我一圈当中就会切换12次甚至更多，这样“颗粒感”就会变的更小，切换的时间和间距越短，电机的运行效果就越平滑。<br><img src="https://pic1.zhimg.com/80/v2-d77d7004abebc0d667fb9f5c3f862fe6_720w.png" alt=""><br>上图是一个极对数为9的无刷电机，但是电机仍然只有三根线在外面。</p>
+<p>但是，即使我们增加了极对数，但是仍然没有解决根本上的问题，因为方波本身是不平滑的，而无刷电机的波形确实正弦波形，那就直接用正弦波去驱动不就行了？没错，这就是PMSM的解决方式，其反电动势被人为设计成正弦波的形状，我们再搭配一些软件和算法，把方波的驱动信号转换被SPWM正弦波或者SVPWM马鞍波，这样就从根本上解决了这个问题，这也就是FOC的实现原理。</p>
+<h1 id="FOC控制原理"><a href="#FOC控制原理" class="headerlink" title="FOC控制原理"></a>FOC控制原理</h1><p>我们先在控制系统的顶层来了解一下控制流程<br><img src="https://pic1.zhimg.com/80/v2-b12a2650b001faa9cd31ecbb309eaca0_720w.webp" alt=""><br>上图中是电流闭环控制，也就是恒定力矩模式。整个控制流程是这样的：</p>
+<ol>
+<li>对电机三相电流进行采样得到 $𝐼_𝑎,𝐼_𝑏,𝐼_𝑐$ ​</li>
+<li>将 $𝐼_𝑎,𝐼_𝑏,𝐼_𝑐$ ​​经过$Clark$变换得到​ $𝐼_𝛼,𝐼_𝛽$</li>
+<li>将​ $𝐼_𝛼,𝐼_𝛽$经过$Park变换$得到​ $𝐼_𝑞,𝐼_𝑑$</li>
+<li>计算$​𝐼_𝑞,𝐼_𝑑$和其设定值$𝐼_{𝑞_{𝑟𝑒𝑓}},𝐼_{d_{𝑟𝑒𝑓}}$,的误差</li>
+<li>将上述误差输入两个PID控制器，得到输出的控制电压​ $𝑈_𝑞,𝑈_𝑑$</li>
+<li>将​$𝑈_𝑞,𝑈_𝑑$进行反Park变换得到​ $𝑈_𝛼,𝑈_𝛽$</li>
+<li>用$𝑈_𝛼,𝑈_𝛽$合成电压空间矢量，输入$SVPWM$模块进行调制，输出该时刻三个半桥的状态编码值（前文有提到）</li>
+<li>按照前面输出的编码值控制三相逆变器的$MOS$管开关，驱动电机</li>
+<li>循环上述步骤<h2 id="Clark变换"><a href="#Clark变换" class="headerlink" title="Clark变换"></a>Clark变换</h2><img src="https://pic4.zhimg.com/80/v2-de99d63cac7edac6868bd829ce92685f_720w.webp" alt=""><br>对于三相电机而言，由KCL很容易得到</li>
+</ol>
+<script type="math/tex; mode=display">
+I_a+I_b+I_C=0</script><p>定义三相坐标系如图所示<br><img src="https://picx.zhimg.com/80/v2-71dd5ef2bce9f8b3531913f2498bdf7d_720w.png" alt=""><br>这和我们之前转动电机得到的相位差结果基本一致，但是他有三个轴，分析起来太麻烦了，我们通过定义正交基向量来重新定义一个$\alpha-\beta$坐标系</p>
+<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+I_{\alpha}=I_{a}+\cos \left(\frac{2 \pi}{3}\right) I_{b}+\cos \left(\frac{2 \pi}{3}\right) I_{c} \\
+I_{\beta}=\sin \left(\frac{2 \pi}{3}\right) I_{b}-\sin \left(\frac{2 \pi}{3}\right) I_{c}
+\end{array}\right.</script><p>相当于把原来的三个向量投影到坐标轴上，只需要控制两个变量了就能达到原来的效果，但是我们新坐标系下仍然是以正弦方式在做变化的，我们希望把它线性化，这样更容易控制和计算，也就引入了Park变换。</p>
+<h2 id="Park变换"><a href="#Park变换" class="headerlink" title="Park变换"></a>Park变换</h2><p>为什么上面经过Clark变换的结果是正弦变化的呢？因为电机本身是在旋转的，我们需要消除“旋转”这一特征才能达到线性化的目的。<br>在Park变换中，我们将坐标系逆时针旋转$\theta$°，定义$\theta$为电机转子转过的角度，就像图片的这样。<br><img src="https://picx.zhimg.com/80/v2-000d05e82742dd15d575492dd00b2c07_720w.png" alt=""><br>坐标变换的结果仍然是简单的矢量投影，公式如下：</p>
+<script type="math/tex; mode=display">
+\left\{\begin{array}{l}
+I_{d}=I_{\alpha} \cos (\theta)+I_{\beta} \sin (\theta) \\
+I_{q}=-I_{\alpha} \sin (\theta)+I_{\beta} \cos (\theta)
+\end{array}\right.</script><p>转子转多少度那么$d-q$坐标系就转多少度，因此，“旋转”的特征被消除，我们对电机的控制最后解耦为对$I_d,I_q$的控制，也就可以搭配PID这种线性控制器来控制了。</p>
+<h2 id="PID控制"><a href="#PID控制" class="headerlink" title="PID控制"></a>PID控制</h2><p>FOC控制中主要会用到几个控制环路，分别是电流环，速度环，位置环<br><img src="https://picx.zhimg.com/80/v2-0e858178a22a7adbebbe213b54842a25_720w.png" alt=""><br>我们首先讨论电流环，在$d-q$坐标系中，我们讲到在这个坐标系下消除了”旋转“的特征，两个向量对于转子而言分别是径向向量和切向向量，很明显，推动转子旋转的向量就是切向向量，而径向向量是我们不需要的，如果它不为0就会影响效率和力矩，因此我们希望把它控制为0，因此电流环的作用就是使径向电流尽可能为0（0就是控制器的期望），而使切向电流达到期望值。<br><img src="https://pica.zhimg.com/80/v2-421da3a6bda3d28e57ba0169e4138fcb_720w.png" alt=""><br>电流环的控制作用到这里就结束了，它负责的东西就这么多。</p>
+<h3 id="速度环和位置环"><a href="#速度环和位置环" class="headerlink" title="速度环和位置环"></a>速度环和位置环</h3><p><img src="https://pic4.zhimg.com/80/v2-3ec15f2e8ab0b97b7818e1d94d9dbd9b_720w.webp" alt=""><br>其实在了解电流环之后剩下的两个环不难理解，这里不再赘述。<br>至此整个控制环节基本结束，但是我们注意到电流环的输出线给到了RevPark变换先还原到$\alpha-\beta$坐标系下，但是却没有RevClark变换，而是转到了一个叫做SVPWM的东西，它的输出是三相每一相的电压。</p>
+<h2 id="SVPWM"><a href="#SVPWM" class="headerlink" title="SVPWM"></a>SVPWM</h2><p>全称Space Vector PWM，也是PWM，但是加上了空间电压矢量的前缀，我们首先把SV搞明白。</p>
+<h3 id="Space-Vector"><a href="#Space-Vector" class="headerlink" title="Space Vector"></a>Space Vector</h3><p>我们不妨先把线圈通电，就像图中这样<br><img src="https://pic4.zhimg.com/80/v2-28c5ce7876603e45d61668e290e371e3_720w.webp" alt=""><br>我们假设每个线圈的电阻都是相同的，我们可以得到这样一个电路<br><img src="https://pic2.zhimg.com/80/v2-f4cd3936b0c1599086576e4ba5f7f9bd_720w.webp" alt=""><br>这是非常简单的一个分压电路，容易计算得出各相的相电压</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+U_{a}=U_{A}-U_{N}=\frac{2}{3} U_{d c} \\
+U_{b}=U_{B}-U_{N}=-\frac{1}{3} U_{d c} \\
+U_{c}=U_{C}-U_{N}=-\frac{1}{3} U_{d c}
+\end{array}</script><p>各相电压的方向是和电流方向相同的，我们规定正方向是指向中心的方向的话，就能得到这么一幅图<br><img src="https://pic2.zhimg.com/80/v2-33a33723f55b80d28efa4d59af68739d_720w.webp" alt=""><br>这个合成的向量是$AO$方向的，由右手螺旋定则能看出其$N$朝向下方，而根据我们前面的分析，转子会努力转到这个方向上来，也就是说，SpaceVector代表了转子的方向（或者电机角度），而改变电机转子的角度就需要去改变空间电压矢量的方向，而空间电压矢量本质上来说，是半桥的不同开关状态导致了各相电压的不同，进而影响了空间电压矢量的位置。</p>
+<p>我们定义一个开关函数$S(x)$用来描述半桥开关时的状态</p>
+<script type="math/tex; mode=display">
+ S(x)=\left\{ 
+ \begin{aligned} 
+ 1&,上桥臂导通\\
+ 0&,下桥臂导通
+  \end{aligned} \right.</script><p>注意：在一个开关动作中，上下桥臂不能同时开启，同时开启则意味着短路，为此还需要引入死区时间控制来保证这一点。<br>对于三相电机而言，$(S_a,S_b.S_c)$的组合为八个，去掉两个零矢量（0,0,0）和（1,1,1）(去掉的原因是这两个状态线圈时没有电流的，不产生力矩)，剩下的六个空间电压矢量能明显的看出来和之前的六步换向很像。我们如果想让一个空间电压矢量去旋转的任意方向，就需要对六个空间电压矢量去进行合成，也就是SVPMM技术。</p>
+<h2 id="SVPWM-1"><a href="#SVPWM-1" class="headerlink" title="SVPWM"></a>SVPWM</h2><p><img src="https://pic1.zhimg.com/80/v2-1d0392a19bc58c20f2c440d9c06edc8c_720w.webp" alt=""><br>为了简便处理，我们不会使用六个矢量去合成，能看到这六个矢量把整个空间分成了六个扇区，我们会首先判断矢量所在扇区的位置，然后用扇区的两个电压矢量去合成扇区内的任意电压矢量，即有</p>
+<script type="math/tex; mode=display">
+U_{ref}\cdot\ T=U_x \cdot T_x+U_y \cdot T_y+U^*_0 \cdot T_0^*</script><p>公式中，$T$是一个PWM周期，$T_x,T_y,T_0^*$都是对应矢量的作用时间，插入零矢量会让空间电压矢量切换的更加顺滑。<br>比如说，我们要在扇区$I$内去合成一个指定角度的空间电压矢量$U_{ref}$<br><img src="https://img-blog.csdn.net/20180207132645570?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGR1Y29sbGlucw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>由正弦定理有</p>
+<script type="math/tex; mode=display">
+\frac{\frac{T_6}{T}U_6}{\sin \theta}=\frac{\frac{T_4}{T}U_4}{\sin (\frac{\pi}{3}-\theta)}=\frac{U_{ref}}{\sin \frac{2\pi}{3}}</script><p>能计算出</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+T_4&=mT\sin(\frac{\pi}{3}-\theta)\\
+T_6&=mT\sin\theta
+\end{aligned}</script><p>剩余时间则分配给零矢量，至此，整个FOC的控制部分就全部结束了，但我们还有一个问题，虽然理论上来说，只要这个电压矢量的时间持续的够长，这六个开关怎么开关都行，但是开关对于MOS是有损耗的，我们希望尽可能减少开关的次数，因此有了下面的切换顺序<br><img src="https://pic1.zhimg.com/80/v2-c69c43d31f65da0ac541be7d03102d10_720w.webp" alt=""><br>我们在实际中会把PWM配置成中心对齐模式，在这种开关控制模式下，每一次都只会开关一次，而零矢量被分配在了起始和中间位置，有效降低了开关次数的同时也就降低了PWM的谐波分量。同理也可以列出其他扇区的切换顺序。<br><img src="https://pic1.zhimg.com/80/v2-f5aed28538a791f5e760a0bc66081a9c_720w.webp" alt=""><br>至此，整个FOC的九个步骤全部完成.</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Harry Zhang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://WwWangGuan.github.io/2024/04/25/dian-zi-dian-li/foc/foc-yuan-li/">http://WwWangGuan.github.io/2024/04/25/dian-zi-dian-li/foc/foc-yuan-li/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Harry Zhang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/05/14/fpga/fpga-qi-mo-fu-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/24.png" class="responsive-img" alt="FPGA期末复习">
+                        
+                        <span class="card-title">FPGA期末复习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/04/14/kong-zhi-li-lun/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.png" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Harry Zhang
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+    <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+        repo="WwWangGuan/Blog_Comment"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+
+    
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('12')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: WwWangGuan<br />'
+            + '文章作者: Harry Zhang<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <a href="/about" target="_blank">Harry Zhang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">33.3k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/WwWangGuan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:WwWangGuanHaZ@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3478985297" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3478985297" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://WwWangGuan.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
+    
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura-half.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

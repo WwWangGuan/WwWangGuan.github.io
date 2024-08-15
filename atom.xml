@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-14T17:30:33.305Z</updated>
+  <updated>2024-08-15T15:43:02.123Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -17,11 +17,109 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>编译器对比</title>
+    <link href="http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/"/>
+    <id>http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/</id>
+    <published>2024-08-15T14:55:59.847Z</published>
+    <updated>2024-08-15T15:43:02.123Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;gcc编译&lt;img src=&quot;https://raw.githubusercontent.com/WwWangGuan/pics/main/202408152257254.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="RISCV" scheme="http://wwwangguan.github.io/tags/RISCV/"/>
+    
+    <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
+    
+    <category term="编译器" scheme="http://wwwangguan.github.io/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    
+    <category term="GCC" scheme="http://wwwangguan.github.io/tags/GCC/"/>
+    
+    <category term="Andes" scheme="http://wwwangguan.github.io/tags/Andes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/15/za-ji/2024-08-15/"/>
+    <id>http://wwwangguan.github.io/2024/08/15/za-ji/2024-08-15/</id>
+    <published>2024-08-15T14:32:06.736Z</published>
+    <updated>2024-08-15T16:19:47.939Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一点碎碎念&lt;/p&gt;
+&lt;p&gt;没有做出选择也是一种选择，尽管你不想要，你又不是碇真嗣，橙汁了还有一个凌波一个搞基的能给你圆回来。&lt;/p&gt;
+&lt;p&gt;大抵之前在语境上太较真了吧，每个人说话都是这样，下意识的以自己的处境作为当时说话的语境，而每个人的处境又不尽相同，意识到了也不太敢去说</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HPM5301EVKLite 点灯</title>
+    <link href="http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/hpm5301evklite-dian-deng/"/>
+    <id>http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/hpm5301evklite-dian-deng/</id>
+    <published>2024-08-15T09:05:18.454Z</published>
+    <updated>2024-08-15T09:06:35.516Z</updated>
+    
+    
+    
+    
+    
+    <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
+    
+    <category term="嵌入式软件原神" scheme="http://wwwangguan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="GPIO" scheme="http://wwwangguan.github.io/tags/GPIO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电子元器件</title>
+    <link href="http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/dian-zi-yuan-qi-jian/"/>
+    <id>http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/dian-zi-yuan-qi-jian/</id>
+    <published>2024-08-15T06:02:34.449Z</published>
+    <updated>2024-08-15T06:09:42.169Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;保险丝&quot;&gt;&lt;a href=&quot;#保险丝&quot; class=&quot;headerlink&quot; title=&quot;保险丝&quot;&gt;&lt;/a&gt;保险丝&lt;/h1&gt;&lt;h2 id=&quot;跳闸电流&quot;&gt;&lt;a href=&quot;#跳闸电流&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="电子元件原神" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E5%AD%90%E5%85%83%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="硬件" scheme="http://wwwangguan.github.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ZYNQ-Core 硬件设计</title>
-    <link href="http://wwwangguan.github.io/2024/08/15/zynq/zynq-core-ying-jian-she-ji/"/>
-    <id>http://wwwangguan.github.io/2024/08/15/zynq/zynq-core-ying-jian-she-ji/</id>
+    <link href="http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/zynq/zynq-core-ying-jian-she-ji/"/>
+    <id>http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/zynq/zynq-core-ying-jian-she-ji/</id>
     <published>2024-08-14T16:08:21.578Z</published>
-    <updated>2024-08-14T17:30:33.305Z</updated>
+    <updated>2024-08-15T01:13:37.163Z</updated>
     
     
       
@@ -47,8 +145,8 @@
   
   <entry>
     <title>CAN</title>
-    <link href="http://wwwangguan.github.io/2024/08/12/stm32/can/"/>
-    <id>http://wwwangguan.github.io/2024/08/12/stm32/can/</id>
+    <link href="http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/"/>
+    <id>http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/</id>
     <published>2024-08-12T01:21:50.421Z</published>
     <updated>2024-08-12T02:48:04.945Z</updated>
     
@@ -72,8 +170,8 @@
   
   <entry>
     <title>Clion HPM5301lite开发</title>
-    <link href="http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/"/>
-    <id>http://wwwangguan.github.io/2024/08/11/clion-hpm5301lite-kai-fa/</id>
+    <link href="http://wwwangguan.github.io/2024/08/11/qian-ru-shi-ruan-jian/hpm/clion-hpm5301lite-kai-fa/"/>
+    <id>http://wwwangguan.github.io/2024/08/11/qian-ru-shi-ruan-jian/hpm/clion-hpm5301lite-kai-fa/</id>
     <published>2024-08-11T03:43:51.923Z</published>
     <updated>2024-08-14T07:34:31.822Z</updated>
     
@@ -103,8 +201,8 @@
   
   <entry>
     <title>XMC7200EEVK-SPI</title>
-    <link href="http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200evk-spi/"/>
-    <id>http://wwwangguan.github.io/2024/08/09/rt-thread/xmc7200evk-spi/</id>
+    <link href="http://wwwangguan.github.io/2024/08/09/qian-ru-shi-ruan-jian/rt-thread/xmc7200evk-spi/"/>
+    <id>http://wwwangguan.github.io/2024/08/09/qian-ru-shi-ruan-jian/rt-thread/xmc7200evk-spi/</id>
     <published>2024-08-09T07:49:01.036Z</published>
     <updated>2024-08-14T06:25:54.458Z</updated>
     
@@ -130,8 +228,8 @@
   
   <entry>
     <title></title>
-    <link href="http://wwwangguan.github.io/2024/08/06/gao-qing/"/>
-    <id>http://wwwangguan.github.io/2024/08/06/gao-qing/</id>
+    <link href="http://wwwangguan.github.io/2024/08/06/za-ji/gao-qing/"/>
+    <id>http://wwwangguan.github.io/2024/08/06/za-ji/gao-qing/</id>
     <published>2024-08-06T04:30:44.453Z</published>
     <updated>2024-08-13T10:00:42.937Z</updated>
     
@@ -153,8 +251,8 @@
   
   <entry>
     <title></title>
-    <link href="http://wwwangguan.github.io/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/"/>
-    <id>http://wwwangguan.github.io/2024/07/13/chao-ji-dian-rong/chao-ji-dian-rong/</id>
+    <link href="http://wwwangguan.github.io/2024/07/13/dian-zi-dian-li/chao-ji-dian-rong/chao-ji-dian-rong/"/>
+    <id>http://wwwangguan.github.io/2024/07/13/dian-zi-dian-li/chao-ji-dian-rong/chao-ji-dian-rong/</id>
     <published>2024-07-13T13:42:10.156Z</published>
     <updated>2024-08-13T02:38:50.490Z</updated>
     
@@ -174,8 +272,8 @@
   
   <entry>
     <title>CheeryDAP源码分析</title>
-    <link href="http://wwwangguan.github.io/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/"/>
-    <id>http://wwwangguan.github.io/2024/07/07/stm32/cheerydap-yuan-ma-fen-xi/</id>
+    <link href="http://wwwangguan.github.io/2024/07/07/qian-ru-shi-ruan-jian/stm32/cheerydap-yuan-ma-fen-xi/"/>
+    <id>http://wwwangguan.github.io/2024/07/07/qian-ru-shi-ruan-jian/stm32/cheerydap-yuan-ma-fen-xi/</id>
     <published>2024-07-06T17:27:51.859Z</published>
     <updated>2024-08-14T09:00:18.029Z</updated>
     
@@ -239,8 +337,8 @@
   
   <entry>
     <title>芯原杯IDE替换测试</title>
-    <link href="http://wwwangguan.github.io/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/"/>
-    <id>http://wwwangguan.github.io/2024/06/08/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/</id>
+    <link href="http://wwwangguan.github.io/2024/06/08/qian-ru-shi-ruan-jian/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/"/>
+    <id>http://wwwangguan.github.io/2024/06/08/qian-ru-shi-ruan-jian/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/</id>
     <published>2024-06-07T16:21:18.693Z</published>
     <updated>2024-08-14T07:34:16.077Z</updated>
     
@@ -291,8 +389,8 @@
   
   <entry>
     <title>FOC原理</title>
-    <link href="http://wwwangguan.github.io/2024/04/25/foc/foc-yuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/04/25/foc/foc-yuan-li/</id>
+    <link href="http://wwwangguan.github.io/2024/04/25/dian-zi-dian-li/foc/foc-yuan-li/"/>
+    <id>http://wwwangguan.github.io/2024/04/25/dian-zi-dian-li/foc/foc-yuan-li/</id>
     <published>2024-04-25T08:50:19.446Z</published>
     <updated>2024-04-26T14:23:23.086Z</updated>
     
@@ -333,8 +431,8 @@
   
   <entry>
     <title></title>
-    <link href="http://wwwangguan.github.io/2024/04/08/stm32/rtthread/"/>
-    <id>http://wwwangguan.github.io/2024/04/08/stm32/rtthread/</id>
+    <link href="http://wwwangguan.github.io/2024/04/08/qian-ru-shi-ruan-jian/stm32/rtthread/"/>
+    <id>http://wwwangguan.github.io/2024/04/08/qian-ru-shi-ruan-jian/stm32/rtthread/</id>
     <published>2024-04-08T15:46:35.873Z</published>
     <updated>2024-04-08T15:46:57.434Z</updated>
     
@@ -354,8 +452,8 @@
   
   <entry>
     <title></title>
-    <link href="http://wwwangguan.github.io/2024/04/06/robomaster/2024rmul-fu-pan/"/>
-    <id>http://wwwangguan.github.io/2024/04/06/robomaster/2024rmul-fu-pan/</id>
+    <link href="http://wwwangguan.github.io/2024/04/06/qian-ru-shi-ruan-jian/robomaster/2024rmul-fu-pan/"/>
+    <id>http://wwwangguan.github.io/2024/04/06/qian-ru-shi-ruan-jian/robomaster/2024rmul-fu-pan/</id>
     <published>2024-04-06T10:35:36.599Z</published>
     <updated>2024-04-06T11:07:08.281Z</updated>
     
@@ -375,8 +473,8 @@
   
   <entry>
     <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/04/03/stm32/freertos/"/>
-    <id>http://wwwangguan.github.io/2024/04/03/stm32/freertos/</id>
+    <link href="http://wwwangguan.github.io/2024/04/03/qian-ru-shi-ruan-jian/stm32/freertos/"/>
+    <id>http://wwwangguan.github.io/2024/04/03/qian-ru-shi-ruan-jian/stm32/freertos/</id>
     <published>2024-04-03T03:51:47.565Z</published>
     <updated>2024-04-04T14:24:11.705Z</updated>
     
@@ -386,92 +484,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;中断模式和中断事件模式&quot;&gt;&lt;a href=&quot;#中断模式和中断事件模式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/"/>
-    <id>http://wwwangguan.github.io/2024/03/29/za-ji/le-yu-zhu-ren-de-hu-gua-yu-lei-feng-you-shi-me-qu-bie/</id>
-    <published>2024-03-29T04:07:00.545Z</published>
-    <updated>2024-03-29T05:04:05.252Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;胡适所谓乐于助人的行为，大多是资助他人完成学业或者资助好友，比较典型的例子是资助林语堂&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在当时，与胡适一同到美国留学的林语堂便是众多贫困子弟中的一个，并且由于家境贫困，即使林语堂在空闲时间全部用于打工赚钱，仍然无法凑齐学费，日常生活也</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>问题</title>
-    <link href="http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/"/>
-    <id>http://wwwangguan.github.io/2024/03/22/za-ji/wen-ti/</id>
-    <published>2024-03-22T04:01:58.030Z</published>
-    <updated>2024-03-24T09:42:26.356Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot;&gt;&lt;a href=&quot;#TVS和ESD的区别，用来防止栅极过冲使用ESD是否可行&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>工作记录</title>
-    <link href="http://wwwangguan.github.io/2024/03/22/za-ji/gong-zuo-ji-lu/"/>
-    <id>http://wwwangguan.github.io/2024/03/22/za-ji/gong-zuo-ji-lu/</id>
-    <published>2024-03-22T03:59:32.587Z</published>
-    <updated>2024-03-22T04:00:29.205Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-22&quot;&gt;&lt;a href=&quot;#2024-3-22&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/"/>
-    <id>http://wwwangguan.github.io/2024/03/01/roboamaster-kai-fa-ban/ying-jian-fang-an/</id>
-    <published>2024-03-01T11:09:11.656Z</published>
-    <updated>2024-03-02T10:37:03.843Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;主控：STM32F103CBT6&lt;br&gt;锂电池充放电管理：IP5306，带有四颗LED灯指示电量。&lt;br&gt;充电口：MicroUSB&lt;br&gt;气体压力传感器：AGR10系列表压型传感器。&lt;br&gt;运算放大器：OPA376&lt;br&gt;选用3.7V电池或者18560锂电池。&lt;br&gt;ADC</summary>
         
       
     
