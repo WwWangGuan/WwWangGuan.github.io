@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-15T15:43:02.123Z</updated>
+  <updated>2024-08-20T02:45:24.159Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>几个小目标</title>
+    <link href="http://wwwangguan.github.io/2024/08/20/za-ji/ji-ge-xiao-mu-biao/"/>
+    <id>http://wwwangguan.github.io/2024/08/20/za-ji/ji-ge-xiao-mu-biao/</id>
+    <published>2024-08-20T02:40:11.833Z</published>
+    <updated>2024-08-20T02:45:24.159Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;[ ] 买个Roland Jupiter-80&lt;/li&gt;
+&lt;li&gt;[ ] 搞一套自己的架子鼓&lt;/li&gt;
+&lt;li&gt;[ ] 熟练扒谱&lt;/li&gt;
+&lt;li&gt;[ ]</summary>
+        
+      
+    
+    
+    
+    
+    <category term="碎碎念" scheme="http://wwwangguan.github.io/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移远EC801E调试记录</title>
+    <link href="http://wwwangguan.github.io/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/"/>
+    <id>http://wwwangguan.github.io/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/</id>
+    <published>2024-08-19T01:11:53.314Z</published>
+    <updated>2024-08-19T06:12:37.856Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;EC600E-CN&amp;amp;EC800E-CN&lt;br&gt;AT 命令手册&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="嵌入式软件原神" scheme="http://wwwangguan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="4G通信" scheme="http://wwwangguan.github.io/tags/4G%E9%80%9A%E4%BF%A1/"/>
+    
+    <category term="ATCommand" scheme="http://wwwangguan.github.io/tags/ATCommand/"/>
+    
+    <category term="MQTT" scheme="http://wwwangguan.github.io/tags/MQTT/"/>
+    
+  </entry>
   
   <entry>
     <title>编译器对比</title>
@@ -48,11 +104,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>2024-8-15</title>
     <link href="http://wwwangguan.github.io/2024/08/15/za-ji/2024-08-15/"/>
     <id>http://wwwangguan.github.io/2024/08/15/za-ji/2024-08-15/</id>
     <published>2024-08-15T14:32:06.736Z</published>
-    <updated>2024-08-15T16:19:47.939Z</updated>
+    <updated>2024-08-19T01:11:13.644Z</updated>
     
     
       
@@ -67,6 +123,8 @@
     
     
     
+    
+    <category term="碎碎念" scheme="http://wwwangguan.github.io/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
   </entry>
   
@@ -148,7 +206,7 @@
     <link href="http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/"/>
     <id>http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/</id>
     <published>2024-08-12T01:21:50.421Z</published>
-    <updated>2024-08-12T02:48:04.945Z</updated>
+    <updated>2024-08-19T09:24:55.614Z</updated>
     
     
       
@@ -442,48 +500,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;线程启动与切换过程详解&quot;&gt;&lt;a href=&quot;#线程启动与切换过程详解&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/04/06/qian-ru-shi-ruan-jian/robomaster/2024rmul-fu-pan/"/>
-    <id>http://wwwangguan.github.io/2024/04/06/qian-ru-shi-ruan-jian/robomaster/2024rmul-fu-pan/</id>
-    <published>2024-04-06T10:35:36.599Z</published>
-    <updated>2024-04-06T11:07:08.281Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;不能将就&quot;&gt;&lt;a href=&quot;#不能将就&quot; class=&quot;headerlink&quot; title=&quot;不能将就&quot;&gt;&lt;/a&gt;不能将就&lt;/h1&gt;&lt;h1 id=&quot;算法&quot;&gt;&lt;a href=&quot;#算法&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[object Object]</title>
-    <link href="http://wwwangguan.github.io/2024/04/03/qian-ru-shi-ruan-jian/stm32/freertos/"/>
-    <id>http://wwwangguan.github.io/2024/04/03/qian-ru-shi-ruan-jian/stm32/freertos/</id>
-    <published>2024-04-03T03:51:47.565Z</published>
-    <updated>2024-04-04T14:24:11.705Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;中断模式和中断事件模式&quot;&gt;&lt;a href=&quot;#中断模式和中断事件模式&quot; class=&quot;headerlink&quot;</summary>
         
       
     

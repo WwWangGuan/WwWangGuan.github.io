@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>几个小目标</title>
+      <link href="/2024/08/20/za-ji/ji-ge-xiao-mu-biao/"/>
+      <url>/2024/08/20/za-ji/ji-ge-xiao-mu-biao/</url>
+      
+        <content type="html"><![CDATA[<ul><li>[ ] 买个Roland Jupiter-80</li><li>[ ] 搞一套自己的架子鼓</li><li>[ ] 熟练扒谱</li><li>[ ] Jlink！！！！！（被傻逼瑞萨气死）</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 碎碎念 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>移远EC801E调试记录</title>
+      <link href="/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/"/>
+      <url>/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>EC600E-CN&amp;EC800E-CN<br>AT 命令手册<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190913781.png" alt=""><br>EC801E兼容EC800E</p><h1 id="测试与配置"><a href="#测试与配置" class="headerlink" title="测试与配置"></a>测试与配置</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190914163.png" alt=""></p><h2 id="ID请求"><a href="#ID请求" class="headerlink" title="ID请求"></a>ID请求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190915615.png" alt=""></p><h2 id="IMEI和SN请求"><a href="#IMEI和SN请求" class="headerlink" title="IMEI和SN请求"></a>IMEI和SN请求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190918401.png" alt=""></p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">» ATI+GSN&#x3D;?« ATI+GSN&#x3D;?QuectelEC801ERevision: EC801ECNCGR03A03M02+GSN: (0,1)OK» ATI+GSN&#x3D;0« ATI+GSN&#x3D;0QuectelEC801ERevision: EC801ECNCGR03A03M02+GSN: &quot;P1Y24AF290027370P&quot;OK» ATI+GSN&#x3D;1« ATI+GSN&#x3D;1QuectelEC801ERevision: EC801ECNCGR03A03M02+GSN: &quot;864145070094386&quot;OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="串口控制命令"><a href="#串口控制命令" class="headerlink" title="串口控制命令"></a>串口控制命令</h1><h3 id="AT-amp-C-设置DCD-信号模式"><a href="#AT-amp-C-设置DCD-信号模式" class="headerlink" title="AT&amp;C 设置DCD 信号模式"></a>AT&amp;C 设置DCD 信号模式</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190933034.png" alt=""><br>啥叫DCD信号模式？<br> 来看看chatgpt怎么说</p><p> 4G模块的DCD信号（Data Carrier Detect，数据载波检测）通常用于表示设备是否已与网络建立了有效的连接。DCD信号是一种传统的串口通信信号，用于告诉接收设备通信线路上是否存在有效的载波信号。在4G模块中，DCD信号模式的作用取决于具体的模块设计和应用需求。</p><h4 id="DCD信号模式的几种典型用法："><a href="#DCD信号模式的几种典型用法：" class="headerlink" title="DCD信号模式的几种典型用法："></a>DCD信号模式的几种典型用法：</h4><ol><li><p><strong>网络连接状态指示：</strong><br> 在一些4G模块中，DCD信号可以用于指示模块是否已经成功注册到网络并建立了数据连接。如果DCD信号处于激活状态（通常是低电平），则表示已经成功连接到网络；反之，则表示未连接。</p></li><li><p><strong>数据传输状态指示：</strong><br> 在数据通信中，DCD信号也可能被用来指示当前是否有正在进行的数据传输。例如，当有数据在通过4G链路传输时，DCD信号可能会被拉低或拉高，表示链路上有活动的数据流。</p></li><li><p><strong>休眠和唤醒控制：</strong><br> 在某些设计中，DCD信号也可能用于控制模块的休眠和唤醒状态。当设备不需要数据通信时，可以通过检测DCD信号来判断是否可以进入低功耗模式，节省能源。</p></li><li><p><strong>诊断和调试用途：</strong><br> 在开发和调试过程中，DCD信号模式可以用作一个诊断工具，用于监控模块的网络连接状态或数据通信状态。</p><h3 id="串口配置相关"><a href="#串口配置相关" class="headerlink" title="串口配置相关"></a>串口配置相关</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190937943.png" alt=""><br>实际测试结果<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190937676.png" alt=""><br>设置成921600并保存配置<br>md，寄了<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190942172.png" alt=""></p><h1 id="救砖"><a href="#救砖" class="headerlink" title="救砖"></a>救砖</h1><p>官方Todesk救砖</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 嵌入式软件原神 </tag>
+            
+            <tag> 4G通信 </tag>
+            
+            <tag> ATCommand </tag>
+            
+            <tag> MQTT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编译器对比</title>
       <link href="/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/"/>
       <url>/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/</url>
@@ -31,13 +75,19 @@
     
     
     <entry>
-      <title></title>
+      <title>2024-8-15</title>
       <link href="/2024/08/15/za-ji/2024-08-15/"/>
       <url>/2024/08/15/za-ji/2024-08-15/</url>
       
         <content type="html"><![CDATA[<p>一点碎碎念</p><p>没有做出选择也是一种选择，尽管你不想要，你又不是碇真嗣，橙汁了还有一个凌波一个搞基的能给你圆回来。</p><p>大抵之前在语境上太较真了吧，每个人说话都是这样，下意识的以自己的处境作为当时说话的语境，而每个人的处境又不尽相同，意识到了也不太敢去说这个问题，由此造成了误解。也没有必要对每个人说的每句话去较真，没用，最后只是给自己徒增烦恼罢了</p><p>博客还想搞点好看的壁纸捏，目前的还行，但是数量还是太少hhhh，也许好东西就是难找而且数量少吧。</p><p>Mygo算是成功勾起了自己对于编曲的一点执念吧？每次听歌的时候都会忍不住去扒谱，结果只能扒个人声主旋律，和弦直接寄掉<br><del>当时怎么不好好学乐理，这下回旋镖了</del></p><p>我只是在苦苦寻找之前拥有过的东西，像一只没有头的苍蝇，想要知晓后面的航向。</p><pre><code>理解他人，以及为他人做点什么， 那只不过是傲慢罢了</code></pre><p>为什么呢？<br>你觉得你理解了别人，为他做了点什么是为他好，又亦是觉得能够弥补什么，都是处于自身出发的啊。</p><p>别人需要吗？不见得，你理解了他反倒会被倒打一把。你觉得这么做会很好，自己很高兴，但是事情不见得就是这个样子，这是对事实的傲慢。</p><p>犯下的错误真的可以弥补吗？为什么总是要在事情发生了之后才去做点什么呢？当你打算去弥补的时候，是不是暗地在想这样就行了？这确实是对事实的傲慢。</p><p>但是我们通常意识不到，总在想为什么没有人来理解我呢?</p><p>又闲又🗡</p><p>所谓物极必反，不对，不是这句话</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 碎碎念 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -117,7 +167,7 @@
       <link href="/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/"/>
       <url>/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/</url>
       
-        <content type="html"><![CDATA[<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="https://www.st.com.cn/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf">rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf</a><br>DS9405，其实是STM32F429的datasheet</p><h1 id="bxCAN"><a href="#bxCAN" class="headerlink" title="bxCAN"></a>bxCAN</h1><p>以STM32F429IGT6为例</p><h2 id="特性介绍"><a href="#特性介绍" class="headerlink" title="特性介绍"></a>特性介绍</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121004416.png" alt=""><br>CAN1是主CAN，CAN2是从CAN，两者共享64字节的SRAM。</p><h3 id="波特率计算"><a href="#波特率计算" class="headerlink" title="波特率计算"></a>波特率计算</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121018865.png" alt=""><br><del>这时钟树真是tm又臭又长又大</del> 明显俩CAN用APB1的时钟，默认配满45Mhz<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121009550.png" alt=""><br>明显可以得到波特率计算公式，该公式适用于直接填写CubeMX的参数</p><script type="math/tex; mode=display">BaudRate=\frac{f_{APB1}}{Prescaler\cdot(1+t_{BS1}+t_{BS2})}</script><p>以使用SAE J1939标准为例，该标准使用250kbps的波特率，STM32cubeMX配置界面如下所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121046807.png" alt=""></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a href="https://www.st.com.cn/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf">rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf</a><br>DS9405，其实是STM32F429的datasheet<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191714629.png" alt=""></p><h1 id="bxCAN"><a href="#bxCAN" class="headerlink" title="bxCAN"></a>bxCAN</h1><p>以STM32F429IGT6为例</p><h2 id="特性介绍"><a href="#特性介绍" class="headerlink" title="特性介绍"></a>特性介绍</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121004416.png" alt=""><br>CAN1是主CAN，CAN2是从CAN，两者共享64字节的SRAM。</p><h3 id="波特率计算"><a href="#波特率计算" class="headerlink" title="波特率计算"></a>波特率计算</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121018865.png" alt=""><br><del>这时钟树真是tm又臭又长又大</del> 明显俩CAN用APB1的时钟，默认配满45Mhz<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121009550.png" alt=""><br>明显可以得到波特率计算公式，该公式适用于直接填写CubeMX的参数</p><script type="math/tex; mode=display">BaudRate=\frac{f_{APB1}}{Prescaler\cdot(1+t_{BS1}+t_{BS2})}</script><p>以使用SAE J1939标准为例，该标准使用250kbps的波特率，STM32cubeMX配置界面如下所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121046807.png" alt=""></p><h1 id="FDCAN"><a href="#FDCAN" class="headerlink" title="FDCAN"></a>FDCAN</h1><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><h2 id="波特率配置"><a href="#波特率配置" class="headerlink" title="波特率配置"></a>波特率配置</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191723590.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191724188.png" alt=""><br>对比了一下跟bxcan的公式计算是相同的</p>]]></content>
       
       
       
