@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-20T02:45:24.159Z</updated>
+  <updated>2024-08-29T00:01:16.479Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,118 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/28/csapp/ji-suan-ji-ti-xi-jie-gou-ji-chu/"/>
+    <id>http://wwwangguan.github.io/2024/08/28/csapp/ji-suan-ji-ti-xi-jie-gou-ji-chu/</id>
+    <published>2024-08-28T11:21:09.294Z</published>
+    <updated>2024-08-29T00:01:16.479Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;使用教材：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/27/qian-ru-shi-ruan-jian/nei-he/arm-cortex-m3-he-m4-wei-chu-li-qi-quan-wei-zhi-nan/"/>
+    <id>http://wwwangguan.github.io/2024/08/27/qian-ru-shi-ruan-jian/nei-he/arm-cortex-m3-he-m4-wei-chu-li-qi-quan-wei-zhi-nan/</id>
+    <published>2024-08-27T11:27:06.451Z</published>
+    <updated>2024-08-27T11:27:06.451Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/26/dian-zi-dian-li/zynq/ad-layout-bga/"/>
+    <id>http://wwwangguan.github.io/2024/08/26/dian-zi-dian-li/zynq/ad-layout-bga/</id>
+    <published>2024-08-26T06:44:58.892Z</published>
+    <updated>2024-08-26T06:44:58.892Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>电机与拖动</title>
+    <link href="http://wwwangguan.github.io/2024/08/26/dian-zi-dian-li/dian-ji-yu-tuo-dong/dian-ji-yu-tuo-dong/"/>
+    <id>http://wwwangguan.github.io/2024/08/26/dian-zi-dian-li/dian-ji-yu-tuo-dong/dian-ji-yu-tuo-dong/</id>
+    <published>2024-08-25T23:45:16.172Z</published>
+    <updated>2024-08-25T23:46:05.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="电机" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E6%9C%BA/"/>
+    
+    <category term="电子电力技术" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/nxp/lpc4322jet100e/"/>
+    <id>http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/nxp/lpc4322jet100e/</id>
+    <published>2024-08-20T14:04:58.715Z</published>
+    <updated>2024-08-20T14:04:58.715Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在openocd下使用Jlink并调用其GDB</title>
+    <link href="http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/debugger/zai-openocd-xia-shi-yong-jlink-bing-diao-yong-qi-gdb/"/>
+    <id>http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/debugger/zai-openocd-xia-shi-yong-jlink-bing-diao-yong-qi-gdb/</id>
+    <published>2024-08-20T06:56:22.624Z</published>
+    <updated>2024-08-21T06:23:41.934Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;测试条件&quot;&gt;&lt;a href=&quot;#测试条件&quot; class=&quot;headerlink&quot; title=&quot;测试条件&quot;&gt;&lt;/a&gt;测试条件&lt;/h1&gt;&lt;p&gt;STM32H750VGH6&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
+    
+    <category term="Jlink" scheme="http://wwwangguan.github.io/tags/Jlink/"/>
+    
+    <category term="Jlink-OB" scheme="http://wwwangguan.github.io/tags/Jlink-OB/"/>
+    
+  </entry>
   
   <entry>
     <title>几个小目标</title>
@@ -152,7 +264,7 @@
     <link href="http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/dian-zi-yuan-qi-jian/"/>
     <id>http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/dian-zi-yuan-qi-jian/</id>
     <published>2024-08-15T06:02:34.449Z</published>
-    <updated>2024-08-15T06:09:42.169Z</updated>
+    <updated>2024-08-21T07:53:27.261Z</updated>
     
     
       
@@ -177,7 +289,7 @@
     <link href="http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/zynq/zynq-core-ying-jian-she-ji/"/>
     <id>http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/zynq/zynq-core-ying-jian-she-ji/</id>
     <published>2024-08-14T16:08:21.578Z</published>
-    <updated>2024-08-15T01:13:37.163Z</updated>
+    <updated>2024-08-25T15:14:30.892Z</updated>
     
     
       
@@ -206,7 +318,7 @@
     <link href="http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/"/>
     <id>http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/</id>
     <published>2024-08-12T01:21:50.421Z</published>
-    <updated>2024-08-19T09:24:55.614Z</updated>
+    <updated>2024-08-20T03:10:42.836Z</updated>
     
     
       
@@ -360,148 +472,6 @@
     <published>2024-07-06T05:31:51.960Z</published>
     <updated>2024-07-06T05:32:21.161Z</updated>
     
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>硬件组2023-2024-2 最终考核</title>
-    <link href="http://wwwangguan.github.io/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/"/>
-    <id>http://wwwangguan.github.io/2024/06/23/dian-zi-dian-li/ying-jian-zu-kao-he/ying-jian-zu-2023-2024-2-zui-zhong-kao-he/</id>
-    <published>2024-06-23T09:00:00.000Z</published>
-    <updated>2024-06-26T16:15:04.148Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;考核须知&quot;&gt;&lt;a href=&quot;#考核须知&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="硬件组" scheme="http://wwwangguan.github.io/tags/%E7%A1%AC%E4%BB%B6%E7%BB%84/"/>
-    
-    <category term="原神" scheme="http://wwwangguan.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="RoboMaster" scheme="http://wwwangguan.github.io/tags/RoboMaster/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>芯原杯IDE替换测试</title>
-    <link href="http://wwwangguan.github.io/2024/06/08/qian-ru-shi-ruan-jian/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/"/>
-    <id>http://wwwangguan.github.io/2024/06/08/qian-ru-shi-ruan-jian/xin-yuan-bei/xin-yuan-bei-ide-ti-huan-ce-shi/</id>
-    <published>2024-06-07T16:21:18.693Z</published>
-    <updated>2024-08-14T07:34:16.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;省流：能代码补全，编译结果有问题，CLion的远程调试能接上qemu，但是程序都似了有没有什么用，建议ntr开发，Clion写代码Esclipse编译Debug。&lt;/p&gt;
-&lt;h1 id=&quot;为什么要做IDE替换&quot;&gt;&lt;a href=&quot;#为什么要做IDE替换&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Cmake" scheme="http://wwwangguan.github.io/tags/Cmake/"/>
-    
-    <category term="Clion" scheme="http://wwwangguan.github.io/tags/Clion/"/>
-    
-    <category term="RISCV" scheme="http://wwwangguan.github.io/tags/RISCV/"/>
-    
-    <category term="VeriSilicon" scheme="http://wwwangguan.github.io/tags/VeriSilicon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FPGA期末复习</title>
-    <link href="http://wwwangguan.github.io/2024/05/14/fpga/fpga-qi-mo-fu-xi/"/>
-    <id>http://wwwangguan.github.io/2024/05/14/fpga/fpga-qi-mo-fu-xi/</id>
-    <published>2024-05-14T13:13:57.681Z</published>
-    <updated>2024-08-13T02:36:13.415Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;杂记&quot;&gt;&lt;a href=&quot;#杂记&quot; class=&quot;headerlink&quot; title=&quot;杂记&quot;&gt;&lt;/a&gt;杂记&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;RTL  Register Transfer</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>FOC原理</title>
-    <link href="http://wwwangguan.github.io/2024/04/25/dian-zi-dian-li/foc/foc-yuan-li/"/>
-    <id>http://wwwangguan.github.io/2024/04/25/dian-zi-dian-li/foc/foc-yuan-li/</id>
-    <published>2024-04-25T08:50:19.446Z</published>
-    <updated>2024-04-26T14:23:23.086Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/04/14/kong-zhi-li-lun/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/"/>
-    <id>http://wwwangguan.github.io/2024/04/14/kong-zhi-li-lun/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/dong-tai-xi-tong-de-jian-mo-yu-fen-xi/</id>
-    <published>2024-04-14T07:40:24.489Z</published>
-    <updated>2024-04-14T09:16:02.648Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;拉普拉斯变换&quot;&gt;&lt;a href=&quot;#拉普拉斯变换&quot; class=&quot;headerlink&quot; title=&quot;拉普拉斯变换&quot;&gt;&lt;/a&gt;拉普拉斯变换&lt;/h1&gt;&lt;script type=&quot;math/tex;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/04/08/qian-ru-shi-ruan-jian/stm32/rtthread/"/>
-    <id>http://wwwangguan.github.io/2024/04/08/qian-ru-shi-ruan-jian/stm32/rtthread/</id>
-    <published>2024-04-08T15:46:35.873Z</published>
-    <updated>2024-04-08T15:46:57.434Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;线程启动与切换过程详解&quot;&gt;&lt;a href=&quot;#线程启动与切换过程详解&quot; class=&quot;headerlink&quot;</summary>
-        
-      
     
     
     

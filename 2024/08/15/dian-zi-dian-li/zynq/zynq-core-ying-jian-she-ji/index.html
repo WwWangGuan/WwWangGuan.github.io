@@ -400,14 +400,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-15
+                    2024-08-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    209
+                    232
                 </div>
                 
 
@@ -437,14 +437,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><h1 id="原理图设计"><a href="#原理图设计" class="headerlink" title="原理图设计"></a>原理图设计</h1><h2 id="PS部分"><a href="#PS部分" class="headerlink" title="PS部分"></a>PS部分</h2><h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150009030.png" alt=""><br>看了下PYNQ，用的50Mhz，不过频率30到六十都行麻<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150011818.png" alt=""><br>这两个复位比较有意思<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150009670.png" alt="">PYNQ上，PS_POR_B最后给到了PG_ALL，而PS_SRST_B给到了真正的外部复位上。<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150014382.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150028828.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150022476.png" alt=""></p>
+                <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><h1 id="原理图设计"><a href="#原理图设计" class="headerlink" title="原理图设计"></a>原理图设计</h1><h2 id="PS部分"><a href="#PS部分" class="headerlink" title="PS部分"></a>PS部分</h2><h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150009030.png"><br>看了下PYNQ，用的50Mhz，不过频率30到六十都行麻<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150011818.png"><br>这两个复位比较有意思<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150009670.png">PYNQ上，PS_POR_B最后给到了PG_ALL，而PS_SRST_B给到了真正的外部复位上。<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150014382.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150028828.png"></p>
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150022476.png"></p>
 <blockquote>
 <p>不过这个AR_RST没看懂啊，NC7WZ07P6X是个缓冲器，AR_RST一端给到了排针的外部接口上，但他又接回PS上去了，他的RESET用的是1.8V电压，因为bank501是1.8电压域，但是为啥又接到3.3的电压域的PS引脚上去了?不懂</p>
-<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150021628.png" alt=""></p>
 </blockquote>
-<p>需要注意的是，两个RESET分属不同的电压域，PYNQ上，PS_POR_B的电压域是3.3V，而PS_SRST_B的电压域是1.8V<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150018297.png" alt=""><br>最后一个PS_MIO_VREF，看图<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150034907.png" alt=""><br>接下来是Vivado分配引脚<br><del>Vivado的PS引脚分配不知道咋导出来，直接抄PYNQ</del></p>
-<h2 id="PL部分"><a href="#PL部分" class="headerlink" title="PL部分"></a>PL部分</h2><h3 id="引脚说明"><a href="#引脚说明" class="headerlink" title="引脚说明"></a>引脚说明</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150912323.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150913193.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150021628.png"></p>
+<p>需要注意的是，两个RESET分属不同的电压域，PYNQ上，PS_POR_B的电压域是3.3V，而PS_SRST_B的电压域是1.8V<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150018297.png"><br>最后一个PS_MIO_VREF，看图<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150034907.png"><br>接下来是Vivado分配引脚<br><del>Vivado的PS引脚分配不知道咋导出来，直接抄PYNQ</del></p>
+<h2 id="PL部分"><a href="#PL部分" class="headerlink" title="PL部分"></a>PL部分</h2><h3 id="引脚说明"><a href="#引脚说明" class="headerlink" title="引脚说明"></a>引脚说明</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150912323.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408150913193.png"></p>
+<h2 id="上电时序"><a href="#上电时序" class="headerlink" title="上电时序"></a>上电时序</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408251929061.png"><br>PS和PL的电源是完全分离的，不必考虑相互耦合。<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408251929721.png"></p>
 
                 
             </div>
@@ -859,7 +860,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.8k</span>
+                        class="white-color">34.6k</span>
             
             
             

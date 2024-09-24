@@ -389,14 +389,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-19
+                    2024-08-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    163
+                    172
                 </div>
                 
 
@@ -426,14 +426,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a target="_blank" rel="noopener" href="https://www.st.com.cn/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf">rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf</a><br>DS9405，其实是STM32F429的datasheet<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191714629.png" alt=""></p>
+                <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a target="_blank" rel="noopener" href="https://www.st.com.cn/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf">rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf</a><br>DS9405，其实是STM32F429的datasheet<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191714629.png"></p>
 <h1 id="bxCAN"><a href="#bxCAN" class="headerlink" title="bxCAN"></a>bxCAN</h1><p>以STM32F429IGT6为例</p>
-<h2 id="特性介绍"><a href="#特性介绍" class="headerlink" title="特性介绍"></a>特性介绍</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121004416.png" alt=""><br>CAN1是主CAN，CAN2是从CAN，两者共享64字节的SRAM。</p>
-<h3 id="波特率计算"><a href="#波特率计算" class="headerlink" title="波特率计算"></a>波特率计算</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121018865.png" alt=""><br><del>这时钟树真是tm又臭又长又大</del> 明显俩CAN用APB1的时钟，默认配满45Mhz<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121009550.png" alt=""><br>明显可以得到波特率计算公式，该公式适用于直接填写CubeMX的参数</p>
-<script type="math/tex; mode=display">
-BaudRate=\frac{f_{APB1}}{Prescaler\cdot(1+t_{BS1}+t_{BS2})}</script><p>以使用SAE J1939标准为例，该标准使用250kbps的波特率，STM32cubeMX配置界面如下所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121046807.png" alt=""></p>
-<h1 id="FDCAN"><a href="#FDCAN" class="headerlink" title="FDCAN"></a>FDCAN</h1><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><h2 id="波特率配置"><a href="#波特率配置" class="headerlink" title="波特率配置"></a>波特率配置</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191723590.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191724188.png" alt=""><br>对比了一下跟bxcan的公式计算是相同的</p>
-
+<h2 id="特性介绍"><a href="#特性介绍" class="headerlink" title="特性介绍"></a>特性介绍</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121004416.png"><br>CAN1是主CAN，CAN2是从CAN，两者共享64字节的SRAM。</p>
+<h3 id="波特率计算"><a href="#波特率计算" class="headerlink" title="波特率计算"></a>波特率计算</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121018865.png"><br><del>这时钟树真是tm又臭又长又大</del> 明显俩CAN用APB1的时钟，默认配满45Mhz<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121009550.png"><br>明显可以得到波特率计算公式，该公式适用于直接填写CubeMX的参数<br>$$<br>BaudRate&#x3D;\frac{f_{APB1}}{Prescaler\cdot(1+t_{BS1}+t_{BS2})}<br>$$<br>以使用SAE J1939标准为例，该标准使用250kbps的波特率，STM32cubeMX配置界面如下所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408121046807.png"></p>
+<h1 id="FDCAN"><a href="#FDCAN" class="headerlink" title="FDCAN"></a>FDCAN</h1><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><h2 id="波特率配置"><a href="#波特率配置" class="headerlink" title="波特率配置"></a>波特率配置</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191723590.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408191724188.png"><br>对比了一下跟bxcan的公式计算是相同的</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="中断函数解析"><a href="#中断函数解析" class="headerlink" title="中断函数解析"></a>中断函数解析</h3>
                 
             </div>
             <hr/>
@@ -859,7 +857,7 @@ BaudRate=\frac{f_{APB1}}{Prescaler\cdot(1+t_{BS1}+t_{BS2})}</script><p>以使用
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.8k</span>
+                        class="white-color">34.6k</span>
             
             
             
