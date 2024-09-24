@@ -422,13 +422,13 @@ Kernel SettingsUSE_PREEMPTION1：抢占式调度器（p">
             <div id="articleContent">
                 <h1 id="中断模式和中断事件模式"><a href="#中断模式和中断事件模式" class="headerlink" title="中断模式和中断事件模式"></a>中断模式和中断事件模式</h1><p>两者的区别在于中断的事件模式仅仅会将设备从低功耗条件下唤醒而不执行代码，也就是说，没有ISR。</p>
 <p>byd,osDelay怎么不切换线程。。。</p>
-<h1 id="Kernel-Settings"><a href="#Kernel-Settings" class="headerlink" title="Kernel Settings"></a>Kernel Settings</h1><h2 id="USE-PREEMPTION"><a href="#USE-PREEMPTION" class="headerlink" title="USE_PREEMPTION"></a>USE_PREEMPTION</h2><p>1：抢占式调度器（preemptive a. 抢占的）<br>0：时间片调度（cooperative a. 协作的）<br>USE_PREEMPTION 是 <strong>RTOS 的调度方式选择，为 1 时使用抢占式调度器，为 0 时使用协程</strong>，如果使用抢占式调度器的话内核会在每个时钟节拍中断中进行任务切换，当使用协程的话会在如下地方进行任务切换</p>
+<h1 id="Kernel-Settings"><a href="#Kernel-Settings" class="headerlink" title="Kernel Settings"></a>Kernel Settings</h1><h2 id="USE-PREEMPTION"><a href="#USE-PREEMPTION" class="headerlink" title="USE_PREEMPTION"></a>USE_PREEMPTION</h2><p>1：抢占式调度器（preemptive a. 抢占的）<br>0：时间片调度（cooperative a. 协作的）<br>USE_PREEMPTION 是 <strong>RTOS 的调度方式选择，为 1 时使用抢占式调度器，为 0 时使用协程</strong>，如果使用抢占式调度器的话内核会在每个时钟节拍中断中进行任务切换，当使用协程的话会在如下地方进行任务切换</p>
 <ol>
 <li>一个任务调用了函数 taskYIELD()。</li>
 <li>一个任务调用了可以使任务进入阻塞态的 API 函数。</li>
-<li>应用程序明确定义了在中断中执行上下文切换。<h2 id="CPU-CLOCK-HZ"><a href="#CPU-CLOCK-HZ" class="headerlink" title="CPU_CLOCK_HZ"></a>CPU_CLOCK_HZ</h2></li>
+<li>应用程序明确定义了在中断中执行上下文切换。</li>
 </ol>
-
+<h2 id="CPU-CLOCK-HZ"><a href="#CPU-CLOCK-HZ" class="headerlink" title="CPU_CLOCK_HZ"></a>CPU_CLOCK_HZ</h2>
                 
             </div>
             <hr/>
@@ -802,7 +802,7 @@ Kernel SettingsUSE_PREEMPTION1：抢占式调度器（p">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

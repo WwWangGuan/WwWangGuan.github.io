@@ -424,14 +424,13 @@ RTL  Register Transfer level
                 <h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><ol>
 <li>RTL  Register Transfer level</li>
 <li>时序仿真是最接近真实器件运行特性的仿真。</li>
-<li><p>综合器总是能综合出唯一的电路网表文件。然而，在实际的数字电路设计中，这种说法是不准确的。综合器在将高级设计描述（如HDL代码）转换为门级网表时，可以基于不同的优化目标（如速度、面积、功耗等）和综合策略产生不同的网表结果。同一个功能的电路描述，根据不同的综合约束和目标，可能会被综合成不同的电路网表。因此，综合出的网表文件并不唯一。</p>
-<h1 id="HDL设计风格"><a href="#HDL设计风格" class="headerlink" title="HDL设计风格"></a>HDL设计风格</h1><h2 id="行为级描述"><a href="#行为级描述" class="headerlink" title="行为级描述"></a>行为级描述</h2><h2 id="数据流描述"><a href="#数据流描述" class="headerlink" title="数据流描述"></a>数据流描述</h2><h2 id="结构描述"><a href="#结构描述" class="headerlink" title="结构描述"></a>结构描述</h2><h3 id="顺序描述语句（Sequential-Statements）"><a href="#顺序描述语句（Sequential-Statements）" class="headerlink" title="顺序描述语句（Sequential Statements）"></a>顺序描述语句（Sequential Statements）</h3><p>顺序描述语句是在进程（process）、函数（function）和过程（procedure）中使用的。这些语句按照书写的顺序执行，类似于软件编程中的顺序执行。<br><strong>*构造体中的语句是并行执行的</strong>，与书写顺序无关*</p>
-</li>
+<li>综合器总是能综合出唯一的电路网表文件。然而，在实际的数字电路设计中，这种说法是不准确的。综合器在将高级设计描述（如HDL代码）转换为门级网表时，可以基于不同的优化目标（如速度、面积、功耗等）和综合策略产生不同的网表结果。同一个功能的电路描述，根据不同的综合约束和目标，可能会被综合成不同的电路网表。因此，综合出的网表文件并不唯一。</li>
 </ol>
+<h1 id="HDL设计风格"><a href="#HDL设计风格" class="headerlink" title="HDL设计风格"></a>HDL设计风格</h1><h2 id="行为级描述"><a href="#行为级描述" class="headerlink" title="行为级描述"></a>行为级描述</h2><h2 id="数据流描述"><a href="#数据流描述" class="headerlink" title="数据流描述"></a>数据流描述</h2><h2 id="结构描述"><a href="#结构描述" class="headerlink" title="结构描述"></a>结构描述</h2><h3 id="顺序描述语句（Sequential-Statements）"><a href="#顺序描述语句（Sequential-Statements）" class="headerlink" title="顺序描述语句（Sequential Statements）"></a>顺序描述语句（Sequential Statements）</h3><p>顺序描述语句是在进程（process）、函数（function）和过程（procedure）中使用的。这些语句按照书写的顺序执行，类似于软件编程中的顺序执行。<br><em><strong>构造体中的语句是并行执行的</strong>，与书写顺序无关</em></p>
 <h1 id="端口的方向"><a href="#端口的方向" class="headerlink" title="端口的方向"></a>端口的方向</h1><p>in out inout BUFFER</p>
 <p>variable是局部量，只能在process和子程序里面用？<br>子程序是什么？</p>
-<p>/=是不等于，斜杠向左偏</p>
-<p>基于FPGA/CPLD的数字系统设计流程包括：<br>设计输入、综合、适配、仿真、编程下载。<br>设计输入 综合 适配 仿真 下载</p>
+<p>&#x2F;&#x3D;是不等于，斜杠向左偏</p>
+<p>基于FPGA&#x2F;CPLD的数字系统设计流程包括：<br>设计输入、综合、适配、仿真、编程下载。<br>设计输入 综合 适配 仿真 下载</p>
 <h1 id="数据建立时间"><a href="#数据建立时间" class="headerlink" title="数据建立时间"></a>数据建立时间</h1><p>在时钟跳变之前数据必须保持稳定无跳边的时间</p>
 <h1 id="数据保持时间"><a href="#数据保持时间" class="headerlink" title="数据保持时间"></a>数据保持时间</h1><p>在时钟跳变之后数据必须保持稳定的时间</p>
 <h1 id="entity"><a href="#entity" class="headerlink" title="entity"></a>entity</h1><p>类书参数说明</p>
@@ -447,13 +446,17 @@ RTL  Register Transfer level
 <li>可以使用更小规模的FPGA器件，节省成本</li>
 <li>为日后升级留下更多资源</li>
 <li>FPGA资源使用过多会导致功耗上升</li>
-<li>FPGA布线资源有限，占用资源过多会影响电路性能<h3 id="速度优化"><a href="#速度优化" class="headerlink" title="速度优化"></a>速度优化</h3></li>
+<li>FPGA布线资源有限，占用资源过多会影响电路性能</li>
+</ol>
+<h3 id="速度优化"><a href="#速度优化" class="headerlink" title="速度优化"></a>速度优化</h3><ol>
 <li>流水线设计，时钟周期不得小于数据从输入到输出经过的时间，系统最高频率取决于延时最小的组合逻辑块</li>
 <li>寄存器配平。</li>
 <li>关键路径法（优先使用）</li>
 <li>乒乓操作法</li>
-<li>加法数法<h2 id="数据建立和保持时间的要求；"><a href="#数据建立和保持时间的要求；" class="headerlink" title="数据建立和保持时间的要求；"></a>数据建立和保持时间的要求；</h2><h3 id="数据建立时间-1"><a href="#数据建立时间-1" class="headerlink" title="数据建立时间"></a>数据建立时间</h3>在时钟跳变之前，数据必须保持稳定的时间<h3 id="数据保持时间-1"><a href="#数据保持时间-1" class="headerlink" title="数据保持时间"></a>数据保持时间</h3>在时钟跳变之后数据保持稳定的时间</li>
+<li>加法数法</li>
 </ol>
+<h2 id="数据建立和保持时间的要求；"><a href="#数据建立和保持时间的要求；" class="headerlink" title="数据建立和保持时间的要求；"></a>数据建立和保持时间的要求；</h2><h3 id="数据建立时间-1"><a href="#数据建立时间-1" class="headerlink" title="数据建立时间"></a>数据建立时间</h3><p>在时钟跳变之前，数据必须保持稳定的时间</p>
+<h3 id="数据保持时间-1"><a href="#数据保持时间-1" class="headerlink" title="数据保持时间"></a>数据保持时间</h3><p>在时钟跳变之后数据保持稳定的时间</p>
 <p>数据的稳定传输必须同时满足数据建立时间和数据保持时间，应当避开在数据建立时间或在其附近读取数据。</p>
 <h2 id="冒险现象和毛刺消除技术；"><a href="#冒险现象和毛刺消除技术；" class="headerlink" title="冒险现象和毛刺消除技术；"></a>冒险现象和毛刺消除技术；</h2><h3 id="毛刺消除"><a href="#毛刺消除" class="headerlink" title="毛刺消除"></a>毛刺消除</h3><ol>
 <li>延时方式</li>
@@ -860,7 +863,7 @@ RTL  Register Transfer level
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

@@ -363,6 +363,10 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/OpenOCD/">
+                                <span class="chip bg-color">OpenOCD</span>
+                            </a>
+                        
                             <a href="/tags/Clion/">
                                 <span class="chip bg-color">Clion</span>
                             </a>
@@ -377,10 +381,6 @@
                         
                             <a href="/tags/JTAG/">
                                 <span class="chip bg-color">JTAG</span>
-                            </a>
-                        
-                            <a href="/tags/OpenOCD/">
-                                <span class="chip bg-color">OpenOCD</span>
                             </a>
                         
                     </div>
@@ -409,7 +409,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    834
+                    840
                 </div>
                 
 
@@ -440,20 +440,25 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/564229673">在 CLion 中开发 HPM6000 系列单片机</a></p>
-<h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><p>HPM5301evklite，调试器选用了daplink，但是需要支持jtag调试的，<del>强烈推荐南航无线dap和淘宝无线dap，能调arm和ch32的哪家，我没收他俩广告费</del><br>hpm官方sdk与sdk_env<br><a target="_blank" rel="noopener" href="https://github.com/hpmicro">HPMicro Semiconductor Ltd · GitHub</a><br>env自带了toolchain，但是也可以用andes的 ,据说是只有andes的才能发挥RV的全部实力<br><a target="_blank" rel="noopener" href="https://github.com/andestech/nds-gnu-toolchain">GitHub - andestech/nds-gnu-toolchain: GNU toolchain for AndesCore</a></p>
-<h1 id="开发环境配置"><a href="#开发环境配置" class="headerlink" title="开发环境配置"></a>开发环境配置</h1><p>添加环境变量，请忽略下图的GNNRISCV_ToolChain的环境变量，那个已经删掉了<br><img src="https://pic1.zhimg.com/80/v2-33cb49bc41d69bb46a6185715e36f7aa_1440w.png" alt=""><br>PS:toolchain的环境变量指向的目录不要带bin，否则编译会有问题<br><img src="https://picx.zhimg.com/80/v2-d3c98237ab6e44aa1d81a638fc7b48ff_1440w.png" alt=""><br>工具链在ENV里面带了，填进去就行，最新的13.2<br><img src="https://pica.zhimg.com/80/v2-e0d2738df23660f51b8e4f2401effd94_1440w.png" alt=""></p>
+<h1 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h1><p>HPM5301evklite，调试器选用了daplink，但是需要支持jtag调试的，<del>强烈推荐南航无线dap和淘宝无线dap，能调arm和ch32的哪家，我没收他俩广告费</del><br>hpm官方sdk与sdk_env<br><a target="_blank" rel="noopener" href="https://github.com/hpmicro">HPMicro Semiconductor Ltd · GitHub</a><br>env自带了toolchain，但是也可以用andes的 ,据说是只有andes的才能发挥RV的全部实力<br><a target="_blank" rel="noopener" href="https://github.com/andestech/nds-gnu-toolchain">GitHub - andestech&#x2F;nds-gnu-toolchain: GNU toolchain for AndesCore</a></p>
+<h1 id="开发环境配置"><a href="#开发环境配置" class="headerlink" title="开发环境配置"></a>开发环境配置</h1><p>添加环境变量，请忽略下图的GNNRISCV_ToolChain的环境变量，那个已经删掉了<br><img src="https://pic1.zhimg.com/80/v2-33cb49bc41d69bb46a6185715e36f7aa_1440w.png"><br>PS:toolchain的环境变量指向的目录不要带bin，否则编译会有问题<br><img src="https://picx.zhimg.com/80/v2-d3c98237ab6e44aa1d81a638fc7b48ff_1440w.png"><br>工具链在ENV里面带了，填进去就行，最新的13.2<br><img src="https://pica.zhimg.com/80/v2-e0d2738df23660f51b8e4f2401effd94_1440w.png"></p>
 <h1 id="CLion开发"><a href="#CLion开发" class="headerlink" title="CLion开发"></a>CLion开发</h1><p>hpm sdk生成工具在Clion中打开<br>工具链如图<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811120732.png" alt="Pasted image 20240811120732.png"><br>报错<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811120757.png" alt="Pasted image 20240811120757.png"></p>
-<p>加上这个试试<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811120911.png" alt="Pasted image 20240811120911.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811204720.png" alt=""><br>成功<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811121056.png" alt="Pasted image 20240811121056.png"></p>
+<p>加上这个试试<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811120911.png" alt="Pasted image 20240811120911.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811204720.png"><br>成功<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811121056.png" alt="Pasted image 20240811121056.png"></p>
 <p>不过这个目录有点怪啊，我原本以为是直接复制出来一份例程，没成想还是改原来的？<br>这个问题跳转到SDK本地化开发解决。</p>
 <blockquote>
 <p>有个问题，上图的这个编译实际上是不对的，应该在这里设置一下<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811205240.png" alt="Pasted image 20240811205240.png"><br>可执行文件这个把elf文件选上，正常编译结果下图所示，别的型号的片子也差不多<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811205400.png" alt="Pasted image 20240811205400.png"></p>
+</blockquote>
 <h2 id="本地化开发"><a href="#本地化开发" class="headerlink" title="本地化开发"></a>本地化开发</h2><p>本地化开发是依托答辩，建议把sample里面的例程直接复制过来，加上Cmake的参数就行了，跟上面步骤是一样的</p>
 <h1 id="OpenOCD-下载与调试"><a href="#OpenOCD-下载与调试" class="headerlink" title="OpenOCD 下载与调试"></a>OpenOCD 下载与调试</h1><p>openocd必须用HPM的env里面提供的openocd，CLion开发实测不需要将其添加到环境变量中，只需指定即可</p>
+<blockquote>
 <p>一个bug<br>我的实际目录是这样的<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811205939.png" alt="Pasted image 20240811205939.png"></p>
+</blockquote>
+<blockquote>
 <p>但是呢，来看看CLion，<del>没有图了</del>，用人话说就是CLion的这个目录里面看不到这个openocd<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210041.png" alt="Pasted image 20240811210041.png"> </p>
 </blockquote>
-<p>另外还需要对env_sdk的openocd目录做一点手脚，熟悉openocd的同学们应该能发现实际上env里面这个openocd是不完整的，CLion也会提示找不到scripts/board，这个东西实际上在sdk里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210252.png" alt="Pasted image 20240811210252.png"></p>
-<p>所以，要把这些东西复制到env的openocd/scripts目录里面<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210946.png" alt="Pasted image 20240811210946.png"><br>这个时候CLion应该不会报错了，接下来是编写面板配置文件（.cfg）<br><pre class="line-numbers language-tcl" data-language="tcl"><code class="language-tcl">bindto 0.0.0.0  
+<p>另外还需要对env_sdk的openocd目录做一点手脚，熟悉openocd的同学们应该能发现实际上env里面这个openocd是不完整的，CLion也会提示找不到scripts&#x2F;board，这个东西实际上在sdk里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210252.png" alt="Pasted image 20240811210252.png"></p>
+<p>所以，要把这些东西复制到env的openocd&#x2F;scripts目录里面<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811210946.png" alt="Pasted image 20240811210946.png"><br>这个时候CLion应该不会报错了，接下来是编写面板配置文件（.cfg）</p>
+<pre class="line-numbers language-tcl" data-language="tcl"><code class="language-tcl">bindto 0.0.0.0  
   
 adapter speed 8000  
   
@@ -496,8 +501,9 @@ $_TARGET0 configure -event gdb-attach &#123;
     reset halt  
 &#125;  
   
-reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<p>这个实际上是hpm5301evklite.cfg和probe/cmsis-dap.cfg的缝合体，<del>以及又加上了一点我自己的屎</del><br>如果你要是用6200evk去开发，就把find soc那句改成hpm6280.cfg，这些文件都在openocd/scripts/soc里面<br>再把下面的flash相关的东西从board的cfg偷过来就行了。<br>调试起来挺舒服的，不过速度相比较stm32g474-nucelo来说略有一点点卡，<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811212504.png" alt="Pasted image 20240811212504.png"></p>
+reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这个实际上是hpm5301evklite.cfg和probe&#x2F;cmsis-dap.cfg的缝合体，<del>以及又加上了一点我自己的屎</del><br>如果你要是用6200evk去开发，就把find soc那句改成hpm6280.cfg，这些文件都在openocd&#x2F;scripts&#x2F;soc里面<br>再把下面的flash相关的东西从board的cfg偷过来就行了。<br>调试起来挺舒服的，不过速度相比较stm32g474-nucelo来说略有一点点卡，<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240811212504.png" alt="Pasted image 20240811212504.png"></p>
 <h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><pre class="line-numbers language-tcl" data-language="tcl"><code class="language-tcl">bindto 0.0.0.0  
   
 adapter speed 8000  
@@ -578,6 +584,10 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/OpenOCD/">
+                                    <span class="chip bg-color">OpenOCD</span>
+                                </a>
+                            
                                 <a href="/tags/Clion/">
                                     <span class="chip bg-color">Clion</span>
                                 </a>
@@ -592,10 +602,6 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
                             
                                 <a href="/tags/JTAG/">
                                     <span class="chip bg-color">JTAG</span>
-                                </a>
-                            
-                                <a href="/tags/OpenOCD/">
-                                    <span class="chip bg-color">OpenOCD</span>
                                 </a>
                             
                         </div>
@@ -936,7 +942,7 @@ reset_config srst_only<span aria-hidden="true" class="line-numbers-rows"><span><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

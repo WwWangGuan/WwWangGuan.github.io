@@ -450,24 +450,30 @@ extern &quot;C&quot; &#123;
 <li>栈是一种自动分配和释放的内存区域，用于存储函数调用、局部变量，返回地址，函数的形参等临时数据。</li>
 <li>栈的大小固定，由编译器或操作系统预先分配。通常比堆小，但速度更快。</li>
 <li>栈的分配和释放由编译器自动管理，遵循“<strong>先进后出</strong>”的原则。</li>
-<li>栈的数据只能在当前函数的作用域内访问，具有较短的生命周期。<br>对于STM32而言，堆栈在启动文件中设定<h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2>此修饰符用来控制变量与函数的存储方式和可见性</li>
+<li>栈的数据只能在当前函数的作用域内访问，具有较短的生命周期。<br>对于STM32而言，堆栈在启动文件中设定</li>
 </ul>
 </li>
+</ol>
+<h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>此修饰符用来控制变量与函数的存储方式和可见性</p>
+<ol>
 <li>对局部变量使用static声明则此变量只会在第一次调用时初始化，之后的调用会保留上一次调用的值，并且其生命周期会延长到整个程序的运行期间而非整个函数的运行期间。</li>
 <li>在函数外部使用static关键字声明的变量称为静态全局变量。静态全局变量的作用域仅限于声明它的源文件，其他文件无法访问。</li>
-<li>静态函数：使用static关键字声明的函数称为静态函数。静态函数只能在声明它的源文件中使用，不能被其他文件调用。<h2 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h2>C语言中的extern关键字用于声明一个全局变量或函数，该变量或函数在其他文件中定义。它的作用是告诉编译器该变量或函数是在其他文件中定义的，需要在当前文件中使用。</li>
+<li>静态函数：使用static关键字声明的函数称为静态函数。静态函数只能在声明它的源文件中使用，不能被其他文件调用。</li>
 </ol>
-<p>extern关键字可以放在变量或函数的声明前面，表示该变量或函数在其他文件中已经定义。例如：<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">
+<h2 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h2><p>C语言中的extern关键字用于声明一个全局变量或函数，该变量或函数在其他文件中定义。它的作用是告诉编译器该变量或函数是在其他文件中定义的，需要在当前文件中使用。</p>
+<p>extern关键字可以放在变量或函数的声明前面，表示该变量或函数在其他文件中已经定义。例如：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">
 extern int count; &#x2F;&#x2F; 声明一个全局变量count，在其他文件中定义
 
-extern void printMessage(); &#x2F;&#x2F; 声明一个函数printMessage()，在其他文件中定义<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
+extern void printMessage(); &#x2F;&#x2F; 声明一个函数printMessage()，在其他文件中定义<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>通过使用extern关键字，可以将全局变量或函数的定义分散在多个文件中，提高代码的模块化和可维护性。<br>需要注意的是，extern关键字只是告诉编译器该变量或函数在其他文件中定义，具体的定义仍需在其他文件中进行。如果没有在其他文件中定义，编译器将会报错。</p>
 <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><pre class="line-numbers language-C" data-language="C"><code class="language-C">#define HSE_VALUE ((uint32_t)8000000) \\外部高速时钟频率<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ol>
 <li>这段代码定义了一个宏常量HSE_VALUE，其值为8000000。在单片机中，HSE_VALUE通常用于定义外部高速时钟（HSE）的频率。通过定义HSE_VALUE，可以方便地在程序中使用该值进行时钟配置和计算等操作。<br>在这个例子中，HSE_VALUE的值被定义为8000000，即外部高速时钟的频率为8MHz。在实际应用中，可以根据实际的硬件配置和需要进行适当的修改。</li>
 </ol>
 <p>使用宏常量的好处是可以提高代码的可读性和可维护性。通过使用HSE_VALUE宏常量，可以避免在代码中多次写入具体的数值，而只需要引用宏常量即可。这样，在需要修改外部高速时钟频率时，只需要修改一处定义即可，不需要在代码中逐个修改相关的数值，提高了代码的可维护性。</p>
-<ol>
+<ol start="2">
 <li>(uint32_t)8000000 是一个类型转换表达式，将常量8000000转换为32位无符号整数类型（uint32_t）。在单片机编程中，类型转换常常用于将不同的数据类型进行转换，以满足特定的需求。在这个例子中，将8000000转换为uint32_t类型，可能是为了确保在计算或操作中使用32位无符号整数的正确性。<br>类型转换的目的可以是为了避免数据溢出、提高计算精度、满足特定的数据格式要求等。在使用类型转换时，需要注意数据范围是否适合目标类型，以及可能引起的数据丢失或截断等问题。</li>
 </ol>
 <h1 id="递归包含"><a href="#递归包含" class="headerlink" title="递归包含"></a>递归包含</h1><p>递归包含是指在头文件中包含其他头文件时，可能会出现循环依赖的情况。例如，头文件A包含头文件B，而头文件B又包含头文件A，这样就形成了递归包含。<br>递归包含可能会导致以下问题：</p>
@@ -475,10 +481,11 @@ extern void printMessage(); &#x2F;&#x2F; 声明一个函数printMessage()，在�
 <li>编译错误：当头文件A包含头文件B时，编译器会先处理头文件A的内容，然后再处理头文件B的内容。如果头文件B中又包含了头文件A，就会产生循环依赖，编译器无法解析这种情况，导致编译错误。</li>
 <li>重复定义：如果递归包含导致某个符号在多个头文件中被定义多次，就会导致重复定义的错误。这会导致链接错误，使得程序无法正常编译和运行。<br>可以采取以下几种解决方法以避免递归包含：</li>
 <li>使用前置声明：如果只需要使用某个类型的指针或引用，可以使用前置声明来替代头文件的包含。这样可以避免直接包含头文件，减少循环依赖的可能性。</li>
-<li>使用头文件保护宏：在每个头文件的开头和结尾使用头文件保护宏，可以防止同一个头文件被重复包含。这样可以避免递归包含和重复定义的问题。<h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1>C语言中的断言（assertion）是一种用于在程序中检查条件是否满足的机制。它可以帮助程序员在开发过程中发现和诊断错误，并提供一种简单的调试工具。</li>
+<li>使用头文件保护宏：在每个头文件的开头和结尾使用头文件保护宏，可以防止同一个头文件被重复包含。这样可以避免递归包含和重复定义的问题。</li>
 </ol>
+<h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1><p>C语言中的断言（assertion）是一种用于在程序中检查条件是否满足的机制。它可以帮助程序员在开发过程中发现和诊断错误，并提供一种简单的调试工具。</p>
 <p>断言的基本用法是在代码中插入一个条件判断，如果条件为假（即false），则会触发断言失败，并输出相关的错误信息。断言的目的是在程序运行时快速定位错误，并提供有关错误信息的提示，以便于调试和修复问题。</p>
-<p>在C语言中，可以使用 <code>&lt;assert.h&gt;</code> 头文件中的 <code>assert()</code> 宏来实现断言功能。<code>assert()</code> 宏接受一个条件表达式作为参数，如果条件为假，则会触发断言失败，打印出错信息，并终止程序的执行。</p>
+<p>在C语言中，可以使用 <code>&lt;assert.h&gt;</code> 头文件中的 <code>assert()</code> 宏来实现断言功能。<code>assert()</code> 宏接受一个条件表达式作为参数，如果条件为假，则会触发断言失败，打印出错信息，并终止程序的执行。</p>
 <p>以下是一个简单的示例：</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">#include &lt;assert.h&gt;
 
@@ -487,9 +494,11 @@ int main() &#123;
     assert(x &#x3D;&#x3D; 10);  &#x2F;&#x2F; 断言条件 x &#x3D;&#x3D; 10
     return 0;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>在上述示例中，断言条件 <code>x == 10</code> 显然是不满足的，因此运行程序时会触发断言失败，输出类似以下的错误信息：</p>
+
+<p>在上述示例中，断言条件 <code>x == 10</code> 显然是不满足的，因此运行程序时会触发断言失败，输出类似以下的错误信息：</p>
 <pre class="line-numbers language-Cmake" data-language="Cmake"><code class="language-Cmake">Assertion failed: x &#x3D;&#x3D; 10, file example.c, line 6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>通过断言，我们可以在程序中插入一些条件检查，帮助我们在开发过程中发现和解决问题。但需要注意的是，断言通常用于调试阶段，而在生产环境中，可以通过定义 <code>NDEBUG</code> 宏来禁用断言，以提高程序的性能和效率。</p>
+
+<p>通过断言，我们可以在程序中插入一些条件检查，帮助我们在开发过程中发现和解决问题。但需要注意的是，断言通常用于调试阶段，而在生产环境中，可以通过定义 <code>NDEBUG</code> 宏来禁用断言，以提高程序的性能和效率。</p>
 <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>0x00000002U 是一个十六进制的无符号整数常量，表示十进制的2。</p>
 <p>解析这个数据时，按照以下步骤进行：</p>
 <ol>
@@ -498,10 +507,9 @@ int main() &#123;
 <li>“U” 表示这是一个无符号整数。(unsigned int)</li>
 </ol>
 <p>将十六进制数”00000002” 转换为十进制数，结果为2。由于数据类型被指定为无符号整数，因此该数值为正数。</p>
-<h1 id="杂记-1"><a href="#杂记-1" class="headerlink" title="杂记"></a>杂记</h1><ol>
-<li><pre class="line-numbers language-C" data-language="C"><code class="language-C">volatile const init_fn_t *fn_ptr;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-volatile: 这个关键字用来告诉编译器，这个变量的值可能会在程序控制之外的情况下改变，比如由于硬件的变动或者并行执行的线程。这意味着编译器在优化代码时不能假设这个值在两次读取之间是不变的，它必须在每次使用时直接从内存中读取它的值。</li>
-</ol>
+<h1 id="杂记-1"><a href="#杂记-1" class="headerlink" title="杂记"></a>杂记</h1><p>1. </p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">volatile const init_fn_t *fn_ptr;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>volatile: 这个关键字用来告诉编译器，这个变量的值可能会在程序控制之外的情况下改变，比如由于硬件的变动或者并行执行的线程。这意味着编译器在优化代码时不能假设这个值在两次读取之间是不变的，它必须在每次使用时直接从内存中读取它的值。</p>
 <p>const: 这个关键字表示指针指向的数据是常量，不可以被修改。注意，const 在 * 的左边，表明被指向的数据是常量，而指针本身可以修改，即可以指向不同的 init_fn_t 实例。</p>
 <p>init_fn_t: 这通常是一个函数指针的类型定义。在C或C++中，init_fn_t 可能定义为特定类型的函数指针，用于初始化操作或其他目的。</p>
 <p>fn_ptr: 这是变量名，指的是一个指向 init_fn_t 类型数据的指针。</p>
@@ -899,7 +907,7 @@ volatile: 这个关键字用来告诉编译器，这个变量的值可能会在�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

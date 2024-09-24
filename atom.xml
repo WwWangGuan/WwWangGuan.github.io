@@ -120,11 +120,11 @@
     
     
     
-    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
-    
     <category term="Jlink" scheme="http://wwwangguan.github.io/tags/Jlink/"/>
     
     <category term="Jlink-OB" scheme="http://wwwangguan.github.io/tags/Jlink-OB/"/>
+    
+    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
     
   </entry>
   
@@ -133,7 +133,7 @@
     <link href="http://wwwangguan.github.io/2024/08/20/za-ji/ji-ge-xiao-mu-biao/"/>
     <id>http://wwwangguan.github.io/2024/08/20/za-ji/ji-ge-xiao-mu-biao/</id>
     <published>2024-08-20T02:40:11.833Z</published>
-    <updated>2024-08-20T02:45:24.159Z</updated>
+    <updated>2024-08-20T03:10:18.336Z</updated>
     
     
       
@@ -141,10 +141,9 @@
         
         
     <summary type="html">&lt;ul&gt;
-&lt;li&gt;[ ] 买个Roland Jupiter-80&lt;/li&gt;
-&lt;li&gt;[ ] 搞一套自己的架子鼓&lt;/li&gt;
-&lt;li&gt;[ ] 熟练扒谱&lt;/li&gt;
-&lt;li&gt;[ ]</summary>
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 买个Roland Jupiter-80&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 搞一套自己的架子鼓&lt;/li&gt;
+&lt;li&gt;&lt;input</summary>
         
       
     
@@ -196,16 +195,16 @@
       
         
         
-    <summary type="html">&lt;p&gt;gcc编译&lt;img src=&quot;https://raw.githubusercontent.com/WwWangGuan/pics/main/202408152257254.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;gcc编译&lt;img src=&quot;https://raw.githubusercontent.com/WwWangGuan/pics/main/202408152257254.png&quot;&gt;&lt;br&gt;&lt;img</summary>
         
       
     
     
     
     
-    <category term="RISCV" scheme="http://wwwangguan.github.io/tags/RISCV/"/>
-    
     <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
+    
+    <category term="RISCV" scheme="http://wwwangguan.github.io/tags/RISCV/"/>
     
     <category term="编译器" scheme="http://wwwangguan.github.io/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
     
@@ -357,6 +356,8 @@
     
     
     
+    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
+    
     <category term="Clion" scheme="http://wwwangguan.github.io/tags/Clion/"/>
     
     <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
@@ -364,8 +365,6 @@
     <category term="DAPLink" scheme="http://wwwangguan.github.io/tags/DAPLink/"/>
     
     <category term="JTAG" scheme="http://wwwangguan.github.io/tags/JTAG/"/>
-    
-    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
     
   </entry>
   
@@ -381,7 +380,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;BSP修改与SPI配置&quot;&gt;&lt;a href=&quot;#BSP修改与SPI配置&quot; class=&quot;headerlink&quot; title=&quot;BSP修改与SPI配置&quot;&gt;&lt;/a&gt;BSP修改与SPI配置&lt;/h1&gt;&lt;p&gt;首先在board/Kconfig里面加入SPI配置&lt;br&gt;&lt;pre</summary>
+    <summary type="html">&lt;h1 id=&quot;BSP修改与SPI配置&quot;&gt;&lt;a href=&quot;#BSP修改与SPI配置&quot; class=&quot;headerlink&quot;</summary>
         
       
     

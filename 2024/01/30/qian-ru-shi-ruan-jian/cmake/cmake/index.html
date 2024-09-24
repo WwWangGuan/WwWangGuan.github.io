@@ -507,8 +507,10 @@ add_custom_command(TARGET $&#123;PROJECT_NAME&#125;.elf POST_BUILD
         COMMAND $&#123;CMAKE_OBJCOPY&#125; -Obinary $&lt;TARGET_FILE:$&#123;PROJECT_NAME&#125;.elf&gt; $&#123;BIN_FILE&#125;  
         COMMENT &quot;Building $&#123;HEX_FILE&#125;  
 Building $&#123;BIN_FILE&#125;&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h1 id="语法杂记"><a href="#语法杂记" class="headerlink" title="语法杂记"></a>语法杂记</h1><h2 id="set"><a href="#set" class="headerlink" title="set()"></a>set()</h2><p>在CMake中，<code>set()</code> 函数用于定义变量及其值。这是CMake脚本中非常基本和重要的一个功能，用于配置项目构建过程中需要的各种参数。这个函数的基本语法是：</p>
 <pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">set(VARIABLE_NAME value1 value2 ...)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>这里，<code>VARIABLE_NAME</code> 是你想要设置的变量的名称，而后面跟着的是一个或多个值，这些值将被赋给这个变量。变量的值可以是字符串、文件路径、布尔值等。</p>
 <p>例如:</p>
 <ul>
@@ -907,7 +909,7 @@ Building $&#123;BIN_FILE&#125;&quot;)<span aria-hidden="true" class="line-number
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

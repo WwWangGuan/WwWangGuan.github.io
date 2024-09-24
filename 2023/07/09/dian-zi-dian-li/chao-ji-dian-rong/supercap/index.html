@@ -398,7 +398,7 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    541
+                    542
                 </div>
                 
 
@@ -428,9 +428,9 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="超级电容功率控制器"><a href="#超级电容功率控制器" class="headerlink" title="超级电容功率控制器"></a>超级电容功率控制器</h1><h2 id="双向BuckBoost原理"><a href="#双向BuckBoost原理" class="headerlink" title="双向BuckBoost原理"></a>双向BuckBoost原理</h2><p><img src="https://pic1.zhimg.com/80/v2-103cc0c450fc12c4723054bd0efafd4b_1440w.png" alt=""><br>其本质上也是Buck-Boost的基本拓补结构<br><img src="https://pic1.zhimg.com/80/v2-6687a142cd61eb44dc30ab01ffdd9e4c_1440w.png" alt=""><br>只需将图内续流二极管换成Mos管即可</p>
-<h3 id="Buck模式"><a href="#Buck模式" class="headerlink" title="Buck模式"></a>Buck模式</h3><p>工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关，也就是变成了经典Buck电路拓补结构<br><img src="https://pica.zhimg.com/80/v2-ca50fe2d1baa11937e1aa7c5e236e5e2_1440w.png" alt=""></p>
-<h3 id="Boost模式"><a href="#Boost模式" class="headerlink" title="Boost模式"></a>Boost模式</h3><p><img src="https://picx.zhimg.com/80/v2-9b2c241093b59dcb1c6987d3ef1a4aee_1440w.png" alt=""><br>由经典Boost电路不难得出，如果想工作在Boost状态，Q1工作在满占空比状态，Q2常开，Q3、Q4交替开关</p>
+                <h1 id="超级电容功率控制器"><a href="#超级电容功率控制器" class="headerlink" title="超级电容功率控制器"></a>超级电容功率控制器</h1><h2 id="双向BuckBoost原理"><a href="#双向BuckBoost原理" class="headerlink" title="双向BuckBoost原理"></a>双向BuckBoost原理</h2><p><img src="https://pic1.zhimg.com/80/v2-103cc0c450fc12c4723054bd0efafd4b_1440w.png"><br>其本质上也是Buck-Boost的基本拓补结构<br><img src="https://pic1.zhimg.com/80/v2-6687a142cd61eb44dc30ab01ffdd9e4c_1440w.png"><br>只需将图内续流二极管换成Mos管即可</p>
+<h3 id="Buck模式"><a href="#Buck模式" class="headerlink" title="Buck模式"></a>Buck模式</h3><p>工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关，也就是变成了经典Buck电路拓补结构<br><img src="https://pica.zhimg.com/80/v2-ca50fe2d1baa11937e1aa7c5e236e5e2_1440w.png"></p>
+<h3 id="Boost模式"><a href="#Boost模式" class="headerlink" title="Boost模式"></a>Boost模式</h3><p><img src="https://picx.zhimg.com/80/v2-9b2c241093b59dcb1c6987d3ef1a4aee_1440w.png"><br>由经典Boost电路不难得出，如果想工作在Boost状态，Q1工作在满占空比状态，Q2常开，Q3、Q4交替开关</p>
 <h3 id="BuckBoost"><a href="#BuckBoost" class="headerlink" title="BuckBoost"></a>BuckBoost</h3><p><del>四开关不就是干这个的吗</del></p>
 <h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>使用超级电容与裁判系统供电并联的方案，当底盘功率小于限定功率时，电池的剩余功率走buck回路给电容组充电，当所需底盘功率高于限定功率时， 超级电容走Boost回路和裁判系统一起给底盘供电。<br>为了防止电流回灌到裁判系统中，在裁判系统电源输入端串接以理想二极管回路。</p>
 <h3 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h3><ol>
@@ -442,9 +442,9 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
 <li>电机电流如果回灌回来能否进行有效利用？</li>
 <li></li>
 </ol>
-<h2 id="超级电容均压板"><a href="#超级电容均压板" class="headerlink" title="超级电容均压板"></a>超级电容均压板</h2><p>计划使用主动均衡电路<br><img src="https://pic1.zhimg.com/80/v2-d973d70449df0612034c47e848c1cba2_1440w.png" alt=""><br>如图所示，SC为超级电容，其和一个小电容并联，充电电源和两列电容之间用4个MOS管隔开，充电时，左侧MOS等效为开关闭合，右侧MOS截止，先给小电容充电，随后左侧MOS截止，右侧MOS闭合，小电容给超级电容充电，如此循环往复达到超级电容的主动均压，只需给一个高频PWM即可。</p>
-<h3 id="均压速率影响因素"><a href="#均压速率影响因素" class="headerlink" title="均压速率影响因素"></a>均压速率影响因素</h3><p>有人做过相关Matlab仿真,结果如图所示<br><img src="https://picx.zhimg.com/80/v2-10102bcb9e8165ef687dc9d29c76b7e7_1440w.png" alt=""></p>
-<h2 id="BuckBoost-占空比更新逻辑"><a href="#BuckBoost-占空比更新逻辑" class="headerlink" title="BuckBoost 占空比更新逻辑"></a>BuckBoost 占空比更新逻辑</h2><p>参数输入是输出电压和输入电压的比值<br>首先对比值进行限幅处理，不得高于预设的最大值和最小值（1.2 /0.1）</p>
+<h2 id="超级电容均压板"><a href="#超级电容均压板" class="headerlink" title="超级电容均压板"></a>超级电容均压板</h2><p>计划使用主动均衡电路<br><img src="https://pic1.zhimg.com/80/v2-d973d70449df0612034c47e848c1cba2_1440w.png"><br>如图所示，SC为超级电容，其和一个小电容并联，充电电源和两列电容之间用4个MOS管隔开，充电时，左侧MOS等效为开关闭合，右侧MOS截止，先给小电容充电，随后左侧MOS截止，右侧MOS闭合，小电容给超级电容充电，如此循环往复达到超级电容的主动均压，只需给一个高频PWM即可。</p>
+<h3 id="均压速率影响因素"><a href="#均压速率影响因素" class="headerlink" title="均压速率影响因素"></a>均压速率影响因素</h3><p>有人做过相关Matlab仿真,结果如图所示<br><img src="https://picx.zhimg.com/80/v2-10102bcb9e8165ef687dc9d29c76b7e7_1440w.png"></p>
+<h2 id="BuckBoost-占空比更新逻辑"><a href="#BuckBoost-占空比更新逻辑" class="headerlink" title="BuckBoost 占空比更新逻辑"></a>BuckBoost 占空比更新逻辑</h2><p>参数输入是输出电压和输入电压的比值<br>首先对比值进行限幅处理，不得高于预设的最大值和最小值（1.2 &#x2F;0.1）</p>
 <h1 id="ADC滤波"><a href="#ADC滤波" class="headerlink" title="ADC滤波"></a>ADC滤波</h1>
                 
             </div>
@@ -831,7 +831,7 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

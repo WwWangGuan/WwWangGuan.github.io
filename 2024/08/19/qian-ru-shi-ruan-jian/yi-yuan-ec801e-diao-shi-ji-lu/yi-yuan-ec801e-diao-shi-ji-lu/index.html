@@ -442,10 +442,10 @@ EC801">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>EC600E-CN&amp;EC800E-CN<br>AT 命令手册<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190913781.png" alt=""><br>EC801E兼容EC800E</p>
-<h1 id="测试与配置"><a href="#测试与配置" class="headerlink" title="测试与配置"></a>测试与配置</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190914163.png" alt=""></p>
-<h2 id="ID请求"><a href="#ID请求" class="headerlink" title="ID请求"></a>ID请求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190915615.png" alt=""></p>
-<h2 id="IMEI和SN请求"><a href="#IMEI和SN请求" class="headerlink" title="IMEI和SN请求"></a>IMEI和SN请求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190918401.png" alt=""></p>
+                <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>EC600E-CN&amp;EC800E-CN<br>AT 命令手册<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190913781.png"><br>EC801E兼容EC800E</p>
+<h1 id="测试与配置"><a href="#测试与配置" class="headerlink" title="测试与配置"></a>测试与配置</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190914163.png"></p>
+<h2 id="ID请求"><a href="#ID请求" class="headerlink" title="ID请求"></a>ID请求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190915615.png"></p>
+<h2 id="IMEI和SN请求"><a href="#IMEI和SN请求" class="headerlink" title="IMEI和SN请求"></a>IMEI和SN请求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190918401.png"></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">» ATI+GSN&#x3D;?
 « ATI+GSN&#x3D;?
 
@@ -476,7 +476,7 @@ Revision: EC801ECNCGR03A03M02
 +GSN: &quot;864145070094386&quot;
 
 OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="串口控制命令"><a href="#串口控制命令" class="headerlink" title="串口控制命令"></a>串口控制命令</h1><h3 id="AT-amp-C-设置DCD-信号模式"><a href="#AT-amp-C-设置DCD-信号模式" class="headerlink" title="AT&amp;C 设置DCD 信号模式"></a>AT&amp;C 设置DCD 信号模式</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190933034.png" alt=""><br>啥叫DCD信号模式？<br> 来看看chatgpt怎么说</p>
+<h1 id="串口控制命令"><a href="#串口控制命令" class="headerlink" title="串口控制命令"></a>串口控制命令</h1><h3 id="AT-C-设置DCD-信号模式"><a href="#AT-C-设置DCD-信号模式" class="headerlink" title="AT&amp;C 设置DCD 信号模式"></a>AT&amp;C 设置DCD 信号模式</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190933034.png"><br>啥叫DCD信号模式？<br> 来看看chatgpt怎么说</p>
 <p> 4G模块的DCD信号（Data Carrier Detect，数据载波检测）通常用于表示设备是否已与网络建立了有效的连接。DCD信号是一种传统的串口通信信号，用于告诉接收设备通信线路上是否存在有效的载波信号。在4G模块中，DCD信号模式的作用取决于具体的模块设计和应用需求。</p>
 <h4 id="DCD信号模式的几种典型用法："><a href="#DCD信号模式的几种典型用法：" class="headerlink" title="DCD信号模式的几种典型用法："></a>DCD信号模式的几种典型用法：</h4><ol>
 <li><p><strong>网络连接状态指示：</strong><br> 在一些4G模块中，DCD信号可以用于指示模块是否已经成功注册到网络并建立了数据连接。如果DCD信号处于激活状态（通常是低电平），则表示已经成功连接到网络；反之，则表示未连接。</p>
@@ -486,10 +486,10 @@ OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
 <li><p><strong>休眠和唤醒控制：</strong><br> 在某些设计中，DCD信号也可能用于控制模块的休眠和唤醒状态。当设备不需要数据通信时，可以通过检测DCD信号来判断是否可以进入低功耗模式，节省能源。</p>
 </li>
 <li><p><strong>诊断和调试用途：</strong><br> 在开发和调试过程中，DCD信号模式可以用作一个诊断工具，用于监控模块的网络连接状态或数据通信状态。</p>
-<h3 id="串口配置相关"><a href="#串口配置相关" class="headerlink" title="串口配置相关"></a>串口配置相关</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190937943.png" alt=""><br>实际测试结果<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190937676.png" alt=""><br>设置成921600并保存配置<br>md，寄了<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190942172.png" alt=""></p>
-<h1 id="救砖"><a href="#救砖" class="headerlink" title="救砖"></a>救砖</h1><p>官方Todesk救砖</p>
 </li>
 </ol>
+<h3 id="串口配置相关"><a href="#串口配置相关" class="headerlink" title="串口配置相关"></a>串口配置相关</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190937943.png"><br>实际测试结果<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190937676.png"><br>设置成921600并保存配置<br>md，寄了<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408190942172.png"></p>
+<h1 id="救砖"><a href="#救砖" class="headerlink" title="救砖"></a>救砖</h1><p>官方Todesk救砖</p>
 
                 
             </div>
@@ -692,12 +692,12 @@ OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RISCV/">
-                        <span class="chip bg-color">RISCV</span>
-                    </a>
-                    
                     <a href="/tags/HPM/">
                         <span class="chip bg-color">HPM</span>
+                    </a>
+                    
+                    <a href="/tags/RISCV/">
+                        <span class="chip bg-color">RISCV</span>
                     </a>
                     
                     <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/">
@@ -912,7 +912,7 @@ OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

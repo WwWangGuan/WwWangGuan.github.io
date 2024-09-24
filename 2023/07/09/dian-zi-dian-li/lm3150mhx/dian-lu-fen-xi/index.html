@@ -439,7 +439,7 @@ De">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h1><p><img src="https://pica.zhimg.com/80/v2-31edd6ee23e2deb3d1fc7208c1ea0177_1440w.png" alt=""></p>
+                <h1 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h1><p><img src="https://pica.zhimg.com/80/v2-31edd6ee23e2deb3d1fc7208c1ea0177_1440w.png"></p>
 <h1 id="芯片引脚分析"><a href="#芯片引脚分析" class="headerlink" title="芯片引脚分析"></a>芯片引脚分析</h1><h2 id="VCC"><a href="#VCC" class="headerlink" title="VCC"></a>VCC</h2><blockquote>
 <p>Nominally regulated to 5.95V. Connect a 1.0 µF to 2.2 µF decoupling capacitor from this pin to ground.</p>
 </blockquote>
@@ -463,29 +463,17 @@ De">
 <h2 id="SS（Soft-Start）"><a href="#SS（Soft-Start）" class="headerlink" title="SS（Soft Start）"></a>SS（Soft Start）</h2><blockquote>
 <p>An internal 7.7 µA current source charges an external capacitor to provide the soft-start function.</p>
 </blockquote>
-<p>此处需外接一电容，充电后提供软起动功能<br>计算公式</p>
-<script type="math/tex; mode=display">
-C_{SS}=\frac{I_{SS}t_{SS}}{V_{ref}}</script><p>其中$V_{ref}=0.6V$，$I_{SS}=7.7 \mu A$，$t_{SS}$需要在开始的几秒之内测出来？(我理解是这个意思)</p>
+<p>此处需外接一电容，充电后提供软起动功能<br>计算公式<br>$$<br>C_{SS}&#x3D;\frac{I_{SS}t_{SS}}{V_{ref}}<br>$$<br>其中$V_{ref}&#x3D;0.6V$，$I_{SS}&#x3D;7.7 \mu A$，$t_{SS}$需要在开始的几秒之内测出来？(我理解是这个意思)</p>
 <h2 id="RON"><a href="#RON" class="headerlink" title="RON"></a>RON</h2><blockquote>
 <p>Function:An external resistor from VIN to this pin sets the high-side switch on-time.</p>
 </blockquote>
-<p>从VIN到该引脚的外部电阻设置高压侧开关接通时间。<br>由datasheet有以下关系</p>
-<script type="math/tex; mode=display">
-D=\frac{t_{on}}{t_{on}t_{off}}=t_{on}f_s \approx \frac{V_{OUT}}{V_{IN}}</script><p>易得</p>
-<script type="math/tex; mode=display">
-f_s=\frac{V_{OUT}}{K R_{on}}</script><p>其中K为常数，$K=100pC$。</p>
+<p>从VIN到该引脚的外部电阻设置高压侧开关接通时间。<br>由datasheet有以下关系<br>$$<br>D&#x3D;\frac{t_{on}}{t_{on}t_{off}}&#x3D;t_{on}f_s \approx \frac{V_{OUT}}{V_{IN}}<br>$$<br>易得<br>$$<br>f_s&#x3D;\frac{V_{OUT}}{K R_{on}}<br>$$<br>其中K为常数，$K&#x3D;100pC$。</p>
 <h2 id="PGND"><a href="#PGND" class="headerlink" title="PGND"></a>PGND</h2><p>SGND里写了</p>
 <h2 id="ILIM（Current-Limit）"><a href="#ILIM（Current-Limit）" class="headerlink" title="ILIM（Current Limit）"></a>ILIM（Current Limit）</h2><blockquote>
 <p>Monitors current through the low-side switch and triggers current limit operation if the inductor valley current exceeds a user defined value that is set by $R_{LIM}$ and the Sense current, $I_{LIM-TH}$, sourced out of this pin during operation.</p>
 </blockquote>
-<p>监控通过低压侧开关的电流，如果电感器谷电流（最小电流）超过用户定义的值（由$R_{LIM}$设置），则触发电流限制操作，并且在操作过程中检测电流$I_{LIN-TH}$来自此引脚。<br>由datasheet，$R_{LIM}$可以按下方算式进行估计</p>
-<script type="math/tex; mode=display">
-\begin{equation}\begin{split} 
-&I_{CL}=I_{OCL}-\frac{\Delta I_L}{2} \\
-&R_{ILM}=\frac{I_{CL}R_{DS(on)_{max}}}{I_{LIM-TH}}
-\end{split}\end{equation}</script><p>其中$I_{OCL}$是自定义的最大输出电流，$R_{DS(on)_{max}}$是低位MOS管在预期最大MOS管温度下的电阻值，$I_{LIM-TH}$典型内部电流源为$85 \mu A$。<br>还有一个</p>
-<script type="math/tex; mode=display">
-\Delta I_L=\frac{(V_{IN}-V_{OUT})t_{on}}{L}</script><h2 id="SW-Switch-Node"><a href="#SW-Switch-Node" class="headerlink" title="SW(Switch Node)"></a>SW(Switch Node)</h2><blockquote>
+<p>监控通过低压侧开关的电流，如果电感器谷电流（最小电流）超过用户定义的值（由$R_{LIM}$设置），则触发电流限制操作，并且在操作过程中检测电流$I_{LIN-TH}$来自此引脚。<br>由datasheet，$R_{LIM}$可以按下方算式进行估计<br>$$<br>\begin{equation}\begin{split}<br>&amp;I_{CL}&#x3D;I_{OCL}-\frac{\Delta I_L}{2} \<br>&amp;R_{ILM}&#x3D;\frac{I_{CL}R_{DS(on)<em>{max}}}{I</em>{LIM-TH}}<br>\end{split}\end{equation}<br>$$<br>其中$I_{OCL}$是自定义的最大输出电流，$R_{DS(on)<em>{max}}$是低位MOS管在预期最大MOS管温度下的电阻值，$I</em>{LIM-TH}$典型内部电流源为$85 \mu A$。<br>还有一个<br>$$<br>\Delta I_L&#x3D;\frac{(V_{IN}-V_{OUT})t_{on}}{L}<br>$$</p>
+<h2 id="SW-Switch-Node"><a href="#SW-Switch-Node" class="headerlink" title="SW(Switch Node)"></a>SW(Switch Node)</h2><blockquote>
 <p>Switch pin of controller and high-gate driver lower supply rail. A boost capacitor is also connected between this pin and BST pin</p>
 </blockquote>
 <p>SW和BST之间连接一个升压电容<br>Design Guide推荐值为0.47uF<br>此外SW向外连接了一个电感（续流？），直接输出VOUT<br><strong>这里不是很懂，但是Design Example上是这样的。</strong></p>
@@ -503,11 +491,8 @@ f_s=\frac{V_{OUT}}{K R_{on}}</script><p>其中K为常数，$K=100pC$。</p>
 </blockquote>
 <p>和SGND连一起。</p>
 <h1 id="电压输入与输出附近"><a href="#电压输入与输出附近" class="headerlink" title="电压输入与输出附近"></a>电压输入与输出附近</h1><p>注意到在$VIN$和$VOUT$的附近都有三四个电容，放电容的意义是起一定的缓冲作用，相当于微型UPS用以保护芯片。<br><del>我怎么觉得不止这一个作用</del><br>输出和输入端用了两个连接器（XT30PW-F和XT30UPB-F），用以连接供电线缆</p>
-<h1 id="电压输出大小"><a href="#电压输出大小" class="headerlink" title="电压输出大小"></a>电压输出大小</h1><p>根据Design Guide有</p>
-<script type="math/tex; mode=display">
-V_{OUT}=V_{FB}\frac{R_{FB1}+R_{FB2}}{R_{FB1}}</script><p>其中，$R_{FB1}$是下方的电阻，$R_{FB2}$是上方的电阻，<br>上方原理图中，$R_{FB1}$为10k，$R_{FB2}$为300k，$V_{FB}$为0.6V<br>经计算得</p>
-<script type="math/tex; mode=display">
-V_{OUT}=18.6V</script>
+<h1 id="电压输出大小"><a href="#电压输出大小" class="headerlink" title="电压输出大小"></a>电压输出大小</h1><p>根据Design Guide有<br>$$<br>V_{OUT}&#x3D;V_{FB}\frac{R_{FB1}+R_{FB2}}{R_{FB1}}<br>$$<br>其中，$R_{FB1}$是下方的电阻，$R_{FB2}$是上方的电阻，<br>上方原理图中，$R_{FB1}$为10k，$R_{FB2}$为300k，$V_{FB}$为0.6V<br>经计算得<br>$$<br>V_{OUT}&#x3D;18.6V<br>$$</p>
+
                 
             </div>
             <hr/>
@@ -901,7 +886,7 @@ V_{OUT}=18.6V</script>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

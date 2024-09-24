@@ -6,10 +6,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="HAL笔记, WwWangGuan">
     <meta name="description" content="以下所有笔记均基于安富莱V6板
-配置文件为防止递归包含使用如下宏定义进行头文件保护#ifndef __STM32F4xx_HAL_CONF_H 
+配置文件为防止递归包含使用如下宏定义进行头文件保护
+#ifndef __STM32F4xx_HAL_CONF_H 
 #define __STM32F4xx_HAL_CONF_H
 
-&amp;#x2F;&amp;#x2F; 在这">
+&amp;#x2F;&amp;#x2F; 在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -440,12 +441,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>以下所有笔记均基于安富莱V6板</p>
-<h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><p>为防止递归包含使用如下宏定义进行头文件保护<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifndef __STM32F4xx_HAL_CONF_H 
+<h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><p>为防止递归包含使用如下宏定义进行头文件保护</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifndef __STM32F4xx_HAL_CONF_H 
 #define __STM32F4xx_HAL_CONF_H
 
 &#x2F;&#x2F; 在这里定义你的配置
 
-#endif &#x2F;* __STM32F4xx_HAL_CONF_H *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+#endif &#x2F;* __STM32F4xx_HAL_CONF_H *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>递归包含是指在头文件中包含其他头文件时，可能会出现循环依赖的情况。例如，头文件A包含头文件B，而头文件B又包含头文件A，这样就形成了递归包含。<br>递归包含可能会导致以下问题：</p>
 <ol>
@@ -453,7 +455,8 @@
 <li>重复定义：如果递归包含导致某个符号在多个头文件中被定义多次，就会导致重复定义的错误。这会导致链接错误，使得程序无法正常编译和运行。</li>
 </ol>
 </blockquote>
-<p>在配置文件中对于HAL库模块的启用使用了宏定义，如：<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################## Module Selection ############################## *&#x2F;  
+<p>在配置文件中对于HAL库模块的启用使用了宏定义，如：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################## Module Selection ############################## *&#x2F;  
 &#x2F;**  
 * @brief This is the list of modules to be used in the HAL driver  
 *&#x2F;  
@@ -464,7 +467,9 @@
 #define HAL_CAN_MODULE_ENABLED  
 &#x2F;* #define HAL_CRC_MODULE_ENABLED *&#x2F;  
 &#x2F;* #define HAL_CAN_LEGACY_MODULE_ENABLED *&#x2F;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>注释掉的即为未启用的模块，在配置文件的后面，如果你启用了该模块，那么会包含相对应的头文件<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef HAL_RCC_MODULE_ENABLED  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注释掉的即为未启用的模块，在配置文件的后面，如果你启用了该模块，那么会包含相对应的头文件</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef HAL_RCC_MODULE_ENABLED  
 #include &quot;stm32f4xx_hal_rcc.h&quot;  
 #endif &#x2F;* HAL_RCC_MODULE_ENABLED *&#x2F;  
   
@@ -511,8 +516,10 @@
 #ifdef HAL_DAC_MODULE_ENABLED  
 #include &quot;stm32f4xx_hal_dac.h&quot;  
 #endif &#x2F;* HAL_DAC_MODULE_ENABLED *&#x2F;  
-......<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<p>在配置文件中包含了对晶振频率的设定，需和外界保持一致。<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################## HSE&#x2F;HSI Values adaptation ##################### *&#x2F;  
+......<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在配置文件中包含了对晶振频率的设定，需和外界保持一致。</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################## HSE&#x2F;HSI Values adaptation ##################### *&#x2F;  
 &#x2F;**  
 * @brief Adjust the value of External High Speed oscillator (HSE) used in your application.  
 * This value is used by the RCC HAL module to compute the system frequency  
@@ -564,8 +571,10 @@ in voltage and temperature.*&#x2F;
 #endif &#x2F;* EXTERNAL_CLOCK_VALUE *&#x2F;  
   
 &#x2F;* Tip: To avoid modifying this file each time you need to use different HSE,  
-&#x3D;&#x3D;&#x3D; you can define the HSE value in your toolchain compiler preprocessor. *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>需要注意的是，对于启动时的超时时间（XX_STARTUP_TIMEOUT）建议改为5000（5s），防止启动失败时出问题。</p>
-<p>以下是HAL系统配置选项<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################### System Configuration ######################### *&#x2F;  
+&#x3D;&#x3D;&#x3D; you can define the HSE value in your toolchain compiler preprocessor. *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要注意的是，对于启动时的超时时间（XX_STARTUP_TIMEOUT）建议改为5000（5s），防止启动失败时出问题。</p>
+<p>以下是HAL系统配置选项</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;* ########################### System Configuration ######################### *&#x2F;  
 &#x2F;**  
 * @brief This is the HAL system configuration section  
 *&#x2F;  
@@ -574,8 +583,10 @@ in voltage and temperature.*&#x2F;
 #define USE_RTOS 0U  
 #define PREFETCH_ENABLE 1U  
 #define INSTRUCTION_CACHE_ENABLE 1U  
-#define DATA_CACHE_ENABLE 1U<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>比较重要的是TICK_INT_PRIORITY，这个是设置滴答中断优先级的，15是最低优先级。<br>目前HAL库还不支持RTOS宏定义配置</p>
-<p>在配置文件的最后，是关于断言功能的<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef USE_FULL_ASSERT  
+#define DATA_CACHE_ENABLE 1U<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>比较重要的是TICK_INT_PRIORITY，这个是设置滴答中断优先级的，15是最低优先级。<br>目前HAL库还不支持RTOS宏定义配置</p>
+<p>在配置文件的最后，是关于断言功能的</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#ifdef USE_FULL_ASSERT  
 &#x2F;**  
 * @brief The assert_param macro is used for function&#39;s parameters check.  
 * @param expr If expr is false, it calls assert_failed function  
@@ -589,7 +600,9 @@ in voltage and temperature.*&#x2F;
 void assert_failed(uint8_t* file, uint32_t line);  
 #else  
 #define assert_param(expr) ((void)0U)  
-#endif &#x2F;* USE_FULL_ASSERT *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>其主要作用是用来判断函数形参是否有效。默认情况下是关闭的。<br>用一个HAL库函数举例<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  
+#endif &#x2F;* USE_FULL_ASSERT *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其主要作用是用来判断函数形参是否有效。默认情况下是关闭的。<br>用一个HAL库函数举例</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  
 ##### IO operation functions #####  
 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
 @endverbatim  
@@ -620,7 +633,11 @@ else
 bitstatus &#x3D; GPIO_PIN_RESET;  
 &#125;  
 return bitstatus;  
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>对于HAL的各个API都用到了断言功能，但是即使使能了断言，仍然需要自己定义函数<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">void assert_failed(uint8_t* file, uint32_t line)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>下面给出一个参考<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对于HAL的各个API都用到了断言功能，但是即使使能了断言，仍然需要自己定义函数</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">void assert_failed(uint8_t* file, uint32_t line)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>下面给出一个参考</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;*
 ST 库函数使用了 C 编译器的断言功能，如果定义了 USE_FULL_ASSERT ，那么所有的 ST 库函数将检查函数形参是否正确。如果不正确将调用是否正确。如果不正确将调用 assert_failed() assert_failed() 函数函数，这个函数是一个死循环，便于用户检查代码。
 LINE__ 表示源代码行号。 关键字__FILE__表示源代码文件名。
 断言功能使能后将增大代码大小，推荐用户仅在调试时使能，在正式发布软件是禁止。断言功能使能后将增大代码大小，推荐用户仅在调试时使能，在正式发布软件是禁止。 用户可以选择是否使能用户可以选择是否使能STST固件库的断言供能。使能断言的方法有两种：固件库的断言供能。
@@ -631,8 +648,9 @@ printf(&quot;Wrong parameters value: file %s on line %d\\rr\\n&quot;, file, line
 &#x2F;* 这是一个死循环，断言失败时程序会在此处死机，以便于用户查错这是一个死循环，断言失败时程序会在此处死机，以便于用户查错 *&#x2F;
 while (1) &#123;  
   &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h1 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h1><h2 id="gpio-h-c"><a href="#gpio-h-c" class="headerlink" title="gpio.h/.c"></a>gpio.h/.c</h2><p>似乎这里只有一个函数“ void MX_GPIO_Init()”<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;** Configure pins as  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h1><h2 id="gpio-h-c"><a href="#gpio-h-c" class="headerlink" title="gpio.h&#x2F;.c"></a>gpio.h&#x2F;.c</h2><p>似乎这里只有一个函数“ void MX_GPIO_Init()”</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;** Configure pins as  
 * Analog  
 * Input  
 * Output  
@@ -683,11 +701,13 @@ GPIO_InitStruct.Mode &#x3D; GPIO_MODE_ANALOG;
 GPIO_InitStruct.Pull &#x3D; GPIO_NOPULL;  
 HAL_GPIO_Init(GPIOI, &amp;GPIO_InitStruct);  
   
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>这里只摘取了部分代码，后面的基本都是相同的</p>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里只摘取了部分代码，后面的基本都是相同的</p>
 <blockquote>
-<p>GPIO_InitTypeDef结构体一般用于配置GPIO引脚的初始化参数。这个结构体包含了多个成员变量，用来设置引脚的模式、速度、上拉/下拉设置等。</p>
+<p>GPIO_InitTypeDef结构体一般用于配置GPIO引脚的初始化参数。这个结构体包含了多个成员变量，用来设置引脚的模式、速度、上拉&#x2F;下拉设置等。</p>
 </blockquote>
-<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>随后开启GPIO的时钟并开始配置引脚，这里的每一个GPIO_PIN之前都用宏定义定义了地址，使用或位操作符将多个引脚组合在一起。<br>这里统一设置为了模拟模式和浮空状态，随后进入HAL_GPIO_INIT函数进行初始化<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;**  
+<p>在这行代码中，GPIO_InitStruct变量被初始化为0，这意味着所有的成员变量都被设置为0。这样做是为了确保在后续的代码中，如果没有特别指定某个成员变量的值，那么它们的默认值都是0。<br>随后开启GPIO的时钟并开始配置引脚，这里的每一个GPIO_PIN之前都用宏定义定义了地址，使用或位操作符将多个引脚组合在一起。<br>这里统一设置为了模拟模式和浮空状态，随后进入HAL_GPIO_INIT函数进行初始化</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;**  
 * @brief Initializes the GPIOx peripheral according to the specified parameters in the GPIO_Init.  
 * @param GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or  
 * x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427X devices.  
@@ -815,7 +835,9 @@ EXTI-&gt;IMR &#x3D; temp;
 &#125;  
 &#125;  
 &#125;  
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>以下是GPIO初始化结构体定义<br><pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;**  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>以下是GPIO初始化结构体定义</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">&#x2F;**  
 * @brief GPIO Init structure definition  
 *&#x2F;  
 typedef struct  
@@ -834,7 +856,7 @@ This parameter can be a value of @ref GPIO_speed_define *&#x2F;
   
 uint32_t Alternate; &#x2F;*!&lt; Peripheral to be connected to the selected pins.  
 This parameter can be a value of @ref GPIO_Alternate_function_selection *&#x2F;  
-&#125;GPIO_InitTypeDef;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+&#125;GPIO_InitTypeDef;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><h2 id="预加载"><a href="#预加载" class="headerlink" title="预加载"></a>预加载</h2><p>STM32的定时器预加载功能是指在定时器的计数器中设置一个预加载值，当计数器的值达到这个预设值时，可以触发一个事件或中断。这个功能在STM32微控制器的定时器操作中非常有用，尤其是在需要精确控制时间事件时。 </p>
 <h2 id="重复周期计数器"><a href="#重复周期计数器" class="headerlink" title="重复周期计数器"></a>重复周期计数器</h2><p>在STM32微控制器中，一个重复周期计数器（Repeat Counter）通常是指定时器中的一个功能，它允许定时器在计数达到预设值后自动重置并重新开始计数。这种功能对于创建周期性事件非常有用，如周期性中断或定期检查某个条件。</p>
 <p>使用重复周期计数器的基本步骤如下：</p>
@@ -846,7 +868,9 @@ This parameter can be a value of @ref GPIO_Alternate_function_selection *&#x2F;
 <li><p><strong>中断配置（可选）</strong>：如果需要在每个周期结束时执行特定的操作，可以配置并启用更新事件中断（UIE）。</p>
 </li>
 <li><p><strong>启动定时器</strong>：最后，启动定时器以开始计数。</p>
-<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2></li>
+</li>
+</ol>
+<h2 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h2><ol>
 <li><p><strong>单脉冲模式（Single-Shot Mode）</strong>：在这种模式下，HRTIM在每次启动时只生成一个脉冲。这种模式通常用于精确控制时间长度的单次事件。</p>
 </li>
 <li><p><strong>重复模式（Repetitive Mode）</strong>：HRTIM会不断重复生成波形。这种模式适用于需要连续产生周期性波形的应用。</p>
@@ -1262,7 +1286,7 @@ This parameter can be a value of @ref GPIO_Alternate_function_selection *&#x2F;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             

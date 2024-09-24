@@ -7,7 +7,7 @@
     <meta name="keywords" content="[object Object], WwWangGuan">
     <meta name="description" content="
 引脚解析BSTBST是用来驱动高侧MOS的栅极驱动器电源，连接至外部自举二极管与一个电容，芯片内部有一电荷泵为电容充电用以驱动MOS。
-CSN/CSP本质上是一个运算放大器的同相输入端与反相输入端，其与一个采样电阻相连接用以对输入电流进行">
+CSN&amp;#x2F;CSP本质上是一个运算放大器的同相输入端与反相输入端，其与一个采样电阻相连接用以对输">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -390,7 +390,7 @@ CSN/CSP本质上是一个运算放大器的同相输入端与反相输入端，�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    353
+                    355
                 </div>
                 
 
@@ -420,14 +420,14 @@ CSN/CSP本质上是一个运算放大器的同相输入端与反相输入端，�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=NDdhNzMxNmFlOGZiZTViMmY3YTMxMDFhM2U0MDU4MWRfSGZlOHdocHhLMHNtYmYxS1pvMlkwOXNaMEkxV1ZJTGVfVG9rZW46Vzc4ZWJyWUFab2Z0S254eTBEaGNpUVljbnJkXzE2OTc0NTU0MTI6MTY5NzQ1OTAxMl9WNA" alt=""></p>
+                <p><img src="https://wv9y1mjo8hb.feishu.cn/space/api/box/stream/download/asynccode/?code=NDdhNzMxNmFlOGZiZTViMmY3YTMxMDFhM2U0MDU4MWRfSGZlOHdocHhLMHNtYmYxS1pvMlkwOXNaMEkxV1ZJTGVfVG9rZW46Vzc4ZWJyWUFab2Z0S254eTBEaGNpUVljbnJkXzE2OTc0NTU0MTI6MTY5NzQ1OTAxMl9WNA"></p>
 <h1 id="引脚解析"><a href="#引脚解析" class="headerlink" title="引脚解析"></a>引脚解析</h1><h2 id="BST"><a href="#BST" class="headerlink" title="BST"></a>BST</h2><p>BST是用来驱动高侧MOS的栅极驱动器电源，连接至外部自举二极管与一个电容，芯片内部有一电荷泵为电容充电用以驱动MOS。</p>
-<h2 id="CSN-CSP"><a href="#CSN-CSP" class="headerlink" title="CSN/CSP"></a>CSN/CSP</h2><p>本质上是一个运算放大器的同相输入端与反相输入端，其与一个采样电阻相连接用以对输入电流进行采样。</p>
+<h2 id="CSN-CSP"><a href="#CSN-CSP" class="headerlink" title="CSN&#x2F;CSP"></a>CSN&#x2F;CSP</h2><p>本质上是一个运算放大器的同相输入端与反相输入端，其与一个采样电阻相连接用以对输入电流进行采样。</p>
 <h2 id="RES"><a href="#RES" class="headerlink" title="RES"></a>RES</h2><p>打嗝工作模式的选择<br><a target="_blank" rel="noopener" href="https://www.eet-china.com/mp/a146201.html">峰值电流模式的过流保护：Hiccup打嗝工作模式</a></p>
 <h2 id="SLOPE"><a href="#SLOPE" class="headerlink" title="SLOPE"></a>SLOPE</h2><p>斜坡补偿调整<br><a target="_blank" rel="noopener" href="https://bbs.21dianyuan.com/thread-47567-1-1.html">https://bbs.21dianyuan.com/thread-47567-1-1.html</a></p>
-<h2 id="SYNCIN-RT"><a href="#SYNCIN-RT" class="headerlink" title="SYNCIN/RT"></a>SYNCIN/RT</h2><p>外部连接一下拉电阻用以调整内部晶振的频率，其频率会影响内部开关频率。</p>
+<h2 id="SYNCIN-RT"><a href="#SYNCIN-RT" class="headerlink" title="SYNCIN&#x2F;RT"></a>SYNCIN&#x2F;RT</h2><p>外部连接一下拉电阻用以调整内部晶振的频率，其频率会影响内部开关频率。</p>
 <h2 id="UVLO"><a href="#UVLO" class="headerlink" title="UVLO"></a>UVLO</h2><p>欠压保护编程引脚</p>
-<p>如果 UVLO 引脚电压低于 0.4V，则调节器处于关闭模式，所有功能被禁用。如果 UVLO 引脚电压高于 0.4V 且低于 1.2V，则调节器处于待机模式，VCC 稳压器工作，HO 和LO 输出端无开关。如果 UVLO 引脚电压高于 1.2V，则启动顺序开始。当 UVLO 超过 1.2V 时，UVLO 引脚上的 A10- μA 电流源启动，并流过外部 UVLO 电阻，以提供迟滞。UVLO 引脚不应悬空。 —-DataSheet</p>
+<p>如果 UVLO 引脚电压低于 0.4V，则调节器处于关闭模式，所有功能被禁用。如果 UVLO 引脚电压高于 0.4V 且低于 1.2V，则调节器处于待机模式，VCC 稳压器工作，HO 和LO 输出端无开关。如果 UVLO 引脚电压高于 1.2V，则启动顺序开始。当 UVLO 超过 1.2V 时，UVLO 引脚上的 A10- μA 电流源启动，并流过外部 UVLO 电阻，以提供迟滞。UVLO 引脚不应悬空。 —DataSheet</p>
 <h2 id="Mode"><a href="#Mode" class="headerlink" title="Mode"></a>Mode</h2><p>控制器的工作模式选择，主要是强制PWM模式和二极管仿真模式的切换</p>
 <p><a target="_blank" rel="noopener" href="https://e2echina.ti.com/blogs_/b/power_house/posts/buck">https://e2echina.ti.com/blogs_/b/power_house/posts/buck</a></p>
 
@@ -824,7 +824,7 @@ CSN/CSP本质上是一个运算放大器的同相输入端与反相输入端，�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">34.6k</span>
+                        class="white-color">37.5k</span>
             
             
             
