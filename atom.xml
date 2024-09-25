@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-08-29T00:01:16.479Z</updated>
+  <updated>2024-09-25T11:44:42.672Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/09/25/dian-zi-dian-li/controlling-output-ripple-and-achieving-esr-independence-in-constant-on-time-cot-regulator-designs/"/>
+    <id>http://wwwangguan.github.io/2024/09/25/dian-zi-dian-li/controlling-output-ripple-and-achieving-esr-independence-in-constant-on-time-cot-regulator-designs/</id>
+    <published>2024-09-25T11:44:42.672Z</published>
+    <updated>2024-09-25T11:44:42.672Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;Texas Instruments AN-1481&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LT8708-SuperCapController</title>
+    <link href="http://wwwangguan.github.io/2024/09/24/dian-zi-dian-li/chao-ji-dian-rong/lt8708-supercapcontroller/"/>
+    <id>http://wwwangguan.github.io/2024/09/24/dian-zi-dian-li/chao-ji-dian-rong/lt8708-supercapcontroller/</id>
+    <published>2024-09-24T07:00:00.000Z</published>
+    <updated>2024-09-25T11:47:15.174Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Design-Requirement&quot;&gt;&lt;a href=&quot;#Design-Requirement&quot; class=&quot;headerlink&quot; title=&quot;Design Requirement&quot;&gt;&lt;/a&gt;Design Requirement&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="电子元件原神" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E5%AD%90%E5%85%83%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="电子电力技术" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="硬件组" scheme="http://wwwangguan.github.io/tags/%E7%A1%AC%E4%BB%B6%E7%BB%84/"/>
+    
+    <category term="RoboMaster" scheme="http://wwwangguan.github.io/tags/RoboMaster/"/>
+    
+    <category term="超级电容" scheme="http://wwwangguan.github.io/tags/%E8%B6%85%E7%BA%A7%E7%94%B5%E5%AE%B9/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -433,44 +485,6 @@
     <summary type="html">&lt;h1 id=&quot;7-13&quot;&gt;&lt;a href=&quot;#7-13&quot; class=&quot;headerlink&quot; title=&quot;7.13&quot;&gt;&lt;/a&gt;7.13&lt;/h1&gt;&lt;h2 id=&quot;频率和预计不符&quot;&gt;&lt;a href=&quot;#频率和预计不符&quot; class=&quot;headerlink&quot;</summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CheeryDAP源码分析</title>
-    <link href="http://wwwangguan.github.io/2024/07/07/qian-ru-shi-ruan-jian/stm32/cheerydap-yuan-ma-fen-xi/"/>
-    <id>http://wwwangguan.github.io/2024/07/07/qian-ru-shi-ruan-jian/stm32/cheerydap-yuan-ma-fen-xi/</id>
-    <published>2024-07-06T17:27:51.859Z</published>
-    <updated>2024-08-14T09:00:18.029Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;以STM32</summary>
-        
-      
-    
-    
-    
-    
-    <category term="DAPlink" scheme="http://wwwangguan.github.io/tags/DAPlink/"/>
-    
-    <category term="CherryDAP" scheme="http://wwwangguan.github.io/tags/CherryDAP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高速电路设计进阶</title>
-    <link href="http://wwwangguan.github.io/2024/07/06/dian-zi-dian-li/gao-su-dian-lu-she-ji-jin-jie/"/>
-    <id>http://wwwangguan.github.io/2024/07/06/dian-zi-dian-li/gao-su-dian-lu-she-ji-jin-jie/</id>
-    <published>2024-07-06T05:31:51.960Z</published>
-    <updated>2024-07-06T05:32:21.161Z</updated>
-    
     
     
     
