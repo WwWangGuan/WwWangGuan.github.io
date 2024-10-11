@@ -415,21 +415,21 @@ VO">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-10-10
+                    2024-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    10 分
                 </div>
                 
 
@@ -561,8 +561,9 @@ VO">
 </blockquote>
 <h3 id="Slope-Compensation"><a href="#Slope-Compensation" class="headerlink" title="Slope Compensation"></a>Slope Compensation</h3><p>datasheet上有，与硬件设计无关（大雾</p>
 <h3 id="IC-Junction-Temperature-Measurement"><a href="#IC-Junction-Temperature-Measurement" class="headerlink" title="IC Junction Temperature Measurement"></a>IC Junction Temperature Measurement</h3><p>LT8708的芯片温度会对$CLKOUT$引脚输出信号的占空比产生影响<br>$$<br>T_J \approx \frac{DC_{CLKOUT}- 34.4%}{0.325%} \  ^\circ C<br>$$<br>计算出来的温度有大概±10℃的误差，<del>NTC算出来的误差大概多少？<br>感觉还是上个NTC吧，误差有点离谱了，不能芯片本身制动还要靠这个吧（）</del></p>
-<h3 id="Component-Selection"><a href="#Component-Selection" class="headerlink" title="Component Selection"></a>Component Selection</h3><h4 id="R-SENSE-Selection"><a href="#R-SENSE-Selection" class="headerlink" title="$R_{SENSE}$  Selection"></a>$R_{SENSE}$  Selection</h4><p>这里的检流电阻特指电感电流的检流电阻，输入和输出的检流电阻不在本小节的讨论范围内，请右转Current Monitoring and Limiting。</p>
-<h4 id="Mosfet-Selection"><a href="#Mosfet-Selection" class="headerlink" title="Mosfet Selection"></a>Mosfet Selection</h4><h5 id="Dissipation-Calculate"><a href="#Dissipation-Calculate" class="headerlink" title="Dissipation Calculate"></a>Dissipation Calculate</h5><h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><h4 id="Start-Up-Sequence"><a href="#Start-Up-Sequence" class="headerlink" title="Start-Up Sequence"></a>Start-Up Sequence</h4><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240924145904.png"></p>
+<h3 id="Component-Selection"><a href="#Component-Selection" class="headerlink" title="Component Selection"></a>Component Selection</h3><h4 id="R-SENSE-Selection"><a href="#R-SENSE-Selection" class="headerlink" title="$R_{SENSE}$  Selection"></a>$R_{SENSE}$  Selection</h4><p>这里的检流电阻特指电感电流的检流电阻，输入和输出的检流电阻不在本小节的讨论范围内，请右转Current Monitoring and Limiting。<br>需要计算四个区域的最大$R_{SENSE}$阻值，正向升压，反向升压，正向降压，反向降压，最后的结果小于四者的最小值。如果有一个区域没有用到时，此区域的$R_{SENSE}&#x3D;\infty$<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011105512.png" alt="会有用的.jpg"></p>
+<h5 id="Max-R-SENSE-in-the-Boost-Reigon"><a href="#Max-R-SENSE-in-the-Boost-Reigon" class="headerlink" title="Max $R_{SENSE}$ in the Boost Reigon"></a>Max $R_{SENSE}$ in the Boost Reigon</h5><h6 id="Forward-Conduction"><a href="#Forward-Conduction" class="headerlink" title="Forward Conduction"></a>Forward Conduction</h6><p>在升压区域，当$VIN$最低且$VOUT$最高时，最大正$VOUT$电流能力最低。<del>（说实话没看懂啥意思）</del><br>此时的M3占空比<br>$$<br>DC_{MAX,M3,BOOST}\approx(1-\frac{V_{IN(MIN,BOOST)}}{V_{OUT(MAX,BOOST)}})\cdot 100%<br>$$<br>计算出占空比后需要去看一下最大电感电流检测电压图，找到此时$R_{SENSE}$两侧的电压$V_{R_{SENSE}}$<br>下一级计算正向升压区域的电感纹波电流（Inductor Ripple Current），此时分两种情况<br>如果尚未确定此时的电感感值，取最大$V_{OUT}$负载电流的30%-50%，因此纹波电流为：<br>$$<br>\Delta I_{L(MAX,BOOST)}&#x3D;\frac{V_{OUT(MAX.BOOST)}\cdot I_{OUT(MAX,FWD)}}{V_{IN(MIN,BOOST)}\cdot (\frac{100%}{Ripple%}-0.5)}A<br>$$<br>若此时电感感值以确定，那么有：<br>$$<br>\Delta I_{L(MAX,M3,BOOST)}&#x3D;\frac{(\frac{DC_{(MAX,M3,BOOST)}}{100%})\cdot V_{IN(MIN,BOOST)}}{f\cdot L}A<br>$$<br>在最大纹波电流确定后，本区域内的最大$R_{SENSE}$计算公式如下：<br>$$<br>R_{SENSE(MAX,BOOST,FWD)}&#x3D;\frac{2\cdot V_{R_{SENSE(MAX,BOOST,MAXDC)}}\cdot V_{IN(MIN,BOOST)}}{(2\cdot I_{OUT(MAX,FWD)}\cdot V_{OUT(MAX,BOOST)}+(\Delta I_{L(MAX,BOOST)}\cdot V_{IN(MIN,BOOST)}))} \ohm<br>$$</p>
+<h6 id="Reverse-Conduction"><a href="#Reverse-Conduction" class="headerlink" title="Reverse Conduction"></a>Reverse Conduction</h6><h4 id="Mosfet-Selectio"><a href="#Mosfet-Selectio" class="headerlink" title="Mosfet Selectio"></a>Mosfet Selectio</h4><h5 id="Dissipation-Calculate"><a href="#Dissipation-Calculate" class="headerlink" title="Dissipation Calculate"></a>Dissipation Calculate</h5><h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><h4 id="Start-Up-Sequence"><a href="#Start-Up-Sequence" class="headerlink" title="Start-Up Sequence"></a>Start-Up Sequence</h4><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240924145904.png"></p>
 <p>$\overline{SHDN}$是LT8708的主关断引脚，当此引脚上的电压低于0.35V时整个芯片会被强制关闭（$\textcolor{red}{CHIP \quad OFF}$），此时静态电流最小，只有当电压提升到1.221V以上后，$INTV_{CC}$和$LDO33$启用之后，芯片才会启动（$\textcolor{red}{SWITCHER \quad OFF \quad 1}$）<br><del>傻逼MathJax这latex语法都认不出来？蛤？</del><br>当$\overline{SHDN}$为高电平之后，$SWEN$用来控制启动芯片的开关稳压器（<del>芝士什么</del>），低于0.8V时无法启动，必须通过电阻拉高至1.208V以上才可启动，否则芯片电流检测电路将被禁用。 </p>
 <p>$SWEN$也为高电平之后进入$\textcolor{red}{INITIALIZE}$状态，此时$SS$将被强制拉低，为软起动做准备。在此状态下，随着$SS$逐渐上升，软启动电路会在适当的方向上提供 $V_C$ 和电感器电流的逐渐斜坡。这可以防止电感电流突然浪涌，并有助于输出电压平稳地斜坡调节。 </p>
 <p>$SS$内部有180K上拉电阻，和外部电容组成$RC$电路，当$SS$引脚电压到达1.8V时退出软起动状态开始进入正常操作状态。 </p>
@@ -1019,7 +1020,7 @@ VO">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">39.9k</span>
+                        class="white-color">40.2k</span>
             
             
             
