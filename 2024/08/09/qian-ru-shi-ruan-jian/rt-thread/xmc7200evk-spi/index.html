@@ -396,21 +396,21 @@ menuconfig BSP_USING_SPI
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-14
+                    2024-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -470,35 +470,35 @@ menuconfig BSP_USING_SPI
   
 #define LED_PIN     GET_PIN(16, 1)  
 #define LED2_PIN    GET_PIN(16,2)  
-rt_thread_t spitest;  
+rt_thread_t IMU_thread; 
 ADIS16467_T adi_imu &#x3D; &#123;0&#125;;  
   
 void SPIRTTEST() &#123;  
-&#x2F;&#x2F;    LOG_D(&quot;SPIRTTEST\n&quot;);  
+
     rt_pin_mode(GET_PIN(10, 3), PIN_MODE_OUTPUT);  
-    rt_kprintf(&quot;SPIRTTEST\n&quot;);  
+    rt_kprintf(&quot;IMU Thread Start！\n&quot;);  
     struct rt_spi_configuration imu_config &#x3D; &#123;  
             .data_width&#x3D;16,  
             .mode&#x3D;RT_SPI_MASTER | RT_SPI_MODE_3 | RT_SPI_MSB,  
             .max_hz&#x3D;1000000  
     &#125;;  
-&#x2F;&#x2F;    rt_hw_spi_device_attach(&quot;spi6&quot;, &quot;spi61&quot;, GET_PIN(10, 3));  
-  
+	struct rt_spi_device* imu_device &#x3D; (struct rt_spi_device*)rt_malloc(sizeof(struct rt_spi_device));
+    rt_spi_bus_attach_device_cspin(imu,&quot;spi61&quot;,&quot;spi6&quot;,GET_PIN(10,3),RT_NULL);  
     struct rt_spi_device *imu &#x3D; (struct rt_spi_device *) rt_device_find(&quot;spi61&quot;);  
   
     if (!imu) &#123;  
-        LOG_E(&quot;imu not found\n&quot;);  
+        rt_kprintf(&quot;imu not found\n&quot;);  
     &#125; else &#123;  
-&#x2F;&#x2F;        LOG_D(&quot;imu found\n&quot;);  
+
         rt_kprintf(&quot;imu found\n&quot;);  
     &#125;    
-    rt_spi_bus_attach_device_cspin(imu,&quot;spi61&quot;,&quot;spi6&quot;,GET_PIN(10,3),RT_NULL);  
+
     rt_spi_configure(imu, &amp;imu_config);  
-  
+
+
+
     adi_imu.spi_device &#x3D; imu;  
   
-%%     uint16_t send[1]&#x3D;&#123;0x1234&#125;;  
-    rt_spi_send(imu,send,1);   %%
     ADIS16467_Init(&amp;adi_imu);  
     ADIS16467_Check(&amp;adi_imu);  
     ADIS16467_imuInfo(&amp;adi_imu);  
@@ -619,7 +619,24 @@ uint16_t ADI_flame_TandR(ADIS16467_T *imu, uint16_t trans) &#123;
         rt_pin_write(LED2_PIN, PIN_LOW);  
         rt_thread_mdelay(500);  
     &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>priority改成10？试了，没用，这真的慢。<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130914709.png"></p>
+<p>priority改成10？试了，没用，这真的慢。<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/202408130914709.png"><br>换用rt_spi_transfer_message，有效</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">uint16_t ADI_flame_TandR(ADIS16467_T *imu, uint16_t trans) &#123;  
+    &#x2F;&#x2F; HAL_GPIO_WritePin(imu-&gt;GPIOx, imu-&gt;GPIO_PIN, 0);  
+    uint16_t result;  
+    struct rt_spi_message msg1,msg2;  
+  
+    msg1.send_buf    &#x3D; &amp;trans;  
+    msg1.recv_buf    &#x3D; &amp;result;  
+    msg1.length      &#x3D; 1;  
+    msg1.cs_take     &#x3D; 1;  
+    msg1.cs_release  &#x3D; 1;  
+    msg1.next        &#x3D; RT_NULL;  
+  
+    rt_spi_transfer_message(imu-&gt;spi_device,&amp;msg1);  
+    &#x2F;&#x2F; rt_spi_transfer(imu-&gt;spi_device,&amp;trans,&amp;result,2);  
+    &#x2F;&#x2F; sb_delay(200);    return result;  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>读取成功<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011210657.png"><br>接下来console输出加速度和角速度值（rt_krpintf输出浮点数需要安装全功能软件包），但是debug下是好使的<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011211502.png"><br>串口输出结果<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011211935.png"></p>
 <h1 id="EVK板载QSPI-Flash"><a href="#EVK板载QSPI-Flash" class="headerlink" title="EVK板载QSPI Flash"></a>EVK板载QSPI Flash</h1><p>换用QSPI，更换逻分之后再尝试<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810170117.png"></p>
 <p>原理图如图所示，型号为S25FL512SAGMFMR10，英飞凌自己家的，参数挺好<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810170337.png"></p>
 <p>引脚映射在下图<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/Pasted%20image%2020240810170201.png"></p>
@@ -1039,7 +1056,7 @@ uint16_t ADI_flame_TandR(ADIS16467_T *imu, uint16_t trans) &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.2k</span>
+                        class="white-color">41.5k</span>
             
             
             

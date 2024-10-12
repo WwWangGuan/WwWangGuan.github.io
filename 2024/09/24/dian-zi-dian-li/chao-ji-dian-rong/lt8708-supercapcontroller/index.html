@@ -5,17 +5,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="LT8708-SuperCapController, WwWangGuan">
-    <meta name="description" content="Design Requirement 电容侧电压欠压保护 底盘侧电压过压保护
-LT8708Chip Diagram
-Typical Application
-For SuperCap
-Monitor Pin
+    <meta name="description" content="Design Requirement 电容侧电压欠压保护 底盘侧电压过压保护借用部分Gmaster2022开源的设计参数
 
 
-引脚
-功能
-描述
-备注
+
+输入电压
+14-28V
+
+
+
+
+输入电流
+±8A
+
+
+
+输出电压
+14V-30V
+
+
+
+输出电流
+±8A
 
 
 
@@ -415,14 +426,14 @@ Monitor Pin
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-10-11
+                    2024-10-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.7k
+                    3.9k
                 </div>
                 
 
@@ -452,9 +463,38 @@ Monitor Pin
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Design-Requirement"><a href="#Design-Requirement" class="headerlink" title="Design Requirement"></a>Design Requirement</h1><p> 电容侧电压欠压保护<br> 底盘侧电压过压保护</p>
+                <h1 id="Design-Requirement"><a href="#Design-Requirement" class="headerlink" title="Design Requirement"></a>Design Requirement</h1><p> 电容侧电压欠压保护<br> 底盘侧电压过压保护<br>借用部分Gmaster2022开源的设计参数</p>
+<table>
+<thead>
+<tr>
+<th>输入电压</th>
+<th>14-28V</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入电流</td>
+<td>±8A</td>
+<td></td>
+</tr>
+<tr>
+<td>输出电压</td>
+<td>14V-30V</td>
+<td></td>
+</tr>
+<tr>
+<td>输出电流</td>
+<td>±8A</td>
+<td></td>
+</tr>
+<tr>
+<td>电容电压</td>
+<td>5V-2</td>
+<td></td>
+</tr>
+</tbody></table>
 <h2 id="LT8708"><a href="#LT8708" class="headerlink" title="LT8708"></a>LT8708</h2><h3 id="Chip-Diagram"><a href="#Chip-Diagram" class="headerlink" title="Chip Diagram"></a>Chip Diagram</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241010182741.png"></p>
-<h3 id="Typical-Application"><a href="#Typical-Application" class="headerlink" title="Typical Application"></a>Typical Application</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240923104201.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240923104211.png"></p>
+<h3 id="Typical-Applicatio"><a href="#Typical-Applicatio" class="headerlink" title="Typical Applicatio"></a>Typical Applicatio</h3><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240923104201.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240923104211.png"></p>
 <h4 id="For-SuperCap"><a href="#For-SuperCap" class="headerlink" title="For SuperCap"></a>For SuperCap</h4><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240929142259.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240929142311.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240929142323.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240929142330.png"></p>
 <h3 id="Monitor-Pin"><a href="#Monitor-Pin" class="headerlink" title="Monitor Pin"></a>Monitor Pin</h3><table>
 <thead>
@@ -522,6 +562,8 @@ Monitor Pin
 <h4 id="Power-Switch-Control"><a href="#Power-Switch-Control" class="headerlink" title="Power Switch Control"></a>Power Switch Control</h4><h5 id="Error-Amplifiers"><a href="#Error-Amplifiers" class="headerlink" title="Error Amplifiers"></a>Error Amplifiers</h5><p>LT8708一共有六个误差放大器<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240924163550.png"><br>误差放大器优先级<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240924173611.png"><br>在某些情况下某些误差放大器不可用<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240924173837.png"></p>
 <h5 id="Power-Switch-Contorl"><a href="#Power-Switch-Contorl" class="headerlink" title="Power Switch Contorl"></a>Power Switch Contorl</h5><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011163748.png" alt="请注意，本图所述情况为反向传导环节.pdf"><br>LT8708比较有意思，由于IC内部自带了电荷泵升压，因此可以做到上管常开</p>
 <h6 id="Switch-Control-Buck-Region-VIN-VOUT"><a href="#Switch-Control-Buck-Region-VIN-VOUT" class="headerlink" title="Switch Control: Buck Region (VIN &gt;&gt; VOUT)"></a>Switch Control: Buck Region (VIN &gt;&gt; VOUT)</h6><p>这部分很常规，上管常开之后就跟普通的Buck Controller差不多。<br>随着 $V_{IN}$ 和 $V_{OUT}$ 彼此接近，占空比减小，直到降压区域中转换器的最小占空比达到$DC_{(ABSMIN,M2,BUCK)}$。如果占空比低于 $DC_{(ABSMIN,M2,BUCK)}$，该区域转移至Buck-Boost区域。<br>$$<br>DC_{(ABSMIN,M2,BUCK)}&#x3D;t_{on(M2,MIN)}\cdot f \cdot 100 %<br>$$<br>其中，$t_{on(M2,MIN)}$是降压操作中同步开关的最短导通时间（典型值为 200ns，详见Electrical Characteristics）</p>
+<h6 id="Switch-Control-Buck-Boost-VIN-≅-VOUT"><a href="#Switch-Control-Buck-Boost-VIN-≅-VOUT" class="headerlink" title="Switch Control: Buck-Boost (VIN ≅ VOUT)"></a>Switch Control: Buck-Boost (VIN ≅ VOUT)</h6><p>四开关交替导通，没啥好说的</p>
+<h6 id="Switch-Control-Boost-Region-VIN-VOUT"><a href="#Switch-Control-Boost-Region-VIN-VOUT" class="headerlink" title="Switch Control: Boost Region (VIN &lt;&lt; VOUT)"></a>Switch Control: Boost Region (VIN &lt;&lt; VOUT)</h6><p>和Buck Reigon一样，就一个公式。<br>随着$V_{IN}$和$V_{OUT}$彼此接近，占空比减小，直到升压区域中转换器的最小占空比达到$DC_{(ABSMIN,M3,BOOST)}$。如果占空比低于 $DC_{(ABSMIN,M3,BOOST)}$，该区域转移至Buck-Boost区域。<br>$$<br>DC_{(ABSMIN,M3,BOOST)}&#x3D;t_{on(M3,MIN)} \cdot f \cdot 100 %<br>$$<br>其中，$DC_{(ABSMIN,M3,BOOST)}$是升压操作中同步开关的最短导通时间（典型值为 200ns，详见Electrical Characteristics）</p>
 <h5 id="Uni-and-Bidirecional-Conduction"><a href="#Uni-and-Bidirecional-Conduction" class="headerlink" title="Uni and Bidirecional Conduction"></a>Uni and Bidirecional Conduction</h5><p>双向模式下是CCM，单向模式下是HCM（混合电流模式和突发模式操作）和DCM<br><del>（HCM？….没听过<br> 没事了，datasheet后面有）</del><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240924172325.png"></p>
 <h6 id="CCM"><a href="#CCM" class="headerlink" title="CCM"></a>CCM</h6><p>伟大，无需多言</p>
 <h6 id="DCM"><a href="#DCM" class="headerlink" title="DCM"></a>DCM</h6><h4 id="Current-Monitoring-and-Limiting"><a href="#Current-Monitoring-and-Limiting" class="headerlink" title="Current Monitoring and Limiting"></a>Current Monitoring and Limiting</h4><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241009180756.png" alt="输入电流检测与限制"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241009180808.png" alt="输出电流检测与限制"><br>输入和输出的电流检测是完全独立的，两边的结构都是相似的，检流电阻的压差差分信号经过一个跨导放大器连接到内部的误差放大器，并且输出到外部的检测引脚，由于引脚输出的是电流（内部会在跨导放大器的基础上加上一个$20\mu A$的电流），因此接上一个电阻就可以将其转换成电压信号，这样就可以用ADC采集到电流信息。电容仅仅是为了滤波和稳定环路（忘了在哪看到的了），几个$nF$就足够了</p>
@@ -534,7 +576,7 @@ Monitor Pin
 </blockquote>
 <h4 id="Slope-Compensation"><a href="#Slope-Compensation" class="headerlink" title="Slope Compensation"></a>Slope Compensation</h4><p>datasheet上有，与硬件设计无关（大雾</p>
 <h3 id="IC-Junction-Temperature-Measurement"><a href="#IC-Junction-Temperature-Measurement" class="headerlink" title="IC Junction Temperature Measurement"></a>IC Junction Temperature Measurement</h3><p>LT8708的芯片温度会对$CLKOUT$引脚输出信号的占空比产生影响<br>$$<br>T_J \approx \frac{DC_{CLKOUT}- 34.4%}{0.325%} \  ^\circ C<br>$$<br>计算出来的温度有大概±10℃的误差，<del>NTC算出来的误差大概多少？<br>感觉还是上个NTC吧，误差有点离谱了，不能芯片本身制动还要靠这个吧（）</del></p>
-<h3 id="Component-Selection"><a href="#Component-Selection" class="headerlink" title="Component Selection"></a>Component Selection</h3><h4 id="R-SENSE-Selection"><a href="#R-SENSE-Selection" class="headerlink" title="$R_{SENSE}$  Selection"></a>$R_{SENSE}$  Selection</h4><p>这里的检流电阻特指电感电流的检流电阻，输入和输出的检流电阻不在本小节的讨论范围内，请右转Current Monitoring and Limiting。<br>需要计算四个区域的最大$R_{SENSE}$阻值，正向升压，反向升压，正向降压，反向降压，最后的结果小于四者的最小值，并建议流出建议留出$20%$至$30%$的余量。如果有一个区域没有用到时，此区域的$R_{SENSE}&#x3D;\infty$<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011105512.png" alt="会有用的.jpg"></p>
+<h3 id="Component-Selection"><a href="#Component-Selection" class="headerlink" title="Component Selection"></a>Component Selection</h3><h4 id="R-SENSE-Selection"><a href="#R-SENSE-Selection" class="headerlink" title="$R_{SENSE}$  Selection"></a>$R_{SENSE}$  Selection</h4><p>这里的检流电阻特指电感电流的检流电阻，输入和输出的检流电阻不在本小节的讨论范围内，请右转Current Monitoring and Limiting。<br>需要计算四个区域的最大$R_{SENSE}$阻值，正向升压，反向升压，正向降压，反向降压，最后的结果小于四者的最小值，并建议流出建议留出$20%$至$30%$的余量。如果有一个区域没有用到时，此区域的$R_{SENSE}&#x3D;\infty$<br>还有一部分详见datasheet P31右侧。<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011105512.png" alt="会有用的.jpg"></p>
 <h5 id="Max-R-SENSE-in-the-Boost-Reigon"><a href="#Max-R-SENSE-in-the-Boost-Reigon" class="headerlink" title="Max $R_{SENSE}$ in the Boost Reigon"></a>Max $R_{SENSE}$ in the Boost Reigon</h5><h6 id="Forward-Conduction"><a href="#Forward-Conduction" class="headerlink" title="Forward Conduction"></a>Forward Conduction</h6><p>在升压区域，当$VIN$最低且$VOUT$最高时，最大正$VOUT$电流能力最低。<del>（说实话没看懂啥意思）</del><br>此时的M3占空比<br>$$<br>DC_{MAX,M3,BOOST}\approx(1-\frac{V_{IN(MIN,BOOST)}}{V_{OUT(MAX,BOOST)}})\cdot 100%<br>$$<br>计算出占空比后需要去看一下最大电感电流检测电压图，找到此时$R_{SENSE}$两侧的电压$V_{R_{SENSE}}$<br>下一级计算正向升压区域的电感纹波电流(Inductor ripple Current)，此时分两种情况<br>如果尚未确定此时的电感感值，取最大$V_{OUT}$负载电流的30%-50%，因此纹波电流为：<br>$$<br>\Delta I_{L(MAX,BOOST)}&#x3D;\frac{V_{OUT(MAX.BOOST)}\cdot I_{OUT(MAX,FWD)}}{V_{IN(MIN,BOOST)}\cdot (\frac{100 %}{ripple}-0.5)}A<br>$$<br>若此时电感感值已确定，那么有：</p>
 <p>$$<br>\Delta I_{L(MAX,M3,BOOST)}&#x3D;\frac{(\frac{DC_{(MAX,M3,BOOST)}}{100%})\cdot V_{IN(MIN,BOOST)}}{f\cdot L}A<br>$$</p>
 <p>在最大纹波电流确定后，本区域内的最大$R_{SENSE}$计算公式如下：</p>
@@ -544,9 +586,9 @@ Monitor Pin
 <h5 id="Max-R-SENSE-in-the-Buck-Reigon"><a href="#Max-R-SENSE-in-the-Buck-Reigon" class="headerlink" title="Max $R_{SENSE}$ in the Buck Reigon"></a>Max $R_{SENSE}$ in the Buck Reigon</h5><h6 id="Forward-Conduction-1"><a href="#Forward-Conduction-1" class="headerlink" title="Forward Conduction"></a>Forward Conduction</h6><p>在降压区域中，当以最小占空比运行时，最大$VOUT$电流能力最低。<br>和升压区域中的反向导通一样，仍然需要首先计算电感纹波电流$\Delta I_{L(MIN,BUCK)}$，两种情况：<br>如果电感感值未知，纹波电流$\Delta I_{L(MIN,BUCK)}$可以通过选择$\Delta I_{L(MIN,BUCK)}$为降压区域中最大峰值电感电流的 10% 来估算<del>(这句话真的好怪，翻译出来是这样但是你看公式又不是那味)</del>，如下所示<br>$$<br>\Delta I_{L(MIN,BUCK)}&#x3D;\frac{I_{OUT(MAX,FWD)}}{\frac{100%}{10%}-0.5}A<br>$$<br>其中，$I_{OUT(MAX,FWD)}$是正向降压区域所需的最大$VOUT$负载电流。<br>如果电感感值已知，那么可根据下式计算：<br>$$<br>\Delta I_{L(MIN,BUCK)}&#x3D;\frac{\frac{DC_{ABISMIN,M2,BUCK}}{100%}\cdot V_{OUT(MIN,BUCK)}}{f\cdot L}A<br>$$<br>其中，$DC_{ABISMIN,M2,BUCK}$是先前计算的降压区域的最小占空比。<br>在得到电感纹波电流之后，本区域的$R_{SENSE}$计算公式为：<br>$$<br>R_{SENSE(MAX,BUCK,FWD)}&#x3D;\frac{2\cdot V_{R_{SENSE(MAX,BUCK,MINDC)}}}{2\cdot I_{OUT(MAX,FWD)}-\Delta I_{L(MIN,BUCK)}} \ohm<br>$$<br>其中，$V_{R_{SENSE(MAX,BUCK,MINDC)}}$是在最小占空比时的最大电感电流检测电压，典型值为$82mV$。<br>若上式的计算结果为负，则说明任何阻值都可满足要求，将本区域内的阻值视为$\infty$并进入下一部分计算</p>
 <h6 id="Reverse-Forward"><a href="#Reverse-Forward" class="headerlink" title="Reverse Forward"></a>Reverse Forward</h6><p>在降压区域，当$VIN$处于最大值并且$VOUT$处于降压操作的最小值时，最大反向$VIN$电流能力最小。<br>首先找到$VIN$最小且$VOUT$最大时的降压区域占空比<br>$$<br>DC_{(MAX,M2,BUCK)}&#x3D;(1-\frac{V_{OUT(MIN,BUCK)}}{V_{IN(MAX,BUCK)}})\cdot 100%<br>$$<br>然后计算电感纹波电流，如果电感未知，那么最大纹波电流 $\Delta I_{L(MAX,BUCK)}$ 可以通过选择$\Delta I_{L(MAX,BUCK)}$为降压区域最大峰值电感电流的$30%$至$50%$来估算，如下所示:<br>$$<br>\Delta I_{L(MAX,BUCK)}&#x3D; \frac{V_{IN(MAX,BUCK)}\cdot I_{IN(MAX,RVS)}}{V_{OUT(MIN,BUCK)}\cdot (\frac{100%}{Ripple}-0.5)}A<br>$$<br>如果电感已知，那么可根据下式计算的更精确一点：<br>$$<br>\Delta I_{L(MAX,BUCK)}&#x3D;\frac{\frac{DC_{(MAX,M2,BUCK)}}{100%}\cdot V_{OUT(MIN,BUCK)}}{f\cdot L}A<br>$$<br>其中，$DC_{(MAX,M2,BUCK)}$是先前计算的降压区域的最大占空比。<br>那么，最终本区域的$R_{SENSE}$据下式计算：<br>$$<br>R_{SENSE(MAX,BUCK,RVS)}&#x3D;\frac{2\cdot |V_{R_{SENSE()MIN,BUCK,MAXDC}}|\cdot V_{OUT(MIN,BUCK)}}{(2\cdot |I_{IN(MAX,RVS)}|\cdot V_{IN(MAX,BUCK)})+(\Delta I_{L(MAX,BUCK)}\cdot V_{OUT(MIN,BUCK)})} \ohm<br>$$<br>其中，$V_{R_{SENSE()MIN,BUCK,MAXDC}}$是最大占空比时的最小电感电流检测电压。该值的确定方式与之前在$R_{SENSE}$ Selction Boost  Reigon部分中的最大$R_{SENSE}$中讨论的$V_{R_{SENSE(MAX,BOOST,MAXDC)}}$ 类似</p>
 <h5 id="R-SENSE-Filtering"><a href="#R-SENSE-Filtering" class="headerlink" title="$R_{SENSE}$ Filtering"></a>$R_{SENSE}$ Filtering</h5><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011162638.png"><br>10(a)和10(b)都可以，但是10(b)的接法会在电流经过电容时引入接地走线噪声（？从何而来的结论）</p>
-<h4 id="Mosfet-Selection"><a href="#Mosfet-Selection" class="headerlink" title="Mosfet Selection"></a>Mosfet Selection</h4><h5 id="Dissipation-Calculate"><a href="#Dissipation-Calculate" class="headerlink" title="Dissipation Calculate"></a>Dissipation Calculate</h5><h2 id="INA226"><a href="#INA226" class="headerlink" title="INA226"></a>INA226</h2><p>INA并不直接测量电流，它测量检流电阻两侧的差分电压得到电流值（<del>what can i say.jpg</del>）<br>貌似用不到了，直接用ADC加个OPAMP采一下监控引脚就能拿到电压电流值了，非常的nice。</p>
-<h2 id="SuperCap"><a href="#SuperCap" class="headerlink" title="SuperCap"></a>SuperCap</h2><p>Viashy的<a target="_blank" rel="noopener" href="https://www.vishay.com/zh/product/28421/">220 EDLC ENYCAP™ Energy Storage Capacitors | Vishay</a>,2.7V 50F<br>手册的最小放电电压为1.5V，最大充放电电流为4.4A<br>11串电容单体，电压为$$2.7\times11&#x3D;29.7V$$<br>此时能量<br>$$<br>E &#x3D; \frac{1}{2}CU^2&#x3D;2004.75J<br>$$<br>被动均衡，充电至2.65V</p>
-<h2 id="裁判系统要求"><a href="#裁判系统要求" class="headerlink" title="裁判系统要求"></a>裁判系统要求</h2><p>![](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240927164538.png">https://raw.githubusercontent.com/WwWangGuan/pics/main/20240927164538.png</a><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024221.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024232.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024241.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024247.png"></p>
+<h4 id="Mosfet-Selection"><a href="#Mosfet-Selection" class="headerlink" title="Mosfet Selection"></a>Mosfet Selection</h4><h5 id="Dissipation-Calculate"><a href="#Dissipation-Calculate" class="headerlink" title="Dissipation Calculate"></a>Dissipation Calculate</h5><p><del>## INA226<br>INA并不直接测量电流，它测量检流电阻两侧的差分电压得到电流值（</del>what can i say.jpg<del>）<br>貌似用不到了，直接用ADC加个OPAMP采一下监控引脚就能拿到电压电流值了，非常的nice。</del></p>
+<h2 id="SuperCap"><a href="#SuperCap" class="headerlink" title="SuperCap"></a>SuperCap</h2><p>Viashy的<a target="_blank" rel="noopener" href="https://www.vishay.com/zh/product/28421/">220 EDLC ENYCAP™ Energy Storage Capacitors | Vishay</a>,2.7V 50F<br>手册的最小放电电压为1.5V，最大充放电电流为4.4A<br>11串电容单体，电压为$$2.7\times11&#x3D;29.7V$$<br>此时能量<br>$$<br>E &#x3D; \frac{1}{2}CU^2&#x3D;2004.75J<br>$$<br>被动均衡，充电至2.65V,此时电压为：<br>$$<br>2.65\times 11&#x3D;29.15V<br>$$</p>
+<h2 id="裁判系统要求"><a href="#裁判系统要求" class="headerlink" title="裁判系统要求"></a>裁判系统要求</h2><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240927164538.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024221.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024232.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024241.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20240926024247.png"></p>
 <h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><h2 id="参考链接和不认识的玩应"><a href="#参考链接和不认识的玩应" class="headerlink" title="参考链接和不认识的玩应"></a>参考链接和不认识的玩应</h2><ol>
 <li>as intended 按预期</li>
 <li>methodical $adj.$ 有条理的</li>
@@ -562,6 +604,7 @@ Monitor Pin
 <li>significantly $adj.$ 极大的，显著的</li>
 <li>product $n.$ 乘积</li>
 <li>trip $v.$ 跳闸（？我觉得说成跳变也许更好）<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241011171250.png"></li>
+<li><a target="_blank" rel="noopener" href="https://www.analog.com/en/products/lt8708.html">LT8708 Datasheets and Production Info | Analog Devices</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/472919794">Latex符号大全</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/luolang_103/article/details/81289529">LaTex中输入空格以及换行_ctex换行-CSDN博客</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41520353/article/details/128675834">OB0207 obsidian 自动获取url链接：auto-link-title插件使用_auto link title-CSDN博客</a></li>
@@ -970,7 +1013,7 @@ Monitor Pin
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.2k</span>
+                        class="white-color">41.5k</span>
             
             
             
