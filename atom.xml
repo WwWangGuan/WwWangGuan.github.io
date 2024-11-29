@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-09-28T11:07:49.987Z</updated>
+  <updated>2024-11-19T16:14:19.406Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,138 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cmake环境下使用cmsis-driver</title>
+    <link href="http://wwwangguan.github.io/2024/11/19/qian-ru-shi-ruan-jian/stm32/cmake-huan-jing-xia-shi-yong-cmsis-driver/"/>
+    <id>http://wwwangguan.github.io/2024/11/19/qian-ru-shi-ruan-jian/stm32/cmake-huan-jing-xia-shi-yong-cmsis-driver/</id>
+    <published>2024-11-19T15:22:33.884Z</published>
+    <updated>2024-11-19T16:14:19.406Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
+    
+    <category term="Cmake" scheme="http://wwwangguan.github.io/tags/Cmake/"/>
+    
+    <category term="Clion" scheme="http://wwwangguan.github.io/tags/Clion/"/>
+    
+    <category term="CMSIS" scheme="http://wwwangguan.github.io/tags/CMSIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Starbound服务器搭建教程</title>
+    <link href="http://wwwangguan.github.io/2024/11/18/za-ji/starbound-fu-wu-qi-da-jian-jiao-cheng/"/>
+    <id>http://wwwangguan.github.io/2024/11/18/za-ji/starbound-fu-wu-qi-da-jian-jiao-cheng/</id>
+    <published>2024-11-18T12:58:54.950Z</published>
+    <updated>2024-11-18T12:59:29.675Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="嵌入式软件原神" scheme="http://wwwangguan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scons学习调试记录</title>
+    <link href="http://wwwangguan.github.io/2024/11/11/scons-xue-xi-diao-shi-ji-lu/"/>
+    <id>http://wwwangguan.github.io/2024/11/11/scons-xue-xi-diao-shi-ji-lu/</id>
+    <published>2024-11-11T11:24:54.904Z</published>
+    <updated>2024-11-14T07:33:06.533Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;起因：试图解决&lt;a href=&quot;https://github.com/RT-Thread/rt-thread/issues/9536&quot;&gt;[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 ·</summary>
+        
+      
+    
+    
+    
+    
+    <category term="scons" scheme="http://wwwangguan.github.io/tags/scons/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MLCC</title>
+    <link href="http://wwwangguan.github.io/2024/11/11/dian-zi-dian-li/mlcc/"/>
+    <id>http://wwwangguan.github.io/2024/11/11/dian-zi-dian-li/mlcc/</id>
+    <published>2024-11-11T07:48:55.981Z</published>
+    <updated>2024-11-11T07:48:55.981Z</updated>
+    
+    
+    
+    
+    
+    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
+    
+    <category term="HRTIM" scheme="http://wwwangguan.github.io/tags/HRTIM/"/>
+    
+    <category term="MLCC" scheme="http://wwwangguan.github.io/tags/MLCC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>瑞萨MCU适配RT-Thread</title>
+    <link href="http://wwwangguan.github.io/2024/11/11/qian-ru-shi-ruan-jian/rt-thread/rui-sa-mcu-gua-pei-rt-thread/"/>
+    <id>http://wwwangguan.github.io/2024/11/11/qian-ru-shi-ruan-jian/rt-thread/rui-sa-mcu-gua-pei-rt-thread/</id>
+    <published>2024-11-11T07:48:55.980Z</published>
+    <updated>2024-11-11T08:16:55.713Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/WwWangGuan/pics/main/20241031162049.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="RT-Thread" scheme="http://wwwangguan.github.io/tags/RT-Thread/"/>
+    
+    <category term="瑞萨" scheme="http://wwwangguan.github.io/tags/%E7%91%9E%E8%90%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/10/19/wei-ming-ming/"/>
+    <id>http://wwwangguan.github.io/2024/10/19/wei-ming-ming/</id>
+    <published>2024-10-19T07:01:49.702Z</published>
+    <updated>2024-10-20T17:00:18.653Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>XMOS开发环境搭建</title>
@@ -69,14 +201,14 @@
     <link href="http://wwwangguan.github.io/2024/09/24/dian-zi-dian-li/chao-ji-dian-rong/lt8708-supercapcontroller/"/>
     <id>http://wwwangguan.github.io/2024/09/24/dian-zi-dian-li/chao-ji-dian-rong/lt8708-supercapcontroller/</id>
     <published>2024-09-24T07:00:00.000Z</published>
-    <updated>2024-10-12T03:25:11.091Z</updated>
+    <updated>2024-11-11T07:48:55.982Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Design-Requirement&quot;&gt;&lt;a href=&quot;#Design-Requirement&quot; class=&quot;headerlink&quot; title=&quot;Design Requirement&quot;&gt;&lt;/a&gt;Design Requirement&lt;/h1&gt;&lt;p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;Design-Requirement&quot;&gt;&lt;a href=&quot;#Design-Requirement&quot; class=&quot;headerlink&quot; title=&quot;Design Requirement&quot;&gt;&lt;/a&gt;Design</summary>
         
       
     
@@ -334,166 +466,6 @@
     <category term="嵌入式软件原神" scheme="http://wwwangguan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
     
     <category term="GPIO" scheme="http://wwwangguan.github.io/tags/GPIO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>电子元器件</title>
-    <link href="http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/dian-zi-yuan-qi-jian/"/>
-    <id>http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/dian-zi-yuan-qi-jian/</id>
-    <published>2024-08-15T06:02:34.449Z</published>
-    <updated>2024-08-21T07:53:27.261Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;保险丝&quot;&gt;&lt;a href=&quot;#保险丝&quot; class=&quot;headerlink&quot; title=&quot;保险丝&quot;&gt;&lt;/a&gt;保险丝&lt;/h1&gt;&lt;h2 id=&quot;跳闸电流&quot;&gt;&lt;a href=&quot;#跳闸电流&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="电子元件原神" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E5%AD%90%E5%85%83%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="硬件" scheme="http://wwwangguan.github.io/tags/%E7%A1%AC%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ZYNQ-Core 硬件设计</title>
-    <link href="http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/zynq/zynq-core-ying-jian-she-ji/"/>
-    <id>http://wwwangguan.github.io/2024/08/15/dian-zi-dian-li/zynq/zynq-core-ying-jian-she-ji/</id>
-    <published>2024-08-14T16:08:21.578Z</published>
-    <updated>2024-08-25T15:14:30.892Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;h1 id=&quot;原理图设计&quot;&gt;&lt;a href=&quot;#原理图设计&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="ZYNQ" scheme="http://wwwangguan.github.io/tags/ZYNQ/"/>
-    
-    <category term="DDR3L" scheme="http://wwwangguan.github.io/tags/DDR3L/"/>
-    
-    <category term="电源上电时序" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E6%BA%90%E4%B8%8A%E7%94%B5%E6%97%B6%E5%BA%8F/"/>
-    
-    <category term="高速电路设计" scheme="http://wwwangguan.github.io/tags/%E9%AB%98%E9%80%9F%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CAN</title>
-    <link href="http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/"/>
-    <id>http://wwwangguan.github.io/2024/08/12/qian-ru-shi-ruan-jian/stm32/can/</id>
-    <published>2024-08-12T01:21:50.421Z</published>
-    <updated>2024-08-20T03:10:42.836Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="STM32" scheme="http://wwwangguan.github.io/tags/STM32/"/>
-    
-    <category term="CAN" scheme="http://wwwangguan.github.io/tags/CAN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Clion HPM5301lite开发</title>
-    <link href="http://wwwangguan.github.io/2024/08/11/qian-ru-shi-ruan-jian/hpm/clion-hpm5301lite-kai-fa/"/>
-    <id>http://wwwangguan.github.io/2024/08/11/qian-ru-shi-ruan-jian/hpm/clion-hpm5301lite-kai-fa/</id>
-    <published>2024-08-11T03:43:51.923Z</published>
-    <updated>2024-08-14T07:34:31.822Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/564229673&quot;&gt;在 CLion 中开发</summary>
-        
-      
-    
-    
-    
-    
-    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
-    
-    <category term="Clion" scheme="http://wwwangguan.github.io/tags/Clion/"/>
-    
-    <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
-    
-    <category term="DAPLink" scheme="http://wwwangguan.github.io/tags/DAPLink/"/>
-    
-    <category term="JTAG" scheme="http://wwwangguan.github.io/tags/JTAG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XMC7200EEVK-SPI</title>
-    <link href="http://wwwangguan.github.io/2024/08/09/qian-ru-shi-ruan-jian/rt-thread/xmc7200evk-spi/"/>
-    <id>http://wwwangguan.github.io/2024/08/09/qian-ru-shi-ruan-jian/rt-thread/xmc7200evk-spi/</id>
-    <published>2024-08-09T07:49:01.036Z</published>
-    <updated>2024-10-11T13:19:41.863Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;BSP修改与SPI配置&quot;&gt;&lt;a href=&quot;#BSP修改与SPI配置&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="XMC7200C" scheme="http://wwwangguan.github.io/tags/XMC7200C/"/>
-    
-    <category term="SPI" scheme="http://wwwangguan.github.io/tags/SPI/"/>
-    
-    <category term="ADIS16467-2" scheme="http://wwwangguan.github.io/tags/ADIS16467-2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/08/06/za-ji/gao-qing/"/>
-    <id>http://wwwangguan.github.io/2024/08/06/za-ji/gao-qing/</id>
-    <published>2024-08-06T04:30:44.453Z</published>
-    <updated>2024-08-13T10:00:42.937Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 超级电容 &lt;/p&gt;
-&lt;h2 id=&quot;拓扑结构&quot;&gt;&lt;a href=&quot;#拓扑结构&quot; class=&quot;headerlink&quot; title=&quot;拓扑结构&quot;&gt;&lt;/a&gt;拓扑结构&lt;/h2&gt;&lt;p&gt;双向四开关，隔离电源上管常开。&lt;/p&gt;
-&lt;h2 id=&quot;改进设计&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

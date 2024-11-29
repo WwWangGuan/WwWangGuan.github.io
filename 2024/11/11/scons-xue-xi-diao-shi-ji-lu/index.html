@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="WwWangGuan">
-    <meta name="description" content=" 超级电容 
-拓扑结构双向四开关，隔离电源上管常开。
-改进设计27211良品率过于抽象栅极驱动器更换 2edkf7275k 隔离栅驱 4&amp;#x2F;8A。ADC 低通滤波 走线太长寄生电容太大只保留了R。缩小体积。HRTIM 中心对齐PWM">
+    <meta name="keywords" content="scons学习调试记录, WwWangGuan">
+    <meta name="description" content="起因：试图解决[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread/rt-thread · GitHub对比了5.1.0和master版本的scons">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>WwWangGuan</title>
+    <title>scons学习调试记录 | WwWangGuan</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
     
 
@@ -335,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">scons学习调试记录</h1>
                 </div>
             </div>
         </div>
@@ -362,9 +360,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/scons/">
+                                <span class="chip bg-color">scons</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -376,28 +378,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-08-06
+                    2024-11-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-13
+                    2024-11-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    216
+                    419
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -420,13 +422,50 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 超级电容 </p>
-<h2 id="拓扑结构"><a href="#拓扑结构" class="headerlink" title="拓扑结构"></a>拓扑结构</h2><p>双向四开关，隔离电源上管常开。</p>
-<h2 id="改进设计"><a href="#改进设计" class="headerlink" title="改进设计"></a>改进设计</h2><p>27211良品率过于抽象<br>栅极驱动器更换 2edkf7275k 隔离栅驱 4&#x2F;8A。<br>ADC 低通滤波 走线太长寄生电容太大只保留了R。<br>缩小体积。<br>HRTIM 中心对齐PWM触发电流采样。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>空载功耗大（更换栅驱之后死区时间调整<br>结构对齐<br>MPS的电源芯片占地太大。<br>REF3033输出电压小于3.3<br>PWM周期与计算周期不一致（晶振 </p>
-<h1 id="FOC"><a href="#FOC" class="headerlink" title="FOC"></a>FOC</h1><h1 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h1><p>开环运动相电压波形不对，周期开始是马鞍波然后三相同时下降，</p>
-<p>TC387-引脚分配，电源复杂，软件难用</p>
-<h1 id="buck-boost"><a href="#buck-boost" class="headerlink" title="buck boost"></a>buck boost</h1><h2 id="损耗来源"><a href="#损耗来源" class="headerlink" title="损耗来源"></a>损耗来源</h2><h3 id="导通损耗"><a href="#导通损耗" class="headerlink" title="导通损耗"></a>导通损耗</h3><h3 id="开关损耗"><a href="#开关损耗" class="headerlink" title="开关损耗"></a>开关损耗</h3><h3 id="死区时间损耗"><a href="#死区时间损耗" class="headerlink" title="死区时间损耗"></a>死区时间损耗</h3><h3 id="芯片电流损耗"><a href="#芯片电流损耗" class="headerlink" title="芯片电流损耗"></a>芯片电流损耗</h3><h3 id="栅极充电损耗"><a href="#栅极充电损耗" class="headerlink" title="栅极充电损耗"></a>栅极充电损耗</h3><h3 id="DCR-ESR损耗"><a href="#DCR-ESR损耗" class="headerlink" title="DCR&#x2F;ESR损耗"></a>DCR&#x2F;ESR损耗</h3>
+                <p>起因：试图解决<a target="_blank" rel="noopener" href="https://github.com/RT-Thread/rt-thread/issues/9536">[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread/rt-thread · GitHub</a><br>对比了5.1.0和master版本的sconscrips，代码都是一样的，但是在<code>LOCAL_CPPDEFINES</code> 这里会有问题，5.1.0在cmakelists这里会少一个define导致报warning，在issue内有图，不再赘述<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">from building import *  
+import os  
+  
+src &#x3D; Glob(&#39;*.c&#39;)  
+src +&#x3D; Glob(&#39;klibc&#x2F;*.c&#39;)  
+cwd &#x3D; GetCurrentDir()  
+inc &#x3D; [os.path.join(cwd, &#39;..&#39;, &#39;include&#39;)]  
+  
+if GetDepend(&#39;RT_USING_SMALL_MEM&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;mem.c&#39;])  
+  
+if GetDepend(&#39;RT_USING_SLAB&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;slab.c&#39;])  
+  
+if GetDepend(&#39;RT_USING_MEMPOOL&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;mempool.c&#39;])  
+  
+if GetDepend(&#39;RT_USING_MEMHEAP&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;memheap.c&#39;])  
+  
+if GetDepend(&#39;RT_USING_SIGNALS&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;signal.c&#39;])  
+  
+if GetDepend(&#39;RT_USING_DEVICE&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;device.c&#39;])  
+  
+if GetDepend(&#39;RT_USING_SMP&#39;) &#x3D;&#x3D; False:  
+    SrcRemove(src, [&#39;cpu.c&#39;, &#39;scheduler_mp.c&#39;])  
+else:  
+    SrcRemove(src, [&#39;scheduler_up.c&#39;])  
+  
+LOCAL_CFLAGS &#x3D; &#39;&#39;  
+LINKFLAGS &#x3D; &#39;&#39;  
+  
+if rtconfig.PLATFORM in [&#39;gcc&#39;]: # only for GCC    LOCAL_CFLAGS +&#x3D; &#39; -Wunused&#39; # unused warning    LOCAL_CFLAGS +&#x3D; &#39; -Wformat -Wformat-security&#39; # printf&#x2F;scanf format warning    LOCAL_CFLAGS +&#x3D; &#39; -Warray-bounds -Wuninitialized&#39; # memory access warning    LOCAL_CFLAGS +&#x3D; &#39; -Wreturn-type -Wcomment -Wswitch&#39; # code style warning    LOCAL_CFLAGS +&#x3D; &#39; -Wparentheses -Wlogical-op &#39; # operation warning    LOCAL_CFLAGS +&#x3D; &#39; -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes&#39; # function declaration warning    if &#39;mips&#39; not in rtconfig.PREFIX: # mips toolchain does not support        LOCAL_CFLAGS +&#x3D; &#39; -Wimplicit-fallthrough&#39; # implicit fallthrough warning        LOCAL_CFLAGS +&#x3D; &#39; -Wduplicated-cond -Wduplicated-branches&#39; # duplicated condition warning    if rtconfig.ARCH not in [&#39;sim&#39;]:  
+        LINKFLAGS +&#x3D; &#39; -Wl,--gc-sections,--print-memory-usage&#39; # remove unused sections and print memory usage  
+group &#x3D; DefineGroup(&#39;Kernel&#39;, src, depend&#x3D;[&#39;&#39;], CPPPATH&#x3D;inc,  
+                    LINKFLAGS&#x3D;LINKFLAGS, LOCAL_CFLAGS&#x3D;LOCAL_CFLAGS,  
+                    CPPDEFINES&#x3D;[&#39;__RTTHREAD__&#39;], LOCAL_CPPDEFINES&#x3D;[&#39;__RT_KERNEL_SOURCE__&#39;])  
+  
+# print(&quot;Source files:&quot;, src)# print(&quot;Include paths:&quot;, inc)print(&quot;Local CFLAGS:&quot;, LOCAL_CFLAGS)  
+# print(&quot;Local CPPDEFINES:&quot;, LOCAL_CPPDEFINES)# print(&quot;CPPDEFINES:&quot;, env[&#39;CPPDEFINES&#39;])  
+Return(&#39;group&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+
                 
             </div>
             <hr/>
@@ -452,7 +491,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://WwWangGuan.github.io/2024/08/06/za-ji/gao-qing/">http://WwWangGuan.github.io/2024/08/06/za-ji/gao-qing/</a>
+                    <a href="http://WwWangGuan.github.io/2024/11/11/scons-xue-xi-diao-shi-ji-lu/">http://WwWangGuan.github.io/2024/11/11/scons-xue-xi-diao-shi-ji-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -489,7 +528,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/scons/">
+                                    <span class="chip bg-color">scons</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -537,13 +580,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/08/09/qian-ru-shi-ruan-jian/rt-thread/xmc7200evk-spi/">
+                <a href="/2024/11/18/za-ji/starbound-fu-wu-qi-da-jian-jiao-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="XMC7200EEVK-SPI">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Starbound服务器搭建教程">
                         
-                        <span class="card-title">XMC7200EEVK-SPI</span>
+                        <span class="card-title">Starbound服务器搭建教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -554,7 +597,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-08-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-11-18
                         </span>
                         <span class="publish-author">
                             
@@ -567,16 +610,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/XMC7200C/">
-                        <span class="chip bg-color">XMC7200C</span>
-                    </a>
-                    
-                    <a href="/tags/SPI/">
-                        <span class="chip bg-color">SPI</span>
-                    </a>
-                    
-                    <a href="/tags/ADIS16467-2/">
-                        <span class="chip bg-color">ADIS16467-2</span>
+                    <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/">
+                        <span class="chip bg-color">嵌入式软件原神</span>
                     </a>
                     
                 </div>
@@ -590,13 +625,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/07/13/dian-zi-dian-li/chao-ji-dian-rong/chao-ji-dian-rong/">
+                <a href="/2024/11/11/dian-zi-dian-li/mlcc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.png" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="MLCC">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">MLCC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -607,7 +642,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-11
                             </span>
                         <span class="publish-author">
                             
@@ -616,6 +651,22 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/STM32/">
+                        <span class="chip bg-color">STM32</span>
+                    </a>
+                    
+                    <a href="/tags/HRTIM/">
+                        <span class="chip bg-color">HRTIM</span>
+                    </a>
+                    
+                    <a href="/tags/MLCC/">
+                        <span class="chip bg-color">MLCC</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -788,6 +839,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -809,7 +867,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">42.6k</span>
             
             
             

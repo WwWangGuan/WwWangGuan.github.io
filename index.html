@@ -938,7 +938,10 @@ menuconfig BSP_USING_SPI
                             <div class="title center-align">CAN</div>
                             <div class="description center-align">
                                 
-                                    参考文献rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdfDS
+                                    总线标准ISO11898
+CAN BUSbxCAN以STM32F429IGT6为例
+特性介绍CAN1是主CAN，CAN2是从CAN，两者共享64字节的SRAM。
+波特率计算这时钟树真是tm又臭又长又大 明显俩CAN用APB1的时钟，默认配满
                                 
                             </div>
                             <div class="cover-btns">
@@ -1624,32 +1627,29 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
                             <div class="title center-align">LT8708-SuperCapController</div>
                             <div class="description center-align">
                                 
-                                    Design Requirement 电容侧电压欠压保护 底盘侧电压过压保护借用部分Gmaster2022开源的设计参数
+                                    Design Requirement电容侧电压欠压保护底盘侧电压过压保护借用部分Gmaster2022开源的设计参数
+
 
 
 
 输入电压
-14-28V
+跟随电源管理输出电压
 
 
+
+
+
+输入电压
+6S电池范围
+22V-26V
 
 
 输入电流
-±8A
+±10A
 
 
 
-输出电压
-14V-30V
-
-
-
-输出电流
-±8A
-
-
-
-
+输
                                 
                             </div>
                             <div class="cover-btns">
@@ -1678,6 +1678,122 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
                             </div>
                             <div class="cover-btns">
                                 <a href="/2024/09/28/qian-ru-shi-ruan-jian/xmos/xmos-kai-fa-huan-jing-da-jian/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/7.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">scons学习调试记录</div>
+                            <div class="description center-align">
+                                
+                                    起因：试图解决[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread/rt-thread · GitHub对比了5.1.0和master版本的scons
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2024/11/11/scons-xue-xi-diao-shi-ji-lu/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/22.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">Starbound服务器搭建教程</div>
+                            <div class="description center-align">
+                                
+                                     
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2024/11/18/za-ji/starbound-fu-wu-qi-da-jian-jiao-cheng/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/26.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">MLCC</div>
+                            <div class="description center-align">
+                                
+                                    
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2024/11/11/dian-zi-dian-li/mlcc/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/19.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">Cmake环境下使用cmsis-driver</div>
+                            <div class="description center-align">
+                                
+                                    前言最近在搞IMU的统一驱动，在设计上想保持最大的兼容性，于是首先想到了通杀ARM的Cmsis-Driver，然而，STM32CubeMX的软件包设计内并没有CMSIS-Driver相关内容（史，只能说keil不愧是arm亲儿子），于是有了
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2024/11/19/qian-ru-shi-ruan-jian/stm32/cmake-huan-jing-xia-shi-yong-cmsis-driver/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/23.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">瑞萨MCU适配RT-Thread</div>
+                            <div class="description center-align">
+                                
+                                    
+
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2024/11/11/qian-ru-shi-ruan-jian/rt-thread/rui-sa-mcu-gua-pei-rt-thread/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -1804,6 +1920,289 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2024/11/19/qian-ru-shi-ruan-jian/stm32/cmake-huan-jing-xia-shi-yong-cmsis-driver/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Cmake环境下使用cmsis-driver">
+                            
+                            <span class="card-title">Cmake环境下使用cmsis-driver</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                前言最近在搞IMU的统一驱动，在设计上想保持最大的兼容性，于是首先想到了通杀ARM的Cmsis-Driver，然而，STM32CubeMX的软件包设计内并没有CMSIS-Driver相关内容（史，只能说keil不愧是arm亲儿子），于是有了
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/STM32/">
+                            <span class="chip bg-color">STM32</span>
+                        </a>
+                        
+                        <a href="/tags/Cmake/">
+                            <span class="chip bg-color">Cmake</span>
+                        </a>
+                        
+                        <a href="/tags/Clion/">
+                            <span class="chip bg-color">Clion</span>
+                        </a>
+                        
+                        <a href="/tags/CMSIS/">
+                            <span class="chip bg-color">CMSIS</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/11/18/za-ji/starbound-fu-wu-qi-da-jian-jiao-cheng/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Starbound服务器搭建教程">
+                            
+                            <span class="card-title">Starbound服务器搭建教程</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/">
+                            <span class="chip bg-color">嵌入式软件原神</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/11/11/scons-xue-xi-diao-shi-ji-lu/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/7.png" class="responsive-img" alt="scons学习调试记录">
+                            
+                            <span class="card-title">scons学习调试记录</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                起因：试图解决[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread/rt-thread · GitHub对比了5.1.0和master版本的scons
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/scons/">
+                            <span class="chip bg-color">scons</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/11/11/dian-zi-dian-li/mlcc/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="MLCC">
+                            
+                            <span class="card-title">MLCC</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/STM32/">
+                            <span class="chip bg-color">STM32</span>
+                        </a>
+                        
+                        <a href="/tags/HRTIM/">
+                            <span class="chip bg-color">HRTIM</span>
+                        </a>
+                        
+                        <a href="/tags/MLCC/">
+                            <span class="chip bg-color">MLCC</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/11/11/qian-ru-shi-ruan-jian/rt-thread/rui-sa-mcu-gua-pei-rt-thread/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="瑞萨MCU适配RT-Thread">
+                            
+                            <span class="card-title">瑞萨MCU适配RT-Thread</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-11-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/RT-Thread/">
+                            <span class="chip bg-color">RT-Thread</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%91%9E%E8%90%A8/">
+                            <span class="chip bg-color">瑞萨</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/10/19/wei-ming-ming/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.png" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Harry Zhang
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2024/09/28/qian-ru-shi-ruan-jian/xmos/xmos-kai-fa-huan-jing-da-jian/">
                         <div class="card-image">
                             
@@ -1909,32 +2308,29 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Design Requirement 电容侧电压欠压保护 底盘侧电压过压保护借用部分Gmaster2022开源的设计参数
+                                Design Requirement电容侧电压欠压保护底盘侧电压过压保护借用部分Gmaster2022开源的设计参数
+
 
 
 
 输入电压
-14-28V
+跟随电源管理输出电压
 
 
+
+
+
+输入电压
+6S电池范围
+22V-26V
 
 
 输入电流
-±8A
+±10A
 
 
 
-输出电压
-14V-30V
-
-
-
-输出电流
-±8A
-
-
-
-
+输
                             
                         </div>
                         <div class="publish-info">
@@ -2088,326 +2484,6 @@ Buck模式工作在Buck状态下时，Q4导通，Q3截止，Q1、Q2交替开关�
             </div>
               <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/08/26/dian-zi-dian-li/dian-ji-yu-tuo-dong/dian-ji-yu-tuo-dong/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="电机与拖动">
-                            
-                            <span class="card-title">电机与拖动</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                绪论
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%94%B5%E6%9C%BA/">
-                            <span class="chip bg-color">电机</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B%E6%8A%80%E6%9C%AF/">
-                            <span class="chip bg-color">电子电力技术</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/08/20/qian-ru-shi-ruan-jian/nxp/lpc4322jet100e/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.png" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/08/20/qian-ru-shi-ruan-jian/debugger/zai-openocd-xia-shi-yong-jlink-bing-diao-yong-qi-gdb/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/24.png" class="responsive-img" alt="在openocd下使用Jlink并调用其GDB">
-                            
-                            <span class="card-title">在openocd下使用Jlink并调用其GDB</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                测试条件STM32H750VGH6J-Link OB-RA4M2-Full
-实际使用interface里面有jlink.cfg，直接调
-  
-source [find interface&#x2F;jlink.cfg]  
-  
-trans
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Jlink/">
-                            <span class="chip bg-color">Jlink</span>
-                        </a>
-                        
-                        <a href="/tags/Jlink-OB/">
-                            <span class="chip bg-color">Jlink-OB</span>
-                        </a>
-                        
-                        <a href="/tags/OpenOCD/">
-                            <span class="chip bg-color">OpenOCD</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/08/20/za-ji/ji-ge-xiao-mu-biao/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="几个小目标">
-                            
-                            <span class="card-title">几个小目标</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
- 买个Roland Jupiter-80
- 搞一套自己的架子鼓
- 熟练扒谱
- Jlink！！！！！（被傻逼瑞萨气死）
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
-                            <span class="chip bg-color">碎碎念</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="移远EC801E调试记录">
-                            
-                            <span class="card-title">移远EC801E调试记录</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                参考文献EC600E-CN&amp;EC800E-CNAT 命令手册EC801E兼容EC800E
-测试与配置定义
-ID请求
-IMEI和SN请求
-» ATI+GSN&#x3D;?
-« ATI+GSN&#x3D;?
-
-Quectel
-EC801
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-19
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/">
-                            <span class="chip bg-color">嵌入式软件原神</span>
-                        </a>
-                        
-                        <a href="/tags/4G%E9%80%9A%E4%BF%A1/">
-                            <span class="chip bg-color">4G通信</span>
-                        </a>
-                        
-                        <a href="/tags/ATCommand/">
-                            <span class="chip bg-color">ATCommand</span>
-                        </a>
-                        
-                        <a href="/tags/MQTT/">
-                            <span class="chip bg-color">MQTT</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="编译器对比">
-                            
-                            <span class="card-title">编译器对比</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                gcc编译Andes没折腾明白，留坑
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-15
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Harry Zhang
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/HPM/">
-                            <span class="chip bg-color">HPM</span>
-                        </a>
-                        
-                        <a href="/tags/RISCV/">
-                            <span class="chip bg-color">RISCV</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%BC%96%E8%AF%91%E5%99%A8/">
-                            <span class="chip bg-color">编译器</span>
-                        </a>
-                        
-                        <a href="/tags/GCC/">
-                            <span class="chip bg-color">GCC</span>
-                        </a>
-                        
-                        <a href="/tags/Andes/">
-                            <span class="chip bg-color">Andes</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
         </div>
     </article>
 
@@ -2424,7 +2500,7 @@ EC801
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 5</div>
+            <div class="center-align b-text-gray">1 / 6</div>
         </div>
         <div class="col s6 m4 l4">
             
@@ -2459,7 +2535,7 @@ EC801
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.5k</span>
+                        class="white-color">42.6k</span>
             
             
             
