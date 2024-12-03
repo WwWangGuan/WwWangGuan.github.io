@@ -5,9 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="RTT设备树调研, WwWangGuan">
-    <meta name="description" content="什么是设备树设备树（Device Tree）是一种数据结构，用于描述计算机硬件的布局和配置，特别是在嵌入式系统中。它帮助操作系统内核识别和初始化硬件组件。
-设备树的主要特点
-设备树以树状结构描述硬件组件及其属性，包括 CPU、内存、总线、外">
+    <meta name="description" content="什么是设备树设备树（Device Tree）是一种数据结构，用于描述计算机硬件的布局和配置，特别是在嵌入式系统中。它帮助操作系统内核识别和初始化硬件组件。记住 DT 应该是与操作系统无关的，因此任何特定于 Linux 的东西都不应该存在。
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -398,7 +397,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    577
+                    703
                 </div>
                 
 
@@ -428,7 +427,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="什么是设备树"><a href="#什么是设备树" class="headerlink" title="什么是设备树"></a>什么是设备树</h1><p>设备树（Device Tree）是一种数据结构，用于描述计算机硬件的布局和配置，特别是在嵌入式系统中。它帮助操作系统内核识别和初始化硬件组件。</p>
+                <h1 id="什么是设备树"><a href="#什么是设备树" class="headerlink" title="什么是设备树"></a>什么是设备树</h1><p>设备树（Device Tree）是一种数据结构，用于描述计算机硬件的布局和配置，特别是在嵌入式系统中。它帮助操作系统内核识别和初始化硬件组件。<br><strong>记住 DT 应该是与操作系统无关的，因此任何特定于 Linux 的东西都不应该存在。</strong></p>
 <h3 id="设备树的主要特点"><a href="#设备树的主要特点" class="headerlink" title="设备树的主要特点"></a>设备树的主要特点</h3><ul>
 <li>设备树以树状结构描述硬件组件及其属性，包括 CPU、内存、总线、外设等。</li>
 <li>通过设备树，操作系统可以在不修改内核代码的情况下支持不同的硬件平台。</li>
@@ -492,6 +491,8 @@
 </tbody></table>
 <ol start="5">
 <li>Duo的bsp里面有dtb而有些bsp没有</li>
+<li>在<a target="_blank" rel="noopener" href="https://club.rt-thread.org/ask/article/ba50129b5c9a635c.html">RT-Thread-smart启动流程详解RT-Thread问答社区 - RT-Thread</a>里面提及启动时rt_hw_board_init()对设备树如何处理<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241203153453.png"></li>
+<li>修改设备树适配驱动？貌似和linux下做法一致，未知，未涉及领域。</li>
 <li></li>
 </ol>
 <h1 id="参考文献-不知道的东西"><a href="#参考文献-不知道的东西" class="headerlink" title="参考文献&#x2F;不知道的东西"></a>参考文献&#x2F;不知道的东西</h1><ol>
@@ -499,7 +500,9 @@
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/dengjin20104042056/article/details/132873437">【内核驱动】设备树编译和加载_rockchip 单独编译设备树-CSDN博客</a></li>
 <li>DM : Device Model，这是一个用于描述和管理设备的抽象层，特别是在 U-Boot 引导加载程序中。设备模型提供了一种统一的方法来初始化和配置硬件设备。</li>
 <li><a target="_blank" rel="noopener" href="https://www.rt-thread.org/document/site/#/rt-thread-version/rt-thread-smart/device/device-tree/device-tree">设备树使用</a></li>
-<li></li>
+<li><a target="_blank" rel="noopener" href="https://club.rt-thread.org/ask/article/ba50129b5c9a635c.html">RT-Thread-smart启动流程详解RT-Thread问答社区 - RT-Thread</a></li>
+<li><a target="_blank" rel="noopener" href="https://arduino.me/a/2960">Arduino中文社区</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ZengjfOS/RaspberryPi/blob/master/docs/0011_SoC%E8%AE%BE%E5%A4%87%E6%A0%91DTS%E5%88%86%E6%9E%90.md">RaspberryPi&#x2F;docs&#x2F;0011_SoC设备树DTS分析.md at master · ZengjfOS&#x2F;RaspberryPi · GitHub</a></li>
 </ol>
 
                 
@@ -911,7 +914,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">43.2k</span>
+                        class="white-color">43.3k</span>
             
             
             
