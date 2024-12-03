@@ -111,13 +111,21 @@
     
     
     <entry>
-      <title></title>
-      <link href="/2024/10/19/wei-ming-ming/"/>
-      <url>/2024/10/19/wei-ming-ming/</url>
+      <title>RTT设备树调研</title>
+      <link href="/2024/10/19/qian-ru-shi-ruan-jian/rt-thread/rtt-she-bei-shu-diao-yan/"/>
+      <url>/2024/10/19/qian-ru-shi-ruan-jian/rt-thread/rtt-she-bei-shu-diao-yan/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="什么是设备树"><a href="#什么是设备树" class="headerlink" title="什么是设备树"></a>什么是设备树</h1><p>设备树（Device Tree）是一种数据结构，用于描述计算机硬件的布局和配置，特别是在嵌入式系统中。它帮助操作系统内核识别和初始化硬件组件。</p><h3 id="设备树的主要特点"><a href="#设备树的主要特点" class="headerlink" title="设备树的主要特点"></a>设备树的主要特点</h3><ul><li>设备树以树状结构描述硬件组件及其属性，包括 CPU、内存、总线、外设等。</li><li>通过设备树，操作系统可以在不修改内核代码的情况下支持不同的硬件平台。</li><li>设备树与内核代码分离，使得硬件配置可以独立于软件开发进行修改和更新。</li></ul><h3 id="设备树的组成"><a href="#设备树的组成" class="headerlink" title="设备树的组成"></a>设备树的组成</h3><ul><li><strong>节点（Node）</strong>：<ul><li>每个节点代表一个硬件设备或组件。</li><li>节点可以包含子节点，形成层次结构。</li></ul></li><li><strong>属性（Property）</strong>：<ul><li>每个节点包含多个属性，用于描述设备的特性，如地址、大小、中断等。</li></ul></li></ul><h3 id="设备树文件"><a href="#设备树文件" class="headerlink" title="设备树文件"></a>设备树文件</h3><ul><li><strong>源文件（.dts）</strong>：<ul><li>人类可读的文本格式，用于定义设备树结构和属性。</li></ul></li><li><strong>二进制文件（.dtb）</strong>：<ul><li>设备树源文件编译后的二进制格式，供引导加载程序和操作系统使用。</li></ul></li></ul><p>设备树是现代嵌入式系统中硬件抽象的重要工具，帮助实现硬件和软件的解耦，提高系统的灵活性和可维护性。</p><h1 id="rtthread对设备树目前的支持状态"><a href="#rtthread对设备树目前的支持状态" class="headerlink" title="rtthread对设备树目前的支持状态"></a>rtthread对设备树目前的支持状态</h1><ol><li>有相关软件包<a href="https://github.com/RT-Thread-packages/fdt">GitHub - RT-Thread-packages&#x2F;fdt: Device Tree package in RT-Thread</a></li><li>能够看到在开机启动时加载了设备树<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241203013927.png"><br>能否动态加载？未知</li><li>DM2.0是什么？</li><li>目前能用DM2.0的BSP</li></ol><table><thead><tr><th align="center">BSP</th><th></th></tr></thead><tbody><tr><td align="center">cvitek\cv18xx_aarch64</td><td></td></tr><tr><td align="center">raspberry-pi\raspi-dm2.0</td><td></td></tr><tr><td align="center">rockchip\rk3500</td><td></td></tr><tr><td align="center">rockchip\rk3568</td><td></td></tr><tr><td align="center">qemu-virt64-aarch64</td><td></td></tr><tr><td align="center">5. Duo的bsp里面有dtb而有些bsp没有</td><td></td></tr><tr><td align="center">6.</td><td></td></tr></tbody></table><h1 id="参考文献-不知道的东西"><a href="#参考文献-不知道的东西" class="headerlink" title="参考文献&#x2F;不知道的东西"></a>参考文献&#x2F;不知道的东西</h1><ol><li><a href="https://www.bilibili.com/video/BV1Dw4m1v7Ya?spm_id_from=333.788.videopod.sections&vd_source=67112be10c06a05ef313a26847817860">TFTP加载设备树内核&amp;NFS挂载根文件系统演示，ARM-Linux完全入门，用最快的路径实现单片机到ARM-Linux的过度！_哔哩哔哩_bilibili</a></li><li><a href="https://blog.csdn.net/dengjin20104042056/article/details/132873437">【内核驱动】设备树编译和加载_rockchip 单独编译设备树-CSDN博客</a></li><li>DM : Device Model，这是一个用于描述和管理设备的抽象层，特别是在 U-Boot 引导加载程序中。设备模型提供了一种统一的方法来初始化和配置硬件设备。</li><li></li></ol>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> DeviceTree </tag>
+            
+        </tags>
       
     </entry>
     

@@ -136,15 +136,27 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/10/19/wei-ming-ming/"/>
-    <id>http://wwwangguan.github.io/2024/10/19/wei-ming-ming/</id>
+    <title>RTT设备树调研</title>
+    <link href="http://wwwangguan.github.io/2024/10/19/qian-ru-shi-ruan-jian/rt-thread/rtt-she-bei-shu-diao-yan/"/>
+    <id>http://wwwangguan.github.io/2024/10/19/qian-ru-shi-ruan-jian/rt-thread/rtt-she-bei-shu-diao-yan/</id>
     <published>2024-10-19T07:01:49.702Z</published>
-    <updated>2024-10-20T17:00:18.653Z</updated>
+    <updated>2024-12-02T18:10:47.141Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是设备树&quot;&gt;&lt;a href=&quot;#什么是设备树&quot; class=&quot;headerlink&quot; title=&quot;什么是设备树&quot;&gt;&lt;/a&gt;什么是设备树&lt;/h1&gt;&lt;p&gt;设备树（Device</summary>
+        
+      
     
     
     
     
+    <category term="linux" scheme="http://wwwangguan.github.io/tags/linux/"/>
+    
+    <category term="DeviceTree" scheme="http://wwwangguan.github.io/tags/DeviceTree/"/>
     
   </entry>
   
