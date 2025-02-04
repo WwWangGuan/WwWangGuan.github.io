@@ -6,7 +6,7 @@
   <link href="http://wwwangguan.github.io/atom.xml" rel="self"/>
   
   <link href="http://wwwangguan.github.io/"/>
-  <updated>2024-11-19T16:14:19.406Z</updated>
+  <updated>2025-02-04T03:06:10.522Z</updated>
   <id>http://wwwangguan.github.io/</id>
   
   <author>
@@ -15,6 +15,168 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Life goes on</title>
+    <link href="http://wwwangguan.github.io/2025/02/04/xiao-shuo/life-goes-on/"/>
+    <id>http://wwwangguan.github.io/2025/02/04/xiao-shuo/life-goes-on/</id>
+    <published>2025-02-04T02:52:04.963Z</published>
+    <updated>2025-02-04T03:06:10.522Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="EVA" scheme="http://wwwangguan.github.io/tags/EVA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/12/20/matlab/"/>
+    <id>http://wwwangguan.github.io/2024/12/20/matlab/</id>
+    <published>2024-12-20T15:16:04.012Z</published>
+    <updated>2024-12-21T06:33:39.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-matlab&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Pspice for TI使用探索(1)</title>
+    <link href="http://wwwangguan.github.io/2024/12/15/dian-zi-dian-li/pspice-for-ti-shi-yong-tan-suo-1/"/>
+    <id>http://wwwangguan.github.io/2024/12/15/dian-zi-dian-li/pspice-for-ti-shi-yong-tan-suo-1/</id>
+    <published>2024-12-15T11:28:12.370Z</published>
+    <updated>2024-12-15T11:29:01.229Z</updated>
+    
+    
+    
+    
+    
+    <category term="Psipce" scheme="http://wwwangguan.github.io/tags/Psipce/"/>
+    
+    <category term="Cadence" scheme="http://wwwangguan.github.io/tags/Cadence/"/>
+    
+    <category term="仿真" scheme="http://wwwangguan.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Thu Dec 05 2024 00:00:00 GMT+0800 (中国标准时间)</title>
+    <link href="http://wwwangguan.github.io/2024/12/05/za-ji/2024-12-05/"/>
+    <id>http://wwwangguan.github.io/2024/12/05/za-ji/2024-12-05/</id>
+    <published>2024-12-05T13:10:05.413Z</published>
+    <updated>2024-12-05T13:10:23.352Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;MSTT的人声分离不错&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://wwwangguan.github.io/2024/12/05/za-ji/2024-12-04/"/>
+    <id>http://wwwangguan.github.io/2024/12/05/za-ji/2024-12-04/</id>
+    <published>2024-12-05T11:06:02.675Z</published>
+    <updated>2024-12-05T11:06:02.675Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MilkDuo-256 SDK 设备树代码分析</title>
+    <link href="http://wwwangguan.github.io/2024/12/05/qian-ru-shi-ruan-jian/rt-thread/milkduo-256-sdk-she-bei-shu-dai-ma-fen-xi/"/>
+    <id>http://wwwangguan.github.io/2024/12/05/qian-ru-shi-ruan-jian/rt-thread/milkduo-256-sdk-she-bei-shu-dai-ma-fen-xi/</id>
+    <published>2024-12-05T11:06:02.674Z</published>
+    <updated>2024-12-05T11:06:02.674Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;bsp调用dt情况&quot;&gt;&lt;a href=&quot;#bsp调用dt情况&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MilkDuo256 启动流程分析</title>
+    <link href="http://wwwangguan.github.io/2024/12/05/qian-ru-shi-ruan-jian/rt-thread/milkduo256-qi-dong-liu-cheng-fen-xi/"/>
+    <id>http://wwwangguan.github.io/2024/12/05/qian-ru-shi-ruan-jian/rt-thread/milkduo256-qi-dong-liu-cheng-fen-xi/</id>
+    <published>2024-12-05T11:06:02.674Z</published>
+    <updated>2024-12-05T11:06:02.674Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;启动串口输出&quot;&gt;&lt;a href=&quot;#启动串口输出&quot; class=&quot;headerlink&quot; title=&quot;启动串口输出&quot;&gt;&lt;/a&gt;启动串口输出&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Wed Dec 04 2024 00:00:00 GMT+0800 (中国标准时间)</title>
+    <link href="http://wwwangguan.github.io/2024/12/05/za-ji/2024-12-04-1/"/>
+    <id>http://wwwangguan.github.io/2024/12/05/za-ji/2024-12-04-1/</id>
+    <published>2024-12-05T11:06:02.673Z</published>
+    <updated>2024-12-05T13:09:56.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;草了，加速器也犯病，编译编译不过，dtdt找不到，真特么晦气&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Cmake环境下使用cmsis-driver</title>
@@ -283,201 +445,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>电机与拖动</title>
-    <link href="http://wwwangguan.github.io/2024/08/26/dian-zi-dian-li/dian-ji-yu-tuo-dong/dian-ji-yu-tuo-dong/"/>
-    <id>http://wwwangguan.github.io/2024/08/26/dian-zi-dian-li/dian-ji-yu-tuo-dong/dian-ji-yu-tuo-dong/</id>
-    <published>2024-08-25T23:45:16.172Z</published>
-    <updated>2024-08-25T23:46:05.248Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;绪论&quot;&gt;&lt;a href=&quot;#绪论&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="电机" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E6%9C%BA/"/>
-    
-    <category term="电子电力技术" scheme="http://wwwangguan.github.io/tags/%E7%94%B5%E5%AD%90%E7%94%B5%E5%8A%9B%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/nxp/lpc4322jet100e/"/>
-    <id>http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/nxp/lpc4322jet100e/</id>
-    <published>2024-08-20T14:04:58.715Z</published>
-    <updated>2024-08-20T14:04:58.715Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在openocd下使用Jlink并调用其GDB</title>
-    <link href="http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/debugger/zai-openocd-xia-shi-yong-jlink-bing-diao-yong-qi-gdb/"/>
-    <id>http://wwwangguan.github.io/2024/08/20/qian-ru-shi-ruan-jian/debugger/zai-openocd-xia-shi-yong-jlink-bing-diao-yong-qi-gdb/</id>
-    <published>2024-08-20T06:56:22.624Z</published>
-    <updated>2024-08-21T06:23:41.934Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;测试条件&quot;&gt;&lt;a href=&quot;#测试条件&quot; class=&quot;headerlink&quot; title=&quot;测试条件&quot;&gt;&lt;/a&gt;测试条件&lt;/h1&gt;&lt;p&gt;STM32H750VGH6&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Jlink" scheme="http://wwwangguan.github.io/tags/Jlink/"/>
-    
-    <category term="Jlink-OB" scheme="http://wwwangguan.github.io/tags/Jlink-OB/"/>
-    
-    <category term="OpenOCD" scheme="http://wwwangguan.github.io/tags/OpenOCD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>几个小目标</title>
-    <link href="http://wwwangguan.github.io/2024/08/20/za-ji/ji-ge-xiao-mu-biao/"/>
-    <id>http://wwwangguan.github.io/2024/08/20/za-ji/ji-ge-xiao-mu-biao/</id>
-    <published>2024-08-20T02:40:11.833Z</published>
-    <updated>2024-08-20T03:10:18.336Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 买个Roland Jupiter-80&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 搞一套自己的架子鼓&lt;/li&gt;
-&lt;li&gt;&lt;input</summary>
-        
-      
-    
-    
-    
-    
-    <category term="碎碎念" scheme="http://wwwangguan.github.io/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移远EC801E调试记录</title>
-    <link href="http://wwwangguan.github.io/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/"/>
-    <id>http://wwwangguan.github.io/2024/08/19/qian-ru-shi-ruan-jian/yi-yuan-ec801e-diao-shi-ji-lu/yi-yuan-ec801e-diao-shi-ji-lu/</id>
-    <published>2024-08-19T01:11:53.314Z</published>
-    <updated>2024-08-19T06:12:37.856Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h1&gt;&lt;p&gt;EC600E-CN&amp;amp;EC800E-CN&lt;br&gt;AT 命令手册&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="嵌入式软件原神" scheme="http://wwwangguan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="4G通信" scheme="http://wwwangguan.github.io/tags/4G%E9%80%9A%E4%BF%A1/"/>
-    
-    <category term="ATCommand" scheme="http://wwwangguan.github.io/tags/ATCommand/"/>
-    
-    <category term="MQTT" scheme="http://wwwangguan.github.io/tags/MQTT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译器对比</title>
-    <link href="http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/"/>
-    <id>http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/bian-yi-qi-dui-bi/</id>
-    <published>2024-08-15T14:55:59.847Z</published>
-    <updated>2024-08-15T15:43:02.123Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;gcc编译&lt;img src=&quot;https://raw.githubusercontent.com/WwWangGuan/pics/main/202408152257254.png&quot;&gt;&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
-    
-    <category term="RISCV" scheme="http://wwwangguan.github.io/tags/RISCV/"/>
-    
-    <category term="编译器" scheme="http://wwwangguan.github.io/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
-    
-    <category term="GCC" scheme="http://wwwangguan.github.io/tags/GCC/"/>
-    
-    <category term="Andes" scheme="http://wwwangguan.github.io/tags/Andes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-8-15</title>
-    <link href="http://wwwangguan.github.io/2024/08/15/za-ji/2024-08-15/"/>
-    <id>http://wwwangguan.github.io/2024/08/15/za-ji/2024-08-15/</id>
-    <published>2024-08-15T14:32:06.736Z</published>
-    <updated>2024-08-19T01:11:13.644Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一点碎碎念&lt;/p&gt;
-&lt;p&gt;没有做出选择也是一种选择，尽管你不想要，你又不是碇真嗣，橙汁了还有一个凌波一个搞基的能给你圆回来。&lt;/p&gt;
-&lt;p&gt;大抵之前在语境上太较真了吧，每个人说话都是这样，下意识的以自己的处境作为当时说话的语境，而每个人的处境又不尽相同，意识到了也不太敢去说</summary>
-        
-      
-    
-    
-    
-    
-    <category term="碎碎念" scheme="http://wwwangguan.github.io/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HPM5301EVKLite 点灯</title>
-    <link href="http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/hpm5301evklite-dian-deng/"/>
-    <id>http://wwwangguan.github.io/2024/08/15/qian-ru-shi-ruan-jian/hpm/hpm5301evklite-dian-deng/</id>
-    <published>2024-08-15T09:05:18.454Z</published>
-    <updated>2024-08-15T09:06:35.516Z</updated>
-    
-    
-    
-    
-    
-    <category term="HPM" scheme="http://wwwangguan.github.io/tags/HPM/"/>
-    
-    <category term="嵌入式软件原神" scheme="http://wwwangguan.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="GPIO" scheme="http://wwwangguan.github.io/tags/GPIO/"/>
     
   </entry>
   
