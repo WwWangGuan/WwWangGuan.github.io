@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="scons学习调试记录, WwWangGuan">
-    <meta name="description" content="起因：试图解决[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread/rt-thread · GitHub对比了5.1.0和master版本的scons">
+    <meta name="description" content="起因：试图解决[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread&amp;#x2F;rt-thread · GitHub对比了5.1.0和master版本的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -392,7 +392,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    419
+                    420
                 </div>
                 
 
@@ -422,7 +422,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>起因：试图解决<a target="_blank" rel="noopener" href="https://github.com/RT-Thread/rt-thread/issues/9536">[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread/rt-thread · GitHub</a><br>对比了5.1.0和master版本的sconscrips，代码都是一样的，但是在<code>LOCAL_CPPDEFINES</code> 这里会有问题，5.1.0在cmakelists这里会少一个define导致报warning，在issue内有图，不再赘述<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">from building import *  
+                <p>起因：试图解决<a target="_blank" rel="noopener" href="https://github.com/RT-Thread/rt-thread/issues/9536">[Bug] LOCAL_CPPDEFINES组宏定义无法添加到CMakeLists.txt · Issue #9536 · RT-Thread&#x2F;rt-thread · GitHub</a><br>对比了5.1.0和master版本的sconscrips，代码都是一样的，但是在<code>LOCAL_CPPDEFINES</code> 这里会有问题，5.1.0在cmakelists这里会少一个define导致报warning，在issue内有图，不再赘述</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">from building import *  
 import os  
   
 src &#x3D; Glob(&#39;*.c&#39;)  
@@ -464,7 +465,7 @@ group &#x3D; DefineGroup(&#39;Kernel&#39;, src, depend&#x3D;[&#39;&#39;], CPPPAT
   
 # print(&quot;Source files:&quot;, src)# print(&quot;Include paths:&quot;, inc)print(&quot;Local CFLAGS:&quot;, LOCAL_CFLAGS)  
 # print(&quot;Local CPPDEFINES:&quot;, LOCAL_CPPDEFINES)# print(&quot;CPPDEFINES:&quot;, env[&#39;CPPDEFINES&#39;])  
-Return(&#39;group&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+Return(&#39;group&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -655,12 +656,12 @@ Return(&#39;group&#39;)<span aria-hidden="true" class="line-numbers-rows"><span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/STM32/">
-                        <span class="chip bg-color">STM32</span>
-                    </a>
-                    
                     <a href="/tags/HRTIM/">
                         <span class="chip bg-color">HRTIM</span>
+                    </a>
+                    
+                    <a href="/tags/STM32/">
+                        <span class="chip bg-color">STM32</span>
                     </a>
                     
                     <a href="/tags/MLCC/">
@@ -867,7 +868,7 @@ Return(&#39;group&#39;)<span aria-hidden="true" class="line-numbers-rows"><span>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">67.6k</span>
+                        class="white-color">67.7k</span>
             
             
             

@@ -404,7 +404,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    525
+                    530
                 </div>
                 
 
@@ -435,7 +435,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近在搞IMU的统一驱动，在设计上想保持最大的兼容性，于是首先想到了通杀ARM的Cmsis-Driver，然而，STM32CubeMX的软件包设计内并没有CMSIS-Driver相关内容（史，只能说keil不愧是arm亲儿子），于是有了本文，即在GCC+Cmake环境下使用cmsis组件</p>
-<h1 id="探索过程"><a href="#探索过程" class="headerlink" title="探索过程"></a>探索过程</h1><p>clone下来cmsis-driver的源码<a target="_blank" rel="noopener" href="https://github.com/ARM-software/CMSIS-Driver">GitHub - ARM-software/CMSIS-Driver: Repository of microcontroller peripheral driver implementing the CMSIS-Driver API specification</a>，并加入到CMakeLists.txt中<br><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">include_directories(Core&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy  
+<h1 id="探索过程"><a href="#探索过程" class="headerlink" title="探索过程"></a>探索过程</h1><p>clone下来cmsis-driver的源码<a target="_blank" rel="noopener" href="https://github.com/ARM-software/CMSIS-Driver">GitHub - ARM-software&#x2F;CMSIS-Driver: Repository of microcontroller peripheral driver implementing the CMSIS-Driver API specification</a>，并加入到CMakeLists.txt中</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">include_directories(Core&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy  
         Drivers&#x2F;CMSIS&#x2F;Device&#x2F;ST&#x2F;STM32G4xx&#x2F;Include Drivers&#x2F;CMSIS&#x2F;Include  
         Middlewares&#x2F;ST&#x2F;ARM&#x2F;DSP&#x2F;Inc  
         CMSIS-Driver-2.9.0  
@@ -444,7 +445,9 @@
   
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx)  
   
-file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Middlewares&#x2F;*.*&quot; &quot;Drivers&#x2F;*.*&quot; &quot;CMSIS-Driver-2.9.0&#x2F;*.*&quot; &quot;bsp&#x2F;*.*&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>此时发现一点问题<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119234230.png" alt=""><br>于是去CMSIS的Document<a target="_blank" rel="noopener" href="https://arm-software.github.io/CMSIS_5/Driver/html/index.html">Overview</a>里面查了一下，这玩应在Driver_SPI.h里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119234923.png" alt=""><br>项目目录一顿找，没有，everything最后发现应该在cmsis的源码包里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235118.png" alt=""><br>在CubeMX里面找了一圈没发现这玩应怎么启用，文件可以确定在CMSIS/Driver/Include下，实现在DriverTemplate里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235434.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235403.png" alt=""><br>想了一下CubeMX下载的repo里面应该会有，结果就是<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235959.png" alt=""><br><del>ST：我把CMSIS去掉了一部分好让你知道HAL是我写的</del><br>是真没有（草<br>那怎么办，只好把CMSIS源码Clone下来手动加进去<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120000544.png" alt=""><br><pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">include_directories(Core&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy  
+file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Middlewares&#x2F;*.*&quot; &quot;Drivers&#x2F;*.*&quot; &quot;CMSIS-Driver-2.9.0&#x2F;*.*&quot; &quot;bsp&#x2F;*.*&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>此时发现一点问题<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119234230.png"><br>于是去CMSIS的Document<a target="_blank" rel="noopener" href="https://arm-software.github.io/CMSIS_5/Driver/html/index.html">Overview</a>里面查了一下，这玩应在Driver_SPI.h里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119234923.png"><br>项目目录一顿找，没有，everything最后发现应该在cmsis的源码包里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235118.png"><br>在CubeMX里面找了一圈没发现这玩应怎么启用，文件可以确定在CMSIS&#x2F;Driver&#x2F;Include下，实现在DriverTemplate里面<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235434.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235403.png"><br>想了一下CubeMX下载的repo里面应该会有，结果就是<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119235959.png"><br><del>ST：我把CMSIS去掉了一部分好让你知道HAL是我写的</del><br>是真没有（草<br>那怎么办，只好把CMSIS源码Clone下来手动加进去<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120000544.png"></p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake">include_directories(Core&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc Drivers&#x2F;STM32G4xx_HAL_Driver&#x2F;Inc&#x2F;Legacy  
         Drivers&#x2F;CMSIS&#x2F;Device&#x2F;ST&#x2F;STM32G4xx&#x2F;Include  
         Drivers&#x2F;CMSIS&#x2F;Include  
         Drivers&#x2F;CMSIS&#x2F;Driver&#x2F;Include  
@@ -455,9 +458,10 @@ file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Middlewares&#x2F;*.*&q
   
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx)  
   
-file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Middlewares&#x2F;*.*&quot; &quot;Drivers&#x2F;*.*&quot; &quot;CMSIS-Driver-2.9.0&#x2F;*.*&quot; &quot;bsp&#x2F;*.*&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>好了很多，但是注意到CMSIS-Driver调用了CMSIS-OS2，错误由于缺少头文件<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120000900.png" alt=""><br>目前暂不确定是否使用RTOS，继续加文件<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120001335.png" alt=""><br>好了，没错误了，但是好奇为啥调用了CMSIS-OS<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120001417.png" alt=""></p>
-<h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><p>STM32CubeMX的repo目录最好换一下，也好换<br>Help-Updater Settings<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119233333.png" alt=""></p>
-<h1 id="高速电路设计"><a href="#高速电路设计" class="headerlink" title="高速电路设计"></a>高速电路设计</h1>
+file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Middlewares&#x2F;*.*&quot; &quot;Drivers&#x2F;*.*&quot; &quot;CMSIS-Driver-2.9.0&#x2F;*.*&quot; &quot;bsp&#x2F;*.*&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>好了很多，但是注意到CMSIS-Driver调用了CMSIS-OS2，错误由于缺少头文件<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120000900.png"><br>目前暂不确定是否使用RTOS，继续加文件<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120001335.png"><br>好了，没错误了，但是好奇为啥调用了CMSIS-OS<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241120001417.png"></p>
+<h1 id="杂记"><a href="#杂记" class="headerlink" title="杂记"></a>杂记</h1><p>STM32CubeMX的repo目录最好换一下，也好换<br>Help-Updater Settings<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241119233333.png"><br>#高速电路设计 </p>
+
                 
             </div>
             <hr/>
@@ -855,7 +859,7 @@ file(GLOB_RECURSE SOURCES &quot;Core&#x2F;*.*&quot; &quot;Middlewares&#x2F;*.*&q
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">67.6k</span>
+                        class="white-color">67.7k</span>
             
             
             

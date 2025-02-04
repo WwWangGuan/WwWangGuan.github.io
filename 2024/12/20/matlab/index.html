@@ -457,7 +457,9 @@ hold off;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20231823.png" alt="屏幕截图 2024-12-20 231823.png"></p>
 <ul>
-<li>阻尼比 $\zeta$：<br>$\zeta = 0$：系统无阻尼，表现为持续振荡。<br>$0 &lt; \zeta &lt; 1$：系统为欠阻尼，表现为振荡逐渐衰减。<br>$\zeta = 1$：系统为临界阻尼，快速达到稳态，无振荡。<br>$\zeta &gt; 1$：系统为过阻尼，响应缓慢，无振荡。<h1 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h1><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义阻尼比
+<li>阻尼比 $\zeta$：<br>$\zeta &#x3D; 0$：系统无阻尼，表现为持续振荡。<br>$0 &lt; \zeta &lt; 1$：系统为欠阻尼，表现为振荡逐渐衰减。<br>$\zeta &#x3D; 1$：系统为临界阻尼，快速达到稳态，无振荡。<br>$\zeta &gt; 1$：系统为过阻尼，响应缓慢，无振荡。</li>
+</ul>
+<h1 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h1><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义阻尼比
 
 zeta &#x3D; 0.25;
 
@@ -500,10 +502,12 @@ ylabel(&#39;响应&#39;);
 grid on;
 
 hold off;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20231946.png" alt="屏幕截图 2024-12-20 231946.png"></li>
-<li><strong>自然频率 $\omega_n$​</strong>：<br>增加 $\omega_n$会加快系统响应速度。<br>$\omega_n$​ 越大，系统达到稳态的时间越短。</li>
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20231946.png" alt="屏幕截图 2024-12-20 231946.png"></p>
+<ul>
+<li><strong>自然频率 $\omega_n$​</strong>：<br>增加 $\omega_n$会加快系统响应速度。<br>$\omega_n$​ 越大，系统达到稳态的时间越短。</li>
 </ul>
-<p>2.请绘制下面单位负反馈系统的根轨迹曲线<br>（可自行设计开环传递函数）在MATLAB中采用根轨迹法求取使得闭环系统稳定的K值的范围。<br><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义传递函数的分子和分母
+<p>2.请绘制下面单位负反馈系统的根轨迹曲线<br>（可自行设计开环传递函数）在MATLAB中采用根轨迹法求取使得闭环系统稳定的K值的范围。</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义传递函数的分子和分母
 
 numerator &#x3D; [1]; % K 是可变的，因此初始设置为 1
 
@@ -525,7 +529,9 @@ xlabel(&#39;实部&#39;);
 
 ylabel(&#39;虚部&#39;);
 
-grid on;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220232426.png" alt=""><br><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义传递函数的分子和分母
+grid on;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220232426.png"></p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义传递函数的分子和分母
 
 numerator &#x3D; [1]; % K 是可变的，因此初始设置为 1
 
@@ -563,7 +569,8 @@ end
 
 % 输出稳定的 K 值范围
 
-fprintf(&#39;稳定的 K 值范围: %.2f &lt;&#x3D; K &lt;&#x3D; %.2f\n&#39;, k_stable_min, k_stable_max);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220232748.png" alt=""></p>
+fprintf(&#39;稳定的 K 值范围: %.2f &lt;&#x3D; K &lt;&#x3D; %.2f\n&#39;, k_stable_min, k_stable_max);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220232748.png"></p>
 <h1 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h1><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 定义传递函数的分子和分母
 
 numerator &#x3D; [1, 0.125];
@@ -577,9 +584,10 @@ sys &#x3D; tf(numerator, denominator);
 % 打开根轨迹设计工具
 
 rltool(sys);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220233449.png" alt=""><br>添加一个实零点<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220233919.png" alt=""></p>
-<h1 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h1><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20234221.png" alt="屏幕截图 2024-12-20 234221.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20234252.png" alt="屏幕截图 2024-12-20 234252.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220234337.png" alt=""><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220234352.png" alt=""><br>相位裕度和增益裕度都为正，Nyquist曲线不包围-1，系统稳定</p>
-<h1 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h1><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221004606.png" alt=""><br>各component配置，如下图所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221004529.png" alt=""><br>系统输出如下图所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221004315.png" alt=""><br>将系统输出连接至To WorkSpace模块上计算输出值<br><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 运行仿真后，在 MATLAB 中分析数据
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220233449.png"><br>添加一个实零点<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220233919.png"></p>
+<h1 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h1><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20234221.png" alt="屏幕截图 2024-12-20 234221.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20234252.png" alt="屏幕截图 2024-12-20 234252.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220234337.png"><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241220234352.png"><br>相位裕度和增益裕度都为正，Nyquist曲线不包围-1，系统稳定</p>
+<h1 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h1><p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221004606.png"><br>各component配置，如下图所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221004529.png"><br>系统输出如下图所示<br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221004315.png"><br>将系统输出连接至To WorkSpace模块上计算输出值</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">% 运行仿真后，在 MATLAB 中分析数据
 
 simOut &#x3D; sim(&#39;test&#39;); % 替换为你的模型名称
 
@@ -589,7 +597,8 @@ outputData &#x3D; simOut.get(&#39;outputData&#39;);
 
 steadyStateValue &#x3D; mean(outputData(end-100:end)); % 取最后100个数据点的平均值
 
-fprintf(&#39;稳态输出值: %.2f\n&#39;, steadyStateValue);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221010805.png" alt=""></p>
+fprintf(&#39;稳态输出值: %.2f\n&#39;, steadyStateValue);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/WwWangGuan/pics/main/20241221010805.png"></p>
 <p>改善性能：</p>
 <ol>
 <li><strong>增加积分控制</strong>：<ul>
@@ -601,7 +610,7 @@ fprintf(&#39;稳态输出值: %.2f\n&#39;, steadyStateValue);<span aria-hidden="
 </ul>
 </li>
 <li><strong>调整反馈增益</strong>：<ul>
-<li>优化反馈增益 H(s)H(s) 以提高系统的响应速度和稳定性。</li>
+<li>优化反馈增益 H(s)H(s) 以提高系统的响应速度和稳定性。</li>
 </ul>
 </li>
 <li><strong>滤波器设计</strong>：<ul>
@@ -1000,7 +1009,7 @@ fprintf(&#39;稳态输出值: %.2f\n&#39;, steadyStateValue);<span aria-hidden="
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">67.6k</span>
+                        class="white-color">67.7k</span>
             
             
             
